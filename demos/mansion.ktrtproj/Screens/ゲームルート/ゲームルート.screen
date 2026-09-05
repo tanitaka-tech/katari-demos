@@ -1,0 +1,249 @@
+screen_component:
+  screen_space: true
+  resolution_width: 1280
+  resolution_height: 720
+  ref_resolution_width: 1280
+  ref_resolution_height: 720
+  scale_mode: "blend"
+  scale_blend: 0.5
+  priority: 0
+objects: []
+variables:
+  - kind: "normal"
+    id: "has_key"
+    name: "$has_key"
+    value_type: "Bool"
+    initial_value: "false"
+  - kind: "normal"
+    id: "key_on_desk"
+    name: "$key_on_desk"
+    value_type: "Bool"
+    initial_value: "true"
+  - kind: "normal"
+    id: "oni_active"
+    name: "$oni_active"
+    value_type: "Bool"
+    initial_value: "false"
+  - kind: "normal"
+    id: "oni_room"
+    name: "$oni_room"
+    value_type: "String"
+    initial_value: ""
+  - kind: "normal"
+    id: "oni_x"
+    name: "$oni_x"
+    value_type: "Float"
+    initial_value: "0"
+  - kind: "normal"
+    id: "oni_y"
+    name: "$oni_y"
+    value_type: "Float"
+    initial_value: "0"
+  - kind: "normal"
+    id: "oni_wait"
+    name: "$oni_wait"
+    value_type: "Float"
+    initial_value: "0"
+  - kind: "normal"
+    id: "oni_patience"
+    name: "$oni_patience"
+    value_type: "Float"
+    initial_value: "4"
+  - kind: "normal"
+    id: "hidden"
+    name: "$hidden"
+    value_type: "Bool"
+    initial_value: "false"
+  - kind: "normal"
+    id: "face_x"
+    name: "$face_x"
+    value_type: "Float"
+    initial_value: "0"
+  - kind: "normal"
+    id: "face_y"
+    name: "$face_y"
+    value_type: "Float"
+    initial_value: "1"
+  - kind: "normal"
+    id: "move"
+    name: "$move"
+    value_type: "Vector2"
+    initial_value: "0,0"
+  - kind: "normal"
+    id: "act"
+    name: "$act"
+    value_type: "Bool"
+    initial_value: "false"
+  - kind: "normal"
+    id: "pressed"
+    name: "$pressed"
+    value_type: "Bool"
+    initial_value: "false"
+  - kind: "normal"
+    id: "press_prev"
+    name: "$press_prev"
+    value_type: "Bool"
+    initial_value: "false"
+  - kind: "normal"
+    id: "msg_open"
+    name: "$msg_open"
+    value_type: "Bool"
+    initial_value: "false"
+  - kind: "normal"
+    id: "msg"
+    name: "$msg"
+    value_type: "String"
+    initial_value: ""
+  - kind: "normal"
+    id: "msg_speaker"
+    name: "$msg_speaker"
+    value_type: "String"
+    initial_value: ""
+  - kind: "normal"
+    id: "player_visible"
+    name: "$player_visible"
+    value_type: "Bool"
+    initial_value: "true"
+  - kind: "normal"
+    id: "oni_here"
+    name: "$oni_here"
+    value_type: "Bool"
+    initial_value: "false"
+  - kind: "normal"
+    id: "oni_visible"
+    name: "$oni_visible"
+    value_type: "Bool"
+    initial_value: "false"
+  - kind: "normal"
+    id: "door_hit"
+    name: "$door_hit"
+    value_type: "String"
+    initial_value: ""
+  - kind: "normal"
+    id: "probe"
+    name: "$probe"
+    value_type: "String"
+    initial_value: ""
+requests: []
+functions:
+  - id: "fn_step_toward"
+    name: "StepToward"
+    pure: true
+    access: "public"
+    params:
+      - name: "cur"
+        type: "float"
+      - name: "target"
+        type: "float"
+      - name: "speed"
+        type: "float"
+      - name: "dt"
+        type: "float"
+    returns:
+      - name: "out"
+        type: "float"
+    graph:
+      nodes:
+        - id: "function_entry_1"
+          type: "function_entry"
+          next: "function_return_1"
+        - id: "float_mul_1"
+          type: "float_mul"
+        - id: "float_sub_1"
+          type: "float_sub"
+        - id: "float_mul_2"
+          type: "float_mul"
+          properties:
+            b: -1
+        - id: "float_clamp_1"
+          type: "float_clamp"
+        - id: "float_add_1"
+          type: "float_add"
+        - id: "function_return_1"
+          type: "function_return"
+      layout:
+        - id: "float_mul_1"
+          x: 260
+          y: 0
+        - id: "float_sub_1"
+          x: 260
+          y: 130
+        - id: "float_mul_2"
+          x: 520
+          y: 0
+        - id: "float_clamp_1"
+          x: 780
+          y: 0
+        - id: "float_add_1"
+          x: 1040
+          y: 0
+        - id: "function_return_1"
+          x: 1300
+          y: 0
+      edges:
+        - from:
+            nodeId: "function_entry_1"
+            pin: "speed"
+          to:
+            nodeId: "float_mul_1"
+            pin: "a"
+        - from:
+            nodeId: "function_entry_1"
+            pin: "dt"
+          to:
+            nodeId: "float_mul_1"
+            pin: "b"
+        - from:
+            nodeId: "function_entry_1"
+            pin: "target"
+          to:
+            nodeId: "float_sub_1"
+            pin: "a"
+        - from:
+            nodeId: "function_entry_1"
+            pin: "cur"
+          to:
+            nodeId: "float_sub_1"
+            pin: "b"
+        - from:
+            nodeId: "float_mul_1"
+            pin: "return"
+          to:
+            nodeId: "float_mul_2"
+            pin: "a"
+        - from:
+            nodeId: "float_sub_1"
+            pin: "return"
+          to:
+            nodeId: "float_clamp_1"
+            pin: "value"
+        - from:
+            nodeId: "float_mul_2"
+            pin: "return"
+          to:
+            nodeId: "float_clamp_1"
+            pin: "min"
+        - from:
+            nodeId: "float_mul_1"
+            pin: "return"
+          to:
+            nodeId: "float_clamp_1"
+            pin: "max"
+        - from:
+            nodeId: "function_entry_1"
+            pin: "cur"
+          to:
+            nodeId: "float_add_1"
+            pin: "a"
+        - from:
+            nodeId: "float_clamp_1"
+            pin: "return"
+          to:
+            nodeId: "float_add_1"
+            pin: "b"
+        - from:
+            nodeId: "float_add_1"
+            pin: "return"
+          to:
+            nodeId: "function_return_1"
+            pin: "out"

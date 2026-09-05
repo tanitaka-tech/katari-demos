@@ -1,0 +1,13 @@
+schema_version: 2
+kind: "screen-dir"
+id: "screen_topdown_field"
+display_name: "森のはずれ"
+memo: "矢印 / WASD で歩き、スペースで跳ぶ。低い柵は跳べば越えられる。木の裏に回れる。"
+pos:
+  x: 40
+  y: 200
+children:
+  -
+    name: "森のはずれ.screen"
+    id: "screen_topdown_field"
+    ref: "file"

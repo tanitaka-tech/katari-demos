@@ -1,0 +1,2513 @@
+screen_component:
+  screen_space: true
+  resolution_width: 1280
+  resolution_height: 720
+  ref_resolution_width: 1280
+  ref_resolution_height: 720
+  scale_mode: "blend"
+  scale_blend: 0.5
+  priority: 0
+objects:
+  - id: "floor"
+    name: "床と壁"
+    type: "tilemap"
+    x: 0
+    y: 0
+    origin_x: 0
+    origin_y: 0
+    width: 1280
+    height: 704
+    tile_width: 32
+    tile_height: 32
+    columns: 40
+    rows: 22
+    tiles:
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 1
+      - 1
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 1
+      - 1
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 1
+      - 1
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 1
+      - 1
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 1
+      - 1
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 1
+      - 1
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 1
+      - 1
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 1
+      - 1
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 1
+      - 1
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 1
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 1
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 2
+      - 2
+      - 2
+      - 2
+      - 2
+      - 2
+      - 2
+      - 2
+      - 2
+      - 2
+      - 2
+      - 2
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 1
+      - 1
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 2
+      - 2
+      - 2
+      - 2
+      - 2
+      - 2
+      - 2
+      - 2
+      - 2
+      - 2
+      - 2
+      - 2
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 1
+      - 1
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 2
+      - 2
+      - 2
+      - 2
+      - 2
+      - 2
+      - 2
+      - 2
+      - 2
+      - 2
+      - 2
+      - 2
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 1
+      - 1
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 2
+      - 2
+      - 2
+      - 2
+      - 2
+      - 2
+      - 2
+      - 2
+      - 2
+      - 2
+      - 2
+      - 2
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 1
+      - 1
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 2
+      - 2
+      - 2
+      - 2
+      - 2
+      - 2
+      - 2
+      - 2
+      - 2
+      - 2
+      - 2
+      - 2
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 1
+      - 1
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 2
+      - 2
+      - 2
+      - 2
+      - 2
+      - 2
+      - 2
+      - 2
+      - 2
+      - 2
+      - 2
+      - 2
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 1
+      - 1
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 2
+      - 2
+      - 2
+      - 2
+      - 2
+      - 2
+      - 2
+      - 2
+      - 2
+      - 2
+      - 2
+      - 2
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 1
+      - 1
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 2
+      - 2
+      - 2
+      - 2
+      - 2
+      - 2
+      - 2
+      - 2
+      - 2
+      - 2
+      - 2
+      - 2
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 1
+      - 1
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+    tile_textures: []
+    tile_colors:
+      - "#4a3b2f"
+      - "#241d1a"
+      - "#6b2f2a"
+    solid_tiles:
+      - 1
+  - id: "door_east"
+    name: "扉 → 廊下"
+    type: "rectangle"
+    x: 1248
+    y: 320
+    origin_x: 0
+    origin_y: 0
+    width: 32
+    height: 64
+    fill: "#1a1410"
+    alpha: 0.6
+    collider:
+      layer: "door"
+      is_trigger: true
+  - id: "exit_door"
+    name: "大扉"
+    type: "rectangle"
+    x: 576
+    y: 640
+    origin_x: 0
+    origin_y: 0
+    width: 128
+    height: 32
+    fill: "#6b4a2b"
+    corner_radius: 4
+    z_index: 672
+    collider:
+      layer: "solid"
+  - id: "exit_door_zone"
+    name: "大扉（調べる）"
+    type: "rectangle"
+    x: 566
+    y: 630
+    origin_x: 0
+    origin_y: 0
+    width: 148
+    height: 52
+    fill: "#ffffff"
+    visible: false
+    collider:
+      layer: "interact"
+      is_trigger: true
+  - id: "table"
+    name: "テーブル"
+    type: "rectangle"
+    x: 576
+    y: 192
+    origin_x: 0
+    origin_y: 0
+    width: 128
+    height: 64
+    fill: "#8a6a3a"
+    corner_radius: 4
+    z_index: 256
+    collider:
+      layer: "solid"
+  - id: "table_zone"
+    name: "テーブル（調べる）"
+    type: "rectangle"
+    x: 566
+    y: 182
+    origin_x: 0
+    origin_y: 0
+    width: 148
+    height: 84
+    fill: "#ffffff"
+    visible: false
+    collider:
+      layer: "interact"
+      is_trigger: true
+  - id: "player"
+    name: "プレイヤー"
+    type: "image"
+    x: "$px"
+    y: "$py"
+    origin_x: 0
+    origin_y: 0
+    width: 24
+    height: 28
+    fallback_color: "#f2d3a7"
+    visible: "$player_visible"
+    z_index: "=$py + 28"
+  - id: "oni"
+    name: "追ってくるもの"
+    type: "image"
+    x: "$oni_x"
+    y: "$oni_y"
+    origin_x: 0
+    origin_y: 0
+    width: 28
+    height: 36
+    fallback_color: "#3457d5"
+    visible: "$oni_visible"
+    z_index: "=$oni_y + 36"
+  - id: "hint"
+    name: "操作の説明"
+    type: "text"
+    x: 16
+    y: 8
+    origin_x: 0
+    origin_y: 0
+    width: 700
+    height: 24
+    text: "玄関ホール　WASD: 歩く　Space: 調べる / 閉じる"
+    font_size: 16
+    color: "#cfc8b8"
+    text_align: "left"
+    z_index: 9000
+  - id: "msg_box"
+    name: "メッセージ窓"
+    type: "rectangle"
+    x: 40
+    y: 570
+    origin_x: 0
+    origin_y: 0
+    width: 1200
+    height: 118
+    fill: "#0b0a10"
+    alpha: 0.88
+    corner_radius: 8
+    stroke: "#d8d3c4"
+    stroke_width: 2
+    visible: "$msg_open"
+    z_index: 10000
+  - id: "msg_speaker"
+    name: "話者"
+    type: "text"
+    x: 64
+    y: 578
+    origin_x: 0
+    origin_y: 0
+    width: 400
+    height: 28
+    text: "$msg_speaker"
+    font_size: 20
+    color: "#e8c39e"
+    text_align: "left"
+    visible: "$msg_open"
+    z_index: 10001
+  - id: "msg_text"
+    name: "本文"
+    type: "text"
+    x: 64
+    y: 610
+    origin_x: 0
+    origin_y: 0
+    width: 1152
+    height: 70
+    text: "$msg"
+    font_size: 24
+    color: "#f4f1ea"
+    text_align: "left"
+    visible: "$msg_open"
+    z_index: 10001
+variables:
+  - kind: "input"
+    id: "px"
+    name: "$px"
+    value_type: "Float"
+    initial_value: "612"
+  - kind: "input"
+    id: "py"
+    name: "$py"
+    value_type: "Float"
+    initial_value: "512"
+requests: []
+script_graph:
+  nodes:
+    - id: "event_begin_play_1"
+      type: "event_begin_play"
+      next: "subscribe_vector2_1"
+    - id: "get_input_action_vector2_1"
+      type: "get_input_action_vector2"
+      properties:
+        actionMap: "map_gameplay"
+        action: "act_move"
+    - id: "lambda_1"
+      type: "lambda"
+      properties:
+        arg_count: 1
+        arg_types: "[\"Vector2\"]"
+      next: "set_variable_1"
+    - id: "set_variable_1"
+      type: "set_variable"
+      properties:
+        variable: "move"
+    - id: "subscribe_vector2_1"
+      type: "subscribe_vector2"
+      next: "subscribe_bool_1"
+    - id: "get_input_action_bool_1"
+      type: "get_input_action_bool"
+      properties:
+        actionMap: "map_gameplay"
+        action: "act_jump"
+    - id: "lambda_2"
+      type: "lambda"
+      properties:
+        arg_count: 1
+        arg_types: "[\"Bool\"]"
+      next: "set_variable_2"
+    - id: "set_variable_2"
+      type: "set_variable"
+      properties:
+        variable: "act"
+    - id: "subscribe_bool_1"
+      type: "subscribe_bool"
+    - id: "event_tick_1"
+      type: "event_tick"
+      next: "set_variable_3"
+    - id: "sequence_1"
+      type: "sequence"
+      properties:
+        then_count: 3
+      next:
+        then_0: "branch_1"
+        then_1: "branch_9"
+    - id: "set_variable_3"
+      type: "set_variable"
+      properties:
+        variable: "pressed"
+        value: "=$act && !$press_prev"
+      next: "set_variable_4"
+    - id: "set_variable_4"
+      type: "set_variable"
+      properties:
+        variable: "press_prev"
+        value: "$act"
+      next: "set_variable_5"
+    - id: "set_variable_5"
+      type: "set_variable"
+      properties:
+        variable: "msg_open"
+        value: "$__line_open"
+      next: "set_variable_6"
+    - id: "set_variable_6"
+      type: "set_variable"
+      properties:
+        variable: "msg"
+        value: "$__line_message"
+      next: "set_variable_7"
+    - id: "set_variable_7"
+      type: "set_variable"
+      properties:
+        variable: "msg_speaker"
+        value: "$__line_speaker"
+      next: "set_variable_8"
+    - id: "set_variable_8"
+      type: "set_variable"
+      properties:
+        variable: "oni_here"
+        value: "=$oni_active && $oni_room == \"玄関ホール\""
+      next: "set_variable_9"
+    - id: "set_variable_9"
+      type: "set_variable"
+      properties:
+        variable: "oni_visible"
+        value: "=$oni_here && $oni_wait <= 0"
+      next: "set_variable_10"
+    - id: "set_variable_10"
+      type: "set_variable"
+      properties:
+        variable: "player_visible"
+        value: "=!$hidden"
+      next: "sequence_1"
+    - id: "branch_1"
+      type: "branch"
+      properties:
+        condition: "$msg_open"
+      next:
+        true: "branch_2"
+        false: "branch_3"
+    - id: "branch_2"
+      type: "branch"
+      properties:
+        condition: "$pressed"
+      next:
+        true: "advance_line_1"
+    - id: "advance_line_1"
+      type: "advance_line"
+      properties:
+        choice: 0
+    - id: "branch_3"
+      type: "branch"
+      properties:
+        condition: "$hidden"
+      next:
+        true: "branch_4"
+        false: "set_variable_12"
+    - id: "branch_4"
+      type: "branch"
+      properties:
+        condition: "$pressed"
+      next:
+        true: "set_variable_11"
+    - id: "set_variable_11"
+      type: "set_variable"
+      properties:
+        variable: "hidden"
+        value: false
+    - id: "branch_5"
+      type: "branch"
+      properties:
+        condition: "$pressed"
+      next:
+        true: "set_variable_16"
+    - id: "get_variable_vector2_1"
+      type: "get_variable_vector2"
+      properties:
+        variable: "move"
+    - id: "break_vector2_1"
+      type: "break_vector2"
+    - id: "get_colliders_1"
+      type: "get_colliders"
+      properties:
+        layer: "solid"
+    - id: "get_variable_float_1"
+      type: "get_variable_float"
+      properties:
+        variable: "px"
+    - id: "get_variable_float_2"
+      type: "get_variable_float"
+      properties:
+        variable: "py"
+    - id: "float_mul_1"
+      type: "float_mul"
+      properties:
+        b: 170
+    - id: "float_mul_2"
+      type: "float_mul"
+    - id: "float_mul_3"
+      type: "float_mul"
+      properties:
+        b: 170
+    - id: "float_mul_4"
+      type: "float_mul"
+    - id: "move_and_collide_1"
+      type: "move_and_collide"
+      properties:
+        width: 24
+        height: 28
+    - id: "break_vector2_2"
+      type: "break_vector2"
+    - id: "get_variable_vector2_2"
+      type: "get_variable_vector2"
+      properties:
+        variable: "move"
+    - id: "vector2_length_1"
+      type: "vector2_length"
+    - id: "float_gt_1"
+      type: "float_gt"
+      properties:
+        b: 0.01
+    - id: "set_variable_12"
+      type: "set_variable"
+      properties:
+        variable: "px"
+      next: "set_variable_13"
+    - id: "set_variable_13"
+      type: "set_variable"
+      properties:
+        variable: "py"
+      next: "set_variable_14"
+    - id: "get_variable_float_3"
+      type: "get_variable_float"
+      properties:
+        variable: "face_x"
+    - id: "ternary_1"
+      type: "ternary"
+    - id: "set_variable_14"
+      type: "set_variable"
+      properties:
+        variable: "face_x"
+      next: "set_variable_15"
+    - id: "get_variable_float_4"
+      type: "get_variable_float"
+      properties:
+        variable: "face_y"
+    - id: "ternary_2"
+      type: "ternary"
+    - id: "set_variable_15"
+      type: "set_variable"
+      properties:
+        variable: "face_y"
+      next: "branch_5"
+    - id: "get_colliders_2"
+      type: "get_colliders"
+      properties:
+        layer: "interact"
+    - id: "overlap_ids_1"
+      type: "overlap_ids"
+      properties:
+        x: "=$px + 12 + $face_x * 30 - 8"
+        y: "=$py + 14 + $face_y * 30 - 8"
+        width: 16
+        height: 16
+    - id: "array_is_empty_1"
+      type: "array_is_empty"
+    - id: "not_op_1"
+      type: "not_op"
+    - id: "array_first_1"
+      type: "array_first"
+    - id: "ternary_3"
+      type: "ternary"
+      properties:
+        false: ""
+    - id: "set_variable_16"
+      type: "set_variable"
+      properties:
+        variable: "probe"
+      next: "branch_6"
+    - id: "branch_6"
+      type: "branch"
+      properties:
+        condition: "=$probe == \"exit_door_zone\""
+      next:
+        true: "branch_7"
+        false: "branch_8"
+    - id: "branch_7"
+      type: "branch"
+      properties:
+        condition: "$has_key"
+      next:
+        true: "call_custom_event_1"
+        false: "show_message_1"
+    - id: "call_custom_event_1"
+      type: "call_custom_event"
+      properties:
+        event_name: "escape"
+    - id: "show_message_1"
+      type: "show_message"
+      properties:
+        speaker: ""
+        message: "扉には鍵がかかっている。"
+    - id: "custom_event_1"
+      type: "custom_event"
+      properties:
+        event_name: "escape"
+        parameters: "[]"
+      next: "open_screen_call_1"
+    - id: "open_screen_call_1"
+      type: "open_screen_call"
+      properties:
+        screen: "scr_mansion_clear"
+        transition: "fade"
+        transition_color: "#ffffff"
+        transition_duration: 1
+    - id: "branch_8"
+      type: "branch"
+      properties:
+        condition: "=$probe == \"table_zone\""
+      next:
+        true: "show_message_2"
+    - id: "show_message_2"
+      type: "show_message"
+      properties:
+        speaker: ""
+        message: "埃をかぶったテーブルだ。誰も居ない。"
+    - id: "branch_9"
+      type: "branch"
+      properties:
+        condition: "=$oni_here && !$msg_open"
+      next:
+        true: "branch_10"
+    - id: "branch_10"
+      type: "branch"
+      properties:
+        condition: "=$oni_wait > 0"
+      next:
+        true: "set_variable_17"
+        false: "branch_11"
+    - id: "get_variable_float_5"
+      type: "get_variable_float"
+      properties:
+        variable: "oni_wait"
+    - id: "float_sub_1"
+      type: "float_sub"
+    - id: "set_variable_17"
+      type: "set_variable"
+      properties:
+        variable: "oni_wait"
+    - id: "branch_11"
+      type: "branch"
+      properties:
+        condition: "$hidden"
+      next:
+        true: "set_variable_18"
+        false: "set_variable_21"
+    - id: "branch_12"
+      type: "branch"
+      properties:
+        condition: "=$oni_patience <= 0"
+      next:
+        true: "set_variable_19"
+    - id: "get_variable_float_6"
+      type: "get_variable_float"
+      properties:
+        variable: "oni_patience"
+    - id: "float_sub_2"
+      type: "float_sub"
+    - id: "set_variable_18"
+      type: "set_variable"
+      properties:
+        variable: "oni_patience"
+      next: "branch_12"
+    - id: "set_variable_19"
+      type: "set_variable"
+      properties:
+        variable: "oni_active"
+        value: false
+      next: "set_variable_20"
+    - id: "set_variable_20"
+      type: "set_variable"
+      properties:
+        variable: "oni_room"
+        value: ""
+      next: "show_message_3"
+    - id: "show_message_3"
+      type: "show_message"
+      properties:
+        speaker: ""
+        message: "足音が遠ざかっていった……。"
+    - id: "make_vector2_1"
+      type: "make_vector2"
+      properties:
+        x: "=$oni_x + 14"
+        y: "=$oni_y + 18"
+    - id: "make_vector2_2"
+      type: "make_vector2"
+      properties:
+        x: "=$px + 12"
+        y: "=$py + 14"
+    - id: "get_colliders_3"
+      type: "get_colliders"
+      properties:
+        layer: "solid"
+    - id: "get_path_step_1"
+      type: "get_path_step"
+      properties:
+        object_id: "floor"
+        avoid_tags: ""
+        diagonal: true
+    - id: "break_vector2_3"
+      type: "break_vector2"
+    - id: "vector2_distance_1"
+      type: "vector2_distance"
+    - id: "float_lt_1"
+      type: "float_lt"
+      properties:
+        b: 48
+    - id: "float_sub_3"
+      type: "float_sub"
+      properties:
+        b: 14
+    - id: "get_variable_float_7"
+      type: "get_variable_float"
+      properties:
+        variable: "oni_x"
+    - id: "ternary_4"
+      type: "ternary"
+    - id: "ternary_5"
+      type: "ternary"
+      properties:
+        true: "=$px + -2"
+    - id: "float_sub_4"
+      type: "float_sub"
+      properties:
+        b: 18
+    - id: "get_variable_float_8"
+      type: "get_variable_float"
+      properties:
+        variable: "oni_y"
+    - id: "ternary_6"
+      type: "ternary"
+    - id: "ternary_7"
+      type: "ternary"
+      properties:
+        true: "=$py + -4"
+    - id: "get_variable_float_9"
+      type: "get_variable_float"
+      properties:
+        variable: "oni_x"
+    - id: "function_call_1"
+      type: "function_call"
+      properties:
+        function_id: "fn_step_toward"
+        speed: 125
+    - id: "get_variable_float_10"
+      type: "get_variable_float"
+      properties:
+        variable: "oni_y"
+    - id: "function_call_2"
+      type: "function_call"
+      properties:
+        function_id: "fn_step_toward"
+        speed: 125
+    - id: "float_lt_2"
+      type: "float_lt"
+      properties:
+        b: 22
+    - id: "branch_13"
+      type: "branch"
+      next:
+        true: "call_custom_event_2"
+    - id: "set_variable_21"
+      type: "set_variable"
+      properties:
+        variable: "oni_patience"
+        value: 4
+      next: "set_variable_22"
+    - id: "set_variable_22"
+      type: "set_variable"
+      properties:
+        variable: "oni_x"
+      next: "set_variable_23"
+    - id: "set_variable_23"
+      type: "set_variable"
+      properties:
+        variable: "oni_y"
+      next: "branch_13"
+    - id: "call_custom_event_2"
+      type: "call_custom_event"
+      properties:
+        event_name: "caught"
+    - id: "custom_event_2"
+      type: "custom_event"
+      properties:
+        event_name: "caught"
+        parameters: "[]"
+      next: "open_screen_call_2"
+    - id: "open_screen_call_2"
+      type: "open_screen_call"
+      properties:
+        screen: "scr_mansion_gameover"
+        transition: "fade"
+        transition_color: "#000000"
+        transition_duration: 0.4
+    - id: "get_colliders_4"
+      type: "get_colliders"
+      properties:
+        layer: "door"
+    - id: "get_variable_float_11"
+      type: "get_variable_float"
+      properties:
+        variable: "px"
+    - id: "get_variable_float_12"
+      type: "get_variable_float"
+      properties:
+        variable: "py"
+    - id: "overlap_ids_2"
+      type: "overlap_ids"
+      properties:
+        width: 24
+        height: 28
+    - id: "branch_14"
+      type: "branch"
+      properties:
+        condition: "=!$msg_open && !$hidden"
+      next:
+        true: "set_variable_24"
+    - id: "array_is_empty_2"
+      type: "array_is_empty"
+    - id: "not_op_2"
+      type: "not_op"
+    - id: "array_first_2"
+      type: "array_first"
+    - id: "ternary_8"
+      type: "ternary"
+      properties:
+        false: ""
+    - id: "set_variable_24"
+      type: "set_variable"
+      properties:
+        variable: "door_hit"
+      next: "branch_15"
+    - id: "branch_15"
+      type: "branch"
+      properties:
+        condition: "=$door_hit == \"door_east\""
+      next:
+        true: "call_custom_event_3"
+    - id: "call_custom_event_3"
+      type: "call_custom_event"
+      properties:
+        event_name: "go_door_east"
+    - id: "sequence_2"
+      type: "sequence"
+      properties:
+        then_count: 2
+      next:
+        then_0: "branch_16"
+        then_1: "open_screen_call_3"
+    - id: "custom_event_3"
+      type: "custom_event"
+      properties:
+        event_name: "go_door_east"
+        parameters: "[]"
+      next: "sequence_2"
+    - id: "branch_16"
+      type: "branch"
+      properties:
+        condition: "$oni_here"
+      next:
+        true: "set_variable_25"
+    - id: "set_variable_25"
+      type: "set_variable"
+      properties:
+        variable: "oni_room"
+        value: "廊下"
+      next: "set_variable_26"
+    - id: "set_variable_26"
+      type: "set_variable"
+      properties:
+        variable: "oni_x"
+        value: 34
+      next: "set_variable_27"
+    - id: "set_variable_27"
+      type: "set_variable"
+      properties:
+        variable: "oni_y"
+        value: 320
+      next: "set_variable_28"
+    - id: "set_variable_28"
+      type: "set_variable"
+      properties:
+        variable: "oni_wait"
+        value: 1.5
+    - id: "open_screen_call_3"
+      type: "open_screen_call"
+      properties:
+        screen: "scr_mansion_corridor"
+        inputs: "px,py"
+        in_px: 64
+        in_py: 322
+        transition: "fade"
+        transition_color: "#000000"
+        transition_duration: 0.6
+  layout:
+    - id: "get_input_action_vector2_1"
+      x: 0
+      y: 130
+    - id: "lambda_1"
+      x: 0
+      y: 260
+    - id: "set_variable_1"
+      x: 260
+      y: 0
+    - id: "subscribe_vector2_1"
+      x: 260
+      y: 130
+    - id: "get_input_action_bool_1"
+      x: 0
+      y: 390
+    - id: "lambda_2"
+      x: 0
+      y: 520
+    - id: "set_variable_2"
+      x: 260
+      y: 260
+    - id: "subscribe_bool_1"
+      x: 520
+      y: 0
+    - id: "event_tick_1"
+      x: 0
+      y: 650
+    - id: "sequence_1"
+      x: 2340
+      y: 0
+    - id: "set_variable_3"
+      x: 260
+      y: 390
+    - id: "set_variable_4"
+      x: 520
+      y: 130
+    - id: "set_variable_5"
+      x: 780
+      y: 0
+    - id: "set_variable_6"
+      x: 1040
+      y: 0
+    - id: "set_variable_7"
+      x: 1300
+      y: 0
+    - id: "set_variable_8"
+      x: 1560
+      y: 0
+    - id: "set_variable_9"
+      x: 1820
+      y: 0
+    - id: "set_variable_10"
+      x: 2080
+      y: 0
+    - id: "branch_1"
+      x: 2600
+      y: 0
+    - id: "branch_2"
+      x: 2860
+      y: 0
+    - id: "advance_line_1"
+      x: 3120
+      y: 0
+    - id: "branch_3"
+      x: 2860
+      y: 130
+    - id: "branch_4"
+      x: 3120
+      y: 130
+    - id: "set_variable_11"
+      x: 3380
+      y: 0
+    - id: "branch_5"
+      x: 4160
+      y: 0
+    - id: "get_variable_vector2_1"
+      x: 0
+      y: 780
+    - id: "break_vector2_1"
+      x: 260
+      y: 520
+    - id: "get_colliders_1"
+      x: 0
+      y: 910
+    - id: "get_variable_float_1"
+      x: 0
+      y: 1040
+    - id: "get_variable_float_2"
+      x: 0
+      y: 1170
+    - id: "float_mul_1"
+      x: 520
+      y: 260
+    - id: "float_mul_2"
+      x: 780
+      y: 130
+    - id: "float_mul_3"
+      x: 520
+      y: 390
+    - id: "float_mul_4"
+      x: 780
+      y: 260
+    - id: "move_and_collide_1"
+      x: 1040
+      y: 130
+    - id: "break_vector2_2"
+      x: 1300
+      y: 130
+    - id: "get_variable_vector2_2"
+      x: 0
+      y: 1300
+    - id: "vector2_length_1"
+      x: 260
+      y: 650
+    - id: "float_gt_1"
+      x: 520
+      y: 520
+    - id: "set_variable_12"
+      x: 3120
+      y: 260
+    - id: "set_variable_13"
+      x: 3380
+      y: 130
+    - id: "get_variable_float_3"
+      x: 0
+      y: 1430
+    - id: "ternary_1"
+      x: 780
+      y: 390
+    - id: "set_variable_14"
+      x: 3640
+      y: 0
+    - id: "get_variable_float_4"
+      x: 0
+      y: 1560
+    - id: "ternary_2"
+      x: 780
+      y: 520
+    - id: "set_variable_15"
+      x: 3900
+      y: 0
+    - id: "get_colliders_2"
+      x: 0
+      y: 1690
+    - id: "overlap_ids_1"
+      x: 260
+      y: 780
+    - id: "array_is_empty_1"
+      x: 520
+      y: 650
+    - id: "not_op_1"
+      x: 780
+      y: 650
+    - id: "array_first_1"
+      x: 520
+      y: 780
+    - id: "ternary_3"
+      x: 1040
+      y: 260
+    - id: "set_variable_16"
+      x: 4420
+      y: 0
+    - id: "branch_6"
+      x: 4680
+      y: 0
+    - id: "branch_7"
+      x: 4940
+      y: 0
+    - id: "call_custom_event_1"
+      x: 5200
+      y: 0
+    - id: "show_message_1"
+      x: 5200
+      y: 130
+    - id: "custom_event_1"
+      x: 0
+      y: 1820
+    - id: "open_screen_call_1"
+      x: 260
+      y: 910
+    - id: "branch_8"
+      x: 4940
+      y: 130
+    - id: "show_message_2"
+      x: 5200
+      y: 260
+    - id: "branch_9"
+      x: 2600
+      y: 130
+    - id: "branch_10"
+      x: 2860
+      y: 260
+    - id: "get_variable_float_5"
+      x: 0
+      y: 1950
+    - id: "float_sub_1"
+      x: 260
+      y: 1040
+    - id: "set_variable_17"
+      x: 3120
+      y: 390
+    - id: "branch_11"
+      x: 3120
+      y: 520
+    - id: "branch_12"
+      x: 3640
+      y: 130
+    - id: "get_variable_float_6"
+      x: 0
+      y: 2080
+    - id: "float_sub_2"
+      x: 260
+      y: 1170
+    - id: "set_variable_18"
+      x: 3380
+      y: 260
+    - id: "set_variable_19"
+      x: 3900
+      y: 130
+    - id: "set_variable_20"
+      x: 4160
+      y: 130
+    - id: "show_message_3"
+      x: 4420
+      y: 130
+    - id: "make_vector2_1"
+      x: 0
+      y: 2210
+    - id: "make_vector2_2"
+      x: 0
+      y: 2340
+    - id: "get_colliders_3"
+      x: 0
+      y: 2470
+    - id: "get_path_step_1"
+      x: 260
+      y: 1300
+    - id: "break_vector2_3"
+      x: 520
+      y: 910
+    - id: "vector2_distance_1"
+      x: 260
+      y: 1430
+    - id: "float_lt_1"
+      x: 520
+      y: 1040
+    - id: "float_sub_3"
+      x: 780
+      y: 780
+    - id: "get_variable_float_7"
+      x: 0
+      y: 2600
+    - id: "ternary_4"
+      x: 1040
+      y: 390
+    - id: "ternary_5"
+      x: 1300
+      y: 260
+    - id: "float_sub_4"
+      x: 780
+      y: 910
+    - id: "get_variable_float_8"
+      x: 0
+      y: 2730
+    - id: "ternary_6"
+      x: 1040
+      y: 520
+    - id: "ternary_7"
+      x: 1300
+      y: 390
+    - id: "get_variable_float_9"
+      x: 0
+      y: 2860
+    - id: "function_call_1"
+      x: 1560
+      y: 130
+    - id: "get_variable_float_10"
+      x: 0
+      y: 2990
+    - id: "function_call_2"
+      x: 1560
+      y: 260
+    - id: "float_lt_2"
+      x: 520
+      y: 1170
+    - id: "branch_13"
+      x: 4160
+      y: 260
+    - id: "set_variable_21"
+      x: 3380
+      y: 390
+    - id: "set_variable_22"
+      x: 3640
+      y: 260
+    - id: "set_variable_23"
+      x: 3900
+      y: 260
+    - id: "call_custom_event_2"
+      x: 4420
+      y: 260
+    - id: "custom_event_2"
+      x: 0
+      y: 3120
+    - id: "open_screen_call_2"
+      x: 260
+      y: 1560
+    - id: "get_colliders_4"
+      x: 0
+      y: 3250
+    - id: "get_variable_float_11"
+      x: 0
+      y: 3380
+    - id: "get_variable_float_12"
+      x: 0
+      y: 3510
+    - id: "overlap_ids_2"
+      x: 260
+      y: 1690
+    - id: "branch_14"
+      x: 2600
+      y: 260
+    - id: "array_is_empty_2"
+      x: 520
+      y: 1300
+    - id: "not_op_2"
+      x: 780
+      y: 1040
+    - id: "array_first_2"
+      x: 520
+      y: 1430
+    - id: "ternary_8"
+      x: 1040
+      y: 650
+    - id: "set_variable_24"
+      x: 2860
+      y: 390
+    - id: "branch_15"
+      x: 3120
+      y: 650
+    - id: "call_custom_event_3"
+      x: 3380
+      y: 520
+    - id: "sequence_2"
+      x: 260
+      y: 1820
+    - id: "custom_event_3"
+      x: 0
+      y: 3640
+    - id: "branch_16"
+      x: 520
+      y: 1560
+    - id: "set_variable_25"
+      x: 780
+      y: 1170
+    - id: "set_variable_26"
+      x: 1040
+      y: 780
+    - id: "set_variable_27"
+      x: 1300
+      y: 520
+    - id: "set_variable_28"
+      x: 1560
+      y: 390
+    - id: "open_screen_call_3"
+      x: 520
+      y: 1690
+  edges:
+    - from:
+        nodeId: "lambda_1"
+        pin: "value_0"
+      to:
+        nodeId: "set_variable_1"
+        pin: "value"
+    - from:
+        nodeId: "get_input_action_vector2_1"
+        pin: "value"
+      to:
+        nodeId: "subscribe_vector2_1"
+        pin: "source"
+    - from:
+        nodeId: "lambda_1"
+        pin: "function"
+      to:
+        nodeId: "subscribe_vector2_1"
+        pin: "on_next"
+    - from:
+        nodeId: "lambda_2"
+        pin: "value_0"
+      to:
+        nodeId: "set_variable_2"
+        pin: "value"
+    - from:
+        nodeId: "get_input_action_bool_1"
+        pin: "value"
+      to:
+        nodeId: "subscribe_bool_1"
+        pin: "source"
+    - from:
+        nodeId: "lambda_2"
+        pin: "function"
+      to:
+        nodeId: "subscribe_bool_1"
+        pin: "on_next"
+    - from:
+        nodeId: "get_variable_vector2_1"
+        pin: "value"
+      to:
+        nodeId: "break_vector2_1"
+        pin: "v"
+    - from:
+        nodeId: "break_vector2_1"
+        pin: "x"
+      to:
+        nodeId: "float_mul_1"
+        pin: "a"
+    - from:
+        nodeId: "float_mul_1"
+        pin: "return"
+      to:
+        nodeId: "float_mul_2"
+        pin: "a"
+    - from:
+        nodeId: "event_tick_1"
+        pin: "delta_seconds"
+      to:
+        nodeId: "float_mul_2"
+        pin: "b"
+    - from:
+        nodeId: "break_vector2_1"
+        pin: "y"
+      to:
+        nodeId: "float_mul_3"
+        pin: "a"
+    - from:
+        nodeId: "float_mul_3"
+        pin: "return"
+      to:
+        nodeId: "float_mul_4"
+        pin: "a"
+    - from:
+        nodeId: "event_tick_1"
+        pin: "delta_seconds"
+      to:
+        nodeId: "float_mul_4"
+        pin: "b"
+    - from:
+        nodeId: "get_colliders_1"
+        pin: "return"
+      to:
+        nodeId: "move_and_collide_1"
+        pin: "colliders"
+    - from:
+        nodeId: "get_variable_float_1"
+        pin: "value"
+      to:
+        nodeId: "move_and_collide_1"
+        pin: "x"
+    - from:
+        nodeId: "get_variable_float_2"
+        pin: "value"
+      to:
+        nodeId: "move_and_collide_1"
+        pin: "y"
+    - from:
+        nodeId: "float_mul_2"
+        pin: "return"
+      to:
+        nodeId: "move_and_collide_1"
+        pin: "delta_x"
+    - from:
+        nodeId: "float_mul_4"
+        pin: "return"
+      to:
+        nodeId: "move_and_collide_1"
+        pin: "delta_y"
+    - from:
+        nodeId: "move_and_collide_1"
+        pin: "position"
+      to:
+        nodeId: "break_vector2_2"
+        pin: "v"
+    - from:
+        nodeId: "get_variable_vector2_2"
+        pin: "value"
+      to:
+        nodeId: "vector2_length_1"
+        pin: "a"
+    - from:
+        nodeId: "vector2_length_1"
+        pin: "return"
+      to:
+        nodeId: "float_gt_1"
+        pin: "a"
+    - from:
+        nodeId: "break_vector2_2"
+        pin: "x"
+      to:
+        nodeId: "set_variable_12"
+        pin: "value"
+    - from:
+        nodeId: "break_vector2_2"
+        pin: "y"
+      to:
+        nodeId: "set_variable_13"
+        pin: "value"
+    - from:
+        nodeId: "float_gt_1"
+        pin: "return"
+      to:
+        nodeId: "ternary_1"
+        pin: "index"
+    - from:
+        nodeId: "break_vector2_1"
+        pin: "x"
+      to:
+        nodeId: "ternary_1"
+        pin: "true"
+    - from:
+        nodeId: "get_variable_float_3"
+        pin: "value"
+      to:
+        nodeId: "ternary_1"
+        pin: "false"
+    - from:
+        nodeId: "ternary_1"
+        pin: "return"
+      to:
+        nodeId: "set_variable_14"
+        pin: "value"
+    - from:
+        nodeId: "float_gt_1"
+        pin: "return"
+      to:
+        nodeId: "ternary_2"
+        pin: "index"
+    - from:
+        nodeId: "break_vector2_1"
+        pin: "y"
+      to:
+        nodeId: "ternary_2"
+        pin: "true"
+    - from:
+        nodeId: "get_variable_float_4"
+        pin: "value"
+      to:
+        nodeId: "ternary_2"
+        pin: "false"
+    - from:
+        nodeId: "ternary_2"
+        pin: "return"
+      to:
+        nodeId: "set_variable_15"
+        pin: "value"
+    - from:
+        nodeId: "get_colliders_2"
+        pin: "return"
+      to:
+        nodeId: "overlap_ids_1"
+        pin: "colliders"
+    - from:
+        nodeId: "overlap_ids_1"
+        pin: "return"
+      to:
+        nodeId: "array_is_empty_1"
+        pin: "array"
+    - from:
+        nodeId: "array_is_empty_1"
+        pin: "return"
+      to:
+        nodeId: "not_op_1"
+        pin: "a"
+    - from:
+        nodeId: "overlap_ids_1"
+        pin: "return"
+      to:
+        nodeId: "array_first_1"
+        pin: "array"
+    - from:
+        nodeId: "not_op_1"
+        pin: "return"
+      to:
+        nodeId: "ternary_3"
+        pin: "index"
+    - from:
+        nodeId: "array_first_1"
+        pin: "return"
+      to:
+        nodeId: "ternary_3"
+        pin: "true"
+    - from:
+        nodeId: "ternary_3"
+        pin: "return"
+      to:
+        nodeId: "set_variable_16"
+        pin: "value"
+    - from:
+        nodeId: "get_variable_float_5"
+        pin: "value"
+      to:
+        nodeId: "float_sub_1"
+        pin: "a"
+    - from:
+        nodeId: "event_tick_1"
+        pin: "delta_seconds"
+      to:
+        nodeId: "float_sub_1"
+        pin: "b"
+    - from:
+        nodeId: "float_sub_1"
+        pin: "return"
+      to:
+        nodeId: "set_variable_17"
+        pin: "value"
+    - from:
+        nodeId: "get_variable_float_6"
+        pin: "value"
+      to:
+        nodeId: "float_sub_2"
+        pin: "a"
+    - from:
+        nodeId: "event_tick_1"
+        pin: "delta_seconds"
+      to:
+        nodeId: "float_sub_2"
+        pin: "b"
+    - from:
+        nodeId: "float_sub_2"
+        pin: "return"
+      to:
+        nodeId: "set_variable_18"
+        pin: "value"
+    - from:
+        nodeId: "make_vector2_1"
+        pin: "return"
+      to:
+        nodeId: "get_path_step_1"
+        pin: "from"
+    - from:
+        nodeId: "make_vector2_2"
+        pin: "return"
+      to:
+        nodeId: "get_path_step_1"
+        pin: "to"
+    - from:
+        nodeId: "get_colliders_3"
+        pin: "return"
+      to:
+        nodeId: "get_path_step_1"
+        pin: "blocked"
+    - from:
+        nodeId: "get_path_step_1"
+        pin: "step"
+      to:
+        nodeId: "break_vector2_3"
+        pin: "v"
+    - from:
+        nodeId: "make_vector2_1"
+        pin: "return"
+      to:
+        nodeId: "vector2_distance_1"
+        pin: "a"
+    - from:
+        nodeId: "make_vector2_2"
+        pin: "return"
+      to:
+        nodeId: "vector2_distance_1"
+        pin: "b"
+    - from:
+        nodeId: "vector2_distance_1"
+        pin: "return"
+      to:
+        nodeId: "float_lt_1"
+        pin: "a"
+    - from:
+        nodeId: "break_vector2_3"
+        pin: "x"
+      to:
+        nodeId: "float_sub_3"
+        pin: "a"
+    - from:
+        nodeId: "get_path_step_1"
+        pin: "found"
+      to:
+        nodeId: "ternary_4"
+        pin: "index"
+    - from:
+        nodeId: "float_sub_3"
+        pin: "return"
+      to:
+        nodeId: "ternary_4"
+        pin: "true"
+    - from:
+        nodeId: "get_variable_float_7"
+        pin: "value"
+      to:
+        nodeId: "ternary_4"
+        pin: "false"
+    - from:
+        nodeId: "float_lt_1"
+        pin: "return"
+      to:
+        nodeId: "ternary_5"
+        pin: "index"
+    - from:
+        nodeId: "ternary_4"
+        pin: "return"
+      to:
+        nodeId: "ternary_5"
+        pin: "false"
+    - from:
+        nodeId: "break_vector2_3"
+        pin: "y"
+      to:
+        nodeId: "float_sub_4"
+        pin: "a"
+    - from:
+        nodeId: "get_path_step_1"
+        pin: "found"
+      to:
+        nodeId: "ternary_6"
+        pin: "index"
+    - from:
+        nodeId: "float_sub_4"
+        pin: "return"
+      to:
+        nodeId: "ternary_6"
+        pin: "true"
+    - from:
+        nodeId: "get_variable_float_8"
+        pin: "value"
+      to:
+        nodeId: "ternary_6"
+        pin: "false"
+    - from:
+        nodeId: "float_lt_1"
+        pin: "return"
+      to:
+        nodeId: "ternary_7"
+        pin: "index"
+    - from:
+        nodeId: "ternary_6"
+        pin: "return"
+      to:
+        nodeId: "ternary_7"
+        pin: "false"
+    - from:
+        nodeId: "get_variable_float_9"
+        pin: "value"
+      to:
+        nodeId: "function_call_1"
+        pin: "cur"
+    - from:
+        nodeId: "ternary_5"
+        pin: "return"
+      to:
+        nodeId: "function_call_1"
+        pin: "target"
+    - from:
+        nodeId: "event_tick_1"
+        pin: "delta_seconds"
+      to:
+        nodeId: "function_call_1"
+        pin: "dt"
+    - from:
+        nodeId: "get_variable_float_10"
+        pin: "value"
+      to:
+        nodeId: "function_call_2"
+        pin: "cur"
+    - from:
+        nodeId: "ternary_7"
+        pin: "return"
+      to:
+        nodeId: "function_call_2"
+        pin: "target"
+    - from:
+        nodeId: "event_tick_1"
+        pin: "delta_seconds"
+      to:
+        nodeId: "function_call_2"
+        pin: "dt"
+    - from:
+        nodeId: "vector2_distance_1"
+        pin: "return"
+      to:
+        nodeId: "float_lt_2"
+        pin: "a"
+    - from:
+        nodeId: "float_lt_2"
+        pin: "return"
+      to:
+        nodeId: "branch_13"
+        pin: "condition"
+    - from:
+        nodeId: "function_call_1"
+        pin: "out"
+      to:
+        nodeId: "set_variable_22"
+        pin: "value"
+    - from:
+        nodeId: "function_call_2"
+        pin: "out"
+      to:
+        nodeId: "set_variable_23"
+        pin: "value"
+    - from:
+        nodeId: "get_colliders_4"
+        pin: "return"
+      to:
+        nodeId: "overlap_ids_2"
+        pin: "colliders"
+    - from:
+        nodeId: "get_variable_float_11"
+        pin: "value"
+      to:
+        nodeId: "overlap_ids_2"
+        pin: "x"
+    - from:
+        nodeId: "get_variable_float_12"
+        pin: "value"
+      to:
+        nodeId: "overlap_ids_2"
+        pin: "y"
+    - from:
+        nodeId: "sequence_1"
+        pin: "then_2"
+      to:
+        nodeId: "branch_14"
+        pin: "exec_in"
+    - from:
+        nodeId: "overlap_ids_2"
+        pin: "return"
+      to:
+        nodeId: "array_is_empty_2"
+        pin: "array"
+    - from:
+        nodeId: "array_is_empty_2"
+        pin: "return"
+      to:
+        nodeId: "not_op_2"
+        pin: "a"
+    - from:
+        nodeId: "overlap_ids_2"
+        pin: "return"
+      to:
+        nodeId: "array_first_2"
+        pin: "array"
+    - from:
+        nodeId: "not_op_2"
+        pin: "return"
+      to:
+        nodeId: "ternary_8"
+        pin: "index"
+    - from:
+        nodeId: "array_first_2"
+        pin: "return"
+      to:
+        nodeId: "ternary_8"
+        pin: "true"
+    - from:
+        nodeId: "ternary_8"
+        pin: "return"
+      to:
+        nodeId: "set_variable_24"
+        pin: "value"

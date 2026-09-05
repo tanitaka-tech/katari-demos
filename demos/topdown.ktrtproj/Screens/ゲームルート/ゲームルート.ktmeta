@@ -1,0 +1,10 @@
+schema_version: 2
+kind: "screen"
+id: "screen_topdown_root"
+display_name: "ゲームルート"
+parent_screen_id: null
+memo: "部屋を跨いで使う関数を置く画面。ここの関数は子画面から呼べる（ADR-0281）。"
+pos:
+  x: 40
+  y: 40
+favorite: false

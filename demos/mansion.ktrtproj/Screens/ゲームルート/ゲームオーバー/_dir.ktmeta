@@ -1,0 +1,13 @@
+schema_version: 2
+kind: "screen-dir"
+id: "scr_mansion_gameover"
+display_name: "ゲームオーバー"
+memo: "追ってくるものに触れられたらここ。Space で玄関ホールからやり直す。"
+pos:
+  x: 340
+  y: 400
+children:
+  -
+    name: "ゲームオーバー.screen"
+    id: "scr_mansion_gameover"
+    ref: "file"

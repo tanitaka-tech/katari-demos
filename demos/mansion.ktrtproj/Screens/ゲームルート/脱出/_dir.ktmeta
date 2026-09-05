@@ -1,0 +1,13 @@
+schema_version: 2
+kind: "screen-dir"
+id: "scr_mansion_clear"
+display_name: "脱出"
+memo: "鍵を持って大扉を開けたらここ。"
+pos:
+  x: 640
+  y: 400
+children:
+  -
+    name: "脱出.screen"
+    id: "scr_mansion_clear"
+    ref: "file"

@@ -1,0 +1,13 @@
+schema_version: 2
+kind: "screen-dir"
+id: "scr_mansion_corridor"
+display_name: "廊下"
+memo: "ロッカーに隠れられる。追われたらここへ。"
+pos:
+  x: 340
+  y: 220
+children:
+  -
+    name: "廊下.screen"
+    id: "scr_mansion_corridor"
+    ref: "file"

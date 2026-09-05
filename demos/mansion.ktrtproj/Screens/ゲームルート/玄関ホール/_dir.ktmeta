@@ -1,0 +1,13 @@
+schema_version: 2
+kind: "screen-dir"
+id: "scr_mansion_hall"
+display_name: "玄関ホール"
+memo: "最初の部屋。下の大扉は鍵がかかっている。東の扉で廊下へ。"
+pos:
+  x: 40
+  y: 220
+children:
+  -
+    name: "玄関ホール.screen"
+    id: "scr_mansion_hall"
+    ref: "file"

@@ -1,6 +1,6 @@
 # Katari デモ集
 
-[Katari](https://github.com/tanitaka-tech/Katari) のホーム画面に並ぶデモ 5 本。
+[Katari](https://github.com/tanitaka-tech/Katari) のホーム画面に並ぶデモ 7 本。
 **Katari の拡張**として配っています（[ADR-0289](https://github.com/tanitaka-tech/Katari/blob/main/docs/adr/0289-demos-as-extension.md)）。
 
 ## 入れかた
@@ -12,7 +12,7 @@
 git+https://github.com/tanitaka-tech/katari-demos
 ```
 
-取得したあと**承認**すると、ホームのデモ一覧に 5 本が並びます。
+取得したあと**承認**すると、ホームのデモ一覧に 6 本が並びます。
 
 ## 中身
 

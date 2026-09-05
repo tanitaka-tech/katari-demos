@@ -5,8 +5,8 @@ name:
   ja: "Katari デモ集"
   en: "Katari demos"
 description:
-  ja: "ホーム画面に並ぶデモ 5 本。触って動かして確かめるためのもの"
-  en: "The five demos on the home screen. Made to be opened and played"
+  ja: "ホーム画面に並ぶデモ 7 本。触って動かして確かめるためのもの"
+  en: "The 7 demos on the home screen. Made to be opened and played"
 contributes:
   sample_projects:
     - id: "platformer"
@@ -26,6 +26,40 @@ contributes:
         cover: "media/platformer/hero.jpg"
         screenshots: ["media/platformer/shot-1.jpg", "media/platformer/shot-2.jpg"]
         trailer: "media/platformer/play.mp4"
+    - id: "topdown"
+      name:
+        ja: "見下ろしアクション"
+        en: "Top-down action"
+      description:
+        ja: "木の裏に回り、低い柵を跳んで越える。小川を避けて追ってくる敵つき"
+        en: "Walk behind trees and jump a low fence, with an enemy that paths around the stream"
+      body:
+        ja: "ゼルダ型の見下ろしを 1 面。A / D / W / S で歩き、Space で跳びます。前後は足元の y で毎フレーム入れ替わり（描画順）、低い柵は跳んでいる間だけ越えられます（高さ）。草地の縁はオートタイルで決まり、小川は 2 コマで波打ちます。敵は小川と岩を避けて経路を引き、近づく処理はルート画面の共有関数を呼んでいます。"
+        en: "A single top-down field. Walk with A / D / W / S and jump with Space. Depth flips every frame from the character's foot y, and the low fence is only passable while airborne. Grass edges come from autotiles, the stream animates, and the enemy paths around water and rocks using a shared function that lives on the root screen."
+      path: "demos/topdown.ktrtproj"
+      home: true
+      accent: "#3f7d4f"
+      media:
+        cover: "media/topdown/hero.jpg"
+        screenshots: ["media/topdown/shot-1.jpg", "media/topdown/shot-2.jpg"]
+        trailer: "media/topdown/play.mp4"
+    - id: "mansion"
+      name:
+        ja: "洋館ホラー"
+        en: "Mansion horror"
+      description:
+        ja: "部屋を渡って鍵を探す。追ってくるものから逃げてロッカーに隠れる。画面を跨ぐ変数とメッセージが入っている"
+        en: "Search rooms for a key while something chases you. Cross-screen variables and in-room messages"
+      body:
+        ja: "青鬼型の探索ホラーを 3 部屋ぶん。WASD で歩き、Space で調べます。書斎の机の鍵を取ると追ってくるものが現れ、扉を抜けても少し遅れて同じ扉から入ってきます。廊下のロッカーに隠れればやり過ごせます。鍵の所持や追ってくるものの居場所はルート画面の変数 1 か所に置いてあるだけで、部屋を差し替えても値が続きます。「調べる → 1 行出る」は Show Message で書いています。"
+        en: "A three-room exploration horror. Walk with WASD and examine with Space. Taking the key from the study desk summons something that chases you, and it follows you through doors a beat later. Hide in the corridor locker to shake it. The key and the chaser's whereabouts live in root-screen variables that persist across rooms, and every examine-message is a single Show Message node."
+      path: "demos/mansion.ktrtproj"
+      home: true
+      accent: "#3457d5"
+      media:
+        cover: "media/mansion/hero.jpg"
+        screenshots: ["media/mansion/shot-1.jpg", "media/mansion/shot-2.jpg"]
+        trailer: "media/mansion/play.mp4"
     - id: "training"
       name:
         ja: "育成シミュレーション"

@@ -1,0 +1,15 @@
+schema_version: 2
+kind: "screen-dir"
+id: "scr_mansion_root"
+display_name: "ゲームルート"
+memo: "部屋を跨いで生きる状態（鍵 / 追ってくるもの / 隠れているか）をここに宣言する。子画面の engine にも居て、差し替えても値が続く（ADR-0313）。"
+pos:
+  x: 40
+  y: 40
+children[6]{name,id,ref}:
+  "ゲームルート.screen","scr_mansion_root","file"
+  "玄関ホール","scr_mansion_hall","dir"
+  "廊下","scr_mansion_corridor","dir"
+  "書斎","scr_mansion_study","dir"
+  "ゲームオーバー","scr_mansion_gameover","dir"
+  "脱出","scr_mansion_clear","dir"

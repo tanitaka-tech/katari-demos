@@ -1,0 +1,284 @@
+screen_component:
+  screen_space: true
+  resolution_width: 1280
+  resolution_height: 720
+  ref_resolution_width: 1280
+  ref_resolution_height: 720
+  scale_mode: "blend"
+  scale_blend: 0.5
+  priority: 0
+objects:
+  - id: "bg"
+    name: "背景"
+    type: "rectangle"
+    x: 0
+    y: 0
+    origin_x: 0
+    origin_y: 0
+    width: 1280
+    height: 720
+    fill: "#160b0e"
+  - id: "title"
+    name: "見出し"
+    type: "text"
+    x: 0
+    y: 260
+    origin_x: 0
+    origin_y: 0
+    width: 1280
+    height: 80
+    text: "つかまった……"
+    font_size: 56
+    color: "#d8425f"
+    text_align: "center"
+  - id: "body"
+    name: "本文"
+    type: "text"
+    x: 0
+    y: 360
+    origin_x: 0
+    origin_y: 0
+    width: 1280
+    height: 40
+    text: "Space でもう一度"
+    font_size: 22
+    color: "#d8d3c4"
+    text_align: "center"
+variables: []
+requests: []
+script_graph:
+  nodes:
+    - id: "event_begin_play_1"
+      type: "event_begin_play"
+      next: "subscribe_vector2_1"
+    - id: "get_input_action_vector2_1"
+      type: "get_input_action_vector2"
+      properties:
+        actionMap: "map_gameplay"
+        action: "act_move"
+    - id: "lambda_1"
+      type: "lambda"
+      properties:
+        arg_count: 1
+        arg_types: "[\"Vector2\"]"
+      next: "set_variable_1"
+    - id: "set_variable_1"
+      type: "set_variable"
+      properties:
+        variable: "move"
+    - id: "subscribe_vector2_1"
+      type: "subscribe_vector2"
+      next: "subscribe_bool_1"
+    - id: "get_input_action_bool_1"
+      type: "get_input_action_bool"
+      properties:
+        actionMap: "map_gameplay"
+        action: "act_jump"
+    - id: "lambda_2"
+      type: "lambda"
+      properties:
+        arg_count: 1
+        arg_types: "[\"Bool\"]"
+      next: "set_variable_2"
+    - id: "set_variable_2"
+      type: "set_variable"
+      properties:
+        variable: "act"
+    - id: "subscribe_bool_1"
+      type: "subscribe_bool"
+    - id: "event_tick_1"
+      type: "event_tick"
+      next: "set_variable_3"
+    - id: "branch_1"
+      type: "branch"
+      properties:
+        condition: "$pressed"
+      next:
+        true: "call_custom_event_1"
+    - id: "set_variable_3"
+      type: "set_variable"
+      properties:
+        variable: "pressed"
+        value: "=$act && !$press_prev"
+      next: "set_variable_4"
+    - id: "set_variable_4"
+      type: "set_variable"
+      properties:
+        variable: "press_prev"
+        value: "$act"
+      next: "branch_1"
+    - id: "call_custom_event_1"
+      type: "call_custom_event"
+      properties:
+        event_name: "retry"
+    - id: "custom_event_1"
+      type: "custom_event"
+      properties:
+        event_name: "retry"
+        parameters: "[]"
+      next: "set_variable_5"
+    - id: "set_variable_5"
+      type: "set_variable"
+      properties:
+        variable: "has_key"
+        value: false
+      next: "set_variable_6"
+    - id: "set_variable_6"
+      type: "set_variable"
+      properties:
+        variable: "key_on_desk"
+        value: true
+      next: "set_variable_7"
+    - id: "set_variable_7"
+      type: "set_variable"
+      properties:
+        variable: "oni_active"
+        value: false
+      next: "set_variable_8"
+    - id: "set_variable_8"
+      type: "set_variable"
+      properties:
+        variable: "oni_room"
+        value: ""
+      next: "set_variable_9"
+    - id: "set_variable_9"
+      type: "set_variable"
+      properties:
+        variable: "oni_wait"
+        value: 0
+      next: "set_variable_10"
+    - id: "set_variable_10"
+      type: "set_variable"
+      properties:
+        variable: "hidden"
+        value: false
+      next: "set_variable_11"
+    - id: "set_variable_11"
+      type: "set_variable"
+      properties:
+        variable: "face_x"
+        value: 0
+      next: "set_variable_12"
+    - id: "set_variable_12"
+      type: "set_variable"
+      properties:
+        variable: "face_y"
+        value: 1
+      next: "open_screen_call_1"
+    - id: "open_screen_call_1"
+      type: "open_screen_call"
+      properties:
+        screen: "scr_mansion_hall"
+        inputs: "px,py"
+        in_px: 612
+        in_py: 512
+        transition: "fade"
+        transition_color: "#000000"
+        transition_duration: 0.6
+  layout:
+    - id: "get_input_action_vector2_1"
+      x: 0
+      y: 130
+    - id: "lambda_1"
+      x: 0
+      y: 260
+    - id: "set_variable_1"
+      x: 260
+      y: 0
+    - id: "subscribe_vector2_1"
+      x: 260
+      y: 130
+    - id: "get_input_action_bool_1"
+      x: 0
+      y: 390
+    - id: "lambda_2"
+      x: 0
+      y: 520
+    - id: "set_variable_2"
+      x: 260
+      y: 260
+    - id: "subscribe_bool_1"
+      x: 520
+      y: 0
+    - id: "event_tick_1"
+      x: 0
+      y: 650
+    - id: "branch_1"
+      x: 780
+      y: 0
+    - id: "set_variable_3"
+      x: 260
+      y: 390
+    - id: "set_variable_4"
+      x: 520
+      y: 130
+    - id: "call_custom_event_1"
+      x: 1040
+      y: 0
+    - id: "custom_event_1"
+      x: 0
+      y: 780
+    - id: "set_variable_5"
+      x: 260
+      y: 520
+    - id: "set_variable_6"
+      x: 520
+      y: 260
+    - id: "set_variable_7"
+      x: 780
+      y: 130
+    - id: "set_variable_8"
+      x: 1040
+      y: 130
+    - id: "set_variable_9"
+      x: 1300
+      y: 0
+    - id: "set_variable_10"
+      x: 1560
+      y: 0
+    - id: "set_variable_11"
+      x: 1820
+      y: 0
+    - id: "set_variable_12"
+      x: 2080
+      y: 0
+    - id: "open_screen_call_1"
+      x: 2340
+      y: 0
+  edges:
+    - from:
+        nodeId: "lambda_1"
+        pin: "value_0"
+      to:
+        nodeId: "set_variable_1"
+        pin: "value"
+    - from:
+        nodeId: "get_input_action_vector2_1"
+        pin: "value"
+      to:
+        nodeId: "subscribe_vector2_1"
+        pin: "source"
+    - from:
+        nodeId: "lambda_1"
+        pin: "function"
+      to:
+        nodeId: "subscribe_vector2_1"
+        pin: "on_next"
+    - from:
+        nodeId: "lambda_2"
+        pin: "value_0"
+      to:
+        nodeId: "set_variable_2"
+        pin: "value"
+    - from:
+        nodeId: "get_input_action_bool_1"
+        pin: "value"
+      to:
+        nodeId: "subscribe_bool_1"
+        pin: "source"
+    - from:
+        nodeId: "lambda_2"
+        pin: "function"
+      to:
+        nodeId: "subscribe_bool_1"
+        pin: "on_next"

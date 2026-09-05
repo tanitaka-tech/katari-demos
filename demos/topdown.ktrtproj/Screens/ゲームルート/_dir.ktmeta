@@ -1,0 +1,11 @@
+schema_version: 2
+kind: "screen-dir"
+id: "screen_topdown_root"
+display_name: "ゲームルート"
+memo: "部屋を跨いで使う関数を置く画面。ここの関数は子画面から呼べる（ADR-0281）。"
+pos:
+  x: 40
+  y: 40
+children[2]{name,id,ref}:
+  "ゲームルート.screen","screen_topdown_root","file"
+  "森のはずれ","screen_topdown_field","dir"

@@ -1,0 +1,10 @@
+schema_version: 2
+kind: "screen"
+id: "scr_mansion_study"
+display_name: "書斎"
+parent_screen_id: "scr_mansion_root"
+memo: "机の上に鍵。取ると追ってくるものが現れる。"
+pos:
+  x: 640
+  y: 220
+favorite: false

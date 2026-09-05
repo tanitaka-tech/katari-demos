@@ -1,0 +1,10 @@
+schema_version: 2
+kind: "screen"
+id: "scr_mansion_root"
+display_name: "ゲームルート"
+parent_screen_id: null
+memo: "部屋を跨いで生きる状態（鍵 / 追ってくるもの / 隠れているか）をここに宣言する。子画面の engine にも居て、差し替えても値が続く（ADR-0313）。"
+pos:
+  x: 40
+  y: 40
+favorite: false

@@ -1,0 +1,4 @@
+schema_version: 1
+name: "洋館からの脱出 デモ"
+data:
+  format: "split"

@@ -1,0 +1,1973 @@
+screen_component:
+  screen_space: true
+  resolution_width: 1280
+  resolution_height: 720
+  ref_resolution_width: 1280
+  ref_resolution_height: 720
+  scale_mode: "blend"
+  scale_blend: 0.5
+  priority: 0
+objects:
+  - id: "stage"
+    name: "ステージ"
+    type: "tilemap"
+    x: 0
+    y: 0
+    origin_x: 0
+    origin_y: 0
+    width: 1280
+    height: 704
+    tile_width: 32
+    tile_height: 32
+    columns: 40
+    rows: 22
+    tiles:
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 4
+      - 4
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 4
+      - 4
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 4
+      - 4
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 4
+      - 4
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 4
+      - 4
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 4
+      - 4
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 4
+      - 4
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 4
+      - 4
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 4
+      - 4
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 4
+      - 4
+      - 4
+      - 4
+      - 4
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 4
+      - 4
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 4
+      - 4
+      - 4
+      - 4
+      - 4
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 4
+      - 4
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 4
+      - 4
+      - 4
+      - 4
+      - 4
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 4
+      - 4
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 4
+      - 4
+      - 4
+      - 4
+      - 4
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 4
+      - 4
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 4
+      - 4
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 4
+      - 4
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 4
+      - 4
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+    tile_textures: []
+    tile_colors:
+      - "#4f7a3a"
+      - "#446b33"
+      - "#3c5f2d"
+      - "#5a8a44"
+      - "#2f6f9e"
+      - "#3b83b4"
+    solid_tiles: []
+    tile_tags:
+      - ""
+      - ""
+      - ""
+      - ""
+      - "water"
+      - "water"
+    tile_animations:
+      - tile: 4
+        frames:
+          - 4
+          - 5
+        fps: 3
+    tile_autotiles:
+      - tile: 0
+        set:
+          - 2
+          - 2
+          - 2
+          - 2
+          - 2
+          - 2
+          - 2
+          - 1
+          - 2
+          - 2
+          - 2
+          - 1
+          - 2
+          - 1
+          - 1
+          - 0
+  - id: "fence"
+    name: "低い柵"
+    type: "rectangle"
+    x: 448
+    y: 192
+    origin_x: 0
+    origin_y: 0
+    width: 32
+    height: 320
+    fill: "#8a6a3a"
+    z_index: 192
+    collider:
+      wall_height: 24
+      layer: "solid"
+  - id: "rock"
+    name: "岩"
+    type: "rectangle"
+    x: 896
+    y: 288
+    origin_x: 0
+    origin_y: 0
+    width: 64
+    height: 64
+    fill: "#7a7a82"
+    z_index: 352
+    collider:
+      layer: "block"
+  - id: "tree_a"
+    name: "木 a"
+    type: "rectangle"
+    x: 192
+    y: 256
+    origin_x: 0
+    origin_y: 0
+    width: 32
+    height: 64
+    fill: "#2f5d3a"
+    z_index: 320
+    collider:
+      offset_y: 44.8
+      height: 19.2
+      layer: "solid"
+  - id: "tree_b"
+    name: "木 b"
+    type: "rectangle"
+    x: 800
+    y: 160
+    origin_x: 0
+    origin_y: 0
+    width: 32
+    height: 64
+    fill: "#2f5d3a"
+    z_index: 224
+    collider:
+      offset_y: 44.8
+      height: 19.2
+      layer: "solid"
+  - id: "tree_c"
+    name: "木 c"
+    type: "rectangle"
+    x: 1056
+    y: 448
+    origin_x: 0
+    origin_y: 0
+    width: 32
+    height: 64
+    fill: "#2f5d3a"
+    z_index: 512
+    collider:
+      offset_y: 44.8
+      height: 19.2
+      layer: "solid"
+  - id: "player"
+    name: "プレイヤー"
+    type: "image"
+    x: "$px"
+    y: "$py"
+    origin_x: 0
+    origin_y: 0
+    width: 24
+    height: 28
+    fallback_color: "#ff6b4a"
+    z_index: "=$py + 28"
+    elevation: "$lift"
+  - id: "shadow"
+    name: "影"
+    type: "rectangle"
+    x: "$px"
+    y: "$py"
+    origin_x: 0
+    origin_y: 0
+    width: 24
+    height: 28
+    fill: "#22331f"
+    alpha: 0.35
+    corner_radius: 12
+    z_index: "=$py + 28"
+  - id: "enemy"
+    name: "追ってくるもの"
+    type: "image"
+    x: "$ex"
+    y: "$ey"
+    origin_x: 0
+    origin_y: 0
+    width: 24
+    height: 24
+    fallback_color: "#d8425f"
+    z_index: "=$ey + 24"
+  - id: "camera"
+    name: "カメラ"
+    type: "camera"
+    x: 640
+    y: 352
+    width: 1280
+    height: 720
+variables:
+  - kind: "normal"
+    id: "px"
+    name: "$px"
+    value_type: "Float"
+    initial_value: "96"
+  - kind: "normal"
+    id: "py"
+    name: "$py"
+    value_type: "Float"
+    initial_value: "320"
+  - kind: "normal"
+    id: "lift"
+    name: "$lift"
+    value_type: "Float"
+    initial_value: "0"
+  - kind: "normal"
+    id: "jump_t"
+    name: "$jump_t"
+    value_type: "Float"
+    initial_value: "0"
+  - kind: "normal"
+    id: "ex"
+    name: "$ex"
+    value_type: "Float"
+    initial_value: "1120"
+  - kind: "normal"
+    id: "ey"
+    name: "$ey"
+    value_type: "Float"
+    initial_value: "320"
+  - kind: "normal"
+    id: "move"
+    name: "$move"
+    value_type: "Vector2"
+    initial_value: "0,0"
+  - kind: "normal"
+    id: "jump"
+    name: "$jump"
+    value_type: "Bool"
+    initial_value: "false"
+requests: []
+script_graph:
+  nodes:
+    - id: "event_begin_play_1"
+      type: "event_begin_play"
+      next: "subscribe_vector2_1"
+    - id: "get_input_action_vector2_1"
+      type: "get_input_action_vector2"
+      properties:
+        actionMap: "map_gameplay"
+        action: "act_move"
+    - id: "lambda_1"
+      type: "lambda"
+      properties:
+        arg_count: 1
+        arg_types: "[\"Vector2\"]"
+      next: "set_variable_1"
+    - id: "set_variable_1"
+      type: "set_variable"
+      properties:
+        variable: "move"
+    - id: "subscribe_vector2_1"
+      type: "subscribe_vector2"
+      next: "subscribe_bool_1"
+    - id: "get_input_action_bool_1"
+      type: "get_input_action_bool"
+      properties:
+        actionMap: "map_gameplay"
+        action: "act_jump"
+    - id: "lambda_2"
+      type: "lambda"
+      properties:
+        arg_count: 1
+        arg_types: "[\"Bool\"]"
+      next: "set_variable_2"
+    - id: "set_variable_2"
+      type: "set_variable"
+      properties:
+        variable: "jump"
+    - id: "subscribe_bool_1"
+      type: "subscribe_bool"
+    - id: "event_tick_1"
+      type: "event_tick"
+      next: "set_variable_3"
+    - id: "get_variable_float_1"
+      type: "get_variable_float"
+      properties:
+        variable: "jump_t"
+    - id: "float_sub_1"
+      type: "float_sub"
+    - id: "float_max_1"
+      type: "float_max"
+      properties:
+        b: 0
+    - id: "get_variable_bool_1"
+      type: "get_variable_bool"
+      properties:
+        variable: "jump"
+    - id: "get_variable_float_2"
+      type: "get_variable_float"
+      properties:
+        variable: "jump_t"
+    - id: "float_nearly_zero_1"
+      type: "float_nearly_zero"
+      properties:
+        tol: 0.0001
+    - id: "and_op_1"
+      type: "and_op"
+    - id: "ternary_1"
+      type: "ternary"
+      properties:
+        true: 0.6
+    - id: "set_variable_3"
+      type: "set_variable"
+      properties:
+        variable: "jump_t"
+      next: "set_variable_4"
+    - id: "get_variable_float_3"
+      type: "get_variable_float"
+      properties:
+        variable: "jump_t"
+    - id: "float_div_1"
+      type: "float_div"
+      properties:
+        b: 0.6
+    - id: "float_sub_2"
+      type: "float_sub"
+      properties:
+        a: 1
+    - id: "float_mul_1"
+      type: "float_mul"
+      properties:
+        a: 192
+    - id: "float_sub_3"
+      type: "float_sub"
+      properties:
+        a: 1
+    - id: "float_mul_2"
+      type: "float_mul"
+    - id: "get_variable_float_4"
+      type: "get_variable_float"
+      properties:
+        variable: "jump_t"
+    - id: "float_nearly_zero_2"
+      type: "float_nearly_zero"
+      properties:
+        tol: 0.0001
+    - id: "ternary_2"
+      type: "ternary"
+      properties:
+        true: 0
+    - id: "set_variable_4"
+      type: "set_variable"
+      properties:
+        variable: "lift"
+      next: "set_variable_5"
+    - id: "get_variable_vector2_1"
+      type: "get_variable_vector2"
+      properties:
+        variable: "move"
+    - id: "break_vector2_1"
+      type: "break_vector2"
+    - id: "get_colliders_1"
+      type: "get_colliders"
+      properties:
+        layer: "solid"
+    - id: "get_variable_float_5"
+      type: "get_variable_float"
+      properties:
+        variable: "px"
+    - id: "get_variable_float_6"
+      type: "get_variable_float"
+      properties:
+        variable: "py"
+    - id: "float_mul_3"
+      type: "float_mul"
+      properties:
+        b: 200
+    - id: "float_mul_4"
+      type: "float_mul"
+    - id: "float_mul_5"
+      type: "float_mul"
+      properties:
+        b: 200
+    - id: "float_mul_6"
+      type: "float_mul"
+    - id: "move_and_collide_1"
+      type: "move_and_collide"
+      properties:
+        width: 24
+        height: 28
+    - id: "break_vector2_2"
+      type: "break_vector2"
+    - id: "set_variable_5"
+      type: "set_variable"
+      properties:
+        variable: "px"
+      next: "set_variable_6"
+    - id: "set_variable_6"
+      type: "set_variable"
+      properties:
+        variable: "py"
+      next: "set_variable_7"
+    - id: "get_variable_float_7"
+      type: "get_variable_float"
+      properties:
+        variable: "ex"
+    - id: "float_add_1"
+      type: "float_add"
+      properties:
+        b: 12
+    - id: "get_variable_float_8"
+      type: "get_variable_float"
+      properties:
+        variable: "ey"
+    - id: "float_add_2"
+      type: "float_add"
+      properties:
+        b: 12
+    - id: "make_vector2_1"
+      type: "make_vector2"
+    - id: "get_variable_float_9"
+      type: "get_variable_float"
+      properties:
+        variable: "px"
+    - id: "float_add_3"
+      type: "float_add"
+      properties:
+        b: 12
+    - id: "get_variable_float_10"
+      type: "get_variable_float"
+      properties:
+        variable: "py"
+    - id: "float_add_4"
+      type: "float_add"
+      properties:
+        b: 14
+    - id: "make_vector2_2"
+      type: "make_vector2"
+    - id: "get_colliders_2"
+      type: "get_colliders"
+      properties:
+        layer: "block"
+    - id: "get_path_step_1"
+      type: "get_path_step"
+      properties:
+        object_id: "stage"
+        avoid_tags: "water"
+        diagonal: true
+    - id: "break_vector2_3"
+      type: "break_vector2"
+    - id: "float_sub_4"
+      type: "float_sub"
+      properties:
+        b: 12
+    - id: "get_variable_float_11"
+      type: "get_variable_float"
+      properties:
+        variable: "ex"
+    - id: "ternary_3"
+      type: "ternary"
+    - id: "float_sub_5"
+      type: "float_sub"
+      properties:
+        b: 12
+    - id: "get_variable_float_12"
+      type: "get_variable_float"
+      properties:
+        variable: "ey"
+    - id: "ternary_4"
+      type: "ternary"
+    - id: "get_variable_float_13"
+      type: "get_variable_float"
+      properties:
+        variable: "ex"
+    - id: "function_call_1"
+      type: "function_call"
+      properties:
+        function_id: "fn_step_toward"
+        speed: 90
+    - id: "get_variable_float_14"
+      type: "get_variable_float"
+      properties:
+        variable: "ey"
+    - id: "function_call_2"
+      type: "function_call"
+      properties:
+        function_id: "fn_step_toward"
+        speed: 90
+    - id: "set_variable_7"
+      type: "set_variable"
+      properties:
+        variable: "ex"
+      next: "set_variable_8"
+    - id: "set_variable_8"
+      type: "set_variable"
+      properties:
+        variable: "ey"
+  layout:
+    - id: "get_input_action_vector2_1"
+      x: 0
+      y: 130
+    - id: "lambda_1"
+      x: 0
+      y: 260
+    - id: "set_variable_1"
+      x: 260
+      y: 0
+    - id: "subscribe_vector2_1"
+      x: 260
+      y: 130
+    - id: "get_input_action_bool_1"
+      x: 0
+      y: 390
+    - id: "lambda_2"
+      x: 0
+      y: 520
+    - id: "set_variable_2"
+      x: 260
+      y: 260
+    - id: "subscribe_bool_1"
+      x: 520
+      y: 0
+    - id: "event_tick_1"
+      x: 0
+      y: 650
+    - id: "get_variable_float_1"
+      x: 0
+      y: 780
+    - id: "float_sub_1"
+      x: 260
+      y: 390
+    - id: "float_max_1"
+      x: 520
+      y: 130
+    - id: "get_variable_bool_1"
+      x: 0
+      y: 910
+    - id: "get_variable_float_2"
+      x: 0
+      y: 1040
+    - id: "float_nearly_zero_1"
+      x: 260
+      y: 520
+    - id: "and_op_1"
+      x: 520
+      y: 260
+    - id: "ternary_1"
+      x: 780
+      y: 0
+    - id: "set_variable_3"
+      x: 1040
+      y: 0
+    - id: "get_variable_float_3"
+      x: 0
+      y: 1170
+    - id: "float_div_1"
+      x: 260
+      y: 650
+    - id: "float_sub_2"
+      x: 520
+      y: 390
+    - id: "float_mul_1"
+      x: 780
+      y: 130
+    - id: "float_sub_3"
+      x: 780
+      y: 260
+    - id: "float_mul_2"
+      x: 1040
+      y: 130
+    - id: "get_variable_float_4"
+      x: 0
+      y: 1300
+    - id: "float_nearly_zero_2"
+      x: 260
+      y: 780
+    - id: "ternary_2"
+      x: 1300
+      y: 0
+    - id: "set_variable_4"
+      x: 1560
+      y: 0
+    - id: "get_variable_vector2_1"
+      x: 0
+      y: 1430
+    - id: "break_vector2_1"
+      x: 260
+      y: 910
+    - id: "get_colliders_1"
+      x: 0
+      y: 1560
+    - id: "get_variable_float_5"
+      x: 0
+      y: 1690
+    - id: "get_variable_float_6"
+      x: 0
+      y: 1820
+    - id: "float_mul_3"
+      x: 520
+      y: 520
+    - id: "float_mul_4"
+      x: 780
+      y: 390
+    - id: "float_mul_5"
+      x: 520
+      y: 650
+    - id: "float_mul_6"
+      x: 780
+      y: 520
+    - id: "move_and_collide_1"
+      x: 1560
+      y: 130
+    - id: "break_vector2_2"
+      x: 1820
+      y: 0
+    - id: "set_variable_5"
+      x: 2080
+      y: 0
+    - id: "set_variable_6"
+      x: 2340
+      y: 0
+    - id: "get_variable_float_7"
+      x: 0
+      y: 1950
+    - id: "float_add_1"
+      x: 260
+      y: 1040
+    - id: "get_variable_float_8"
+      x: 0
+      y: 2080
+    - id: "float_add_2"
+      x: 260
+      y: 1170
+    - id: "make_vector2_1"
+      x: 520
+      y: 780
+    - id: "get_variable_float_9"
+      x: 0
+      y: 2210
+    - id: "float_add_3"
+      x: 260
+      y: 1300
+    - id: "get_variable_float_10"
+      x: 0
+      y: 2340
+    - id: "float_add_4"
+      x: 260
+      y: 1430
+    - id: "make_vector2_2"
+      x: 520
+      y: 910
+    - id: "get_colliders_2"
+      x: 0
+      y: 2470
+    - id: "get_path_step_1"
+      x: 780
+      y: 650
+    - id: "break_vector2_3"
+      x: 1040
+      y: 260
+    - id: "float_sub_4"
+      x: 1300
+      y: 130
+    - id: "get_variable_float_11"
+      x: 0
+      y: 2600
+    - id: "ternary_3"
+      x: 1560
+      y: 260
+    - id: "float_sub_5"
+      x: 1300
+      y: 260
+    - id: "get_variable_float_12"
+      x: 0
+      y: 2730
+    - id: "ternary_4"
+      x: 1560
+      y: 390
+    - id: "get_variable_float_13"
+      x: 0
+      y: 2860
+    - id: "function_call_1"
+      x: 1820
+      y: 130
+    - id: "get_variable_float_14"
+      x: 0
+      y: 2990
+    - id: "function_call_2"
+      x: 1820
+      y: 260
+    - id: "set_variable_7"
+      x: 2600
+      y: 0
+    - id: "set_variable_8"
+      x: 2860
+      y: 0
+  edges:
+    - from:
+        nodeId: "lambda_1"
+        pin: "value_0"
+      to:
+        nodeId: "set_variable_1"
+        pin: "value"
+    - from:
+        nodeId: "get_input_action_vector2_1"
+        pin: "value"
+      to:
+        nodeId: "subscribe_vector2_1"
+        pin: "source"
+    - from:
+        nodeId: "lambda_1"
+        pin: "function"
+      to:
+        nodeId: "subscribe_vector2_1"
+        pin: "on_next"
+    - from:
+        nodeId: "lambda_2"
+        pin: "value_0"
+      to:
+        nodeId: "set_variable_2"
+        pin: "value"
+    - from:
+        nodeId: "get_input_action_bool_1"
+        pin: "value"
+      to:
+        nodeId: "subscribe_bool_1"
+        pin: "source"
+    - from:
+        nodeId: "lambda_2"
+        pin: "function"
+      to:
+        nodeId: "subscribe_bool_1"
+        pin: "on_next"
+    - from:
+        nodeId: "get_variable_float_1"
+        pin: "value"
+      to:
+        nodeId: "float_sub_1"
+        pin: "a"
+    - from:
+        nodeId: "event_tick_1"
+        pin: "delta_seconds"
+      to:
+        nodeId: "float_sub_1"
+        pin: "b"
+    - from:
+        nodeId: "float_sub_1"
+        pin: "return"
+      to:
+        nodeId: "float_max_1"
+        pin: "a"
+    - from:
+        nodeId: "get_variable_float_2"
+        pin: "value"
+      to:
+        nodeId: "float_nearly_zero_1"
+        pin: "a"
+    - from:
+        nodeId: "get_variable_bool_1"
+        pin: "value"
+      to:
+        nodeId: "and_op_1"
+        pin: "a"
+    - from:
+        nodeId: "float_nearly_zero_1"
+        pin: "return"
+      to:
+        nodeId: "and_op_1"
+        pin: "b"
+    - from:
+        nodeId: "and_op_1"
+        pin: "return"
+      to:
+        nodeId: "ternary_1"
+        pin: "index"
+    - from:
+        nodeId: "float_max_1"
+        pin: "return"
+      to:
+        nodeId: "ternary_1"
+        pin: "false"
+    - from:
+        nodeId: "ternary_1"
+        pin: "return"
+      to:
+        nodeId: "set_variable_3"
+        pin: "value"
+    - from:
+        nodeId: "get_variable_float_3"
+        pin: "value"
+      to:
+        nodeId: "float_div_1"
+        pin: "a"
+    - from:
+        nodeId: "float_div_1"
+        pin: "return"
+      to:
+        nodeId: "float_sub_2"
+        pin: "b"
+    - from:
+        nodeId: "float_sub_2"
+        pin: "return"
+      to:
+        nodeId: "float_mul_1"
+        pin: "b"
+    - from:
+        nodeId: "float_sub_2"
+        pin: "return"
+      to:
+        nodeId: "float_sub_3"
+        pin: "b"
+    - from:
+        nodeId: "float_mul_1"
+        pin: "return"
+      to:
+        nodeId: "float_mul_2"
+        pin: "a"
+    - from:
+        nodeId: "float_sub_3"
+        pin: "return"
+      to:
+        nodeId: "float_mul_2"
+        pin: "b"
+    - from:
+        nodeId: "get_variable_float_4"
+        pin: "value"
+      to:
+        nodeId: "float_nearly_zero_2"
+        pin: "a"
+    - from:
+        nodeId: "float_nearly_zero_2"
+        pin: "return"
+      to:
+        nodeId: "ternary_2"
+        pin: "index"
+    - from:
+        nodeId: "float_mul_2"
+        pin: "return"
+      to:
+        nodeId: "ternary_2"
+        pin: "false"
+    - from:
+        nodeId: "ternary_2"
+        pin: "return"
+      to:
+        nodeId: "set_variable_4"
+        pin: "value"
+    - from:
+        nodeId: "get_variable_vector2_1"
+        pin: "value"
+      to:
+        nodeId: "break_vector2_1"
+        pin: "v"
+    - from:
+        nodeId: "break_vector2_1"
+        pin: "x"
+      to:
+        nodeId: "float_mul_3"
+        pin: "a"
+    - from:
+        nodeId: "float_mul_3"
+        pin: "return"
+      to:
+        nodeId: "float_mul_4"
+        pin: "a"
+    - from:
+        nodeId: "event_tick_1"
+        pin: "delta_seconds"
+      to:
+        nodeId: "float_mul_4"
+        pin: "b"
+    - from:
+        nodeId: "break_vector2_1"
+        pin: "y"
+      to:
+        nodeId: "float_mul_5"
+        pin: "a"
+    - from:
+        nodeId: "float_mul_5"
+        pin: "return"
+      to:
+        nodeId: "float_mul_6"
+        pin: "a"
+    - from:
+        nodeId: "event_tick_1"
+        pin: "delta_seconds"
+      to:
+        nodeId: "float_mul_6"
+        pin: "b"
+    - from:
+        nodeId: "get_colliders_1"
+        pin: "return"
+      to:
+        nodeId: "move_and_collide_1"
+        pin: "colliders"
+    - from:
+        nodeId: "get_variable_float_5"
+        pin: "value"
+      to:
+        nodeId: "move_and_collide_1"
+        pin: "x"
+    - from:
+        nodeId: "get_variable_float_6"
+        pin: "value"
+      to:
+        nodeId: "move_and_collide_1"
+        pin: "y"
+    - from:
+        nodeId: "float_mul_4"
+        pin: "return"
+      to:
+        nodeId: "move_and_collide_1"
+        pin: "delta_x"
+    - from:
+        nodeId: "float_mul_6"
+        pin: "return"
+      to:
+        nodeId: "move_and_collide_1"
+        pin: "delta_y"
+    - from:
+        nodeId: "ternary_2"
+        pin: "return"
+      to:
+        nodeId: "move_and_collide_1"
+        pin: "elevation"
+    - from:
+        nodeId: "move_and_collide_1"
+        pin: "position"
+      to:
+        nodeId: "break_vector2_2"
+        pin: "v"
+    - from:
+        nodeId: "break_vector2_2"
+        pin: "x"
+      to:
+        nodeId: "set_variable_5"
+        pin: "value"
+    - from:
+        nodeId: "break_vector2_2"
+        pin: "y"
+      to:
+        nodeId: "set_variable_6"
+        pin: "value"
+    - from:
+        nodeId: "get_variable_float_7"
+        pin: "value"
+      to:
+        nodeId: "float_add_1"
+        pin: "a"
+    - from:
+        nodeId: "get_variable_float_8"
+        pin: "value"
+      to:
+        nodeId: "float_add_2"
+        pin: "a"
+    - from:
+        nodeId: "float_add_1"
+        pin: "return"
+      to:
+        nodeId: "make_vector2_1"
+        pin: "x"
+    - from:
+        nodeId: "float_add_2"
+        pin: "return"
+      to:
+        nodeId: "make_vector2_1"
+        pin: "y"
+    - from:
+        nodeId: "get_variable_float_9"
+        pin: "value"
+      to:
+        nodeId: "float_add_3"
+        pin: "a"
+    - from:
+        nodeId: "get_variable_float_10"
+        pin: "value"
+      to:
+        nodeId: "float_add_4"
+        pin: "a"
+    - from:
+        nodeId: "float_add_3"
+        pin: "return"
+      to:
+        nodeId: "make_vector2_2"
+        pin: "x"
+    - from:
+        nodeId: "float_add_4"
+        pin: "return"
+      to:
+        nodeId: "make_vector2_2"
+        pin: "y"
+    - from:
+        nodeId: "make_vector2_1"
+        pin: "return"
+      to:
+        nodeId: "get_path_step_1"
+        pin: "from"
+    - from:
+        nodeId: "make_vector2_2"
+        pin: "return"
+      to:
+        nodeId: "get_path_step_1"
+        pin: "to"
+    - from:
+        nodeId: "get_colliders_2"
+        pin: "return"
+      to:
+        nodeId: "get_path_step_1"
+        pin: "blocked"
+    - from:
+        nodeId: "get_path_step_1"
+        pin: "step"
+      to:
+        nodeId: "break_vector2_3"
+        pin: "v"
+    - from:
+        nodeId: "break_vector2_3"
+        pin: "x"
+      to:
+        nodeId: "float_sub_4"
+        pin: "a"
+    - from:
+        nodeId: "get_path_step_1"
+        pin: "found"
+      to:
+        nodeId: "ternary_3"
+        pin: "index"
+    - from:
+        nodeId: "float_sub_4"
+        pin: "return"
+      to:
+        nodeId: "ternary_3"
+        pin: "true"
+    - from:
+        nodeId: "get_variable_float_11"
+        pin: "value"
+      to:
+        nodeId: "ternary_3"
+        pin: "false"
+    - from:
+        nodeId: "break_vector2_3"
+        pin: "y"
+      to:
+        nodeId: "float_sub_5"
+        pin: "a"
+    - from:
+        nodeId: "get_path_step_1"
+        pin: "found"
+      to:
+        nodeId: "ternary_4"
+        pin: "index"
+    - from:
+        nodeId: "float_sub_5"
+        pin: "return"
+      to:
+        nodeId: "ternary_4"
+        pin: "true"
+    - from:
+        nodeId: "get_variable_float_12"
+        pin: "value"
+      to:
+        nodeId: "ternary_4"
+        pin: "false"
+    - from:
+        nodeId: "get_variable_float_13"
+        pin: "value"
+      to:
+        nodeId: "function_call_1"
+        pin: "cur"
+    - from:
+        nodeId: "ternary_3"
+        pin: "return"
+      to:
+        nodeId: "function_call_1"
+        pin: "target"
+    - from:
+        nodeId: "event_tick_1"
+        pin: "delta_seconds"
+      to:
+        nodeId: "function_call_1"
+        pin: "dt"
+    - from:
+        nodeId: "get_variable_float_14"
+        pin: "value"
+      to:
+        nodeId: "function_call_2"
+        pin: "cur"
+    - from:
+        nodeId: "ternary_4"
+        pin: "return"
+      to:
+        nodeId: "function_call_2"
+        pin: "target"
+    - from:
+        nodeId: "event_tick_1"
+        pin: "delta_seconds"
+      to:
+        nodeId: "function_call_2"
+        pin: "dt"
+    - from:
+        nodeId: "function_call_1"
+        pin: "out"
+      to:
+        nodeId: "set_variable_7"
+        pin: "value"
+    - from:
+        nodeId: "function_call_2"
+        pin: "out"
+      to:
+        nodeId: "set_variable_8"
+        pin: "value"

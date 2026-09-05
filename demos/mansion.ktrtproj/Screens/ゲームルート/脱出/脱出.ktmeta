@@ -1,0 +1,10 @@
+schema_version: 2
+kind: "screen"
+id: "scr_mansion_clear"
+display_name: "脱出"
+parent_screen_id: "scr_mansion_root"
+memo: "鍵を持って大扉を開けたらここ。"
+pos:
+  x: 640
+  y: 400
+favorite: false
