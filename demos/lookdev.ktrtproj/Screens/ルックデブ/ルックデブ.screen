@@ -318,7 +318,8 @@ space:
         softness: 0.02
         rim_strength: 0.6
         rim_power: 3
-        outline_width: 0.02
+        outline_width: 0.03
+        shadow_color: "#6a5a8a"
     - id: "box"
       name: "Box"
       type: "render"
