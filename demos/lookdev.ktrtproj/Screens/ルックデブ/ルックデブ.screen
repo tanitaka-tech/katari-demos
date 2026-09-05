@@ -339,6 +339,26 @@ space:
       color: "#c8a040"
       cast_shadows: true
       receive_shadows: true
+    - id: "probe"
+      name: "Reflection Probe"
+      type: "probe"
+      position:
+        x: 0
+        y: 1
+        z: -1
+      rotation:
+        x: 0
+        y: 0
+        z: 0
+      scale:
+        x: 1
+        y: 1
+        z: 1
+      size:
+        x: 14
+        y: 6
+        z: 14
+      resolution: 128
   environment:
     ambient:
       source: "skybox"
