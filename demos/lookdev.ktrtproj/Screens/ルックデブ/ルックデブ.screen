@@ -194,6 +194,10 @@ space:
       color: "#e8e8e8"
       cast_shadows: true
       receive_shadows: true
+      params:
+        kind: "sphere"
+        segments_w: 48
+        segments_h: 32
     - id: "sphere_1"
       name: "Sphere 2"
       type: "render"
@@ -213,6 +217,10 @@ space:
       color: "#d63a3a"
       cast_shadows: true
       receive_shadows: true
+      params:
+        kind: "sphere"
+        segments_w: 48
+        segments_h: 32
     - id: "sphere_2"
       name: "Sphere 3"
       type: "render"
@@ -232,6 +240,10 @@ space:
       color: "#3a7bd6"
       cast_shadows: true
       receive_shadows: true
+      params:
+        kind: "sphere"
+        segments_w: 48
+        segments_h: 32
     - id: "sphere_3"
       name: "Sphere 4"
       type: "render"
@@ -251,6 +263,10 @@ space:
       color: "#3ac06a"
       cast_shadows: true
       receive_shadows: true
+      params:
+        kind: "sphere"
+        segments_w: 48
+        segments_h: 32
     - id: "sphere_4"
       name: "Sphere 5"
       type: "render"
@@ -270,6 +286,10 @@ space:
       color: "#202020"
       cast_shadows: true
       receive_shadows: true
+      params:
+        kind: "sphere"
+        segments_w: 48
+        segments_h: 32
     - id: "toon_sphere"
       name: "Toon Sphere"
       type: "render"
@@ -289,6 +309,10 @@ space:
       color: "#f0c8a0"
       cast_shadows: true
       receive_shadows: true
+      params:
+        kind: "sphere"
+        segments_w: 48
+        segments_h: 32
       shading:
         steps: 3
         softness: 0.02
@@ -316,9 +340,15 @@ space:
       receive_shadows: true
   environment:
     ambient:
-      source: "color"
-      color: "#404652"
+      source: "skybox"
       intensity: 1
+    skybox:
+      source: "gradient"
+      sky_color: "#4a78b8"
+      horizon_color: "#dfe6ee"
+      ground_color: "#3a3632"
+      intensity: 1
+      show_background: true
     tone:
       tonemapping: "neutral"
       exposure: 1
