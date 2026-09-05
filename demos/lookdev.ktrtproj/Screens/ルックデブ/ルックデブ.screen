@@ -1,0 +1,342 @@
+screen_component:
+  screen_space: true
+  resolution_width: 1280
+  resolution_height: 720
+  ref_resolution_width: 1280
+  ref_resolution_height: 720
+  scale_mode: "blend"
+  scale_blend: 0.5
+  priority: 0
+objects: []
+variables:
+  - id: "turn"
+    kind: "normal"
+    name: "$turn"
+    value_type: "Float"
+    initial_value: "0"
+requests: []
+space:
+  entities:
+    - id: "camera"
+      name: "Camera"
+      type: "camera"
+      position:
+        x: 0
+        y: 2.2
+        z: 7
+      rotation:
+        x: -12
+        y: 0
+        z: 0
+      scale:
+        x: 1
+        y: 1
+        z: 1
+      projection: "perspective"
+      fov: 50
+      clear_color: "#1c2028"
+      output: "buffer"
+      camera_work:
+        look_at:
+          target_id: "pedestal"
+          offset:
+            x: 0
+            y: 0.6
+            z: 0
+        dolly:
+          points:
+            - x: 0
+              y: 2.2
+              z: 7
+            - x: 2.6787840265556286
+              y: 2.2
+              z: 6.467156727579007
+            - x: 4.949747468305832
+              y: 2.2
+              z: 4.949747468305833
+            - x: 6.467156727579007
+              y: 2.2
+              z: 2.678784026555629
+            - x: 7
+              y: 2.2
+              z: 4.286263797015736e-16
+            - x: 6.467156727579007
+              y: 2.2
+              z: -2.678784026555628
+            - x: 4.949747468305833
+              y: 2.2
+              z: -4.949747468305832
+            - x: 2.678784026555629
+              y: 2.2
+              z: -6.467156727579007
+            - x: 8.572527594031472e-16
+              y: 2.2
+              z: -7
+            - x: -2.6787840265556273
+              y: 2.2
+              z: -6.467156727579008
+            - x: -4.949747468305832
+              y: 2.2
+              z: -4.949747468305834
+            - x: -6.467156727579006
+              y: 2.2
+              z: -2.678784026555632
+            - x: -7
+              y: 2.2
+              z: -1.2858791391047208e-15
+            - x: -6.467156727579006
+              y: 2.2
+              z: 2.67878402655563
+            - x: -4.949747468305834
+              y: 2.2
+              z: 4.949747468305832
+            - x: -2.6787840265556326
+              y: 2.2
+              z: 6.467156727579006
+          position: "$turn"
+          closed: true
+    - id: "key"
+      name: "Key Light"
+      type: "light"
+      position:
+        x: 0
+        y: 3
+        z: 0
+      rotation:
+        x: 50
+        y: -35
+        z: 0
+      scale:
+        x: 1
+        y: 1
+        z: 1
+      light_type: "directional"
+      color: "#fff2e0"
+      intensity: 1.6
+      cast_shadows: true
+      shadow_resolution: 2048
+      shadow_type: "pcf3"
+      shadow_distance: 30
+    - id: "fill"
+      name: "Fill Light"
+      type: "light"
+      position:
+        x: 0
+        y: 3
+        z: 0
+      rotation:
+        x: 20
+        y: 60
+        z: 0
+      scale:
+        x: 1
+        y: 1
+        z: 1
+      light_type: "directional"
+      color: "#dce6ff"
+      intensity: 0.5
+      cast_shadows: false
+    - id: "rim"
+      name: "Rim Light"
+      type: "light"
+      position:
+        x: 0
+        y: 3
+        z: 0
+      rotation:
+        x: 30
+        y: 160
+        z: 0
+      scale:
+        x: 1
+        y: 1
+        z: 1
+      light_type: "directional"
+      color: "#ffffff"
+      intensity: 0.9
+      cast_shadows: false
+    - id: "pedestal"
+      name: "Pedestal"
+      type: "render"
+      position:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        x: 0
+        y: 0
+        z: 0
+      scale:
+        x: 12
+        y: 1
+        z: 12
+      shape: "plane"
+      color: "#8a8f96"
+      cast_shadows: true
+      receive_shadows: true
+      lightmapped: true
+    - id: "sphere_0"
+      name: "Sphere 1"
+      type: "render"
+      position:
+        x: -3.2
+        y: 0.6
+        z: 0
+      rotation:
+        x: 0
+        y: 0
+        z: 0
+      scale:
+        x: 1.2
+        y: 1.2
+        z: 1.2
+      shape: "sphere"
+      color: "#e8e8e8"
+      cast_shadows: true
+      receive_shadows: true
+    - id: "sphere_1"
+      name: "Sphere 2"
+      type: "render"
+      position:
+        x: -1.6
+        y: 0.6
+        z: 0
+      rotation:
+        x: 0
+        y: 0
+        z: 0
+      scale:
+        x: 1.2
+        y: 1.2
+        z: 1.2
+      shape: "sphere"
+      color: "#d63a3a"
+      cast_shadows: true
+      receive_shadows: true
+    - id: "sphere_2"
+      name: "Sphere 3"
+      type: "render"
+      position:
+        x: 0
+        y: 0.6
+        z: 0
+      rotation:
+        x: 0
+        y: 0
+        z: 0
+      scale:
+        x: 1.2
+        y: 1.2
+        z: 1.2
+      shape: "sphere"
+      color: "#3a7bd6"
+      cast_shadows: true
+      receive_shadows: true
+    - id: "sphere_3"
+      name: "Sphere 4"
+      type: "render"
+      position:
+        x: 1.6
+        y: 0.6
+        z: 0
+      rotation:
+        x: 0
+        y: 0
+        z: 0
+      scale:
+        x: 1.2
+        y: 1.2
+        z: 1.2
+      shape: "sphere"
+      color: "#3ac06a"
+      cast_shadows: true
+      receive_shadows: true
+    - id: "sphere_4"
+      name: "Sphere 5"
+      type: "render"
+      position:
+        x: 3.2
+        y: 0.6
+        z: 0
+      rotation:
+        x: 0
+        y: 0
+        z: 0
+      scale:
+        x: 1.2
+        y: 1.2
+        z: 1.2
+      shape: "sphere"
+      color: "#202020"
+      cast_shadows: true
+      receive_shadows: true
+    - id: "toon_sphere"
+      name: "Toon Sphere"
+      type: "render"
+      position:
+        x: -1.6
+        y: 0.6
+        z: -2.2
+      rotation:
+        x: 0
+        y: 0
+        z: 0
+      scale:
+        x: 1.2
+        y: 1.2
+        z: 1.2
+      shape: "sphere"
+      color: "#f0c8a0"
+      cast_shadows: true
+      receive_shadows: true
+      shading:
+        steps: 3
+        softness: 0.02
+        rim_strength: 0.6
+        rim_power: 3
+        outline_width: 0.02
+    - id: "box"
+      name: "Box"
+      type: "render"
+      position:
+        x: 1.6
+        y: 0.5
+        z: -2.2
+      rotation:
+        x: 0
+        y: 0
+        z: 0
+      scale:
+        x: 1
+        y: 1
+        z: 1
+      shape: "box"
+      color: "#c8a040"
+      cast_shadows: true
+      receive_shadows: true
+  environment:
+    ambient:
+      source: "color"
+      color: "#404652"
+      intensity: 1
+    tone:
+      tonemapping: "neutral"
+      exposure: 1
+      gamma: "srgb"
+  sequences:
+    - id: "turntable"
+      name: "Turntable"
+      kind: "state_loop"
+      duration: 20
+      tracks:
+        - id: "turn-track"
+          kind: "variable"
+          variable_id: "turn"
+          time_offset: 0
+          keyframes:
+            - time: 0
+              value: "0"
+              easing: "linear"
+            - time: 20
+              value: "1"
+              easing: "linear"

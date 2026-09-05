@@ -5,8 +5,8 @@ name:
   ja: "Katari デモ集"
   en: "Katari demos"
 description:
-  ja: "ホーム画面に並ぶデモ 7 本。触って動かして確かめるためのもの"
-  en: "The 7 demos on the home screen. Made to be opened and played"
+  ja: "ホーム画面に並ぶデモ 8 本。触って動かして確かめるためのもの"
+  en: "The 8 demos on the home screen. Made to be opened and played"
 contributes:
   sample_projects:
     - id: "platformer"
@@ -128,3 +128,20 @@ contributes:
         cover: "media/kt-script/hero.jpg"
         screenshots: ["media/kt-script/shot-1.jpg", "media/kt-script/shot-2.jpg"]
         trailer: "media/kt-script/play.mp4"
+    - id: "lookdev"
+      name:
+        ja: "ルックデブ（3D の質感と光）"
+        en: "Lookdev (3D shading and light)"
+      description:
+        ja: "回転台の上の球と箱で質感・ライト・ルックを見比べる。トゥーン / 影 / ライトマップ / ポストエフェクトの出発点"
+        en: "Spheres and a box on a turntable to compare shading, lights and looks. A starting point for toon, shadows, lightmaps and post effects"
+      body:
+        ja: "3D 画面 1 枚のルックデブ用の舞台。色違いの球 5 つとトゥーン球、箱が台の上に並び、キー / フィル / リムの 3 灯が当たっています。▶ を押すとカメラが 20 秒で 1 周する回転台になります。球の色やトゥーンの段、ライトの向き、環境光とトーン、プロジェクト設定「ルック」のプリセットを触って、同じ舞台で見比べるためのものです。"
+        en: "A single 3D screen set up for lookdev. Five colored spheres, a toon sphere and a box sit on a pedestal under key / fill / rim lights. Press play and the camera orbits once every 20 seconds. Tweak sphere colors, toon steps, light directions, ambient and tone, or the project-wide look presets, and compare them on the same stage."
+      path: "demos/lookdev.ktrtproj"
+      home: true
+      accent: "#4f6d8f"
+      media:
+        cover: "media/lookdev/hero.jpg"
+        screenshots: ["media/lookdev/shot-1.jpg", "media/lookdev/shot-2.jpg"]
+        trailer: "media/lookdev/play.mp4"
