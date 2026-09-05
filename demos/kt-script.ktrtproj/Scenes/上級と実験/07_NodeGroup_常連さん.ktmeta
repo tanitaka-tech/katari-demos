@@ -1,6 +1,6 @@
 schema_version: 2
 kind: "scene"
-id: "scn_1onwzpf_ed6d30"
+id: "scn_sample_1onwzpf"
 display_name: "07_NodeGroup_常連さん"
 memo: "同じ title を複数置く Node Group と Saliency。"
 pos:

@@ -1,6 +1,6 @@
 schema_version: 2
 kind: "scene"
-id: "scn_eorf8e_t5likc"
+id: "scn_sample_eorf8e"
 display_name: "00_開店前の台本会議"
 memo: "ファイル構造、コメント、header、enum の入口。"
 pos:

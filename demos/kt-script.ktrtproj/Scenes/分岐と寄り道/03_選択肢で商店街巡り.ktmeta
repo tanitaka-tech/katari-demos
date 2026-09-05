@@ -1,6 +1,6 @@
 schema_version: 2
 kind: "scene"
-id: "scn_8nkr6w_1qdi8t"
+id: "scn_sample_8nkr6w"
 display_name: "03_選択肢で商店街巡り"
 memo: "選択肢、選択肢ガード、once、jump。"
 pos:

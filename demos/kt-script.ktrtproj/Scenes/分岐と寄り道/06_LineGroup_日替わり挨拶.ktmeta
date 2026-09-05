@@ -1,6 +1,6 @@
 schema_version: 2
 kind: "scene"
-id: "scn_1ikss6o_bjd10q"
+id: "scn_sample_1ikss6o"
 display_name: "06_LineGroup_日替わり挨拶"
 memo: "=> line group と条件付き候補。"
 pos:

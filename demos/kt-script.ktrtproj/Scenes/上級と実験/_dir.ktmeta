@@ -7,5 +7,5 @@ pos:
   x: 1000
   y: 40
 children[2]{name,id,ref}:
-  "07_NodeGroup_常連さん.ktrt","scn_1onwzpf_ed6d30","file"
-  "08_非同期演出の屋台.ktrt","scn_1677d5f_zsxdf3","file"
+  "07_NodeGroup_常連さん.ktrt","scn_sample_1onwzpf","file"
+  "08_非同期演出の屋台.ktrt","scn_sample_1677d5f","file"

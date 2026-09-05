@@ -7,5 +7,5 @@ pos:
   x: 40
   y: 40
 children[2]{name,id,ref}:
-  "00_開店前の台本会議.ktrt","scn_eorf8e_t5likc","file"
-  "09_卒業試験.ktrt","scn_xm60la_v4286s","file"
+  "00_開店前の台本会議.ktrt","scn_sample_eorf8e","file"
+  "09_卒業試験.ktrt","scn_sample_xm60la","file"

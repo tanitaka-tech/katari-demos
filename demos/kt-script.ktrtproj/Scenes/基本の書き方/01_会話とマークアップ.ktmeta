@@ -1,6 +1,6 @@
 schema_version: 2
 kind: "scene"
-id: "scn_1nr4mfs_v4rzmt"
+id: "scn_sample_1nr4mfs"
 display_name: "01_会話とマークアップ"
 memo: "話者付きテキスト、ナレーション、行内式、plural/select、エスケープ。"
 pos:

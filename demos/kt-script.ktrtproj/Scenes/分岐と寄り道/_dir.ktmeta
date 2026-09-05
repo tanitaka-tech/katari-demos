@@ -7,7 +7,7 @@ pos:
   x: 680
   y: 40
 children[4]{name,id,ref}:
-  "03_選択肢で商店街巡り.ktrt","scn_8nkr6w_1qdi8t","file"
-  "04_寄り道_八百屋の奥義.ktrt","scn_1xgbc7_pnty13","file"
-  "05_一回だけの貼り紙.ktrt","scn_19jarza_qbfsaq","file"
-  "06_LineGroup_日替わり挨拶.ktrt","scn_1ikss6o_bjd10q","file"
+  "03_選択肢で商店街巡り.ktrt","scn_sample_8nkr6w","file"
+  "04_寄り道_八百屋の奥義.ktrt","scn_sample_1xgbc7","file"
+  "05_一回だけの貼り紙.ktrt","scn_sample_19jarza","file"
+  "06_LineGroup_日替わり挨拶.ktrt","scn_sample_1ikss6o","file"
