@@ -1,0 +1,13 @@
+schema_version: 2
+kind: "screen-dir"
+id: "screen_backlog"
+display_name: "バックログ画面"
+memo: null
+pos:
+  x: 560
+  y: 80
+children:
+  -
+    name: "バックログ画面.screen"
+    id: "screen_backlog"
+    ref: "file"

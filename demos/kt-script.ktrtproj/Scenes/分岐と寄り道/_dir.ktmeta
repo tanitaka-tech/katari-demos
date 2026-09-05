@@ -1,0 +1,13 @@
+schema_version: 2
+kind: "scene-dir"
+id: "sample-flow"
+display_name: "分岐と寄り道"
+memo: "if、選択肢、jump、detour、return、once。"
+pos:
+  x: 680
+  y: 40
+children[4]{name,id,ref}:
+  "03_選択肢で商店街巡り.ktrt","scn_8nkr6w_1qdi8t","file"
+  "04_寄り道_八百屋の奥義.ktrt","scn_1xgbc7_pnty13","file"
+  "05_一回だけの貼り紙.ktrt","scn_19jarza_qbfsaq","file"
+  "06_LineGroup_日替わり挨拶.ktrt","scn_1ikss6o_bjd10q","file"

@@ -1,0 +1,15 @@
+schema_version: 2
+kind: "screen-dir"
+id: "screen_game_root"
+display_name: "ゲームルート"
+memo: null
+pos:
+  x: 80
+  y: 80
+children[6]{name,id,ref}:
+  "ゲームルート.screen","screen_game_root","file"
+  "タイトル画面","screen_title","dir"
+  "バックログ画面","screen_backlog","dir"
+  "会話画面","screen_dialogue","dir"
+  "設定画面","screen_settings","dir"
+  "セーブ&ロード画面","screen_save_load","dir"

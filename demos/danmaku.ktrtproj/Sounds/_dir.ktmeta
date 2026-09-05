@@ -1,0 +1,7 @@
+schema_version: 2
+kind: "asset-dir"
+id: "sounds-root"
+display_name: "Sounds"
+memo: null
+pos: null
+children: []

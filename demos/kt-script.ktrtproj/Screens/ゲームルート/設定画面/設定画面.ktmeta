@@ -1,0 +1,10 @@
+schema_version: 2
+kind: "screen"
+id: "screen_settings"
+display_name: "設定画面"
+parent_screen_id: "screen_game_root"
+memo: null
+pos:
+  x: 560
+  y: 220
+favorite: false

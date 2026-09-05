@@ -1,0 +1,16 @@
+title: 01_会話とマークアップ
+tags: 会話 ナレーション markup
+group: 基本
+priority: 20
+---
+<<declare $player_name = "読者さん">>
+<<declare $stamp = 2>>
+<<declare $mood = "excited">>
+ミオ: {$player_name}、いらっしゃいませ。
+これは話者名を書かないナレーションです。急に店内放送っぽくなります。
+店長: スタンプは [plural $stamp one="1個" other="たくさん"] あります。
+ミオ: 今日のテンションは [select $mood excited="祭り" tired="閉店間際" other="平常運転"] です。
+スクリプト先生: 波括弧や角括弧を文字として出すなら \{こう\}、\[こう\] と逃がします。
+店長: では、次は変数をこねます。うどんではなく変数です。
+<<jump 02_変数と条件分岐>>
+===

@@ -1,0 +1,150 @@
+screen_component:
+  screen_space: true
+  resolution_width: 1280
+  resolution_height: 720
+  ref_resolution_width: 1280
+  ref_resolution_height: 720
+  scale_mode: "blend"
+  scale_blend: 0.5
+  priority: 0
+objects:
+  - id: "dialogue_panel"
+    name: "Dialogue Panel"
+    type: "rectangle"
+    origin_x: 0
+    origin_y: 0
+    x: 64
+    y: 500
+    width: 1152
+    height: 176
+    fill: "#101827dd"
+    corner_radius: 12
+  - id: "speaker"
+    name: "Speaker"
+    type: "text"
+    origin_x: 0
+    origin_y: 0
+    x: 96
+    y: 520
+    width: 1050
+    height: 34
+    text: "$speaker"
+    font_size: 26
+    color: "#ffffff"
+    text_align: "left"
+    text_v_align: "middle"
+  - id: "message"
+    name: "Message"
+    type: "text"
+    origin_x: 0
+    origin_y: 0
+    x: 96
+    y: 558
+    width: 1050
+    height: 98
+    text: "$message"
+    font_size: 30
+    color: "#ffffff"
+    text_align: "left"
+    text_v_align: "top"
+  - id: "choice_1"
+    name: "Choice 1"
+    type: "button"
+    origin_x: 0
+    origin_y: 0
+    x: 280
+    y: 180
+    width: 720
+    height: 48
+    text: "$choice_1"
+    font_size: 22
+    color: "#ffffff"
+    fill: "#1e293bdd"
+    visible: "$is_choice"
+  - id: "choice_2"
+    name: "Choice 2"
+    type: "button"
+    origin_x: 0
+    origin_y: 0
+    x: 280
+    y: 240
+    width: 720
+    height: 48
+    text: "$choice_2"
+    font_size: 22
+    color: "#ffffff"
+    fill: "#1e293bdd"
+    visible: "$is_choice"
+  - id: "choice_3"
+    name: "Choice 3"
+    type: "button"
+    origin_x: 0
+    origin_y: 0
+    x: 280
+    y: 300
+    width: 720
+    height: 48
+    text: "$choice_3"
+    font_size: 22
+    color: "#ffffff"
+    fill: "#1e293bdd"
+    visible: "$is_choice"
+  - id: "choice_4"
+    name: "Choice 4"
+    type: "button"
+    origin_x: 0
+    origin_y: 0
+    x: 280
+    y: 360
+    width: 720
+    height: 48
+    text: "$choice_4"
+    font_size: 22
+    color: "#ffffff"
+    fill: "#1e293bdd"
+    visible: "$is_choice"
+variables:
+  - kind: "normal"
+    id: "speaker"
+    name: "$speaker"
+    value_type: "String"
+    initial_value: ""
+  - kind: "normal"
+    id: "message"
+    name: "$message"
+    value_type: "String"
+    initial_value: ""
+  - kind: "normal"
+    id: "choice_1"
+    name: "$choice_1"
+    value_type: "String"
+    initial_value: ""
+  - kind: "normal"
+    id: "choice_2"
+    name: "$choice_2"
+    value_type: "String"
+    initial_value: ""
+  - kind: "normal"
+    id: "choice_3"
+    name: "$choice_3"
+    value_type: "String"
+    initial_value: ""
+  - kind: "normal"
+    id: "choice_4"
+    name: "$choice_4"
+    value_type: "String"
+    initial_value: ""
+  - kind: "normal"
+    id: "is_choice"
+    name: "$is_choice"
+    value_type: "Bool"
+    initial_value: "false"
+requests: []
+script_graph:
+  nodes:
+    - id: "begin_play"
+      type: "event_begin_play"
+  layout:
+    - id: "begin_play"
+      x: 80
+      y: 80

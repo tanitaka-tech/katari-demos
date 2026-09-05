@@ -1,0 +1,13 @@
+schema_version: 2
+kind: "screen-dir"
+id: "screen_settings"
+display_name: "設定画面"
+memo: null
+pos:
+  x: 560
+  y: 220
+children:
+  -
+    name: "設定画面.screen"
+    id: "screen_settings"
+    ref: "file"

@@ -1,0 +1,13 @@
+schema_version: 2
+kind: "screen-dir"
+id: "screen_dialogue"
+display_name: "会話画面"
+memo: null
+pos:
+  x: 320
+  y: 220
+children:
+  -
+    name: "会話画面.screen"
+    id: "screen_dialogue"
+    ref: "file"

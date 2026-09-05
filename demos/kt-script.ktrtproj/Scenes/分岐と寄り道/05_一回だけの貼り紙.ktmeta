@@ -1,0 +1,8 @@
+schema_version: 2
+kind: "scene"
+id: "scn_19jarza_qbfsaq"
+display_name: "05_一回だけの貼り紙"
+memo: "once/endonce と line group への接続。"
+pos:
+  x: 1300
+  y: 180

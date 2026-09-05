@@ -1,0 +1,10 @@
+schema_version: 2
+kind: "screen"
+id: "screen_stage1"
+display_name: "ステージ 1"
+parent_screen_id: null
+memo: "矢印 / WASD で歩き、スペースで跳ぶ。坂は歩いて登れる。"
+pos:
+  x: 40
+  y: 40
+favorite: false

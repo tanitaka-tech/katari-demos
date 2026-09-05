@@ -1,0 +1,10 @@
+schema_version: 2
+kind: "screen"
+id: "trial_stage"
+display_name: "学級裁判"
+parent_screen_id: null
+memo: "WASD / スティックで照準を動かし、スペース / A ボタンで証言を撃つ。"
+pos:
+  x: 40
+  y: 40
+favorite: false

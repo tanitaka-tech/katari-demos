@@ -1,0 +1,8 @@
+schema_version: 2
+kind: "scene"
+id: "scn_8nkr6w_1qdi8t"
+display_name: "03_選択肢で商店街巡り"
+memo: "選択肢、選択肢ガード、once、jump。"
+pos:
+  x: 860
+  y: 180

@@ -1,0 +1,21 @@
+title: 07_NodeGroup_常連さん
+tags: node_group saliency
+group: 上級
+priority: 1
+when: always
+---
+常連A: 今日は普通の説明回だね。
+店長: 同じ title の node が複数あると、条件と priority で候補を選べます。
+<<jump 08_非同期演出の屋台>>
+===
+
+title: 07_NodeGroup_常連さん
+tags: node_group saliency
+group: 上級
+priority: 50
+when: $festival_mode
+---
+常連A: 祭りの日はこっちが優先される。priority が高いからね。
+ミオ: when を満たした候補だけが Saliency の土俵に上がります。
+<<jump 08_非同期演出の屋台>>
+===

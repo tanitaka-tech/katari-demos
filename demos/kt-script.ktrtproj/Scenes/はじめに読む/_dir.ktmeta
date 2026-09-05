@@ -1,0 +1,11 @@
+schema_version: 2
+kind: "scene-dir"
+id: "sample-root"
+display_name: "はじめに読む"
+memo: "Katari Script の全体像。まずはここから。"
+pos:
+  x: 40
+  y: 40
+children[2]{name,id,ref}:
+  "00_開店前の台本会議.ktrt","scn_eorf8e_t5likc","file"
+  "09_卒業試験.ktrt","scn_xm60la_v4286s","file"

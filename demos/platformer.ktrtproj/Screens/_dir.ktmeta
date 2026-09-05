@@ -1,0 +1,11 @@
+schema_version: 2
+kind: "screen-dir"
+id: "screens-root"
+display_name: "Screens"
+memo: null
+pos: null
+children:
+  -
+    name: "ステージ 1"
+    id: "screen_stage1"
+    ref: "dir"

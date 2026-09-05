@@ -1,0 +1,11 @@
+schema_version: 2
+kind: "scene-dir"
+id: "sample-basic"
+display_name: "基本の書き方"
+memo: "header、会話、変数、行内マークアップ。"
+pos:
+  x: 360
+  y: 40
+children[2]{name,id,ref}:
+  "01_会話とマークアップ.ktrt","scn_1nr4mfs_v4rzmt","file"
+  "02_変数と条件分岐.ktrt","scn_bgisar_j5phve","file"

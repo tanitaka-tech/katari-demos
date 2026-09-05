@@ -1,0 +1,8 @@
+schema_version: 2
+kind: "scene"
+id: "scn_bgisar_j5phve"
+display_name: "02_変数と条件分岐"
+memo: "declare/set/smart、if/elseif/else、wait。"
+pos:
+  x: 620
+  y: 180

@@ -1,0 +1,13 @@
+schema_version: 2
+kind: "screen-dir"
+id: "screen_save_load"
+display_name: "セーブ&ロード画面"
+memo: null
+pos:
+  x: 800
+  y: 220
+children:
+  -
+    name: "セーブ&ロード画面.screen"
+    id: "screen_save_load"
+    ref: "file"

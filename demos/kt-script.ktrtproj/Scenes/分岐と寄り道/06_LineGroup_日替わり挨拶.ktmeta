@@ -1,0 +1,8 @@
+schema_version: 2
+kind: "scene"
+id: "scn_1ikss6o_bjd10q"
+display_name: "06_LineGroup_日替わり挨拶"
+memo: "=> line group と条件付き候補。"
+pos:
+  x: 1520
+  y: 180

@@ -1,0 +1,8 @@
+schema_version: 2
+kind: "scene"
+id: "scn_1xgbc7_pnty13"
+display_name: "04_寄り道_八百屋の奥義"
+memo: "detour/return の戻り方。"
+pos:
+  x: 1080
+  y: 360

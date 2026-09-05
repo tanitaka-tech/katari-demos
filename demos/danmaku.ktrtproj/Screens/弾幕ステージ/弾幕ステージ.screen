@@ -1,0 +1,839 @@
+screen_component:
+  screen_space: true
+  resolution_width: 1280
+  resolution_height: 720
+  ref_resolution_width: 1280
+  ref_resolution_height: 720
+  scale_mode: "blend"
+  scale_blend: 0.5
+  priority: 0
+objects:
+  - id: "bg"
+    name: "背景"
+    type: "rectangle"
+    origin_x: 0
+    origin_y: 0
+    x: 0
+    y: 0
+    width: 1280
+    height: 720
+    fill: "#0b0d1a"
+  - id: "swarm"
+    name: "弾"
+    type: "swarm"
+    origin_x: 0
+    origin_y: 0
+    x: 0
+    y: 0
+    width: 1280
+    height: 720
+    source: "$shots"
+    grain: "circle"
+    grain_size: 10
+    color: "#ff5ea8"
+  - id: "player"
+    name: "自機"
+    type: "rectangle"
+    x: "$px"
+    y: "$py"
+    origin_x: 0.5
+    origin_y: 0.5
+    width: 22
+    height: 22
+    fill: "#8ee7ff"
+  - id: "hitbox"
+    name: "自機の判定"
+    type: "rectangle"
+    x: "$px"
+    y: "$py"
+    origin_x: 0.5
+    origin_y: 0.5
+    width: 10
+    height: 10
+    corner_radius: 5
+    fill: "#ff3355"
+  - id: "hud"
+    name: "被弾数"
+    type: "text"
+    origin_x: 0
+    origin_y: 0
+    x: 24
+    y: 20
+    width: 320
+    height: 40
+    text: "被弾 {$hits}   グレイズ {$graze}"
+    font_size: 24
+    color: "#ffffff"
+variables:
+  - id: "px"
+    name: "$px"
+    kind: "normal"
+    value_type: "Float"
+    initial_value: "640"
+  - id: "py"
+    name: "$py"
+    kind: "normal"
+    value_type: "Float"
+    initial_value: "580"
+  - id: "move"
+    name: "$move"
+    kind: "normal"
+    value_type: "Vector2"
+    initial_value: "0,0"
+  - id: "shots"
+    name: "$shots"
+    kind: "normal"
+    value_type: "String"
+    initial_value: "[]"
+  - id: "hits"
+    name: "$hits"
+    kind: "normal"
+    value_type: "Float"
+    initial_value: "0"
+  - id: "graze"
+    name: "$graze"
+    kind: "normal"
+    value_type: "Float"
+    initial_value: "0"
+  - id: "spin"
+    name: "$spin"
+    kind: "normal"
+    value_type: "Float"
+    initial_value: "0"
+requests: []
+script_graph:
+  nodes:
+    - id: "begin"
+      type: "event_begin_play"
+      next: "mv_sub"
+    - id: "start"
+      type: "start_routine"
+      properties:
+        routine: "pattern"
+    - id: "mv_get"
+      type: "get_input_action_vector2"
+      properties:
+        actionMap: "map_gameplay"
+        action: "act_move"
+    - id: "mv_sub"
+      type: "subscribe_vector2"
+      next: "start"
+    - id: "mv_lam"
+      type: "lambda"
+      properties:
+        arg_count: 1
+        arg_types: "[\"Vector2\"]"
+      next: "mv_set"
+    - id: "mv_set"
+      type: "set_variable"
+      properties:
+        variable: "move"
+    - id: "pt_entry"
+      type: "routine_entry"
+      properties:
+        routine: "pattern"
+      next: "pt_while"
+    - id: "pt_true"
+      type: "bool_literal"
+      properties:
+        value: true
+    - id: "pt_while"
+      type: "while_loop"
+      next:
+        loop_body: "pt_loop"
+    - id: "pt_first"
+      type: "int_literal"
+      properties:
+        value: 0
+    - id: "pt_last"
+      type: "int_literal"
+      properties:
+        value: 31
+    - id: "pt_loop"
+      type: "for_loop"
+      next:
+        loop_body: "pt_add"
+        completed: "pt_spin_set"
+    - id: "pt_step"
+      type: "float_literal"
+      properties:
+        value: 11.25
+    - id: "pt_mul"
+      type: "float_mul"
+    - id: "pt_spin"
+      type: "get_variable_float"
+      properties:
+        variable: "spin"
+    - id: "pt_deg"
+      type: "float_add"
+    - id: "pt_speed"
+      type: "float_literal"
+      properties:
+        value: 3.2
+    - id: "pt_vel"
+      type: "vector2_from_angle"
+    - id: "pt_break"
+      type: "break_vector2"
+    - id: "pt_x"
+      type: "float_literal"
+      properties:
+        value: 640
+    - id: "pt_y"
+      type: "float_literal"
+      properties:
+        value: 140
+    - id: "pt_r"
+      type: "float_literal"
+      properties:
+        value: 5
+    - id: "pt_add"
+      type: "table_add_row"
+      properties:
+        table: "bullets"
+        fields: "x,y,vx,vy,r"
+    - id: "pt_spin2"
+      type: "get_variable_float"
+      properties:
+        variable: "spin"
+    - id: "pt_spin_step"
+      type: "float_literal"
+      properties:
+        value: 9
+    - id: "pt_spin_add"
+      type: "float_add"
+    - id: "pt_spin_set"
+      type: "set_variable"
+      properties:
+        variable: "spin"
+      next: "pt_wait"
+    - id: "pt_wait_n"
+      type: "int_literal"
+      properties:
+        value: 4
+    - id: "pt_wait"
+      type: "routine_wait_frames"
+    - id: "tick"
+      type: "event_tick"
+      next: "px_set"
+    - id: "mv_var"
+      type: "get_variable_vector2"
+      properties:
+        variable: "move"
+    - id: "mv_break"
+      type: "break_vector2"
+    - id: "sp"
+      type: "float_literal"
+      properties:
+        value: 320
+    - id: "mv_dt"
+      type: "float_mul"
+    - id: "mv_dx"
+      type: "float_mul"
+    - id: "mv_dy"
+      type: "float_mul"
+    - id: "px_get"
+      type: "get_variable_float"
+      properties:
+        variable: "px"
+    - id: "py_get"
+      type: "get_variable_float"
+      properties:
+        variable: "py"
+    - id: "px_add"
+      type: "float_add"
+    - id: "py_add"
+      type: "float_add"
+    - id: "edge_lo"
+      type: "float_literal"
+      properties:
+        value: 24
+    - id: "edge_hi_x"
+      type: "float_literal"
+      properties:
+        value: 1256
+    - id: "edge_hi_y"
+      type: "float_literal"
+      properties:
+        value: 696
+    - id: "px_clamp"
+      type: "float_clamp"
+    - id: "py_clamp"
+      type: "float_clamp"
+    - id: "px_set"
+      type: "set_variable"
+      properties:
+        variable: "px"
+      next: "py_set"
+    - id: "py_set"
+      type: "set_variable"
+      properties:
+        variable: "py"
+      next: "adv_x"
+    - id: "f_x"
+      type: "string_literal"
+      properties:
+        value: "x"
+    - id: "f_y"
+      type: "string_literal"
+      properties:
+        value: "y"
+    - id: "f_vx"
+      type: "string_literal"
+      properties:
+        value: "vx"
+    - id: "f_vy"
+      type: "string_literal"
+      properties:
+        value: "vy"
+    - id: "adv_x"
+      type: "table_advance"
+      properties:
+        table: "bullets"
+      next: "adv_y"
+    - id: "adv_y"
+      type: "table_advance"
+      properties:
+        table: "bullets"
+      next: "cull_x_lo"
+    - id: "op_lt"
+      type: "string_literal"
+      properties:
+        value: "<"
+    - id: "op_gt"
+      type: "string_literal"
+      properties:
+        value: ">"
+    - id: "lo"
+      type: "float_literal"
+      properties:
+        value: -60
+    - id: "hi_x"
+      type: "float_literal"
+      properties:
+        value: 1340
+    - id: "hi_y"
+      type: "float_literal"
+      properties:
+        value: 780
+    - id: "cull_x_lo"
+      type: "table_remove_where"
+      properties:
+        table: "bullets"
+      next: "cull_x_hi"
+    - id: "cull_x_hi"
+      type: "table_remove_where"
+      properties:
+        table: "bullets"
+      next: "cull_y_lo"
+    - id: "cull_y_lo"
+      type: "table_remove_where"
+      properties:
+        table: "bullets"
+      next: "cull_y_hi"
+    - id: "cull_y_hi"
+      type: "table_remove_where"
+      properties:
+        table: "bullets"
+      next: "rows_set"
+    - id: "rows"
+      type: "table_rows"
+      properties:
+        table: "bullets"
+    - id: "rows_set"
+      type: "set_variable"
+      properties:
+        variable: "shots"
+      next: "hit_br"
+    - id: "shots_var"
+      type: "get_variable_string"
+      properties:
+        variable: "shots"
+    - id: "px_get2"
+      type: "get_variable_float"
+      properties:
+        variable: "px"
+    - id: "py_get2"
+      type: "get_variable_float"
+      properties:
+        variable: "py"
+    - id: "hit_r"
+      type: "float_literal"
+      properties:
+        value: 5
+    - id: "hit_th"
+      type: "float_literal"
+      properties:
+        value: 14
+    - id: "hit_q"
+      type: "overlap_circle"
+    - id: "hit_len"
+      type: "array_length"
+    - id: "graze_len"
+      type: "array_length"
+    - id: "graze_get"
+      type: "get_variable_float"
+      properties:
+        variable: "graze"
+    - id: "graze_add"
+      type: "float_add"
+    - id: "graze_set"
+      type: "set_variable"
+      properties:
+        variable: "graze"
+    - id: "hit_zero"
+      type: "int_literal"
+      properties:
+        value: 0
+    - id: "hit_test"
+      type: "int_gt"
+    - id: "hit_br"
+      type: "branch"
+      next:
+        true: "hits_inc"
+        false: "graze_set"
+    - id: "hits_inc"
+      type: "float_increment"
+      properties:
+        variable: "hits"
+      next: "freeze"
+    - id: "freeze_sec"
+      type: "float_literal"
+      properties:
+        value: 0.2
+    - id: "freeze"
+      type: "freeze_time"
+      properties:
+        group: "game"
+  edges:
+    - from:
+        nodeId: "mv_get"
+        pin: "value"
+      to:
+        nodeId: "mv_sub"
+        pin: "source"
+    - from:
+        nodeId: "mv_lam"
+        pin: "function"
+      to:
+        nodeId: "mv_sub"
+        pin: "on_next"
+    - from:
+        nodeId: "mv_lam"
+        pin: "value_0"
+      to:
+        nodeId: "mv_set"
+        pin: "value"
+    - from:
+        nodeId: "pt_true"
+        pin: "value"
+      to:
+        nodeId: "pt_while"
+        pin: "condition"
+    - from:
+        nodeId: "pt_first"
+        pin: "value"
+      to:
+        nodeId: "pt_loop"
+        pin: "first_index"
+    - from:
+        nodeId: "pt_last"
+        pin: "value"
+      to:
+        nodeId: "pt_loop"
+        pin: "last_index"
+    - from:
+        nodeId: "pt_loop"
+        pin: "index"
+      to:
+        nodeId: "pt_mul"
+        pin: "a"
+    - from:
+        nodeId: "pt_step"
+        pin: "value"
+      to:
+        nodeId: "pt_mul"
+        pin: "b"
+    - from:
+        nodeId: "pt_mul"
+        pin: "return"
+      to:
+        nodeId: "pt_deg"
+        pin: "a"
+    - from:
+        nodeId: "pt_spin"
+        pin: "value"
+      to:
+        nodeId: "pt_deg"
+        pin: "b"
+    - from:
+        nodeId: "pt_deg"
+        pin: "return"
+      to:
+        nodeId: "pt_vel"
+        pin: "angle"
+    - from:
+        nodeId: "pt_speed"
+        pin: "value"
+      to:
+        nodeId: "pt_vel"
+        pin: "length"
+    - from:
+        nodeId: "pt_vel"
+        pin: "return"
+      to:
+        nodeId: "pt_break"
+        pin: "v"
+    - from:
+        nodeId: "pt_x"
+        pin: "value"
+      to:
+        nodeId: "pt_add"
+        pin: "f_x"
+    - from:
+        nodeId: "pt_y"
+        pin: "value"
+      to:
+        nodeId: "pt_add"
+        pin: "f_y"
+    - from:
+        nodeId: "pt_break"
+        pin: "x"
+      to:
+        nodeId: "pt_add"
+        pin: "f_vx"
+    - from:
+        nodeId: "pt_break"
+        pin: "y"
+      to:
+        nodeId: "pt_add"
+        pin: "f_vy"
+    - from:
+        nodeId: "pt_r"
+        pin: "value"
+      to:
+        nodeId: "pt_add"
+        pin: "f_r"
+    - from:
+        nodeId: "pt_spin2"
+        pin: "value"
+      to:
+        nodeId: "pt_spin_add"
+        pin: "a"
+    - from:
+        nodeId: "pt_spin_step"
+        pin: "value"
+      to:
+        nodeId: "pt_spin_add"
+        pin: "b"
+    - from:
+        nodeId: "pt_spin_add"
+        pin: "return"
+      to:
+        nodeId: "pt_spin_set"
+        pin: "value"
+    - from:
+        nodeId: "pt_wait_n"
+        pin: "value"
+      to:
+        nodeId: "pt_wait"
+        pin: "frames"
+    - from:
+        nodeId: "mv_var"
+        pin: "value"
+      to:
+        nodeId: "mv_break"
+        pin: "v"
+    - from:
+        nodeId: "tick"
+        pin: "delta_seconds"
+      to:
+        nodeId: "mv_dt"
+        pin: "a"
+    - from:
+        nodeId: "sp"
+        pin: "value"
+      to:
+        nodeId: "mv_dt"
+        pin: "b"
+    - from:
+        nodeId: "mv_break"
+        pin: "x"
+      to:
+        nodeId: "mv_dx"
+        pin: "a"
+    - from:
+        nodeId: "mv_dt"
+        pin: "return"
+      to:
+        nodeId: "mv_dx"
+        pin: "b"
+    - from:
+        nodeId: "mv_break"
+        pin: "y"
+      to:
+        nodeId: "mv_dy"
+        pin: "a"
+    - from:
+        nodeId: "mv_dt"
+        pin: "return"
+      to:
+        nodeId: "mv_dy"
+        pin: "b"
+    - from:
+        nodeId: "px_get"
+        pin: "value"
+      to:
+        nodeId: "px_add"
+        pin: "a"
+    - from:
+        nodeId: "mv_dx"
+        pin: "return"
+      to:
+        nodeId: "px_add"
+        pin: "b"
+    - from:
+        nodeId: "py_get"
+        pin: "value"
+      to:
+        nodeId: "py_add"
+        pin: "a"
+    - from:
+        nodeId: "mv_dy"
+        pin: "return"
+      to:
+        nodeId: "py_add"
+        pin: "b"
+    - from:
+        nodeId: "px_add"
+        pin: "return"
+      to:
+        nodeId: "px_clamp"
+        pin: "value"
+    - from:
+        nodeId: "edge_lo"
+        pin: "value"
+      to:
+        nodeId: "px_clamp"
+        pin: "min"
+    - from:
+        nodeId: "edge_hi_x"
+        pin: "value"
+      to:
+        nodeId: "px_clamp"
+        pin: "max"
+    - from:
+        nodeId: "px_clamp"
+        pin: "return"
+      to:
+        nodeId: "px_set"
+        pin: "value"
+    - from:
+        nodeId: "py_add"
+        pin: "return"
+      to:
+        nodeId: "py_clamp"
+        pin: "value"
+    - from:
+        nodeId: "edge_lo"
+        pin: "value"
+      to:
+        nodeId: "py_clamp"
+        pin: "min"
+    - from:
+        nodeId: "edge_hi_y"
+        pin: "value"
+      to:
+        nodeId: "py_clamp"
+        pin: "max"
+    - from:
+        nodeId: "py_clamp"
+        pin: "return"
+      to:
+        nodeId: "py_set"
+        pin: "value"
+    - from:
+        nodeId: "f_x"
+        pin: "value"
+      to:
+        nodeId: "adv_x"
+        pin: "target"
+    - from:
+        nodeId: "f_vx"
+        pin: "value"
+      to:
+        nodeId: "adv_x"
+        pin: "delta"
+    - from:
+        nodeId: "f_y"
+        pin: "value"
+      to:
+        nodeId: "adv_y"
+        pin: "target"
+    - from:
+        nodeId: "f_vy"
+        pin: "value"
+      to:
+        nodeId: "adv_y"
+        pin: "delta"
+    - from:
+        nodeId: "f_x"
+        pin: "value"
+      to:
+        nodeId: "cull_x_lo"
+        pin: "field"
+    - from:
+        nodeId: "op_lt"
+        pin: "value"
+      to:
+        nodeId: "cull_x_lo"
+        pin: "op"
+    - from:
+        nodeId: "lo"
+        pin: "value"
+      to:
+        nodeId: "cull_x_lo"
+        pin: "value"
+    - from:
+        nodeId: "f_x"
+        pin: "value"
+      to:
+        nodeId: "cull_x_hi"
+        pin: "field"
+    - from:
+        nodeId: "op_gt"
+        pin: "value"
+      to:
+        nodeId: "cull_x_hi"
+        pin: "op"
+    - from:
+        nodeId: "hi_x"
+        pin: "value"
+      to:
+        nodeId: "cull_x_hi"
+        pin: "value"
+    - from:
+        nodeId: "f_y"
+        pin: "value"
+      to:
+        nodeId: "cull_y_lo"
+        pin: "field"
+    - from:
+        nodeId: "op_lt"
+        pin: "value"
+      to:
+        nodeId: "cull_y_lo"
+        pin: "op"
+    - from:
+        nodeId: "lo"
+        pin: "value"
+      to:
+        nodeId: "cull_y_lo"
+        pin: "value"
+    - from:
+        nodeId: "f_y"
+        pin: "value"
+      to:
+        nodeId: "cull_y_hi"
+        pin: "field"
+    - from:
+        nodeId: "op_gt"
+        pin: "value"
+      to:
+        nodeId: "cull_y_hi"
+        pin: "op"
+    - from:
+        nodeId: "hi_y"
+        pin: "value"
+      to:
+        nodeId: "cull_y_hi"
+        pin: "value"
+    - from:
+        nodeId: "rows"
+        pin: "return"
+      to:
+        nodeId: "rows_set"
+        pin: "value"
+    - from:
+        nodeId: "shots_var"
+        pin: "value"
+      to:
+        nodeId: "hit_q"
+        pin: "targets"
+    - from:
+        nodeId: "px_get2"
+        pin: "value"
+      to:
+        nodeId: "hit_q"
+        pin: "x"
+    - from:
+        nodeId: "py_get2"
+        pin: "value"
+      to:
+        nodeId: "hit_q"
+        pin: "y"
+    - from:
+        nodeId: "hit_r"
+        pin: "value"
+      to:
+        nodeId: "hit_q"
+        pin: "radius"
+    - from:
+        nodeId: "hit_th"
+        pin: "value"
+      to:
+        nodeId: "hit_q"
+        pin: "threshold"
+    - from:
+        nodeId: "hit_q"
+        pin: "hit"
+      to:
+        nodeId: "hit_len"
+        pin: "array"
+    - from:
+        nodeId: "hit_len"
+        pin: "return"
+      to:
+        nodeId: "hit_test"
+        pin: "a"
+    - from:
+        nodeId: "hit_zero"
+        pin: "value"
+      to:
+        nodeId: "hit_test"
+        pin: "b"
+    - from:
+        nodeId: "hit_test"
+        pin: "return"
+      to:
+        nodeId: "hit_br"
+        pin: "condition"
+    - from:
+        nodeId: "freeze_sec"
+        pin: "value"
+      to:
+        nodeId: "freeze"
+        pin: "seconds"
+    - from:
+        nodeId: "hit_q"
+        pin: "near"
+      to:
+        nodeId: "graze_len"
+        pin: "array"
+    - from:
+        nodeId: "graze_get"
+        pin: "value"
+      to:
+        nodeId: "graze_add"
+        pin: "a"
+    - from:
+        nodeId: "graze_len"
+        pin: "return"
+      to:
+        nodeId: "graze_add"
+        pin: "b"
+    - from:
+        nodeId: "graze_add"
+        pin: "return"
+      to:
+        nodeId: "graze_set"
+        pin: "value"

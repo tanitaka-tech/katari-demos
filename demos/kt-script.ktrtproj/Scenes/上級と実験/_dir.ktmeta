@@ -1,0 +1,11 @@
+schema_version: 2
+kind: "scene-dir"
+id: "sample-advanced"
+display_name: "上級と実験"
+memo: "Node Group、Saliency、task、temporary、.using。"
+pos:
+  x: 1000
+  y: 40
+children[2]{name,id,ref}:
+  "07_NodeGroup_常連さん.ktrt","scn_1onwzpf_ed6d30","file"
+  "08_非同期演出の屋台.ktrt","scn_1677d5f_zsxdf3","file"

@@ -1,0 +1,10 @@
+schema_version: 2
+kind: "screen"
+id: "screen_dialogue"
+display_name: "会話画面"
+parent_screen_id: "screen_game_root"
+memo: null
+pos:
+  x: 320
+  y: 220
+favorite: false

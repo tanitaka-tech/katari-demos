@@ -1,0 +1,10 @@
+schema_version: 2
+kind: "screen"
+id: "screen_game_root"
+display_name: "ゲームルート"
+parent_screen_id: null
+memo: null
+pos:
+  x: 80
+  y: 80
+favorite: false

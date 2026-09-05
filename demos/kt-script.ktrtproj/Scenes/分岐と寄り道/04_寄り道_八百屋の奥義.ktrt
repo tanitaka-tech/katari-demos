@@ -1,0 +1,21 @@
+title: 04_寄り道_八百屋の奥義
+tags: detour return
+group: 分岐
+priority: 20
+---
+八百屋: よく来たね。ここでは <<detour>> と <<return>> を学ぶんだ。
+<<detour 04_レジ袋講座>>
+八百屋: ほら、寄り道から戻ってきただろう。
+ミオ: 本筋を折らずに小話を差し込めるんですね。
+<<jump 05_一回だけの貼り紙>>
+===
+
+title: 04_レジ袋講座
+tags: detour inner
+group: 分岐
+priority: 1
+---
+八百屋: detour は呼び出し元を覚えたまま別 node に行く。
+八百屋: return すると元の続きへ帰る。買い忘れたネギみたいに戻れる。
+<<return>>
+===

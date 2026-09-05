@@ -1,0 +1,13 @@
+schema_version: 2
+kind: "screen-dir"
+id: "screen_stage1"
+display_name: "ステージ 1"
+memo: "矢印 / WASD で歩き、スペースで跳ぶ。坂は歩いて登れる。"
+pos:
+  x: 40
+  y: 40
+children:
+  -
+    name: "ステージ 1.screen"
+    id: "screen_stage1"
+    ref: "file"

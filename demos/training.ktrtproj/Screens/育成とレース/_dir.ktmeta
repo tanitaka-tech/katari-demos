@@ -1,0 +1,13 @@
+schema_version: 2
+kind: "screen-dir"
+id: "screen_uma_stage"
+display_name: "育成とレース"
+memo: "練習ボタンでステータスを伸ばし、12 ターン後のレースで着順が決まる。乱数は種を固定してあるので、同じ手順なら同じ結果になる。"
+pos:
+  x: 40
+  y: 40
+children:
+  -
+    name: "育成とレース.screen"
+    id: "screen_uma_stage"
+    ref: "file"

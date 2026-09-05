@@ -1,0 +1,96 @@
+id: "tanitaka-tech.katari-demos"
+api_version: 1
+version: "1.0.0"
+name:
+  ja: "Katari デモ集"
+  en: "Katari demos"
+description:
+  ja: "ホーム画面に並ぶデモ 5 本。触って動かして確かめるためのもの"
+  en: "The five demos on the home screen. Made to be opened and played"
+contributes:
+  sample_projects:
+    - id: "platformer"
+      name:
+        ja: "2D アクション"
+        en: "2D platformer"
+      description:
+        ja: "走って跳んで坂を登る。当たり判定・カメラ追従・タイル地形が一通り入っている"
+        en: "Run, jump and climb slopes. Collision, camera follow and tilemaps are all wired up"
+      body:
+        ja: "横スクロールの 1 ステージ。キーボードの A / D で走り、Space で跳びます。坂も段差も登れて、カメラはステージの端で止まります。当たり判定・入力・カメラをどう組むかを、そのまま読める形で入れてあります。"
+        en: "A single side-scrolling stage. Run with A / D and jump with Space. Slopes and steps work, and the camera stops at the stage edges. Collision, input and camera wiring are all readable as-is."
+      path: "demos/platformer.ktrtproj"
+      home: true
+      accent: "#b5651d"
+      media:
+        cover: "media/platformer/hero.jpg"
+        screenshots: ["media/platformer/shot-1.jpg", "media/platformer/shot-2.jpg"]
+        trailer: "media/platformer/play.mp4"
+    - id: "training"
+      name:
+        ja: "育成シミュレーション"
+        en: "Training sim"
+      description:
+        ja: "週ごとに練習を選んでステータスを伸ばす。マスターデータ表と変数の使い方が入っている"
+        en: "Pick a training each week and raise stats. Shows master data tables and variables"
+      body:
+        ja: "ターン制の育成もの。練習を選ぶ → ステータスが伸びる → 結果が出る、までが 1 周します。表（マスターデータ）から値を引く形と、変数で進行を持つ形の両方が見られます。"
+        en: "A turn-based trainer. Pick a training, watch stats rise, and reach a result. Shows both reading values from a master data table and holding progress in variables."
+      path: "demos/training.ktrtproj"
+      home: true
+      accent: "#3f6ea5"
+      media:
+        cover: "media/training/hero.jpg"
+        screenshots: ["media/training/shot-1.jpg", "media/training/shot-2.jpg"]
+        trailer: "media/training/play.mp4"
+    - id: "danmaku"
+      name:
+        ja: "弾幕シューティング"
+        en: "Bullet hell"
+      description:
+        ja: "自機を動かして弾を避ける。大量のオブジェクトと当たり判定の組み方が入っている"
+        en: "Move and dodge. Shows how to handle many objects and their collisions"
+      body:
+        ja: "画面いっぱいの弾を避けるシューティング。数の多いオブジェクトをどう出して、どう消して、どう当たり判定を取るかが読めます。"
+        en: "Dodge a screen full of bullets. Shows how to spawn, despawn and collide large numbers of objects."
+      path: "demos/danmaku.ktrtproj"
+      home: true
+      accent: "#c2478f"
+      media:
+        cover: "media/danmaku/hero.jpg"
+        screenshots: ["media/danmaku/shot-1.jpg", "media/danmaku/shot-2.jpg"]
+        trailer: "media/danmaku/play.mp4"
+    - id: "trial"
+      name:
+        ja: "推理 ADV"
+        en: "Mystery ADV"
+      description:
+        ja: "証拠を集めて矛盾を突く。選択肢とフラグ、脚本と画面の行き来が入っている"
+        en: "Collect evidence and find contradictions. Choices, flags, script and screens"
+      body:
+        ja: "法廷ものの一場面。証言を聞き、証拠を選んで矛盾を突きます。脚本（`.ktrt`）と画面（Screen）を行き来する組み方と、選択肢・フラグの持ち方が入っています。"
+        en: "One courtroom scene. Hear testimony, pick evidence, and press the contradiction. Shows moving between the script (`.ktrt`) and screens, plus choices and flags."
+      path: "demos/trial.ktrtproj"
+      home: true
+      accent: "#8e5bd0"
+      media:
+        cover: "media/trial/hero.jpg"
+        screenshots: ["media/trial/shot-1.jpg", "media/trial/shot-2.jpg"]
+        trailer: "media/trial/play.mp4"
+    - id: "kt-script"
+      name:
+        ja: "Katari Script 入門"
+        en: "Katari Script intro"
+      description:
+        ja: "脚本 `.ktrt` の書き方。背景 / 立ち絵 / BGM / 選択肢のコマンドが一通り"
+        en: "How to write `.ktrt`. Backgrounds, characters, BGM and choices"
+      body:
+        ja: "Katari Script（`.ktrt`）の入門サンプル。背景・立ち絵・BGM・選択肢のコマンドが 1 本の脚本の中に並んでいて、上から読めば書き方が分かります。"
+        en: "An intro sample for Katari Script (`.ktrt`). Backgrounds, characters, BGM and choices appear in one script, readable top to bottom."
+      path: "demos/kt-script.ktrtproj"
+      home: true
+      accent: "#845be5"
+      media:
+        cover: "media/kt-script/hero.jpg"
+        screenshots: ["media/kt-script/shot-1.jpg", "media/kt-script/shot-2.jpg"]
+        trailer: "media/kt-script/play.mp4"

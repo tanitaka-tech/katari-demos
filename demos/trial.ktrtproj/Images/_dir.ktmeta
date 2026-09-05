@@ -1,0 +1,7 @@
+schema_version: 2
+kind: "asset-dir"
+id: "images-root"
+display_name: "Images"
+memo: null
+pos: null
+children: []

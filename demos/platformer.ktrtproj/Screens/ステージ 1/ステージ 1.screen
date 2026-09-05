@@ -1,0 +1,1638 @@
+screen_component:
+  screen_space: true
+  resolution_width: 1280
+  resolution_height: 720
+  ref_resolution_width: 1280
+  ref_resolution_height: 720
+  scale_mode: "blend"
+  scale_blend: 0.5
+  priority: 0
+objects:
+  - id: "stage"
+    name: "ステージ"
+    type: "tilemap"
+    x: 0
+    y: 0
+    origin_x: 0
+    origin_y: 0
+    width: 2560
+    height: 384
+    tile_width: 32
+    tile_height: 32
+    columns: 80
+    rows: 12
+    tiles:
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - 1
+      - 1
+      - 1
+      - 1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - 2
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - 2
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - -1
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 3
+      - -1
+      - -1
+      - -1
+      - 2
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 3
+      - -1
+      - -1
+      - -1
+      - 2
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+    tile_textures: []
+    tile_colors:
+      - "#6b4a2f"
+      - "#b5651d"
+      - "#6b4a2f"
+      - "#6b4a2f"
+    slope_up_tiles:
+      - 2
+    slope_down_tiles:
+      - 3
+  - id: "player"
+    name: "プレイヤー"
+    type: "rectangle"
+    x: "$px"
+    y: "$py"
+    origin_x: 0
+    origin_y: 0
+    width: 24
+    height: 32
+    fill: "#ff5a5a"
+  - id: "camera"
+    name: "カメラ"
+    type: "camera"
+    x: "$cam.x"
+    y: "$cam.y"
+    width: 1280
+    height: 720
+variables:
+  - kind: "normal"
+    id: "px"
+    name: "$px"
+    value_type: "Float"
+    initial_value: "64"
+  - kind: "normal"
+    id: "py"
+    name: "$py"
+    value_type: "Float"
+    initial_value: "160"
+  - kind: "normal"
+    id: "vx"
+    name: "$vx"
+    value_type: "Float"
+    initial_value: "0"
+  - kind: "normal"
+    id: "vy"
+    name: "$vy"
+    value_type: "Float"
+    initial_value: "0"
+  - kind: "normal"
+    id: "on_ground"
+    name: "$on_ground"
+    value_type: "Bool"
+    initial_value: "false"
+  - kind: "normal"
+    id: "move"
+    name: "$move"
+    value_type: "Vector2"
+    initial_value: "0,0"
+  - kind: "normal"
+    id: "jump"
+    name: "$jump"
+    value_type: "Bool"
+    initial_value: "false"
+  - kind: "normal"
+    id: "cam"
+    name: "$cam"
+    value_type: "Vector2"
+    initial_value: "640,360"
+requests: []
+script_graph:
+  nodes:
+    - id: "event_begin_play_1"
+      type: "event_begin_play"
+      next: "subscribe_vector2_1"
+    - id: "get_input_action_vector2_1"
+      type: "get_input_action_vector2"
+      properties:
+        actionMap: "map_gameplay"
+        action: "act_move"
+    - id: "lambda_1"
+      type: "lambda"
+      properties:
+        arg_count: 1
+        arg_types: "[\"Vector2\"]"
+      next: "set_variable_1"
+    - id: "set_variable_1"
+      type: "set_variable"
+      properties:
+        variable: "move"
+    - id: "subscribe_vector2_1"
+      type: "subscribe_vector2"
+      next: "subscribe_bool_1"
+    - id: "get_input_action_bool_1"
+      type: "get_input_action_bool"
+      properties:
+        actionMap: "map_gameplay"
+        action: "act_jump"
+    - id: "lambda_2"
+      type: "lambda"
+      properties:
+        arg_count: 1
+        arg_types: "[\"Bool\"]"
+      next: "set_variable_2"
+    - id: "set_variable_2"
+      type: "set_variable"
+      properties:
+        variable: "jump"
+    - id: "subscribe_bool_1"
+      type: "subscribe_bool"
+    - id: "event_tick_1"
+      type: "event_tick"
+      next: "set_variable_3"
+    - id: "get_variable_vector2_1"
+      type: "get_variable_vector2"
+      properties:
+        variable: "move"
+    - id: "break_vector2_1"
+      type: "break_vector2"
+    - id: "float_mul_1"
+      type: "float_mul"
+      properties:
+        b: 220
+    - id: "set_variable_3"
+      type: "set_variable"
+      properties:
+        variable: "vx"
+      next: "set_variable_4"
+    - id: "get_variable_float_1"
+      type: "get_variable_float"
+      properties:
+        variable: "vy"
+    - id: "float_mul_2"
+      type: "float_mul"
+      properties:
+        a: 1400
+    - id: "float_add_1"
+      type: "float_add"
+    - id: "float_min_1"
+      type: "float_min"
+      properties:
+        b: 900
+    - id: "get_variable_bool_1"
+      type: "get_variable_bool"
+      properties:
+        variable: "on_ground"
+    - id: "get_variable_bool_2"
+      type: "get_variable_bool"
+      properties:
+        variable: "jump"
+    - id: "and_op_1"
+      type: "and_op"
+    - id: "ternary_1"
+      type: "ternary"
+      properties:
+        true: -520
+    - id: "set_variable_4"
+      type: "set_variable"
+      properties:
+        variable: "vy"
+      next: "set_variable_5"
+    - id: "get_colliders_1"
+      type: "get_colliders"
+      properties:
+        layer: "solid"
+    - id: "get_variable_float_2"
+      type: "get_variable_float"
+      properties:
+        variable: "px"
+    - id: "get_variable_float_3"
+      type: "get_variable_float"
+      properties:
+        variable: "py"
+    - id: "get_variable_float_4"
+      type: "get_variable_float"
+      properties:
+        variable: "vx"
+    - id: "float_mul_3"
+      type: "float_mul"
+    - id: "get_variable_float_5"
+      type: "get_variable_float"
+      properties:
+        variable: "vy"
+    - id: "float_mul_4"
+      type: "float_mul"
+    - id: "move_and_collide_1"
+      type: "move_and_collide"
+      properties:
+        width: 24
+        height: 32
+    - id: "break_vector2_2"
+      type: "break_vector2"
+    - id: "set_variable_5"
+      type: "set_variable"
+      properties:
+        variable: "px"
+      next: "set_variable_6"
+    - id: "set_variable_6"
+      type: "set_variable"
+      properties:
+        variable: "py"
+      next: "set_variable_7"
+    - id: "set_variable_7"
+      type: "set_variable"
+      properties:
+        variable: "on_ground"
+      next: "set_variable_8"
+    - id: "or_op_1"
+      type: "or_op"
+    - id: "ternary_2"
+      type: "ternary"
+      properties:
+        true: 0
+    - id: "set_variable_8"
+      type: "set_variable"
+      properties:
+        variable: "vy"
+      next: "set_variable_9"
+    - id: "float_add_2"
+      type: "float_add"
+      properties:
+        b: 12
+    - id: "float_add_3"
+      type: "float_add"
+      properties:
+        b: 16
+    - id: "make_vector2_1"
+      type: "make_vector2"
+    - id: "get_variable_vector2_2"
+      type: "get_variable_vector2"
+      properties:
+        variable: "cam"
+    - id: "camera_follow_1"
+      type: "camera_follow"
+      properties:
+        deadzone_x: 160
+        deadzone_y: 90
+        smoothing: 8
+    - id: "clamp_camera_to_bounds_1"
+      type: "clamp_camera_to_bounds"
+      properties:
+        view_width: 1280
+        view_height: 720
+        bounds_x: 0
+        bounds_y: 0
+        bounds_width: 2560
+        bounds_height: 384
+    - id: "set_variable_9"
+      type: "set_variable"
+      properties:
+        variable: "cam"
+  layout:
+    - id: "get_input_action_vector2_1"
+      x: 0
+      y: 130
+    - id: "lambda_1"
+      x: 0
+      y: 260
+    - id: "set_variable_1"
+      x: 260
+      y: 0
+    - id: "subscribe_vector2_1"
+      x: 260
+      y: 130
+    - id: "get_input_action_bool_1"
+      x: 0
+      y: 390
+    - id: "lambda_2"
+      x: 0
+      y: 520
+    - id: "set_variable_2"
+      x: 260
+      y: 260
+    - id: "subscribe_bool_1"
+      x: 520
+      y: 0
+    - id: "event_tick_1"
+      x: 0
+      y: 650
+    - id: "get_variable_vector2_1"
+      x: 0
+      y: 780
+    - id: "break_vector2_1"
+      x: 260
+      y: 390
+    - id: "float_mul_1"
+      x: 520
+      y: 130
+    - id: "set_variable_3"
+      x: 780
+      y: 0
+    - id: "get_variable_float_1"
+      x: 0
+      y: 910
+    - id: "float_mul_2"
+      x: 260
+      y: 520
+    - id: "float_add_1"
+      x: 520
+      y: 260
+    - id: "float_min_1"
+      x: 780
+      y: 130
+    - id: "get_variable_bool_1"
+      x: 0
+      y: 1040
+    - id: "get_variable_bool_2"
+      x: 0
+      y: 1170
+    - id: "and_op_1"
+      x: 260
+      y: 650
+    - id: "ternary_1"
+      x: 1040
+      y: 0
+    - id: "set_variable_4"
+      x: 1300
+      y: 0
+    - id: "get_colliders_1"
+      x: 0
+      y: 1300
+    - id: "get_variable_float_2"
+      x: 0
+      y: 1430
+    - id: "get_variable_float_3"
+      x: 0
+      y: 1560
+    - id: "get_variable_float_4"
+      x: 0
+      y: 1690
+    - id: "float_mul_3"
+      x: 260
+      y: 780
+    - id: "get_variable_float_5"
+      x: 0
+      y: 1820
+    - id: "float_mul_4"
+      x: 260
+      y: 910
+    - id: "move_and_collide_1"
+      x: 520
+      y: 390
+    - id: "break_vector2_2"
+      x: 780
+      y: 260
+    - id: "set_variable_5"
+      x: 1560
+      y: 0
+    - id: "set_variable_6"
+      x: 1820
+      y: 0
+    - id: "set_variable_7"
+      x: 2080
+      y: 0
+    - id: "or_op_1"
+      x: 780
+      y: 390
+    - id: "ternary_2"
+      x: 1300
+      y: 130
+    - id: "set_variable_8"
+      x: 2340
+      y: 0
+    - id: "float_add_2"
+      x: 1040
+      y: 130
+    - id: "float_add_3"
+      x: 1040
+      y: 260
+    - id: "make_vector2_1"
+      x: 1300
+      y: 260
+    - id: "get_variable_vector2_2"
+      x: 0
+      y: 1950
+    - id: "camera_follow_1"
+      x: 1560
+      y: 130
+    - id: "clamp_camera_to_bounds_1"
+      x: 1820
+      y: 130
+    - id: "set_variable_9"
+      x: 2600
+      y: 0
+  edges:
+    - from:
+        nodeId: "lambda_1"
+        pin: "value_0"
+      to:
+        nodeId: "set_variable_1"
+        pin: "value"
+    - from:
+        nodeId: "get_input_action_vector2_1"
+        pin: "value"
+      to:
+        nodeId: "subscribe_vector2_1"
+        pin: "source"
+    - from:
+        nodeId: "lambda_1"
+        pin: "function"
+      to:
+        nodeId: "subscribe_vector2_1"
+        pin: "on_next"
+    - from:
+        nodeId: "lambda_2"
+        pin: "value_0"
+      to:
+        nodeId: "set_variable_2"
+        pin: "value"
+    - from:
+        nodeId: "get_input_action_bool_1"
+        pin: "value"
+      to:
+        nodeId: "subscribe_bool_1"
+        pin: "source"
+    - from:
+        nodeId: "lambda_2"
+        pin: "function"
+      to:
+        nodeId: "subscribe_bool_1"
+        pin: "on_next"
+    - from:
+        nodeId: "get_variable_vector2_1"
+        pin: "value"
+      to:
+        nodeId: "break_vector2_1"
+        pin: "v"
+    - from:
+        nodeId: "break_vector2_1"
+        pin: "x"
+      to:
+        nodeId: "float_mul_1"
+        pin: "a"
+    - from:
+        nodeId: "float_mul_1"
+        pin: "return"
+      to:
+        nodeId: "set_variable_3"
+        pin: "value"
+    - from:
+        nodeId: "event_tick_1"
+        pin: "delta_seconds"
+      to:
+        nodeId: "float_mul_2"
+        pin: "b"
+    - from:
+        nodeId: "get_variable_float_1"
+        pin: "value"
+      to:
+        nodeId: "float_add_1"
+        pin: "a"
+    - from:
+        nodeId: "float_mul_2"
+        pin: "return"
+      to:
+        nodeId: "float_add_1"
+        pin: "b"
+    - from:
+        nodeId: "float_add_1"
+        pin: "return"
+      to:
+        nodeId: "float_min_1"
+        pin: "a"
+    - from:
+        nodeId: "get_variable_bool_1"
+        pin: "value"
+      to:
+        nodeId: "and_op_1"
+        pin: "a"
+    - from:
+        nodeId: "get_variable_bool_2"
+        pin: "value"
+      to:
+        nodeId: "and_op_1"
+        pin: "b"
+    - from:
+        nodeId: "and_op_1"
+        pin: "return"
+      to:
+        nodeId: "ternary_1"
+        pin: "index"
+    - from:
+        nodeId: "float_min_1"
+        pin: "return"
+      to:
+        nodeId: "ternary_1"
+        pin: "false"
+    - from:
+        nodeId: "ternary_1"
+        pin: "return"
+      to:
+        nodeId: "set_variable_4"
+        pin: "value"
+    - from:
+        nodeId: "get_variable_float_4"
+        pin: "value"
+      to:
+        nodeId: "float_mul_3"
+        pin: "a"
+    - from:
+        nodeId: "event_tick_1"
+        pin: "delta_seconds"
+      to:
+        nodeId: "float_mul_3"
+        pin: "b"
+    - from:
+        nodeId: "get_variable_float_5"
+        pin: "value"
+      to:
+        nodeId: "float_mul_4"
+        pin: "a"
+    - from:
+        nodeId: "event_tick_1"
+        pin: "delta_seconds"
+      to:
+        nodeId: "float_mul_4"
+        pin: "b"
+    - from:
+        nodeId: "get_colliders_1"
+        pin: "return"
+      to:
+        nodeId: "move_and_collide_1"
+        pin: "colliders"
+    - from:
+        nodeId: "get_variable_float_2"
+        pin: "value"
+      to:
+        nodeId: "move_and_collide_1"
+        pin: "x"
+    - from:
+        nodeId: "get_variable_float_3"
+        pin: "value"
+      to:
+        nodeId: "move_and_collide_1"
+        pin: "y"
+    - from:
+        nodeId: "float_mul_3"
+        pin: "return"
+      to:
+        nodeId: "move_and_collide_1"
+        pin: "delta_x"
+    - from:
+        nodeId: "float_mul_4"
+        pin: "return"
+      to:
+        nodeId: "move_and_collide_1"
+        pin: "delta_y"
+    - from:
+        nodeId: "move_and_collide_1"
+        pin: "position"
+      to:
+        nodeId: "break_vector2_2"
+        pin: "v"
+    - from:
+        nodeId: "break_vector2_2"
+        pin: "x"
+      to:
+        nodeId: "set_variable_5"
+        pin: "value"
+    - from:
+        nodeId: "break_vector2_2"
+        pin: "y"
+      to:
+        nodeId: "set_variable_6"
+        pin: "value"
+    - from:
+        nodeId: "move_and_collide_1"
+        pin: "on_ground"
+      to:
+        nodeId: "set_variable_7"
+        pin: "value"
+    - from:
+        nodeId: "move_and_collide_1"
+        pin: "hit_top"
+      to:
+        nodeId: "or_op_1"
+        pin: "a"
+    - from:
+        nodeId: "move_and_collide_1"
+        pin: "hit_bottom"
+      to:
+        nodeId: "or_op_1"
+        pin: "b"
+    - from:
+        nodeId: "or_op_1"
+        pin: "return"
+      to:
+        nodeId: "ternary_2"
+        pin: "index"
+    - from:
+        nodeId: "ternary_1"
+        pin: "return"
+      to:
+        nodeId: "ternary_2"
+        pin: "false"
+    - from:
+        nodeId: "ternary_2"
+        pin: "return"
+      to:
+        nodeId: "set_variable_8"
+        pin: "value"
+    - from:
+        nodeId: "break_vector2_2"
+        pin: "x"
+      to:
+        nodeId: "float_add_2"
+        pin: "a"
+    - from:
+        nodeId: "break_vector2_2"
+        pin: "y"
+      to:
+        nodeId: "float_add_3"
+        pin: "a"
+    - from:
+        nodeId: "float_add_2"
+        pin: "return"
+      to:
+        nodeId: "make_vector2_1"
+        pin: "x"
+    - from:
+        nodeId: "float_add_3"
+        pin: "return"
+      to:
+        nodeId: "make_vector2_1"
+        pin: "y"
+    - from:
+        nodeId: "get_variable_vector2_2"
+        pin: "value"
+      to:
+        nodeId: "camera_follow_1"
+        pin: "camera"
+    - from:
+        nodeId: "make_vector2_1"
+        pin: "return"
+      to:
+        nodeId: "camera_follow_1"
+        pin: "target"
+    - from:
+        nodeId: "event_tick_1"
+        pin: "delta_seconds"
+      to:
+        nodeId: "camera_follow_1"
+        pin: "delta_seconds"
+    - from:
+        nodeId: "camera_follow_1"
+        pin: "return"
+      to:
+        nodeId: "clamp_camera_to_bounds_1"
+        pin: "camera"
+    - from:
+        nodeId: "clamp_camera_to_bounds_1"
+        pin: "return"
+      to:
+        nodeId: "set_variable_9"
+        pin: "value"

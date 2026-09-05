@@ -1,0 +1,31 @@
+title: 08_非同期演出の屋台
+tags: task await cancel temporary using
+group: 上級
+priority: 20
+---
+店長: ここからは実行ホストと連携する上級構文です。
+<<task $click = wait_click()>>
+ミオ: <<task>> は裏で処理を始めます。お客さんのクリック待ちを走らせています。
+<<await $click>>
+ミオ: <<await>> で完了待ち。待ち合わせに遅れた友人を責めない大人の構文です。
+<<temporary $shake = shake_character("ミオ", 0.25)>>
+店長: <<temporary>> は続く演出を始めて、<<dispose>> で片付けます。
+<<wait 0.8>>
+<<dispose $shake>>
+.using $bgm = play_bgm("shotengai_theme")
+	ミオ: .using はブロックを抜けると自動で片付く一時演出です。
+	<<wait 0.5>>
+.task.dispatch $cracker
+	<<wait 0.2>>
+	<<task $se = play_se("cracker")>>
+	<<await $se>>
+.task.when_any
+	<<await $cracker>>
+	<<task $timeout = wait_seconds(1)>>
+.task.when_all
+	<<task $short = wait_seconds(0.1)>>
+	<<await $short>>
+<<cancel $cracker>>
+スクリプト先生: プレビュー実装が対応していない環境では、これらは読み物として確認してください。
+<<jump 09_卒業試験>>
+===

@@ -1,0 +1,20 @@
+title: 02_変数と条件分岐
+tags: 変数 if wait
+group: 基本
+priority: 20
+---
+<<declare $budget = 500>>
+<<set $budget = $budget + 120>>
+<<smart $can_buy_pudding = $budget >= 600>>
+ミオ: 所持金は {$budget} 円。商店街では現実味が大事です。
+<<if $can_buy_pudding>>
+	店長: プリンが買えます。しかもスプーン付き。
+<<elseif $budget >= 300>>
+	店長: コロッケなら行けます。揚げたてです。
+<<else>>
+	店長: 今日は試食の爪楊枝を眺めましょう。
+<<endif>>
+<<wait 0.5>>
+スクリプト先生: <<wait 0.5>> は 0.5 秒待つ指定です。間があるとボケが少し上品になります。
+<<jump 03_選択肢で商店街巡り>>
+===

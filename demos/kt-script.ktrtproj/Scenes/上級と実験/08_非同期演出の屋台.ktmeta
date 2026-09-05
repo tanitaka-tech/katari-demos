@@ -1,0 +1,8 @@
+schema_version: 2
+kind: "scene"
+id: "scn_1677d5f_zsxdf3"
+display_name: "08_非同期演出の屋台"
+memo: "task/await/cancel、temporary/dispose、.using、.task.*。"
+pos:
+  x: 1960
+  y: 180

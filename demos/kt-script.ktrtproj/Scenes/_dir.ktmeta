@@ -1,0 +1,11 @@
+schema_version: 2
+kind: "scene-dir"
+id: "scenes-root"
+display_name: "Scenes"
+memo: null
+pos: null
+children[4]{name,id,ref}:
+  "はじめに読む","sample-root","dir"
+  "基本の書き方","sample-basic","dir"
+  "分岐と寄り道","sample-flow","dir"
+  "上級と実験","sample-advanced","dir"

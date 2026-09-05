@@ -1,0 +1,8 @@
+schema_version: 2
+kind: "scene"
+id: "scn_xm60la_v4286s"
+display_name: "09_卒業試験"
+memo: "構文の総復習。最後は END へ。"
+pos:
+  x: 2180
+  y: 180
