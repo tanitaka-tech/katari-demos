@@ -1,0 +1,10 @@
+schema_version: 2
+kind: "screen"
+id: "screen_stealth_mission"
+display_name: "潜入"
+parent_screen_id: null
+memo: "WASD で移動 / Space で忍び足。見張りの視界と足音を避けて南東の出口へ。"
+pos:
+  x: 40
+  y: 40
+favorite: false

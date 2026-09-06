@@ -1,0 +1,13 @@
+schema_version: 2
+kind: "screen-dir"
+id: "screen_stealth_mission"
+display_name: "潜入"
+memo: "WASD で移動 / Space で忍び足。見張りの視界と足音を避けて南東の出口へ。"
+pos:
+  x: 40
+  y: 40
+children:
+  -
+    name: "潜入.screen"
+    id: "screen_stealth_mission"
+    ref: "file"

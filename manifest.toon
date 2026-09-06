@@ -5,8 +5,8 @@ name:
   ja: "Katari デモ集"
   en: "Katari demos"
 description:
-  ja: "ホーム画面に並ぶデモ 8 本。触って動かして確かめるためのもの"
-  en: "The 8 demos on the home screen. Made to be opened and played"
+  ja: "ホーム画面に並ぶデモ 9 本。触って動かして確かめるためのもの"
+  en: "The 9 demos on the home screen. Made to be opened and played"
 contributes:
   sample_projects:
     - id: "platformer"
@@ -60,6 +60,23 @@ contributes:
         cover: "media/mansion/hero.jpg"
         screenshots: ["media/mansion/shot-1.jpg", "media/mansion/shot-2.jpg"]
         trailer: "media/mansion/play.mp4"
+    - id: "stealth"
+      name:
+        ja: "潜入アクション"
+        en: "Stealth action"
+      description:
+        ja: "3D の施設を歩き、見張りの視界と足音を避けて出口へ。視界コーン・レイキャスト・経路探索が入っている"
+        en: "Walk a 3D facility past guards' vision cones and footstep noise. Sight cones, raycasts and pathfinding"
+      body:
+        ja: "フル 3D の潜入もの。WASD で歩き、Space を押している間は忍び足（遅いが静か）です。見張りは視界（扇）と耳を持ち、壁や木箱で遮られれば見つかりません。金網ごしは見通せるので、隠れたつもりで見つかります。気付かれると最後に見た場所へ壁を回り込んで寄ってきます。見張りの目は entity の宣言 1 つで、エディタで選ぶと視界の扇がそのまま描かれます。木箱は配列 1 本から生えていて、行を消せば箱も消えます。"
+        en: "A full-3D stealth mission. Walk with WASD; hold Space to sneak (slower but quiet). Guards have a sight cone and ears, and walls or crates break line of sight — but the wire fence does not, so hiding behind it fails. Once alerted they path around walls toward where they last saw you. A guard's eyes are one declaration on the entity, and selecting it draws that exact cone in the editor. The crates grow from a single array; delete a row and the crate is gone."
+      path: "demos/stealth.ktrtproj"
+      home: true
+      accent: "#2f7f8a"
+      media:
+        cover: "media/stealth/hero.jpg"
+        screenshots: ["media/stealth/shot-1.jpg", "media/stealth/shot-2.jpg"]
+        trailer: "media/stealth/play.mp4"
     - id: "training"
       name:
         ja: "育成シミュレーション"

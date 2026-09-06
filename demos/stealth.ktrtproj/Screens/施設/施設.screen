@@ -1,0 +1,555 @@
+screen_component:
+  screen_space: true
+  resolution_width: 1280
+  resolution_height: 720
+  ref_resolution_width: 1280
+  ref_resolution_height: 720
+  scale_mode: "blend"
+  scale_blend: 0.5
+  priority: 0
+objects: []
+variables: []
+requests: []
+space:
+  entities:
+    - id: "floor"
+      name: "床"
+      type: "render"
+      position:
+        x: 0
+        y: -0.25
+        z: 0
+      rotation:
+        x: 0
+        y: 0
+        z: 0
+      scale:
+        x: 40
+        y: 0.5
+        z: 30
+      shape: "box"
+      color: "#5b6472"
+      physics:
+        body: "static"
+        collider:
+          shape: "box"
+          half_extents:
+            x: 0.5
+            y: 0.5
+            z: 0.5
+    - id: "wall_n"
+      name: "wall_n"
+      type: "render"
+      position:
+        x: 0
+        y: 1.5
+        z: -15
+      rotation:
+        x: 0
+        y: 0
+        z: 0
+      scale:
+        x: 40
+        y: 3
+        z: 0.5
+      shape: "box"
+      color: "#8d99ab"
+      physics:
+        body: "static"
+        collider:
+          shape: "box"
+          half_extents:
+            x: 0.5
+            y: 0.5
+            z: 0.5
+    - id: "wall_s"
+      name: "wall_s"
+      type: "render"
+      position:
+        x: 0
+        y: 1.5
+        z: 15
+      rotation:
+        x: 0
+        y: 0
+        z: 0
+      scale:
+        x: 40
+        y: 3
+        z: 0.5
+      shape: "box"
+      color: "#8d99ab"
+      physics:
+        body: "static"
+        collider:
+          shape: "box"
+          half_extents:
+            x: 0.5
+            y: 0.5
+            z: 0.5
+    - id: "wall_w"
+      name: "wall_w"
+      type: "render"
+      position:
+        x: -20
+        y: 1.5
+        z: 0
+      rotation:
+        x: 0
+        y: 0
+        z: 0
+      scale:
+        x: 0.5
+        y: 3
+        z: 30
+      shape: "box"
+      color: "#8d99ab"
+      physics:
+        body: "static"
+        collider:
+          shape: "box"
+          half_extents:
+            x: 0.5
+            y: 0.5
+            z: 0.5
+    - id: "wall_e"
+      name: "wall_e"
+      type: "render"
+      position:
+        x: 20
+        y: 1.5
+        z: 0
+      rotation:
+        x: 0
+        y: 0
+        z: 0
+      scale:
+        x: 0.5
+        y: 3
+        z: 30
+      shape: "box"
+      color: "#8d99ab"
+      physics:
+        body: "static"
+        collider:
+          shape: "box"
+          half_extents:
+            x: 0.5
+            y: 0.5
+            z: 0.5
+    - id: "wall_a1"
+      name: "wall_a1"
+      type: "render"
+      position:
+        x: -11.5
+        y: 1.5
+        z: -6
+      rotation:
+        x: 0
+        y: 0
+        z: 0
+      scale:
+        x: 17
+        y: 3
+        z: 0.5
+      shape: "box"
+      color: "#8d99ab"
+      physics:
+        body: "static"
+        collider:
+          shape: "box"
+          half_extents:
+            x: 0.5
+            y: 0.5
+            z: 0.5
+    - id: "wall_a2"
+      name: "wall_a2"
+      type: "render"
+      position:
+        x: 11.5
+        y: 1.5
+        z: -6
+      rotation:
+        x: 0
+        y: 0
+        z: 0
+      scale:
+        x: 17
+        y: 3
+        z: 0.5
+      shape: "box"
+      color: "#8d99ab"
+      physics:
+        body: "static"
+        collider:
+          shape: "box"
+          half_extents:
+            x: 0.5
+            y: 0.5
+            z: 0.5
+    - id: "wall_b1"
+      name: "wall_b1"
+      type: "render"
+      position:
+        x: -19
+        y: 1.5
+        z: 5
+      rotation:
+        x: 0
+        y: 0
+        z: 0
+      scale:
+        x: 2
+        y: 3
+        z: 0.5
+      shape: "box"
+      color: "#8d99ab"
+      physics:
+        body: "static"
+        collider:
+          shape: "box"
+          half_extents:
+            x: 0.5
+            y: 0.5
+            z: 0.5
+    - id: "wall_b2"
+      name: "wall_b2"
+      type: "render"
+      position:
+        x: 3
+        y: 1.5
+        z: 5
+      rotation:
+        x: 0
+        y: 0
+        z: 0
+      scale:
+        x: 26
+        y: 3
+        z: 0.5
+      shape: "box"
+      color: "#8d99ab"
+      physics:
+        body: "static"
+        collider:
+          shape: "box"
+          half_extents:
+            x: 0.5
+            y: 0.5
+            z: 0.5
+    - id: "fence"
+      name: "金網"
+      type: "render"
+      position:
+        x: -14
+        y: 1
+        z: 5
+      rotation:
+        x: 0
+        y: 0
+        z: 0
+      scale:
+        x: 8
+        y: 2
+        z: 0.15
+      shape: "box"
+      color: "#b9c4d2"
+      physics:
+        body: "static"
+        collider:
+          shape: "box"
+          half_extents:
+            x: 0.5
+            y: 0.5
+            z: 0.5
+          see_through: true
+    - id: "crate"
+      name: "木箱"
+      type: "group"
+      position:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        x: 0
+        y: 0
+        z: 0
+      scale:
+        x: 1
+        y: 1
+        z: 1
+      repeat:
+        source: "$crates"
+    - id: "crate_box"
+      name: "木箱の中身"
+      type: "render"
+      position:
+        x: 0
+        y: 0.8
+        z: 0
+      rotation:
+        x: 0
+        y: 0
+        z: 0
+      scale:
+        x: 1.6
+        y: 1.6
+        z: 1.6
+      parent_id: "crate"
+      shape: "box"
+      color: "#c08a4a"
+      physics:
+        body: "static"
+        collider:
+          shape: "box"
+          half_extents:
+            x: 0.5
+            y: 0.5
+            z: 0.5
+    - id: "goal"
+      name: "出口"
+      type: "render"
+      position:
+        x: 16
+        y: 0.02
+        z: 12
+      rotation:
+        x: 0
+        y: 0
+        z: 0
+      scale:
+        x: 3
+        y: 0.04
+        z: 3
+      shape: "box"
+      color: "#4fe08c"
+      physics:
+        body: "static"
+        layer: "goal"
+        collider:
+          shape: "box"
+          half_extents:
+            x: 0.5
+            y: 0.5
+            z: 0.5
+          trigger: true
+    - id: "player"
+      name: "プレイヤー"
+      type: "group"
+      position:
+        x: "$px"
+        y: "$py"
+        z: "$pz"
+      rotation:
+        x: 0
+        y: "$pry"
+        z: 0
+      scale:
+        x: 1
+        y: 1
+        z: 1
+      physics:
+        body: "kinematic"
+        layer: "actor"
+        collider:
+          shape: "capsule"
+          radius: 0.3
+          height: 1.2000000000000002
+          offset:
+            x: 0
+            y: 0.9
+            z: 0
+    - id: "player_body"
+      name: "プレイヤーの体"
+      type: "render"
+      position:
+        x: 0
+        y: 0.9
+        z: 0
+      rotation:
+        x: 0
+        y: 0
+        z: 0
+      scale:
+        x: 0.55
+        y: 1.8
+        z: 0.55
+      parent_id: "player"
+      shape: "box"
+      color: "#4fc3f7"
+    - id: "g1"
+      name: "g1"
+      type: "group"
+      position:
+        x: "$g1x"
+        y: 0
+        z: "$g1z"
+      rotation:
+        x: 0
+        y: "$g1ry"
+        z: 0
+      scale:
+        x: 1
+        y: 1
+        z: 1
+      physics:
+        body: "kinematic"
+        layer: "actor"
+        collider:
+          shape: "capsule"
+          radius: 0.35
+          height: 1.1
+          offset:
+            x: 0
+            y: 0.9
+            z: 0
+      sensor:
+        fov: 100
+        range: 11
+        eye_height: 1.55
+        hearing: 9
+    - id: "g1_body"
+      name: "g1 body"
+      type: "render"
+      position:
+        x: 0
+        y: 0.9
+        z: 0
+      rotation:
+        x: 0
+        y: 0
+        z: 0
+      scale:
+        x: 0.6
+        y: 1.8
+        z: 0.6
+      parent_id: "g1"
+      shape: "box"
+      color: "#ff6b6b"
+    - id: "g1_nose"
+      name: "g1 nose"
+      type: "render"
+      position:
+        x: 0
+        y: 1.55
+        z: -0.42
+      rotation:
+        x: 0
+        y: 0
+        z: 0
+      scale:
+        x: 0.24
+        y: 0.18
+        z: 0.3
+      parent_id: "g1"
+      shape: "box"
+      color: "#ffd27f"
+    - id: "g2"
+      name: "g2"
+      type: "group"
+      position:
+        x: "$g2x"
+        y: 0
+        z: "$g2z"
+      rotation:
+        x: 0
+        y: "$g2ry"
+        z: 0
+      scale:
+        x: 1
+        y: 1
+        z: 1
+      physics:
+        body: "kinematic"
+        layer: "actor"
+        collider:
+          shape: "capsule"
+          radius: 0.35
+          height: 1.1
+          offset:
+            x: 0
+            y: 0.9
+            z: 0
+      sensor:
+        fov: 100
+        range: 11
+        eye_height: 1.55
+        hearing: 9
+    - id: "g2_body"
+      name: "g2 body"
+      type: "render"
+      position:
+        x: 0
+        y: 0.9
+        z: 0
+      rotation:
+        x: 0
+        y: 0
+        z: 0
+      scale:
+        x: 0.6
+        y: 1.8
+        z: 0.6
+      parent_id: "g2"
+      shape: "box"
+      color: "#ffa552"
+    - id: "g2_nose"
+      name: "g2 nose"
+      type: "render"
+      position:
+        x: 0
+        y: 1.55
+        z: -0.42
+      rotation:
+        x: 0
+        y: 0
+        z: 0
+      scale:
+        x: 0.24
+        y: 0.18
+        z: 0.3
+      parent_id: "g2"
+      shape: "box"
+      color: "#ffd27f"
+    - id: "cam"
+      name: "カメラ"
+      type: "camera"
+      position:
+        x: 0
+        y: 40
+        z: 0
+      rotation:
+        x: -90
+        y: 0
+        z: 0
+      scale:
+        x: 1
+        y: 1
+        z: 1
+      projection: "perspective"
+      fov: 45
+      clear_color: "#141a24"
+      output: "buffer"
+    - id: "sun"
+      name: "太陽"
+      type: "light"
+      position:
+        x: 0
+        y: 10
+        z: 0
+      rotation:
+        x: -55
+        y: 35
+        z: 0
+      scale:
+        x: 1
+        y: 1
+        z: 1
+      light_type: "directional"
+      color: "#fff4e6"
+      intensity: 1.6
+  environment:
+    ambient:
+      source: "color"
+      color: "#6f7b90"
+      intensity: 1

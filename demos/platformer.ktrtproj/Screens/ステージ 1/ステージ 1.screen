@@ -1091,9 +1091,17 @@ script_graph:
         variable: "jump"
     - id: "subscribe_bool_1"
       type: "subscribe_bool"
-    - id: "event_tick_1"
-      type: "event_tick"
+      next: "subscribe_float_1"
+    - id: "lambda_3"
+      type: "lambda"
+      properties:
+        arg_count: 1
+        arg_types: "[\"Float\"]"
       next: "set_variable_3"
+    - id: "on_tick_1"
+      type: "on_tick"
+    - id: "subscribe_float_1"
+      type: "subscribe_float"
     - id: "get_variable_vector2_1"
       type: "get_variable_vector2"
       properties:
@@ -1257,12 +1265,18 @@ script_graph:
     - id: "subscribe_bool_1"
       x: 520
       y: 0
-    - id: "event_tick_1"
+    - id: "lambda_3"
       x: 0
       y: 650
-    - id: "get_variable_vector2_1"
+    - id: "on_tick_1"
       x: 0
       y: 780
+    - id: "subscribe_float_1"
+      x: 780
+      y: 0
+    - id: "get_variable_vector2_1"
+      x: 0
+      y: 910
     - id: "break_vector2_1"
       x: 260
       y: 390
@@ -1271,10 +1285,10 @@ script_graph:
       y: 130
     - id: "set_variable_3"
       x: 780
-      y: 0
+      y: 130
     - id: "get_variable_float_1"
       x: 0
-      y: 910
+      y: 1040
     - id: "float_mul_2"
       x: 260
       y: 520
@@ -1283,13 +1297,13 @@ script_graph:
       y: 260
     - id: "float_min_1"
       x: 780
-      y: 130
+      y: 260
     - id: "get_variable_bool_1"
       x: 0
-      y: 1040
+      y: 1170
     - id: "get_variable_bool_2"
       x: 0
-      y: 1170
+      y: 1300
     - id: "and_op_1"
       x: 260
       y: 650
@@ -1301,22 +1315,22 @@ script_graph:
       y: 0
     - id: "get_colliders_1"
       x: 0
-      y: 1300
+      y: 1430
     - id: "get_variable_float_2"
       x: 0
-      y: 1430
+      y: 1560
     - id: "get_variable_float_3"
       x: 0
-      y: 1560
+      y: 1690
     - id: "get_variable_float_4"
       x: 0
-      y: 1690
+      y: 1820
     - id: "float_mul_3"
       x: 260
       y: 780
     - id: "get_variable_float_5"
       x: 0
-      y: 1820
+      y: 1950
     - id: "float_mul_4"
       x: 260
       y: 910
@@ -1325,7 +1339,7 @@ script_graph:
       y: 390
     - id: "break_vector2_2"
       x: 780
-      y: 260
+      y: 390
     - id: "set_variable_5"
       x: 1560
       y: 0
@@ -1337,7 +1351,7 @@ script_graph:
       y: 0
     - id: "or_op_1"
       x: 780
-      y: 390
+      y: 520
     - id: "ternary_2"
       x: 1300
       y: 130
@@ -1355,7 +1369,7 @@ script_graph:
       y: 260
     - id: "get_variable_vector2_2"
       x: 0
-      y: 1950
+      y: 2080
     - id: "camera_follow_1"
       x: 1560
       y: 130
@@ -1403,6 +1417,18 @@ script_graph:
         nodeId: "subscribe_bool_1"
         pin: "on_next"
     - from:
+        nodeId: "on_tick_1"
+        pin: "value"
+      to:
+        nodeId: "subscribe_float_1"
+        pin: "source"
+    - from:
+        nodeId: "lambda_3"
+        pin: "function"
+      to:
+        nodeId: "subscribe_float_1"
+        pin: "on_next"
+    - from:
         nodeId: "get_variable_vector2_1"
         pin: "value"
       to:
@@ -1421,8 +1447,8 @@ script_graph:
         nodeId: "set_variable_3"
         pin: "value"
     - from:
-        nodeId: "event_tick_1"
-        pin: "delta_seconds"
+        nodeId: "lambda_3"
+        pin: "value_0"
       to:
         nodeId: "float_mul_2"
         pin: "b"
@@ -1481,8 +1507,8 @@ script_graph:
         nodeId: "float_mul_3"
         pin: "a"
     - from:
-        nodeId: "event_tick_1"
-        pin: "delta_seconds"
+        nodeId: "lambda_3"
+        pin: "value_0"
       to:
         nodeId: "float_mul_3"
         pin: "b"
@@ -1493,8 +1519,8 @@ script_graph:
         nodeId: "float_mul_4"
         pin: "a"
     - from:
-        nodeId: "event_tick_1"
-        pin: "delta_seconds"
+        nodeId: "lambda_3"
+        pin: "value_0"
       to:
         nodeId: "float_mul_4"
         pin: "b"
@@ -1619,8 +1645,8 @@ script_graph:
         nodeId: "camera_follow_1"
         pin: "target"
     - from:
-        nodeId: "event_tick_1"
-        pin: "delta_seconds"
+        nodeId: "lambda_3"
+        pin: "value_0"
       to:
         nodeId: "camera_follow_1"
         pin: "delta_seconds"

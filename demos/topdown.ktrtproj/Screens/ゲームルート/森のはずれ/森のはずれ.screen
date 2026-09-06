@@ -1140,9 +1140,17 @@ script_graph:
         variable: "jump"
     - id: "subscribe_bool_1"
       type: "subscribe_bool"
-    - id: "event_tick_1"
-      type: "event_tick"
+      next: "subscribe_float_1"
+    - id: "lambda_3"
+      type: "lambda"
+      properties:
+        arg_count: 1
+        arg_types: "[\"Float\"]"
       next: "set_variable_3"
+    - id: "on_tick_1"
+      type: "on_tick"
+    - id: "subscribe_float_1"
+      type: "subscribe_float"
     - id: "get_variable_float_1"
       type: "get_variable_float"
       properties:
@@ -1382,12 +1390,18 @@ script_graph:
     - id: "subscribe_bool_1"
       x: 520
       y: 0
-    - id: "event_tick_1"
+    - id: "lambda_3"
       x: 0
       y: 650
-    - id: "get_variable_float_1"
+    - id: "on_tick_1"
       x: 0
       y: 780
+    - id: "subscribe_float_1"
+      x: 780
+      y: 0
+    - id: "get_variable_float_1"
+      x: 0
+      y: 910
     - id: "float_sub_1"
       x: 260
       y: 390
@@ -1396,10 +1410,10 @@ script_graph:
       y: 130
     - id: "get_variable_bool_1"
       x: 0
-      y: 910
+      y: 1040
     - id: "get_variable_float_2"
       x: 0
-      y: 1040
+      y: 1170
     - id: "float_nearly_zero_1"
       x: 260
       y: 520
@@ -1408,13 +1422,13 @@ script_graph:
       y: 260
     - id: "ternary_1"
       x: 780
-      y: 0
+      y: 130
     - id: "set_variable_3"
       x: 1040
       y: 0
     - id: "get_variable_float_3"
       x: 0
-      y: 1170
+      y: 1300
     - id: "float_div_1"
       x: 260
       y: 650
@@ -1423,16 +1437,16 @@ script_graph:
       y: 390
     - id: "float_mul_1"
       x: 780
-      y: 130
+      y: 260
     - id: "float_sub_3"
       x: 780
-      y: 260
+      y: 390
     - id: "float_mul_2"
       x: 1040
       y: 130
     - id: "get_variable_float_4"
       x: 0
-      y: 1300
+      y: 1430
     - id: "float_nearly_zero_2"
       x: 260
       y: 780
@@ -1444,31 +1458,31 @@ script_graph:
       y: 0
     - id: "get_variable_vector2_1"
       x: 0
-      y: 1430
+      y: 1560
     - id: "break_vector2_1"
       x: 260
       y: 910
     - id: "get_colliders_1"
       x: 0
-      y: 1560
+      y: 1690
     - id: "get_variable_float_5"
       x: 0
-      y: 1690
+      y: 1820
     - id: "get_variable_float_6"
       x: 0
-      y: 1820
+      y: 1950
     - id: "float_mul_3"
       x: 520
       y: 520
     - id: "float_mul_4"
       x: 780
-      y: 390
+      y: 520
     - id: "float_mul_5"
       x: 520
       y: 650
     - id: "float_mul_6"
       x: 780
-      y: 520
+      y: 650
     - id: "move_and_collide_1"
       x: 1560
       y: 130
@@ -1483,13 +1497,13 @@ script_graph:
       y: 0
     - id: "get_variable_float_7"
       x: 0
-      y: 1950
+      y: 2080
     - id: "float_add_1"
       x: 260
       y: 1040
     - id: "get_variable_float_8"
       x: 0
-      y: 2080
+      y: 2210
     - id: "float_add_2"
       x: 260
       y: 1170
@@ -1498,13 +1512,13 @@ script_graph:
       y: 780
     - id: "get_variable_float_9"
       x: 0
-      y: 2210
+      y: 2340
     - id: "float_add_3"
       x: 260
       y: 1300
     - id: "get_variable_float_10"
       x: 0
-      y: 2340
+      y: 2470
     - id: "float_add_4"
       x: 260
       y: 1430
@@ -1513,10 +1527,10 @@ script_graph:
       y: 910
     - id: "get_colliders_2"
       x: 0
-      y: 2470
+      y: 2600
     - id: "get_path_step_1"
       x: 780
-      y: 650
+      y: 780
     - id: "break_vector2_3"
       x: 1040
       y: 260
@@ -1525,7 +1539,7 @@ script_graph:
       y: 130
     - id: "get_variable_float_11"
       x: 0
-      y: 2600
+      y: 2730
     - id: "ternary_3"
       x: 1560
       y: 260
@@ -1534,19 +1548,19 @@ script_graph:
       y: 260
     - id: "get_variable_float_12"
       x: 0
-      y: 2730
+      y: 2860
     - id: "ternary_4"
       x: 1560
       y: 390
     - id: "get_variable_float_13"
       x: 0
-      y: 2860
+      y: 2990
     - id: "function_call_1"
       x: 1820
       y: 130
     - id: "get_variable_float_14"
       x: 0
-      y: 2990
+      y: 3120
     - id: "function_call_2"
       x: 1820
       y: 260
@@ -1594,14 +1608,26 @@ script_graph:
         nodeId: "subscribe_bool_1"
         pin: "on_next"
     - from:
+        nodeId: "on_tick_1"
+        pin: "value"
+      to:
+        nodeId: "subscribe_float_1"
+        pin: "source"
+    - from:
+        nodeId: "lambda_3"
+        pin: "function"
+      to:
+        nodeId: "subscribe_float_1"
+        pin: "on_next"
+    - from:
         nodeId: "get_variable_float_1"
         pin: "value"
       to:
         nodeId: "float_sub_1"
         pin: "a"
     - from:
-        nodeId: "event_tick_1"
-        pin: "delta_seconds"
+        nodeId: "lambda_3"
+        pin: "value_0"
       to:
         nodeId: "float_sub_1"
         pin: "b"
@@ -1726,8 +1752,8 @@ script_graph:
         nodeId: "float_mul_4"
         pin: "a"
     - from:
-        nodeId: "event_tick_1"
-        pin: "delta_seconds"
+        nodeId: "lambda_3"
+        pin: "value_0"
       to:
         nodeId: "float_mul_4"
         pin: "b"
@@ -1744,8 +1770,8 @@ script_graph:
         nodeId: "float_mul_6"
         pin: "a"
     - from:
-        nodeId: "event_tick_1"
-        pin: "delta_seconds"
+        nodeId: "lambda_3"
+        pin: "value_0"
       to:
         nodeId: "float_mul_6"
         pin: "b"
@@ -1936,8 +1962,8 @@ script_graph:
         nodeId: "function_call_1"
         pin: "target"
     - from:
-        nodeId: "event_tick_1"
-        pin: "delta_seconds"
+        nodeId: "lambda_3"
+        pin: "value_0"
       to:
         nodeId: "function_call_1"
         pin: "dt"
@@ -1954,8 +1980,8 @@ script_graph:
         nodeId: "function_call_2"
         pin: "target"
     - from:
-        nodeId: "event_tick_1"
-        pin: "delta_seconds"
+        nodeId: "lambda_3"
+        pin: "value_0"
       to:
         nodeId: "function_call_2"
         pin: "dt"

@@ -110,6 +110,7 @@ script_graph:
       type: "start_routine"
       properties:
         routine: "pattern"
+      next: "tick_sub"
     - id: "mv_get"
       type: "get_input_action_vector2"
       properties:
@@ -212,9 +213,16 @@ script_graph:
         value: 4
     - id: "pt_wait"
       type: "routine_wait_frames"
+    - id: "tick_src"
+      type: "on_tick"
     - id: "tick"
-      type: "event_tick"
+      type: "lambda"
+      properties:
+        arg_count: 1
+        arg_types: "[\"Float\"]"
       next: "px_set"
+    - id: "tick_sub"
+      type: "subscribe_float"
     - id: "mv_var"
       type: "get_variable_vector2"
       properties:
@@ -545,10 +553,22 @@ script_graph:
         pin: "v"
     - from:
         nodeId: "tick"
-        pin: "delta_seconds"
+        pin: "value_0"
       to:
         nodeId: "mv_dt"
         pin: "a"
+    - from:
+        nodeId: "tick_src"
+        pin: "value"
+      to:
+        nodeId: "tick_sub"
+        pin: "source"
+    - from:
+        nodeId: "tick"
+        pin: "function"
+      to:
+        nodeId: "tick_sub"
+        pin: "on_next"
     - from:
         nodeId: "sp"
         pin: "value"

@@ -1,0 +1,10 @@
+schema_version: 2
+kind: "space"
+id: "screen_stealth_facility"
+display_name: "施設"
+parent_screen_id: null
+memo: "施設の 3D。見張りを選ぶと視界の扇と聴取円が出る（ADR-0341）。"
+pos:
+  x: 40
+  y: 220
+favorite: false

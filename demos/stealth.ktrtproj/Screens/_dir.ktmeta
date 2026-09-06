@@ -1,0 +1,9 @@
+schema_version: 2
+kind: "screen-dir"
+id: "screens-root"
+display_name: "Screens"
+memo: null
+pos: null
+children[2]{name,id,ref}:
+  "潜入","screen_stealth_mission","dir"
+  "施設","screen_stealth_facility","dir"

@@ -1,0 +1,60 @@
+id: "pc_message_window"
+name: "メッセージ窓"
+piece_type: "object"
+width: 1200
+height: 118
+variables: []
+root:
+  id: "msg_root"
+  name: "メッセージ窓"
+  type: "frame"
+  x: 0
+  y: 0
+  origin_x: 0
+  origin_y: 0
+  width: 1200
+  height: 118
+  children:
+    -
+      id: "msg_box"
+      name: "枠"
+      type: "rectangle"
+      x: 0
+      y: 0
+      origin_x: 0
+      origin_y: 0
+      width: 1200
+      height: 118
+      fill: "#0b0a10"
+      alpha: 0.88
+      corner_radius: 8
+      stroke: "#d8d3c4"
+      stroke_width: 2
+    -
+      id: "msg_speaker"
+      name: "話者"
+      type: "text"
+      x: 24
+      y: 8
+      origin_x: 0
+      origin_y: 0
+      width: 400
+      height: 28
+      text: "$__line_speaker"
+      font_size: 20
+      color: "#e8c39e"
+      text_align: "left"
+    -
+      id: "msg_text"
+      name: "本文"
+      type: "text"
+      x: 24
+      y: 40
+      origin_x: 0
+      origin_y: 0
+      width: 1152
+      height: 70
+      text: "$__line_message"
+      font_size: 24
+      color: "#f4f1ea"
+      text_align: "left"

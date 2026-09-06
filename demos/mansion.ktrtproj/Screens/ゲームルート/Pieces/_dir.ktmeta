@@ -1,0 +1,11 @@
+schema_version: 2
+kind: "piece-dir"
+id: "scr_mansion_root-pieces"
+display_name: "Pieces"
+memo: null
+pos: null
+children:
+  -
+    name: "メッセージ窓.ktpiece.toon"
+    id: "pc_message_window"
+    ref: "file"

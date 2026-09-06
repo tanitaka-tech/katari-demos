@@ -1,0 +1,2681 @@
+screen_component:
+  screen_space: true
+  resolution_width: 1280
+  resolution_height: 720
+  ref_resolution_width: 1280
+  ref_resolution_height: 720
+  scale_mode: "blend"
+  scale_blend: 0.5
+  priority: 0
+objects:
+  - id: "view"
+    name: "施設"
+    type: "screen-instance"
+    screen_id: "screen_stealth_facility"
+  - id: "alert_frame"
+    name: "警戒メーターの枠"
+    type: "rectangle"
+    x: 40
+    y: 36
+    origin_x: 0
+    origin_y: 0
+    width: 404
+    height: 20
+    fill: "#00000088"
+    z_index: 100
+  - id: "alert_bar"
+    name: "警戒メーター"
+    type: "rectangle"
+    x: 42
+    y: 38
+    origin_x: 0
+    origin_y: 0
+    width: "$alert_w"
+    height: 16
+    fill: "#e05a5a"
+    z_index: 101
+  - id: "status"
+    name: "状態"
+    type: "text"
+    x: 40
+    y: 64
+    origin_x: 0
+    origin_y: 0
+    width: 700
+    height: 30
+    text: "$status"
+    font_size: 22
+    color: "#e8eef6"
+    text_align: "left"
+    z_index: 101
+  - id: "hint"
+    name: "操作"
+    type: "text"
+    x: 40
+    y: 672
+    origin_x: 0
+    origin_y: 0
+    width: 900
+    height: 26
+    text: "WASD で移動 / Space で忍び足（遅いが静か）"
+    font_size: 18
+    color: "#8fa0b4"
+    text_align: "left"
+    z_index: 101
+variables:
+  - kind: "normal"
+    id: "px"
+    name: "$px"
+    value_type: "Float"
+    initial_value: "0"
+  - kind: "normal"
+    id: "py"
+    name: "$py"
+    value_type: "Float"
+    initial_value: "0"
+  - kind: "normal"
+    id: "pz"
+    name: "$pz"
+    value_type: "Float"
+    initial_value: "-12"
+  - kind: "normal"
+    id: "pvy"
+    name: "$pvy"
+    value_type: "Float"
+    initial_value: "0"
+  - kind: "normal"
+    id: "pry"
+    name: "$pry"
+    value_type: "Float"
+    initial_value: "0"
+  - kind: "normal"
+    id: "move"
+    name: "$move"
+    value_type: "Vector2"
+    initial_value: "0,0"
+  - kind: "normal"
+    id: "sneak"
+    name: "$sneak"
+    value_type: "Bool"
+    initial_value: "false"
+  - kind: "normal"
+    id: "mx"
+    name: "$mx"
+    value_type: "Float"
+    initial_value: "0"
+  - kind: "normal"
+    id: "mz"
+    name: "$mz"
+    value_type: "Float"
+    initial_value: "0"
+  - kind: "normal"
+    id: "spd"
+    name: "$spd"
+    value_type: "Float"
+    initial_value: "4.6"
+  - kind: "normal"
+    id: "dt"
+    name: "$dt"
+    value_type: "Float"
+    initial_value: "0"
+  - kind: "normal"
+    id: "noise"
+    name: "$noise"
+    value_type: "Float"
+    initial_value: "0"
+  - kind: "normal"
+    id: "moving"
+    name: "$moving"
+    value_type: "Bool"
+    initial_value: "false"
+  - kind: "normal"
+    id: "alert"
+    name: "$alert"
+    value_type: "Float"
+    initial_value: "0"
+  - kind: "normal"
+    id: "alert_w"
+    name: "$alert_w"
+    value_type: "Float"
+    initial_value: "0"
+  - kind: "normal"
+    id: "see1"
+    name: "$see1"
+    value_type: "Float"
+    initial_value: "0"
+  - kind: "normal"
+    id: "see2"
+    name: "$see2"
+    value_type: "Float"
+    initial_value: "0"
+  - kind: "normal"
+    id: "hear1"
+    name: "$hear1"
+    value_type: "Float"
+    initial_value: "0"
+  - kind: "normal"
+    id: "hear2"
+    name: "$hear2"
+    value_type: "Float"
+    initial_value: "0"
+  - kind: "normal"
+    id: "gain"
+    name: "$gain"
+    value_type: "Float"
+    initial_value: "0"
+  - kind: "normal"
+    id: "seen"
+    name: "$seen"
+    value_type: "Bool"
+    initial_value: "false"
+  - kind: "normal"
+    id: "busted"
+    name: "$busted"
+    value_type: "Bool"
+    initial_value: "false"
+  - kind: "normal"
+    id: "caught"
+    name: "$caught"
+    value_type: "Float"
+    initial_value: "0"
+  - kind: "normal"
+    id: "cleared"
+    name: "$cleared"
+    value_type: "Bool"
+    initial_value: "false"
+  - kind: "normal"
+    id: "status"
+    name: "$status"
+    value_type: "String"
+    initial_value: "出口をめざせ"
+  - kind: "normal"
+    id: "g1x"
+    name: "$g1x"
+    value_type: "Float"
+    initial_value: "-13"
+  - kind: "normal"
+    id: "g1z"
+    name: "$g1z"
+    value_type: "Float"
+    initial_value: "-1"
+  - kind: "normal"
+    id: "g1ry"
+    name: "$g1ry"
+    value_type: "Float"
+    initial_value: "0"
+  - kind: "normal"
+    id: "g1wp"
+    name: "$g1wp"
+    value_type: "Float"
+    initial_value: "0"
+  - kind: "normal"
+    id: "g1hunt"
+    name: "$g1hunt"
+    value_type: "Float"
+    initial_value: "0"
+  - kind: "normal"
+    id: "g1sx"
+    name: "$g1sx"
+    value_type: "Float"
+    initial_value: "-13"
+  - kind: "normal"
+    id: "g1sz"
+    name: "$g1sz"
+    value_type: "Float"
+    initial_value: "-1"
+  - kind: "normal"
+    id: "g1tx"
+    name: "$g1tx"
+    value_type: "Float"
+    initial_value: "0"
+  - kind: "normal"
+    id: "g1tz"
+    name: "$g1tz"
+    value_type: "Float"
+    initial_value: "0"
+  - kind: "normal"
+    id: "g2x"
+    name: "$g2x"
+    value_type: "Float"
+    initial_value: "-8"
+  - kind: "normal"
+    id: "g2z"
+    name: "$g2z"
+    value_type: "Float"
+    initial_value: "10"
+  - kind: "normal"
+    id: "g2ry"
+    name: "$g2ry"
+    value_type: "Float"
+    initial_value: "0"
+  - kind: "normal"
+    id: "g2wp"
+    name: "$g2wp"
+    value_type: "Float"
+    initial_value: "0"
+  - kind: "normal"
+    id: "g2hunt"
+    name: "$g2hunt"
+    value_type: "Float"
+    initial_value: "0"
+  - kind: "normal"
+    id: "g2sx"
+    name: "$g2sx"
+    value_type: "Float"
+    initial_value: "-8"
+  - kind: "normal"
+    id: "g2sz"
+    name: "$g2sz"
+    value_type: "Float"
+    initial_value: "10"
+  - kind: "normal"
+    id: "g2tx"
+    name: "$g2tx"
+    value_type: "Float"
+    initial_value: "0"
+  - kind: "normal"
+    id: "g2tz"
+    name: "$g2tz"
+    value_type: "Float"
+    initial_value: "0"
+  - kind: "normal"
+    id: "crates"
+    name: "$crates"
+    value_type: "Array"
+    initial_value: "[\"{\\\"id\\\":\\\"c1\\\",\\\"x\\\":-6,\\\"z\\\":-10}\",\"{\\\"id\\\":\\\"c2\\\",\\\"x\\\":6,\\\"z\\\":-9.5}\",\"{\\\"id\\\":\\\"c3\\\",\\\"x\\\":-3,\\\"z\\\":-2}\",\"{\\\"id\\\":\\\"c4\\\",\\\"x\\\":3.5,\\\"z\\\":1}\",\"{\\\"id\\\":\\\"c5\\\",\\\"x\\\":10,\\\"z\\\":-1.5}\",\"{\\\"id\\\":\\\"c6\\\",\\\"x\\\":-9,\\\"z\\\":1.5}\",\"{\\\"id\\\":\\\"c7\\\",\\\"x\\\":9,\\\"z\\\":9}\",\"{\\\"id\\\":\\\"c8\\\",\\\"x\\\":1,\\\"z\\\":11}\"]"
+    element_type: "String"
+requests: []
+script_graph:
+  nodes:
+    - id: "event_begin_play_1"
+      type: "event_begin_play"
+      next: "subscribe_tick"
+    - id: "get_input_action_vector2_1"
+      type: "get_input_action_vector2"
+      properties:
+        actionMap: "map_gameplay"
+        action: "act_move"
+    - id: "lambda_1"
+      type: "lambda"
+      properties:
+        arg_count: 1
+        arg_types: "[\"Vector2\"]"
+      next: "set_variable_1"
+    - id: "set_variable_1"
+      type: "set_variable"
+      properties:
+        variable: "move"
+    - id: "subscribe_vector2_1"
+      type: "subscribe_vector2"
+      next: "subscribe_bool_1"
+    - id: "get_input_action_bool_1"
+      type: "get_input_action_bool"
+      properties:
+        actionMap: "map_gameplay"
+        action: "act_sneak"
+    - id: "lambda_2"
+      type: "lambda"
+      properties:
+        arg_count: 1
+        arg_types: "[\"Bool\"]"
+      next: "set_variable_2"
+    - id: "set_variable_2"
+      type: "set_variable"
+      properties:
+        variable: "sneak"
+    - id: "subscribe_bool_1"
+      type: "subscribe_bool"
+    - id: "set_variable_3"
+      type: "set_variable"
+      properties:
+        variable: "dt"
+      next: "set_variable_4"
+    - id: "break_vector2_1"
+      type: "break_vector2"
+      properties:
+        v: "$move"
+    - id: "set_variable_4"
+      type: "set_variable"
+      properties:
+        variable: "mx"
+      next: "set_variable_5"
+    - id: "set_variable_5"
+      type: "set_variable"
+      properties:
+        variable: "mz"
+      next: "set_variable_6"
+    - id: "set_variable_6"
+      type: "set_variable"
+      properties:
+        variable: "moving"
+        value: "=$mx * $mx + $mz * $mz > 0.01"
+      next: "set_variable_7"
+    - id: "ternary_1"
+      type: "ternary"
+      properties:
+        index: "$sneak"
+        true: 1.9
+        false: 4.6
+    - id: "set_variable_7"
+      type: "set_variable"
+      properties:
+        variable: "spd"
+      next: "set_variable_8"
+    - id: "ternary_2"
+      type: "ternary"
+      properties:
+        index: "$sneak"
+        true: 2.5
+        false: 12
+    - id: "ternary_3"
+      type: "ternary"
+      properties:
+        index: "$moving"
+        false: 0
+    - id: "set_variable_8"
+      type: "set_variable"
+      properties:
+        variable: "noise"
+      next: "set_variable_9"
+    - id: "set_variable_9"
+      type: "set_variable"
+      properties:
+        variable: "pvy"
+        value: "=max($pvy - 18 * $dt, -30)"
+      next: "set_variable_10"
+    - id: "get_space_colliders_1"
+      type: "get_space_colliders"
+      properties:
+        layer: "solid"
+    - id: "get_space_colliders_2"
+      type: "get_space_colliders"
+      properties:
+        layer: "actor"
+    - id: "array_concat_1"
+      type: "array_concat"
+    - id: "make_vector3_1"
+      type: "make_vector3"
+      properties:
+        x: "$px"
+        y: "$py"
+        z: "$pz"
+    - id: "make_vector3_2"
+      type: "make_vector3"
+      properties:
+        x: "=$mx * $spd * $dt"
+        y: "=$pvy * $dt"
+        z: "=$mz * $spd * $dt"
+    - id: "move_and_slide_3d_1"
+      type: "move_and_slide_3d"
+      properties:
+        radius: 0.3
+        height: 1.8
+        ignore_ids: "[\"player\"]"
+    - id: "break_vector3_1"
+      type: "break_vector3"
+    - id: "set_variable_10"
+      type: "set_variable"
+      properties:
+        variable: "px"
+      next: "set_variable_11"
+    - id: "set_variable_11"
+      type: "set_variable"
+      properties:
+        variable: "py"
+      next: "set_variable_12"
+    - id: "set_variable_12"
+      type: "set_variable"
+      properties:
+        variable: "pz"
+      next: "set_variable_13"
+    - id: "ternary_4"
+      type: "ternary"
+      properties:
+        true: 0
+        false: "$pvy"
+    - id: "set_variable_13"
+      type: "set_variable"
+      properties:
+        variable: "pvy"
+      next: "set_variable_14"
+    - id: "float_mul_1"
+      type: "float_mul"
+      properties:
+        a: "$mx"
+        b: -1
+    - id: "float_mul_2"
+      type: "float_mul"
+      properties:
+        a: "$mz"
+        b: -1
+    - id: "float_atan2_1"
+      type: "float_atan2"
+    - id: "float_mul_3"
+      type: "float_mul"
+      properties:
+        b: 57.29577951308232
+    - id: "ternary_5"
+      type: "ternary"
+      properties:
+        index: "$moving"
+        false: "$pry"
+    - id: "set_variable_14"
+      type: "set_variable"
+      properties:
+        variable: "pry"
+      next: "set_variable_15"
+    - id: "get_space_sensors_1"
+      type: "get_space_sensors"
+    - id: "get_space_colliders_3"
+      type: "get_space_colliders"
+      properties:
+        layer: "solid"
+    - id: "make_vector3_3"
+      type: "make_vector3"
+      properties:
+        x: "$g1x"
+        y: 0
+        z: "$g1z"
+    - id: "make_vector3_4"
+      type: "make_vector3"
+      properties:
+        x: "$px"
+        y: "=$py + 1.4"
+        z: "$pz"
+    - id: "sensor_sees_3d_1"
+      type: "sensor_sees_3d"
+      properties:
+        sensor_id: "g1"
+        ignore_ids: "[\"player\"]"
+    - id: "make_vector3_5"
+      type: "make_vector3"
+      properties:
+        x: "$px"
+        y: "=$py + 0.3"
+        z: "$pz"
+    - id: "sensor_hears_3d_1"
+      type: "sensor_hears_3d"
+      properties:
+        sensor_id: "g1"
+        loudness: "$noise"
+        ignore_ids: "[\"player\"]"
+    - id: "or_op_1"
+      type: "or_op"
+    - id: "ternary_6"
+      type: "ternary"
+      properties:
+        true: 1
+        false: 0
+    - id: "set_variable_15"
+      type: "set_variable"
+      properties:
+        variable: "see1"
+      next: "set_variable_16"
+    - id: "ternary_7"
+      type: "ternary"
+      properties:
+        true: 1
+        false: 0
+    - id: "set_variable_16"
+      type: "set_variable"
+      properties:
+        variable: "hear1"
+      next: "set_variable_17"
+    - id: "ternary_8"
+      type: "ternary"
+      properties:
+        true: 4
+        false: "=max($g1hunt - $dt, 0)"
+    - id: "set_variable_17"
+      type: "set_variable"
+      properties:
+        variable: "g1hunt"
+      next: "set_variable_18"
+    - id: "ternary_9"
+      type: "ternary"
+      properties:
+        true: "$px"
+        false: "$g1sx"
+    - id: "set_variable_18"
+      type: "set_variable"
+      properties:
+        variable: "g1sx"
+      next: "set_variable_19"
+    - id: "ternary_10"
+      type: "ternary"
+      properties:
+        true: "$pz"
+        false: "$g1sz"
+    - id: "set_variable_19"
+      type: "set_variable"
+      properties:
+        variable: "g1sz"
+      next: "set_variable_20"
+    - id: "float_gt_1"
+      type: "float_gt"
+      properties:
+        a: "$g1hunt"
+        b: 0
+    - id: "ternary_11"
+      type: "ternary"
+      properties:
+        true: "$g1sx"
+        false: "=-13 + $g1wp * 26"
+    - id: "set_variable_20"
+      type: "set_variable"
+      properties:
+        variable: "g1tx"
+      next: "set_variable_21"
+    - id: "ternary_12"
+      type: "ternary"
+      properties:
+        true: "$g1sz"
+        false: "=-1 + $g1wp * -1"
+    - id: "set_variable_21"
+      type: "set_variable"
+      properties:
+        variable: "g1tz"
+      next: "set_variable_22"
+    - id: "make_vector3_6"
+      type: "make_vector3"
+      properties:
+        x: "$g1tx"
+        y: 0
+        z: "$g1tz"
+    - id: "nav_next_step_3d_1"
+      type: "nav_next_step_3d"
+      properties:
+        cell: 1
+        agent_radius: 0.35
+        agent_height: 1.8
+    - id: "break_vector3_2"
+      type: "break_vector3"
+    - id: "float_sub_1"
+      type: "float_sub"
+      properties:
+        b: "$g1x"
+    - id: "float_sub_2"
+      type: "float_sub"
+      properties:
+        b: "$g1z"
+    - id: "make_vector3_7"
+      type: "make_vector3"
+      properties:
+        y: 0
+    - id: "vector3_normalize_1"
+      type: "vector3_normalize"
+    - id: "break_vector3_3"
+      type: "break_vector3"
+    - id: "ternary_13"
+      type: "ternary"
+      properties:
+        true: 3.6
+        false: 2.2
+    - id: "get_space_colliders_4"
+      type: "get_space_colliders"
+      properties:
+        layer: "actor"
+    - id: "array_concat_2"
+      type: "array_concat"
+    - id: "float_mul_4"
+      type: "float_mul"
+      properties:
+        b: "$dt"
+    - id: "float_mul_5"
+      type: "float_mul"
+    - id: "float_mul_6"
+      type: "float_mul"
+      properties:
+        b: "$dt"
+    - id: "float_mul_7"
+      type: "float_mul"
+    - id: "make_vector3_8"
+      type: "make_vector3"
+      properties:
+        y: "=-18 * $dt * $dt"
+    - id: "move_and_slide_3d_2"
+      type: "move_and_slide_3d"
+      properties:
+        radius: 0.35
+        height: 1.8
+        ignore_ids: "[\"g1\"]"
+    - id: "break_vector3_4"
+      type: "break_vector3"
+    - id: "set_variable_22"
+      type: "set_variable"
+      properties:
+        variable: "g1x"
+      next: "set_variable_23"
+    - id: "set_variable_23"
+      type: "set_variable"
+      properties:
+        variable: "g1z"
+      next: "set_variable_24"
+    - id: "float_atan2_2"
+      type: "float_atan2"
+      properties:
+        y: "=$g1x - $g1sx"
+        x: "=$g1z - $g1sz"
+    - id: "float_mul_8"
+      type: "float_mul"
+      properties:
+        b: 57.29577951308232
+    - id: "float_mul_9"
+      type: "float_mul"
+      properties:
+        b: -1
+    - id: "float_mul_10"
+      type: "float_mul"
+      properties:
+        b: -1
+    - id: "float_atan2_3"
+      type: "float_atan2"
+    - id: "float_mul_11"
+      type: "float_mul"
+      properties:
+        b: 57.29577951308232
+    - id: "ternary_14"
+      type: "ternary"
+      properties:
+        false: "$g1ry"
+    - id: "ternary_15"
+      type: "ternary"
+    - id: "set_variable_24"
+      type: "set_variable"
+      properties:
+        variable: "g1ry"
+      next: "set_variable_25"
+    - id: "not_op_1"
+      type: "not_op"
+    - id: "and_op_1"
+      type: "and_op"
+    - id: "ternary_16"
+      type: "ternary"
+      properties:
+        true: "=1 - $g1wp"
+        false: "$g1wp"
+    - id: "set_variable_25"
+      type: "set_variable"
+      properties:
+        variable: "g1wp"
+      next: "set_variable_26"
+    - id: "get_space_sensors_2"
+      type: "get_space_sensors"
+    - id: "get_space_colliders_5"
+      type: "get_space_colliders"
+      properties:
+        layer: "solid"
+    - id: "make_vector3_9"
+      type: "make_vector3"
+      properties:
+        x: "$g2x"
+        y: 0
+        z: "$g2z"
+    - id: "make_vector3_10"
+      type: "make_vector3"
+      properties:
+        x: "$px"
+        y: "=$py + 1.4"
+        z: "$pz"
+    - id: "sensor_sees_3d_2"
+      type: "sensor_sees_3d"
+      properties:
+        sensor_id: "g2"
+        ignore_ids: "[\"player\"]"
+    - id: "make_vector3_11"
+      type: "make_vector3"
+      properties:
+        x: "$px"
+        y: "=$py + 0.3"
+        z: "$pz"
+    - id: "sensor_hears_3d_2"
+      type: "sensor_hears_3d"
+      properties:
+        sensor_id: "g2"
+        loudness: "$noise"
+        ignore_ids: "[\"player\"]"
+    - id: "or_op_2"
+      type: "or_op"
+    - id: "ternary_17"
+      type: "ternary"
+      properties:
+        true: 1
+        false: 0
+    - id: "set_variable_26"
+      type: "set_variable"
+      properties:
+        variable: "see2"
+      next: "set_variable_27"
+    - id: "ternary_18"
+      type: "ternary"
+      properties:
+        true: 1
+        false: 0
+    - id: "set_variable_27"
+      type: "set_variable"
+      properties:
+        variable: "hear2"
+      next: "set_variable_28"
+    - id: "ternary_19"
+      type: "ternary"
+      properties:
+        true: 4
+        false: "=max($g2hunt - $dt, 0)"
+    - id: "set_variable_28"
+      type: "set_variable"
+      properties:
+        variable: "g2hunt"
+      next: "set_variable_29"
+    - id: "ternary_20"
+      type: "ternary"
+      properties:
+        true: "$px"
+        false: "$g2sx"
+    - id: "set_variable_29"
+      type: "set_variable"
+      properties:
+        variable: "g2sx"
+      next: "set_variable_30"
+    - id: "ternary_21"
+      type: "ternary"
+      properties:
+        true: "$pz"
+        false: "$g2sz"
+    - id: "set_variable_30"
+      type: "set_variable"
+      properties:
+        variable: "g2sz"
+      next: "set_variable_31"
+    - id: "float_gt_2"
+      type: "float_gt"
+      properties:
+        a: "$g2hunt"
+        b: 0
+    - id: "ternary_22"
+      type: "ternary"
+      properties:
+        true: "$g2sx"
+        false: "=-8 + $g2wp * 20"
+    - id: "set_variable_31"
+      type: "set_variable"
+      properties:
+        variable: "g2tx"
+      next: "set_variable_32"
+    - id: "ternary_23"
+      type: "ternary"
+      properties:
+        true: "$g2sz"
+        false: "=10 + $g2wp * -2"
+    - id: "set_variable_32"
+      type: "set_variable"
+      properties:
+        variable: "g2tz"
+      next: "set_variable_33"
+    - id: "make_vector3_12"
+      type: "make_vector3"
+      properties:
+        x: "$g2tx"
+        y: 0
+        z: "$g2tz"
+    - id: "nav_next_step_3d_2"
+      type: "nav_next_step_3d"
+      properties:
+        cell: 1
+        agent_radius: 0.35
+        agent_height: 1.8
+    - id: "break_vector3_5"
+      type: "break_vector3"
+    - id: "float_sub_3"
+      type: "float_sub"
+      properties:
+        b: "$g2x"
+    - id: "float_sub_4"
+      type: "float_sub"
+      properties:
+        b: "$g2z"
+    - id: "make_vector3_13"
+      type: "make_vector3"
+      properties:
+        y: 0
+    - id: "vector3_normalize_2"
+      type: "vector3_normalize"
+    - id: "break_vector3_6"
+      type: "break_vector3"
+    - id: "ternary_24"
+      type: "ternary"
+      properties:
+        true: 3.6
+        false: 2.2
+    - id: "get_space_colliders_6"
+      type: "get_space_colliders"
+      properties:
+        layer: "actor"
+    - id: "array_concat_3"
+      type: "array_concat"
+    - id: "float_mul_12"
+      type: "float_mul"
+      properties:
+        b: "$dt"
+    - id: "float_mul_13"
+      type: "float_mul"
+    - id: "float_mul_14"
+      type: "float_mul"
+      properties:
+        b: "$dt"
+    - id: "float_mul_15"
+      type: "float_mul"
+    - id: "make_vector3_14"
+      type: "make_vector3"
+      properties:
+        y: "=-18 * $dt * $dt"
+    - id: "move_and_slide_3d_3"
+      type: "move_and_slide_3d"
+      properties:
+        radius: 0.35
+        height: 1.8
+        ignore_ids: "[\"g2\"]"
+    - id: "break_vector3_7"
+      type: "break_vector3"
+    - id: "set_variable_33"
+      type: "set_variable"
+      properties:
+        variable: "g2x"
+      next: "set_variable_34"
+    - id: "set_variable_34"
+      type: "set_variable"
+      properties:
+        variable: "g2z"
+      next: "set_variable_35"
+    - id: "float_atan2_4"
+      type: "float_atan2"
+      properties:
+        y: "=$g2x - $g2sx"
+        x: "=$g2z - $g2sz"
+    - id: "float_mul_16"
+      type: "float_mul"
+      properties:
+        b: 57.29577951308232
+    - id: "float_mul_17"
+      type: "float_mul"
+      properties:
+        b: -1
+    - id: "float_mul_18"
+      type: "float_mul"
+      properties:
+        b: -1
+    - id: "float_atan2_5"
+      type: "float_atan2"
+    - id: "float_mul_19"
+      type: "float_mul"
+      properties:
+        b: 57.29577951308232
+    - id: "ternary_25"
+      type: "ternary"
+      properties:
+        false: "$g2ry"
+    - id: "ternary_26"
+      type: "ternary"
+    - id: "set_variable_35"
+      type: "set_variable"
+      properties:
+        variable: "g2ry"
+      next: "set_variable_36"
+    - id: "not_op_2"
+      type: "not_op"
+    - id: "and_op_2"
+      type: "and_op"
+    - id: "ternary_27"
+      type: "ternary"
+      properties:
+        true: "=1 - $g2wp"
+        false: "$g2wp"
+    - id: "set_variable_36"
+      type: "set_variable"
+      properties:
+        variable: "g2wp"
+      next: "set_variable_37"
+    - id: "set_variable_37"
+      type: "set_variable"
+      properties:
+        variable: "gain"
+        value: "=($see1 + $see2) * 80 + ($hear1 + $hear2) * 34 - 22"
+      next: "set_variable_38"
+    - id: "set_variable_38"
+      type: "set_variable"
+      properties:
+        variable: "alert"
+        value: "=clamp($alert + $gain * $dt, 0, 100)"
+      next: "set_variable_39"
+    - id: "set_variable_39"
+      type: "set_variable"
+      properties:
+        variable: "seen"
+        value: "=$see1 + $see2 > 0"
+      next: "set_variable_40"
+    - id: "set_variable_40"
+      type: "set_variable"
+      properties:
+        variable: "alert_w"
+        value: "=$alert * 4"
+      next: "set_variable_41"
+    - id: "float_ge_1"
+      type: "float_ge"
+      properties:
+        a: "$alert"
+        b: 100
+    - id: "set_variable_41"
+      type: "set_variable"
+      properties:
+        variable: "busted"
+      next: "set_variable_42"
+    - id: "ternary_28"
+      type: "ternary"
+      properties:
+        true: 2
+        false: "=max($caught - $dt, 0)"
+    - id: "set_variable_42"
+      type: "set_variable"
+      properties:
+        variable: "caught"
+      next: "set_variable_43"
+    - id: "ternary_29"
+      type: "ternary"
+      properties:
+        true: 0
+        false: "$px"
+    - id: "set_variable_43"
+      type: "set_variable"
+      properties:
+        variable: "px"
+      next: "set_variable_44"
+    - id: "ternary_30"
+      type: "ternary"
+      properties:
+        true: -12
+        false: "$pz"
+    - id: "set_variable_44"
+      type: "set_variable"
+      properties:
+        variable: "pz"
+      next: "set_variable_45"
+    - id: "ternary_31"
+      type: "ternary"
+      properties:
+        true: 0
+        false: "$alert"
+    - id: "set_variable_45"
+      type: "set_variable"
+      properties:
+        variable: "alert"
+      next: "set_variable_46"
+    - id: "get_space_colliders_7"
+      type: "get_space_colliders"
+      properties:
+        layer: "goal"
+    - id: "make_vector3_15"
+      type: "make_vector3"
+      properties:
+        x: "$px"
+        y: "=$py + 0.1"
+        z: "$pz"
+    - id: "overlap_sphere_3d_1"
+      type: "overlap_sphere_3d"
+      properties:
+        radius: 0.5
+    - id: "array_is_empty_1"
+      type: "array_is_empty"
+    - id: "not_op_3"
+      type: "not_op"
+    - id: "or_op_3"
+      type: "or_op"
+      properties:
+        a: "$cleared"
+    - id: "set_variable_46"
+      type: "set_variable"
+      properties:
+        variable: "cleared"
+      next: "set_variable_47"
+    - id: "ternary_32"
+      type: "ternary"
+      properties:
+        index: "$seen"
+        true: "見られている！"
+        false: "出口をめざせ"
+    - id: "ternary_33"
+      type: "ternary"
+      properties:
+        index: "=$caught > 0"
+        true: "見つかった！ 入口からやり直し"
+    - id: "ternary_34"
+      type: "ternary"
+      properties:
+        index: "$cleared"
+        true: "脱出成功"
+    - id: "set_variable_47"
+      type: "set_variable"
+      properties:
+        variable: "status"
+    - id: "on_tick"
+      type: "on_tick"
+    - id: "tick_body"
+      type: "lambda"
+      properties:
+        arg_count: 1
+        arg_types: "[\"Float\"]"
+      next: "set_variable_3"
+    - id: "subscribe_tick"
+      type: "subscribe_float"
+      next: "subscribe_vector2_1"
+  layout:
+    - id: "get_input_action_vector2_1"
+      x: 0
+      y: 130
+    - id: "lambda_1"
+      x: 0
+      y: 260
+    - id: "set_variable_1"
+      x: 260
+      y: 0
+    - id: "subscribe_vector2_1"
+      x: 260
+      y: 130
+    - id: "get_input_action_bool_1"
+      x: 0
+      y: 390
+    - id: "lambda_2"
+      x: 0
+      y: 520
+    - id: "set_variable_2"
+      x: 260
+      y: 260
+    - id: "subscribe_bool_1"
+      x: 520
+      y: 0
+    - id: "set_variable_3"
+      x: 260
+      y: 390
+    - id: "break_vector2_1"
+      x: 0
+      y: 780
+    - id: "set_variable_4"
+      x: 520
+      y: 130
+    - id: "set_variable_5"
+      x: 780
+      y: 0
+    - id: "set_variable_6"
+      x: 1040
+      y: 0
+    - id: "ternary_1"
+      x: 0
+      y: 910
+    - id: "set_variable_7"
+      x: 1300
+      y: 0
+    - id: "ternary_2"
+      x: 0
+      y: 1040
+    - id: "ternary_3"
+      x: 260
+      y: 520
+    - id: "set_variable_8"
+      x: 1560
+      y: 0
+    - id: "set_variable_9"
+      x: 1820
+      y: 0
+    - id: "get_space_colliders_1"
+      x: 0
+      y: 1170
+    - id: "get_space_colliders_2"
+      x: 0
+      y: 1300
+    - id: "array_concat_1"
+      x: 260
+      y: 650
+    - id: "make_vector3_1"
+      x: 0
+      y: 1430
+    - id: "make_vector3_2"
+      x: 0
+      y: 1560
+    - id: "move_and_slide_3d_1"
+      x: 520
+      y: 260
+    - id: "break_vector3_1"
+      x: 780
+      y: 130
+    - id: "set_variable_10"
+      x: 2080
+      y: 0
+    - id: "set_variable_11"
+      x: 2340
+      y: 0
+    - id: "set_variable_12"
+      x: 2600
+      y: 0
+    - id: "ternary_4"
+      x: 780
+      y: 260
+    - id: "set_variable_13"
+      x: 2860
+      y: 0
+    - id: "float_mul_1"
+      x: 0
+      y: 1690
+    - id: "float_mul_2"
+      x: 0
+      y: 1820
+    - id: "float_atan2_1"
+      x: 260
+      y: 780
+    - id: "float_mul_3"
+      x: 520
+      y: 390
+    - id: "ternary_5"
+      x: 780
+      y: 390
+    - id: "set_variable_14"
+      x: 3120
+      y: 0
+    - id: "get_space_sensors_1"
+      x: 0
+      y: 1950
+    - id: "get_space_colliders_3"
+      x: 0
+      y: 2080
+    - id: "make_vector3_3"
+      x: 0
+      y: 2210
+    - id: "make_vector3_4"
+      x: 0
+      y: 2340
+    - id: "sensor_sees_3d_1"
+      x: 260
+      y: 910
+    - id: "make_vector3_5"
+      x: 0
+      y: 2470
+    - id: "sensor_hears_3d_1"
+      x: 260
+      y: 1040
+    - id: "or_op_1"
+      x: 520
+      y: 520
+    - id: "ternary_6"
+      x: 520
+      y: 650
+    - id: "set_variable_15"
+      x: 3380
+      y: 0
+    - id: "ternary_7"
+      x: 520
+      y: 780
+    - id: "set_variable_16"
+      x: 3640
+      y: 0
+    - id: "ternary_8"
+      x: 780
+      y: 520
+    - id: "set_variable_17"
+      x: 3900
+      y: 0
+    - id: "ternary_9"
+      x: 780
+      y: 650
+    - id: "set_variable_18"
+      x: 4160
+      y: 0
+    - id: "ternary_10"
+      x: 780
+      y: 780
+    - id: "set_variable_19"
+      x: 4420
+      y: 0
+    - id: "float_gt_1"
+      x: 0
+      y: 2600
+    - id: "ternary_11"
+      x: 260
+      y: 1170
+    - id: "set_variable_20"
+      x: 4680
+      y: 0
+    - id: "ternary_12"
+      x: 260
+      y: 1300
+    - id: "set_variable_21"
+      x: 4940
+      y: 0
+    - id: "make_vector3_6"
+      x: 0
+      y: 2730
+    - id: "nav_next_step_3d_1"
+      x: 260
+      y: 1430
+    - id: "break_vector3_2"
+      x: 520
+      y: 910
+    - id: "float_sub_1"
+      x: 780
+      y: 910
+    - id: "float_sub_2"
+      x: 780
+      y: 1040
+    - id: "make_vector3_7"
+      x: 1040
+      y: 130
+    - id: "vector3_normalize_1"
+      x: 1300
+      y: 130
+    - id: "break_vector3_3"
+      x: 1560
+      y: 130
+    - id: "ternary_13"
+      x: 260
+      y: 1560
+    - id: "get_space_colliders_4"
+      x: 0
+      y: 2860
+    - id: "array_concat_2"
+      x: 260
+      y: 1690
+    - id: "float_mul_4"
+      x: 520
+      y: 1040
+    - id: "float_mul_5"
+      x: 1820
+      y: 130
+    - id: "float_mul_6"
+      x: 520
+      y: 1170
+    - id: "float_mul_7"
+      x: 1820
+      y: 260
+    - id: "make_vector3_8"
+      x: 2080
+      y: 130
+    - id: "move_and_slide_3d_2"
+      x: 2340
+      y: 130
+    - id: "break_vector3_4"
+      x: 2600
+      y: 130
+    - id: "set_variable_22"
+      x: 5200
+      y: 0
+    - id: "set_variable_23"
+      x: 5460
+      y: 0
+    - id: "float_atan2_2"
+      x: 0
+      y: 2990
+    - id: "float_mul_8"
+      x: 260
+      y: 1820
+    - id: "float_mul_9"
+      x: 1820
+      y: 390
+    - id: "float_mul_10"
+      x: 1820
+      y: 520
+    - id: "float_atan2_3"
+      x: 2080
+      y: 260
+    - id: "float_mul_11"
+      x: 2340
+      y: 260
+    - id: "ternary_14"
+      x: 2600
+      y: 260
+    - id: "ternary_15"
+      x: 2860
+      y: 130
+    - id: "set_variable_24"
+      x: 5720
+      y: 0
+    - id: "not_op_1"
+      x: 260
+      y: 1950
+    - id: "and_op_1"
+      x: 520
+      y: 1300
+    - id: "ternary_16"
+      x: 780
+      y: 1170
+    - id: "set_variable_25"
+      x: 5980
+      y: 0
+    - id: "get_space_sensors_2"
+      x: 0
+      y: 3120
+    - id: "get_space_colliders_5"
+      x: 0
+      y: 3250
+    - id: "make_vector3_9"
+      x: 0
+      y: 3380
+    - id: "make_vector3_10"
+      x: 0
+      y: 3510
+    - id: "sensor_sees_3d_2"
+      x: 260
+      y: 2080
+    - id: "make_vector3_11"
+      x: 0
+      y: 3640
+    - id: "sensor_hears_3d_2"
+      x: 260
+      y: 2210
+    - id: "or_op_2"
+      x: 520
+      y: 1430
+    - id: "ternary_17"
+      x: 520
+      y: 1560
+    - id: "set_variable_26"
+      x: 6240
+      y: 0
+    - id: "ternary_18"
+      x: 520
+      y: 1690
+    - id: "set_variable_27"
+      x: 6500
+      y: 0
+    - id: "ternary_19"
+      x: 780
+      y: 1300
+    - id: "set_variable_28"
+      x: 6760
+      y: 0
+    - id: "ternary_20"
+      x: 780
+      y: 1430
+    - id: "set_variable_29"
+      x: 7020
+      y: 0
+    - id: "ternary_21"
+      x: 780
+      y: 1560
+    - id: "set_variable_30"
+      x: 7280
+      y: 0
+    - id: "float_gt_2"
+      x: 0
+      y: 3770
+    - id: "ternary_22"
+      x: 260
+      y: 2340
+    - id: "set_variable_31"
+      x: 7540
+      y: 0
+    - id: "ternary_23"
+      x: 260
+      y: 2470
+    - id: "set_variable_32"
+      x: 7800
+      y: 0
+    - id: "make_vector3_12"
+      x: 0
+      y: 3900
+    - id: "nav_next_step_3d_2"
+      x: 260
+      y: 2600
+    - id: "break_vector3_5"
+      x: 520
+      y: 1820
+    - id: "float_sub_3"
+      x: 780
+      y: 1690
+    - id: "float_sub_4"
+      x: 780
+      y: 1820
+    - id: "make_vector3_13"
+      x: 1040
+      y: 260
+    - id: "vector3_normalize_2"
+      x: 1300
+      y: 260
+    - id: "break_vector3_6"
+      x: 1560
+      y: 260
+    - id: "ternary_24"
+      x: 260
+      y: 2730
+    - id: "get_space_colliders_6"
+      x: 0
+      y: 4030
+    - id: "array_concat_3"
+      x: 260
+      y: 2860
+    - id: "float_mul_12"
+      x: 520
+      y: 1950
+    - id: "float_mul_13"
+      x: 1820
+      y: 650
+    - id: "float_mul_14"
+      x: 520
+      y: 2080
+    - id: "float_mul_15"
+      x: 1820
+      y: 780
+    - id: "make_vector3_14"
+      x: 2080
+      y: 390
+    - id: "move_and_slide_3d_3"
+      x: 2340
+      y: 390
+    - id: "break_vector3_7"
+      x: 2600
+      y: 390
+    - id: "set_variable_33"
+      x: 8060
+      y: 0
+    - id: "set_variable_34"
+      x: 8320
+      y: 0
+    - id: "float_atan2_4"
+      x: 0
+      y: 4160
+    - id: "float_mul_16"
+      x: 260
+      y: 2990
+    - id: "float_mul_17"
+      x: 1820
+      y: 910
+    - id: "float_mul_18"
+      x: 1820
+      y: 1040
+    - id: "float_atan2_5"
+      x: 2080
+      y: 520
+    - id: "float_mul_19"
+      x: 2340
+      y: 520
+    - id: "ternary_25"
+      x: 2600
+      y: 520
+    - id: "ternary_26"
+      x: 2860
+      y: 260
+    - id: "set_variable_35"
+      x: 8580
+      y: 0
+    - id: "not_op_2"
+      x: 260
+      y: 3120
+    - id: "and_op_2"
+      x: 520
+      y: 2210
+    - id: "ternary_27"
+      x: 780
+      y: 1950
+    - id: "set_variable_36"
+      x: 8840
+      y: 0
+    - id: "set_variable_37"
+      x: 9100
+      y: 0
+    - id: "set_variable_38"
+      x: 9360
+      y: 0
+    - id: "set_variable_39"
+      x: 9620
+      y: 0
+    - id: "set_variable_40"
+      x: 9880
+      y: 0
+    - id: "float_ge_1"
+      x: 0
+      y: 4290
+    - id: "set_variable_41"
+      x: 10140
+      y: 0
+    - id: "ternary_28"
+      x: 260
+      y: 3250
+    - id: "set_variable_42"
+      x: 10400
+      y: 0
+    - id: "ternary_29"
+      x: 260
+      y: 3380
+    - id: "set_variable_43"
+      x: 10660
+      y: 0
+    - id: "ternary_30"
+      x: 260
+      y: 3510
+    - id: "set_variable_44"
+      x: 10920
+      y: 0
+    - id: "ternary_31"
+      x: 260
+      y: 3640
+    - id: "set_variable_45"
+      x: 11180
+      y: 0
+    - id: "get_space_colliders_7"
+      x: 0
+      y: 4420
+    - id: "make_vector3_15"
+      x: 0
+      y: 4550
+    - id: "overlap_sphere_3d_1"
+      x: 260
+      y: 3770
+    - id: "array_is_empty_1"
+      x: 520
+      y: 2340
+    - id: "not_op_3"
+      x: 780
+      y: 2080
+    - id: "or_op_3"
+      x: 1040
+      y: 390
+    - id: "set_variable_46"
+      x: 11440
+      y: 0
+    - id: "ternary_32"
+      x: 0
+      y: 4680
+    - id: "ternary_33"
+      x: 260
+      y: 3900
+    - id: "ternary_34"
+      x: 520
+      y: 2470
+    - id: "set_variable_47"
+      x: 11700
+      y: 0
+    - id: "on_tick"
+      x: -520
+      y: 650
+    - id: "tick_body"
+      x: 0
+      y: 650
+    - id: "subscribe_tick"
+      x: -260
+      y: 650
+  edges:
+    - from:
+        nodeId: "lambda_1"
+        pin: "value_0"
+      to:
+        nodeId: "set_variable_1"
+        pin: "value"
+    - from:
+        nodeId: "get_input_action_vector2_1"
+        pin: "value"
+      to:
+        nodeId: "subscribe_vector2_1"
+        pin: "source"
+    - from:
+        nodeId: "lambda_1"
+        pin: "function"
+      to:
+        nodeId: "subscribe_vector2_1"
+        pin: "on_next"
+    - from:
+        nodeId: "lambda_2"
+        pin: "value_0"
+      to:
+        nodeId: "set_variable_2"
+        pin: "value"
+    - from:
+        nodeId: "get_input_action_bool_1"
+        pin: "value"
+      to:
+        nodeId: "subscribe_bool_1"
+        pin: "source"
+    - from:
+        nodeId: "lambda_2"
+        pin: "function"
+      to:
+        nodeId: "subscribe_bool_1"
+        pin: "on_next"
+    - from:
+        nodeId: "tick_body"
+        pin: "value_0"
+      to:
+        nodeId: "set_variable_3"
+        pin: "value"
+    - from:
+        nodeId: "break_vector2_1"
+        pin: "x"
+      to:
+        nodeId: "set_variable_4"
+        pin: "value"
+    - from:
+        nodeId: "break_vector2_1"
+        pin: "y"
+      to:
+        nodeId: "set_variable_5"
+        pin: "value"
+    - from:
+        nodeId: "ternary_1"
+        pin: "return"
+      to:
+        nodeId: "set_variable_7"
+        pin: "value"
+    - from:
+        nodeId: "ternary_2"
+        pin: "return"
+      to:
+        nodeId: "ternary_3"
+        pin: "true"
+    - from:
+        nodeId: "ternary_3"
+        pin: "return"
+      to:
+        nodeId: "set_variable_8"
+        pin: "value"
+    - from:
+        nodeId: "get_space_colliders_1"
+        pin: "return"
+      to:
+        nodeId: "array_concat_1"
+        pin: "a"
+    - from:
+        nodeId: "get_space_colliders_2"
+        pin: "return"
+      to:
+        nodeId: "array_concat_1"
+        pin: "b"
+    - from:
+        nodeId: "array_concat_1"
+        pin: "return"
+      to:
+        nodeId: "move_and_slide_3d_1"
+        pin: "colliders"
+    - from:
+        nodeId: "make_vector3_1"
+        pin: "return"
+      to:
+        nodeId: "move_and_slide_3d_1"
+        pin: "position_in"
+    - from:
+        nodeId: "make_vector3_2"
+        pin: "return"
+      to:
+        nodeId: "move_and_slide_3d_1"
+        pin: "delta"
+    - from:
+        nodeId: "move_and_slide_3d_1"
+        pin: "position"
+      to:
+        nodeId: "break_vector3_1"
+        pin: "v"
+    - from:
+        nodeId: "break_vector3_1"
+        pin: "x"
+      to:
+        nodeId: "set_variable_10"
+        pin: "value"
+    - from:
+        nodeId: "break_vector3_1"
+        pin: "y"
+      to:
+        nodeId: "set_variable_11"
+        pin: "value"
+    - from:
+        nodeId: "break_vector3_1"
+        pin: "z"
+      to:
+        nodeId: "set_variable_12"
+        pin: "value"
+    - from:
+        nodeId: "move_and_slide_3d_1"
+        pin: "on_ground"
+      to:
+        nodeId: "ternary_4"
+        pin: "index"
+    - from:
+        nodeId: "ternary_4"
+        pin: "return"
+      to:
+        nodeId: "set_variable_13"
+        pin: "value"
+    - from:
+        nodeId: "float_mul_1"
+        pin: "return"
+      to:
+        nodeId: "float_atan2_1"
+        pin: "y"
+    - from:
+        nodeId: "float_mul_2"
+        pin: "return"
+      to:
+        nodeId: "float_atan2_1"
+        pin: "x"
+    - from:
+        nodeId: "float_atan2_1"
+        pin: "return"
+      to:
+        nodeId: "float_mul_3"
+        pin: "a"
+    - from:
+        nodeId: "float_mul_3"
+        pin: "return"
+      to:
+        nodeId: "ternary_5"
+        pin: "true"
+    - from:
+        nodeId: "ternary_5"
+        pin: "return"
+      to:
+        nodeId: "set_variable_14"
+        pin: "value"
+    - from:
+        nodeId: "get_space_sensors_1"
+        pin: "return"
+      to:
+        nodeId: "sensor_sees_3d_1"
+        pin: "sensors"
+    - from:
+        nodeId: "get_space_colliders_3"
+        pin: "return"
+      to:
+        nodeId: "sensor_sees_3d_1"
+        pin: "colliders"
+    - from:
+        nodeId: "make_vector3_4"
+        pin: "return"
+      to:
+        nodeId: "sensor_sees_3d_1"
+        pin: "target"
+    - from:
+        nodeId: "get_space_sensors_1"
+        pin: "return"
+      to:
+        nodeId: "sensor_hears_3d_1"
+        pin: "sensors"
+    - from:
+        nodeId: "get_space_colliders_3"
+        pin: "return"
+      to:
+        nodeId: "sensor_hears_3d_1"
+        pin: "colliders"
+    - from:
+        nodeId: "make_vector3_5"
+        pin: "return"
+      to:
+        nodeId: "sensor_hears_3d_1"
+        pin: "source"
+    - from:
+        nodeId: "sensor_sees_3d_1"
+        pin: "visible"
+      to:
+        nodeId: "or_op_1"
+        pin: "a"
+    - from:
+        nodeId: "sensor_hears_3d_1"
+        pin: "audible"
+      to:
+        nodeId: "or_op_1"
+        pin: "b"
+    - from:
+        nodeId: "sensor_sees_3d_1"
+        pin: "visible"
+      to:
+        nodeId: "ternary_6"
+        pin: "index"
+    - from:
+        nodeId: "ternary_6"
+        pin: "return"
+      to:
+        nodeId: "set_variable_15"
+        pin: "value"
+    - from:
+        nodeId: "sensor_hears_3d_1"
+        pin: "audible"
+      to:
+        nodeId: "ternary_7"
+        pin: "index"
+    - from:
+        nodeId: "ternary_7"
+        pin: "return"
+      to:
+        nodeId: "set_variable_16"
+        pin: "value"
+    - from:
+        nodeId: "or_op_1"
+        pin: "return"
+      to:
+        nodeId: "ternary_8"
+        pin: "index"
+    - from:
+        nodeId: "ternary_8"
+        pin: "return"
+      to:
+        nodeId: "set_variable_17"
+        pin: "value"
+    - from:
+        nodeId: "or_op_1"
+        pin: "return"
+      to:
+        nodeId: "ternary_9"
+        pin: "index"
+    - from:
+        nodeId: "ternary_9"
+        pin: "return"
+      to:
+        nodeId: "set_variable_18"
+        pin: "value"
+    - from:
+        nodeId: "or_op_1"
+        pin: "return"
+      to:
+        nodeId: "ternary_10"
+        pin: "index"
+    - from:
+        nodeId: "ternary_10"
+        pin: "return"
+      to:
+        nodeId: "set_variable_19"
+        pin: "value"
+    - from:
+        nodeId: "float_gt_1"
+        pin: "return"
+      to:
+        nodeId: "ternary_11"
+        pin: "index"
+    - from:
+        nodeId: "ternary_11"
+        pin: "return"
+      to:
+        nodeId: "set_variable_20"
+        pin: "value"
+    - from:
+        nodeId: "float_gt_1"
+        pin: "return"
+      to:
+        nodeId: "ternary_12"
+        pin: "index"
+    - from:
+        nodeId: "ternary_12"
+        pin: "return"
+      to:
+        nodeId: "set_variable_21"
+        pin: "value"
+    - from:
+        nodeId: "get_space_colliders_3"
+        pin: "return"
+      to:
+        nodeId: "nav_next_step_3d_1"
+        pin: "colliders"
+    - from:
+        nodeId: "make_vector3_3"
+        pin: "return"
+      to:
+        nodeId: "nav_next_step_3d_1"
+        pin: "from"
+    - from:
+        nodeId: "make_vector3_6"
+        pin: "return"
+      to:
+        nodeId: "nav_next_step_3d_1"
+        pin: "to"
+    - from:
+        nodeId: "nav_next_step_3d_1"
+        pin: "next"
+      to:
+        nodeId: "break_vector3_2"
+        pin: "v"
+    - from:
+        nodeId: "break_vector3_2"
+        pin: "x"
+      to:
+        nodeId: "float_sub_1"
+        pin: "a"
+    - from:
+        nodeId: "break_vector3_2"
+        pin: "z"
+      to:
+        nodeId: "float_sub_2"
+        pin: "a"
+    - from:
+        nodeId: "float_sub_1"
+        pin: "return"
+      to:
+        nodeId: "make_vector3_7"
+        pin: "x"
+    - from:
+        nodeId: "float_sub_2"
+        pin: "return"
+      to:
+        nodeId: "make_vector3_7"
+        pin: "z"
+    - from:
+        nodeId: "make_vector3_7"
+        pin: "return"
+      to:
+        nodeId: "vector3_normalize_1"
+        pin: "a"
+    - from:
+        nodeId: "vector3_normalize_1"
+        pin: "return"
+      to:
+        nodeId: "break_vector3_3"
+        pin: "v"
+    - from:
+        nodeId: "float_gt_1"
+        pin: "return"
+      to:
+        nodeId: "ternary_13"
+        pin: "index"
+    - from:
+        nodeId: "get_space_colliders_3"
+        pin: "return"
+      to:
+        nodeId: "array_concat_2"
+        pin: "a"
+    - from:
+        nodeId: "get_space_colliders_4"
+        pin: "return"
+      to:
+        nodeId: "array_concat_2"
+        pin: "b"
+    - from:
+        nodeId: "ternary_13"
+        pin: "return"
+      to:
+        nodeId: "float_mul_4"
+        pin: "a"
+    - from:
+        nodeId: "break_vector3_3"
+        pin: "x"
+      to:
+        nodeId: "float_mul_5"
+        pin: "a"
+    - from:
+        nodeId: "float_mul_4"
+        pin: "return"
+      to:
+        nodeId: "float_mul_5"
+        pin: "b"
+    - from:
+        nodeId: "ternary_13"
+        pin: "return"
+      to:
+        nodeId: "float_mul_6"
+        pin: "a"
+    - from:
+        nodeId: "break_vector3_3"
+        pin: "z"
+      to:
+        nodeId: "float_mul_7"
+        pin: "a"
+    - from:
+        nodeId: "float_mul_6"
+        pin: "return"
+      to:
+        nodeId: "float_mul_7"
+        pin: "b"
+    - from:
+        nodeId: "float_mul_5"
+        pin: "return"
+      to:
+        nodeId: "make_vector3_8"
+        pin: "x"
+    - from:
+        nodeId: "float_mul_7"
+        pin: "return"
+      to:
+        nodeId: "make_vector3_8"
+        pin: "z"
+    - from:
+        nodeId: "array_concat_2"
+        pin: "return"
+      to:
+        nodeId: "move_and_slide_3d_2"
+        pin: "colliders"
+    - from:
+        nodeId: "make_vector3_3"
+        pin: "return"
+      to:
+        nodeId: "move_and_slide_3d_2"
+        pin: "position_in"
+    - from:
+        nodeId: "make_vector3_8"
+        pin: "return"
+      to:
+        nodeId: "move_and_slide_3d_2"
+        pin: "delta"
+    - from:
+        nodeId: "move_and_slide_3d_2"
+        pin: "position"
+      to:
+        nodeId: "break_vector3_4"
+        pin: "v"
+    - from:
+        nodeId: "break_vector3_4"
+        pin: "x"
+      to:
+        nodeId: "set_variable_22"
+        pin: "value"
+    - from:
+        nodeId: "break_vector3_4"
+        pin: "z"
+      to:
+        nodeId: "set_variable_23"
+        pin: "value"
+    - from:
+        nodeId: "float_atan2_2"
+        pin: "return"
+      to:
+        nodeId: "float_mul_8"
+        pin: "a"
+    - from:
+        nodeId: "break_vector3_3"
+        pin: "x"
+      to:
+        nodeId: "float_mul_9"
+        pin: "a"
+    - from:
+        nodeId: "break_vector3_3"
+        pin: "z"
+      to:
+        nodeId: "float_mul_10"
+        pin: "a"
+    - from:
+        nodeId: "float_mul_9"
+        pin: "return"
+      to:
+        nodeId: "float_atan2_3"
+        pin: "y"
+    - from:
+        nodeId: "float_mul_10"
+        pin: "return"
+      to:
+        nodeId: "float_atan2_3"
+        pin: "x"
+    - from:
+        nodeId: "float_atan2_3"
+        pin: "return"
+      to:
+        nodeId: "float_mul_11"
+        pin: "a"
+    - from:
+        nodeId: "nav_next_step_3d_1"
+        pin: "found"
+      to:
+        nodeId: "ternary_14"
+        pin: "index"
+    - from:
+        nodeId: "float_mul_11"
+        pin: "return"
+      to:
+        nodeId: "ternary_14"
+        pin: "true"
+    - from:
+        nodeId: "float_gt_1"
+        pin: "return"
+      to:
+        nodeId: "ternary_15"
+        pin: "index"
+    - from:
+        nodeId: "float_mul_8"
+        pin: "return"
+      to:
+        nodeId: "ternary_15"
+        pin: "true"
+    - from:
+        nodeId: "ternary_14"
+        pin: "return"
+      to:
+        nodeId: "ternary_15"
+        pin: "false"
+    - from:
+        nodeId: "ternary_15"
+        pin: "return"
+      to:
+        nodeId: "set_variable_24"
+        pin: "value"
+    - from:
+        nodeId: "float_gt_1"
+        pin: "return"
+      to:
+        nodeId: "not_op_1"
+        pin: "a"
+    - from:
+        nodeId: "nav_next_step_3d_1"
+        pin: "arrived"
+      to:
+        nodeId: "and_op_1"
+        pin: "a"
+    - from:
+        nodeId: "not_op_1"
+        pin: "return"
+      to:
+        nodeId: "and_op_1"
+        pin: "b"
+    - from:
+        nodeId: "and_op_1"
+        pin: "return"
+      to:
+        nodeId: "ternary_16"
+        pin: "index"
+    - from:
+        nodeId: "ternary_16"
+        pin: "return"
+      to:
+        nodeId: "set_variable_25"
+        pin: "value"
+    - from:
+        nodeId: "get_space_sensors_2"
+        pin: "return"
+      to:
+        nodeId: "sensor_sees_3d_2"
+        pin: "sensors"
+    - from:
+        nodeId: "get_space_colliders_5"
+        pin: "return"
+      to:
+        nodeId: "sensor_sees_3d_2"
+        pin: "colliders"
+    - from:
+        nodeId: "make_vector3_10"
+        pin: "return"
+      to:
+        nodeId: "sensor_sees_3d_2"
+        pin: "target"
+    - from:
+        nodeId: "get_space_sensors_2"
+        pin: "return"
+      to:
+        nodeId: "sensor_hears_3d_2"
+        pin: "sensors"
+    - from:
+        nodeId: "get_space_colliders_5"
+        pin: "return"
+      to:
+        nodeId: "sensor_hears_3d_2"
+        pin: "colliders"
+    - from:
+        nodeId: "make_vector3_11"
+        pin: "return"
+      to:
+        nodeId: "sensor_hears_3d_2"
+        pin: "source"
+    - from:
+        nodeId: "sensor_sees_3d_2"
+        pin: "visible"
+      to:
+        nodeId: "or_op_2"
+        pin: "a"
+    - from:
+        nodeId: "sensor_hears_3d_2"
+        pin: "audible"
+      to:
+        nodeId: "or_op_2"
+        pin: "b"
+    - from:
+        nodeId: "sensor_sees_3d_2"
+        pin: "visible"
+      to:
+        nodeId: "ternary_17"
+        pin: "index"
+    - from:
+        nodeId: "ternary_17"
+        pin: "return"
+      to:
+        nodeId: "set_variable_26"
+        pin: "value"
+    - from:
+        nodeId: "sensor_hears_3d_2"
+        pin: "audible"
+      to:
+        nodeId: "ternary_18"
+        pin: "index"
+    - from:
+        nodeId: "ternary_18"
+        pin: "return"
+      to:
+        nodeId: "set_variable_27"
+        pin: "value"
+    - from:
+        nodeId: "or_op_2"
+        pin: "return"
+      to:
+        nodeId: "ternary_19"
+        pin: "index"
+    - from:
+        nodeId: "ternary_19"
+        pin: "return"
+      to:
+        nodeId: "set_variable_28"
+        pin: "value"
+    - from:
+        nodeId: "or_op_2"
+        pin: "return"
+      to:
+        nodeId: "ternary_20"
+        pin: "index"
+    - from:
+        nodeId: "ternary_20"
+        pin: "return"
+      to:
+        nodeId: "set_variable_29"
+        pin: "value"
+    - from:
+        nodeId: "or_op_2"
+        pin: "return"
+      to:
+        nodeId: "ternary_21"
+        pin: "index"
+    - from:
+        nodeId: "ternary_21"
+        pin: "return"
+      to:
+        nodeId: "set_variable_30"
+        pin: "value"
+    - from:
+        nodeId: "float_gt_2"
+        pin: "return"
+      to:
+        nodeId: "ternary_22"
+        pin: "index"
+    - from:
+        nodeId: "ternary_22"
+        pin: "return"
+      to:
+        nodeId: "set_variable_31"
+        pin: "value"
+    - from:
+        nodeId: "float_gt_2"
+        pin: "return"
+      to:
+        nodeId: "ternary_23"
+        pin: "index"
+    - from:
+        nodeId: "ternary_23"
+        pin: "return"
+      to:
+        nodeId: "set_variable_32"
+        pin: "value"
+    - from:
+        nodeId: "get_space_colliders_5"
+        pin: "return"
+      to:
+        nodeId: "nav_next_step_3d_2"
+        pin: "colliders"
+    - from:
+        nodeId: "make_vector3_9"
+        pin: "return"
+      to:
+        nodeId: "nav_next_step_3d_2"
+        pin: "from"
+    - from:
+        nodeId: "make_vector3_12"
+        pin: "return"
+      to:
+        nodeId: "nav_next_step_3d_2"
+        pin: "to"
+    - from:
+        nodeId: "nav_next_step_3d_2"
+        pin: "next"
+      to:
+        nodeId: "break_vector3_5"
+        pin: "v"
+    - from:
+        nodeId: "break_vector3_5"
+        pin: "x"
+      to:
+        nodeId: "float_sub_3"
+        pin: "a"
+    - from:
+        nodeId: "break_vector3_5"
+        pin: "z"
+      to:
+        nodeId: "float_sub_4"
+        pin: "a"
+    - from:
+        nodeId: "float_sub_3"
+        pin: "return"
+      to:
+        nodeId: "make_vector3_13"
+        pin: "x"
+    - from:
+        nodeId: "float_sub_4"
+        pin: "return"
+      to:
+        nodeId: "make_vector3_13"
+        pin: "z"
+    - from:
+        nodeId: "make_vector3_13"
+        pin: "return"
+      to:
+        nodeId: "vector3_normalize_2"
+        pin: "a"
+    - from:
+        nodeId: "vector3_normalize_2"
+        pin: "return"
+      to:
+        nodeId: "break_vector3_6"
+        pin: "v"
+    - from:
+        nodeId: "float_gt_2"
+        pin: "return"
+      to:
+        nodeId: "ternary_24"
+        pin: "index"
+    - from:
+        nodeId: "get_space_colliders_5"
+        pin: "return"
+      to:
+        nodeId: "array_concat_3"
+        pin: "a"
+    - from:
+        nodeId: "get_space_colliders_6"
+        pin: "return"
+      to:
+        nodeId: "array_concat_3"
+        pin: "b"
+    - from:
+        nodeId: "ternary_24"
+        pin: "return"
+      to:
+        nodeId: "float_mul_12"
+        pin: "a"
+    - from:
+        nodeId: "break_vector3_6"
+        pin: "x"
+      to:
+        nodeId: "float_mul_13"
+        pin: "a"
+    - from:
+        nodeId: "float_mul_12"
+        pin: "return"
+      to:
+        nodeId: "float_mul_13"
+        pin: "b"
+    - from:
+        nodeId: "ternary_24"
+        pin: "return"
+      to:
+        nodeId: "float_mul_14"
+        pin: "a"
+    - from:
+        nodeId: "break_vector3_6"
+        pin: "z"
+      to:
+        nodeId: "float_mul_15"
+        pin: "a"
+    - from:
+        nodeId: "float_mul_14"
+        pin: "return"
+      to:
+        nodeId: "float_mul_15"
+        pin: "b"
+    - from:
+        nodeId: "float_mul_13"
+        pin: "return"
+      to:
+        nodeId: "make_vector3_14"
+        pin: "x"
+    - from:
+        nodeId: "float_mul_15"
+        pin: "return"
+      to:
+        nodeId: "make_vector3_14"
+        pin: "z"
+    - from:
+        nodeId: "array_concat_3"
+        pin: "return"
+      to:
+        nodeId: "move_and_slide_3d_3"
+        pin: "colliders"
+    - from:
+        nodeId: "make_vector3_9"
+        pin: "return"
+      to:
+        nodeId: "move_and_slide_3d_3"
+        pin: "position_in"
+    - from:
+        nodeId: "make_vector3_14"
+        pin: "return"
+      to:
+        nodeId: "move_and_slide_3d_3"
+        pin: "delta"
+    - from:
+        nodeId: "move_and_slide_3d_3"
+        pin: "position"
+      to:
+        nodeId: "break_vector3_7"
+        pin: "v"
+    - from:
+        nodeId: "break_vector3_7"
+        pin: "x"
+      to:
+        nodeId: "set_variable_33"
+        pin: "value"
+    - from:
+        nodeId: "break_vector3_7"
+        pin: "z"
+      to:
+        nodeId: "set_variable_34"
+        pin: "value"
+    - from:
+        nodeId: "float_atan2_4"
+        pin: "return"
+      to:
+        nodeId: "float_mul_16"
+        pin: "a"
+    - from:
+        nodeId: "break_vector3_6"
+        pin: "x"
+      to:
+        nodeId: "float_mul_17"
+        pin: "a"
+    - from:
+        nodeId: "break_vector3_6"
+        pin: "z"
+      to:
+        nodeId: "float_mul_18"
+        pin: "a"
+    - from:
+        nodeId: "float_mul_17"
+        pin: "return"
+      to:
+        nodeId: "float_atan2_5"
+        pin: "y"
+    - from:
+        nodeId: "float_mul_18"
+        pin: "return"
+      to:
+        nodeId: "float_atan2_5"
+        pin: "x"
+    - from:
+        nodeId: "float_atan2_5"
+        pin: "return"
+      to:
+        nodeId: "float_mul_19"
+        pin: "a"
+    - from:
+        nodeId: "nav_next_step_3d_2"
+        pin: "found"
+      to:
+        nodeId: "ternary_25"
+        pin: "index"
+    - from:
+        nodeId: "float_mul_19"
+        pin: "return"
+      to:
+        nodeId: "ternary_25"
+        pin: "true"
+    - from:
+        nodeId: "float_gt_2"
+        pin: "return"
+      to:
+        nodeId: "ternary_26"
+        pin: "index"
+    - from:
+        nodeId: "float_mul_16"
+        pin: "return"
+      to:
+        nodeId: "ternary_26"
+        pin: "true"
+    - from:
+        nodeId: "ternary_25"
+        pin: "return"
+      to:
+        nodeId: "ternary_26"
+        pin: "false"
+    - from:
+        nodeId: "ternary_26"
+        pin: "return"
+      to:
+        nodeId: "set_variable_35"
+        pin: "value"
+    - from:
+        nodeId: "float_gt_2"
+        pin: "return"
+      to:
+        nodeId: "not_op_2"
+        pin: "a"
+    - from:
+        nodeId: "nav_next_step_3d_2"
+        pin: "arrived"
+      to:
+        nodeId: "and_op_2"
+        pin: "a"
+    - from:
+        nodeId: "not_op_2"
+        pin: "return"
+      to:
+        nodeId: "and_op_2"
+        pin: "b"
+    - from:
+        nodeId: "and_op_2"
+        pin: "return"
+      to:
+        nodeId: "ternary_27"
+        pin: "index"
+    - from:
+        nodeId: "ternary_27"
+        pin: "return"
+      to:
+        nodeId: "set_variable_36"
+        pin: "value"
+    - from:
+        nodeId: "float_ge_1"
+        pin: "return"
+      to:
+        nodeId: "set_variable_41"
+        pin: "value"
+    - from:
+        nodeId: "float_ge_1"
+        pin: "return"
+      to:
+        nodeId: "ternary_28"
+        pin: "index"
+    - from:
+        nodeId: "ternary_28"
+        pin: "return"
+      to:
+        nodeId: "set_variable_42"
+        pin: "value"
+    - from:
+        nodeId: "float_ge_1"
+        pin: "return"
+      to:
+        nodeId: "ternary_29"
+        pin: "index"
+    - from:
+        nodeId: "ternary_29"
+        pin: "return"
+      to:
+        nodeId: "set_variable_43"
+        pin: "value"
+    - from:
+        nodeId: "float_ge_1"
+        pin: "return"
+      to:
+        nodeId: "ternary_30"
+        pin: "index"
+    - from:
+        nodeId: "ternary_30"
+        pin: "return"
+      to:
+        nodeId: "set_variable_44"
+        pin: "value"
+    - from:
+        nodeId: "float_ge_1"
+        pin: "return"
+      to:
+        nodeId: "ternary_31"
+        pin: "index"
+    - from:
+        nodeId: "ternary_31"
+        pin: "return"
+      to:
+        nodeId: "set_variable_45"
+        pin: "value"
+    - from:
+        nodeId: "get_space_colliders_7"
+        pin: "return"
+      to:
+        nodeId: "overlap_sphere_3d_1"
+        pin: "colliders"
+    - from:
+        nodeId: "make_vector3_15"
+        pin: "return"
+      to:
+        nodeId: "overlap_sphere_3d_1"
+        pin: "center"
+    - from:
+        nodeId: "overlap_sphere_3d_1"
+        pin: "return"
+      to:
+        nodeId: "array_is_empty_1"
+        pin: "array"
+    - from:
+        nodeId: "array_is_empty_1"
+        pin: "return"
+      to:
+        nodeId: "not_op_3"
+        pin: "a"
+    - from:
+        nodeId: "not_op_3"
+        pin: "return"
+      to:
+        nodeId: "or_op_3"
+        pin: "b"
+    - from:
+        nodeId: "or_op_3"
+        pin: "return"
+      to:
+        nodeId: "set_variable_46"
+        pin: "value"
+    - from:
+        nodeId: "ternary_32"
+        pin: "return"
+      to:
+        nodeId: "ternary_33"
+        pin: "false"
+    - from:
+        nodeId: "ternary_33"
+        pin: "return"
+      to:
+        nodeId: "ternary_34"
+        pin: "false"
+    - from:
+        nodeId: "ternary_34"
+        pin: "return"
+      to:
+        nodeId: "set_variable_47"
+        pin: "value"
+    - from:
+        nodeId: "on_tick"
+        pin: "value"
+      to:
+        nodeId: "subscribe_tick"
+        pin: "source"
+    - from:
+        nodeId: "tick_body"
+        pin: "function"
+      to:
+        nodeId: "subscribe_tick"
+        pin: "on_next"
