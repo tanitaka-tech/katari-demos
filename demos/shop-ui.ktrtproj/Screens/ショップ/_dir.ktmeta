@@ -1,0 +1,13 @@
+schema_version: 2
+kind: "screen-dir"
+id: "screen_shop_ui_main"
+display_name: "ショップ"
+memo: "参照 1 枚から起こした 2 本目。カード状の UI が主役の画面。"
+pos:
+  x: 40
+  y: 40
+children:
+  -
+    name: "ショップ.screen"
+    id: "screen_shop_ui_main"
+    ref: "file"

@@ -1059,7 +1059,7 @@ script_graph:
   nodes:
     - id: "event_begin_play_1"
       type: "event_begin_play"
-      next: "subscribe_float_1"
+      next: "subscribe_1"
     - id: "lambda_1"
       type: "lambda"
       properties:
@@ -1068,8 +1068,8 @@ script_graph:
       next: "set_variable_1"
     - id: "on_tick_1"
       type: "on_tick"
-    - id: "subscribe_float_1"
-      type: "subscribe_float"
+    - id: "subscribe_1"
+      type: "subscribe"
     - id: "sequence_1"
       type: "sequence"
       properties:
@@ -1606,7 +1606,7 @@ script_graph:
     - id: "on_tick_1"
       x: 0
       y: 260
-    - id: "subscribe_float_1"
+    - id: "subscribe_1"
       x: 260
       y: 0
     - id: "sequence_1"
@@ -1941,13 +1941,13 @@ script_graph:
         nodeId: "on_tick_1"
         pin: "value"
       to:
-        nodeId: "subscribe_float_1"
+        nodeId: "subscribe_1"
         pin: "source"
     - from:
         nodeId: "lambda_1"
         pin: "function"
       to:
-        nodeId: "subscribe_float_1"
+        nodeId: "subscribe_1"
         pin: "on_next"
     - from:
         nodeId: "float_mul_1"

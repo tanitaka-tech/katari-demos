@@ -5,8 +5,8 @@ name:
   ja: "Katari デモ集"
   en: "Katari demos"
 description:
-  ja: "ホーム画面に並ぶデモ 9 本。触って動かして確かめるためのもの"
-  en: "The 9 demos on the home screen. Made to be opened and played"
+  ja: "ホーム画面に並ぶデモ 16 本。触って動かして確かめるためのもの"
+  en: "The 16 demos on the home screen. Made to be opened and played"
 contributes:
   sample_projects:
     - id: "platformer"
@@ -94,6 +94,91 @@ contributes:
         cover: "media/training/hero.jpg"
         screenshots: ["media/training/shot-1.jpg", "media/training/shot-2.jpg"]
         trailer: "media/training/play.mp4"
+    - id: "dating"
+      name:
+        ja: "恋愛シミュレーション"
+        en: "Dating sim"
+      description:
+        ja: "週ごとにコマンドを選び、条件に合うイベントの脚本が始まる。育成パートと ADV パートの繋ぎ方が入っている"
+        en: "Pick a command each week; the event that fits your stats plays as a script. Shows how the sim part and the ADV part connect"
+      body:
+        ja: "ときめきメモリアル型の 1 周。勉強・運動・身だしなみ・会いに行くから選び、週を進めると、条件（好感度・機嫌・週）に合うイベントがその場で選ばれて脚本が始まります。台詞の中の好感度は表示の瞬間に入り、脚本が動かした値は画面へ戻ります。イベントを足すのは表に 1 行足して同じ名前の場面を書くだけで、グラフは伸びません。"
+        en: "One loop of a Tokimeki-style dating sim. Choose study, sports, grooming or meeting her, then advance the week: the event matching your stats (affection, mood, week) is picked on the spot and its script plays. Affection appears inside the lines as they are shown, and values the script changes flow back to the screen. Adding an event is one row in a table plus a scene with the same name — the graph does not grow."
+      path: "demos/dating.ktrtproj"
+      home: true
+      accent: "#c25a7a"
+      media:
+        cover: "media/dating/hero.jpg"
+        screenshots: ["media/dating/shot-1.jpg", "media/dating/shot-2.jpg"]
+        trailer: "media/dating/play.mp4"
+    - id: "training-ui"
+      name:
+        ja: "育成ゲームの画面 UI"
+        en: "Trainer game UI"
+      description:
+        ja: "縦持ちスマホの育成画面を、素材なしで矩形と文字だけで組んだもの"
+        en: "A portrait phone game screen built from rectangles and text only — no assets"
+      body:
+        ja: "縦持ち（648x1152）の 1 画面。背景の桜も校舎も、立っているキャラクターも、画像を 1 枚も使わずに矩形・楕円・多角形・文字だけで描いてあります。角丸・グラデーション・多重縁取りの文字を組み合わせると、スマホゲームの UI がそのまま出せることを見せるためのものです。ボタンは押すと動きます（トレーニングでステータスが伸び、体力とターンが減る）。"
+        en: "One portrait screen (648x1152). The blossoms, the school building and the character are all drawn from rectangles, ellipses, polygons and text — not a single image. It shows that rounded corners, gradients and multi-outlined text are enough to build a phone-game UI. The buttons work: training raises a stat and spends stamina and a turn."
+      path: "demos/training-ui.ktrtproj"
+      home: true
+      accent: "#f483b0"
+      media:
+        cover: "media/training-ui/hero.jpg"
+        screenshots: ["media/training-ui/shot-1.jpg", "media/training-ui/shot-2.jpg"]
+        trailer: "media/training-ui/play.mp4"
+    - id: "shop-ui"
+      name:
+        ja: "ショップ画面（参照 1 枚から）"
+        en: "Shop screen (from one reference)"
+      description:
+        ja: "参照画像 1 枚を測って組み直した交換所。カードの並びとアイコン、店内の背景まで素材なし"
+        en: "An exchange counter rebuilt by measuring one reference image — cards, icons and the shop interior, with no assets"
+      body:
+        ja: "縦持ち（648x1152）の 1 画面。**参照の写真を機械で測って**組んであります —— 交換ボタン 6 枚の大きさ（287x112）と並び（2 列 3 行、間隔 303x130）、吹き出しや戻るボタンの枠は、目分量ではなく画素から拾った値です。店内の棚と店員は、色ごとに塊へ割って輪郭をなぞった面の集まり（画像は 1 枚も使っていません）。アイコンは 24x24 の SVG から取り込んであるので、拡大しても崩れません。ボタンは押すと反応します。"
+        en: "One portrait screen (648x1152), rebuilt by **measuring the reference by machine**: the six exchange buttons' size (287x112) and layout (2 columns x 3 rows, pitch 303x130), and the frames of the speech bubble and back button all come from pixels, not from eyeballing. The shelves and shopkeeper are regions traced by colour and outline — no images at all. The icons are imported from 24x24 SVGs so they stay crisp when scaled. The buttons respond."
+      path: "demos/shop-ui.ktrtproj"
+      home: true
+      accent: "#67bc01"
+      media:
+        cover: "media/shop-ui/hero.jpg"
+        screenshots: ["media/shop-ui/shot-1.jpg", "media/shop-ui/shot-2.jpg"]
+        trailer: "media/shop-ui/play.mp4"
+    - id: "form-ui"
+      name:
+        ja: "登録フォーム"
+        en: "Registration form"
+      description:
+        ja: "入力欄とラジオボタンのあるモーダル。押すと選択が入れ替わり、値が変数へ届く"
+        en: "A modal with a text field and radio buttons — tapping swaps the selection and writes to a variable"
+      body:
+        ja: "ぼけた背景の上に載るモーダルのフォームです。名前の入力欄は OS の IME で打てる本物の入力（`input`）で、性別のラジオは押すと変数が変わり、**選ばれているほうにだけ緑の玉が出ます**（`visible` に式を繋いであります）。参照の写真から箱と文字の大きさを測って組んであり、背景のぼけは色ごとに割った面の集まりです。フォームの部品をどう配線するかを、そのまま読める形で入れてあります。"
+        en: "A modal form over a blurred background. The name field is a real input (OS IME works), and the gender radios write a variable when tapped — **only the selected one shows its green dot** (an expression drives `visible`). Boxes and text sizes were measured from the reference photo, and the blurred background is a set of colour regions. It shows how form parts are wired, readably."
+      path: "demos/form-ui.ktrtproj"
+      home: true
+      accent: "#7ecb0c"
+      media:
+        cover: "media/form-ui/hero.jpg"
+        screenshots: ["media/form-ui/shot-1.jpg", "media/form-ui/shot-2.jpg"]
+        trailer: "media/form-ui/play.mp4"
+    - id: "rank-ui"
+      name:
+        ja: "結果発表の画面"
+        en: "Result screen"
+      description:
+        ja: "丸い徽章とリボン、時間で伸びるゲージ。祝う画面の作り方"
+        en: "A round badge, a ribbon and a gauge that fills over time — how a celebration screen is built"
+      body:
+        ja: "育成の結果を出す 1 画面。放射状の背景・丸い徽章・リボンは、参照から色ごとに割って輪郭をなぞった面でできています（画像は 1 枚も使っていません）。▶ を押すとゲージが**時間で伸びて、伸びきったところで止まります** —— 毎フレームの秒を `on_tick` から取って足しているので、端末の速さが変わっても同じ速さで伸びます。同じ形が繰り返すところは金型（Piece）1 枚にまとめてあり、1 枚直せば全部変わります。"
+        en: "A single result screen. The radiating background, round badge and ribbon are regions traced from the reference by colour — not a single image. Press play and the gauge **fills over time and stops when full**: the per-frame seconds come from `on_tick`, so it fills at the same rate on any device. Repeated shapes are collapsed into one Piece, so editing it changes them all."
+      path: "demos/rank-ui.ktrtproj"
+      home: true
+      accent: "#b44fc0"
+      media:
+        cover: "media/rank-ui/hero.jpg"
+        screenshots: ["media/rank-ui/shot-1.jpg", "media/rank-ui/shot-2.jpg"]
+        trailer: "media/rank-ui/play.mp4"
     - id: "danmaku"
       name:
         ja: "弾幕シューティング"
@@ -111,6 +196,23 @@ contributes:
         cover: "media/danmaku/hero.jpg"
         screenshots: ["media/danmaku/shot-1.jpg", "media/danmaku/shot-2.jpg"]
         trailer: "media/danmaku/play.mp4"
+    - id: "shorts"
+      name:
+        ja: "ショート動画フィード"
+        en: "Short video feed"
+      description:
+        ja: "スマホの縦フィード。1 スワイプ = 1 本のページ送りと、いいね / コメント欄"
+        en: "A phone-style vertical feed. One swipe per post, likes and a comment sheet"
+      body:
+        ja: "指で上下に払うと 1 本ずつ送れる縦フィード。素早く払えば少しの動きでも次へ進み、ゆっくりなら元の位置へ戻ります（Frame の `scroll.snap`）。今どの投稿を見ているかは変数に入るので、名前・キャプション・曲・いいねの数は配列から添字で引くだけ。overlay は 1 組で足ります。コメント欄は下から出るスクロール面、末尾まで送ると札が出ます。素材は 1 枚も使っていません。"
+        en: "A vertical feed that moves one post per swipe. A quick flick advances even from a small drag; a slow drag settles back (Frame `scroll.snap`). The current post index lands in a variable, so the name, caption, music and like count are looked up from arrays by index and a single overlay is enough. The comment sheet is a scrolling panel, and a badge appears once you reach the end. No image or audio assets at all."
+      path: "demos/shorts.ktrtproj"
+      home: true
+      accent: "#ff4d6d"
+      media:
+        cover: "media/shorts/hero.jpg"
+        screenshots: ["media/shorts/shot-1.jpg", "media/shorts/shot-2.jpg"]
+        trailer: "media/shorts/play.mp4"
     - id: "trial"
       name:
         ja: "推理 ADV"
@@ -162,3 +264,20 @@ contributes:
         cover: "media/lookdev/hero.jpg"
         screenshots: ["media/lookdev/shot-1.jpg", "media/lookdev/shot-2.jpg"]
         trailer: "media/lookdev/play.mp4"
+    - id: "sakura"
+      name:
+        ja: "桜並木の街角（写真 1 枚を 3D で組む）"
+        en: "Sakura street (a photo rebuilt in 3D)"
+      description:
+        ja: "参照写真の構図を数値で合わせた 3D の街角。素材は 1 枚も持たず、空も地面も桜も手続きマテリアルで作る"
+        en: "A 3D street corner matched to a reference photo by numbers. No assets at all - sky, ground and blossoms are procedural materials"
+      body:
+        ja: "参照写真 1 枚の構図とルックを 3D 画面として組み直したものです。**素材（画像 / HDRI / モデル）を 1 つも持たず**、空も地面も桜も人物もプリミティブと手続きマテリアルだけでできています。カメラは「なんとなく」ではなく、写真の消失点・地平線・人物の頭頂から逆算した固定値（Camera を選ぶと数値が見えます）。桜の花房は板に不透明度を繋いだマテリアルで抜いてあり、髪は焼き込みメッシュです。▶ を押すと花びらが舞い落ちます。"
+        en: "A single reference photo rebuilt as a 3D screen. It ships **no assets at all** - sky, ground, blossoms and characters are primitives and procedural materials. The camera is not eyeballed: its height, pitch and field of view are solved from the photo's vanishing point, horizon and the characters' head tops (select Camera to see the numbers). Blossom clusters are cards cut out by a material's opacity, and the hair is a baked mesh. Press play and petals drift down."
+      path: "demos/sakura.ktrtproj"
+      home: true
+      accent: "#c2708f"
+      media:
+        cover: "media/sakura/hero.jpg"
+        screenshots: ["media/sakura/shot-1.jpg", "media/sakura/shot-2.jpg"]
+        trailer: "media/sakura/play.mp4"

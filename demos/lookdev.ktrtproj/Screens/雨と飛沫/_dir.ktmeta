@@ -1,0 +1,13 @@
+schema_version: 2
+kind: "screen-dir"
+id: "lookdev_rain"
+display_name: "雨と飛沫"
+memo: "▶ で雨が降る。雨粒は床でちょうど寿命が尽き、その場所から飛沫が出る。落ちるまでの時間 / 雨の量 / 飛沫の数はエフェクトの公開パラメータ。"
+pos:
+  x: 40
+  y: 400
+children:
+  -
+    name: "雨と飛沫.screen"
+    id: "lookdev_rain"
+    ref: "file"

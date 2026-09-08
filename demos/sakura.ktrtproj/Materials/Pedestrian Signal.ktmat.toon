@@ -1,0 +1,85 @@
+schema_version: 2
+kind: "material"
+id: "mat_signal_red"
+name: "Pedestrian Signal"
+parent_material_id: null
+graph:
+  nodes:
+    -
+      id: "material_uv_1"
+      type: "material_uv"
+      position:
+        x: 0
+        y: 0
+      properties: {}
+    -
+      id: "shape_box_1"
+      type: "shape_box"
+      position:
+        x: 260
+        y: 0
+      properties:
+        center: "0.5,0.5"
+        size: "0.32,0.3"
+        corner: 0.06
+    -
+      id: "sdf_fill_1"
+      type: "sdf_fill"
+      position:
+        x: 520
+        y: 0
+      properties:
+        softness: 0.03
+    -
+      id: "float_mul_1"
+      type: "float_mul"
+      position:
+        x: 780
+        y: 0
+      properties:
+        b: 2.6
+    -
+      id: "material_output_3d_1"
+      type: "material_output_3d"
+      position:
+        x: 1040
+        y: 0
+      properties:
+        diffuse: "#2a0c0c"
+        emissive: "#ff3322"
+        gloss: 0.2
+  edges:
+    -
+      id: "material_uv_1:value>shape_box_1:uv"
+      from:
+        nodeId: "material_uv_1"
+        pin: "value"
+      to:
+        nodeId: "shape_box_1"
+        pin: "uv"
+    -
+      id: "shape_box_1:value>sdf_fill_1:d"
+      from:
+        nodeId: "shape_box_1"
+        pin: "value"
+      to:
+        nodeId: "sdf_fill_1"
+        pin: "d"
+    -
+      id: "sdf_fill_1:return>float_mul_1:a"
+      from:
+        nodeId: "sdf_fill_1"
+        pin: "return"
+      to:
+        nodeId: "float_mul_1"
+        pin: "a"
+    -
+      id: "float_mul_1:return>material_output_3d_1:emissive_intensity"
+      from:
+        nodeId: "float_mul_1"
+        pin: "return"
+      to:
+        nodeId: "material_output_3d_1"
+        pin: "emissive_intensity"
+defaults: {}
+purpose: "space-3d"

@@ -1,0 +1,989 @@
+schema_version: 2
+kind: "material"
+id: "mat_fac_orbit"
+name: "ORBIT Facade"
+parent_material_id: null
+graph:
+  nodes:
+    -
+      id: "material_world_position_1"
+      type: "material_world_position"
+      position:
+        x: 0
+        y: 0
+      properties: {}
+    -
+      id: "material_world_position_2"
+      type: "material_world_position"
+      position:
+        x: 0
+        y: 130
+      properties: {}
+    -
+      id: "float_mul_1"
+      type: "float_mul"
+      position:
+        x: 260
+        y: 0
+      properties:
+        b: 3.3333333333333335
+    -
+      id: "float_mul_2"
+      type: "float_mul"
+      position:
+        x: 260
+        y: 130
+      properties:
+        b: 8.333333333333334
+    -
+      id: "make_vector2_1"
+      type: "make_vector2"
+      position:
+        x: 520
+        y: 0
+      properties: {}
+    -
+      id: "procedural_grid_1"
+      type: "procedural_grid"
+      position:
+        x: 780
+        y: 0
+      properties:
+        scale: 1
+        line_width: 0.06
+    -
+      id: "procedural_noise_1"
+      type: "procedural_noise"
+      position:
+        x: 780
+        y: 130
+      properties:
+        scale: 0.2
+        seed: 7
+        octaves: 4
+    -
+      id: "float_mul_3"
+      type: "float_mul"
+      position:
+        x: 1040
+        y: 0
+      properties:
+        b: 0.28
+    -
+      id: "color_lerp_1"
+      type: "color_lerp"
+      position:
+        x: 1300
+        y: 0
+      properties:
+        a: "#7e4038"
+        b: "#5e3029"
+    -
+      id: "color_lerp_2"
+      type: "color_lerp"
+      position:
+        x: 1560
+        y: 0
+      properties:
+        b: "#5e3029"
+    -
+      id: "material_world_position_3"
+      type: "material_world_position"
+      position:
+        x: 0
+        y: 260
+      properties: {}
+    -
+      id: "float_mul_4"
+      type: "float_mul"
+      position:
+        x: 260
+        y: 260
+      properties:
+        b: 0.31746031746031744
+    -
+      id: "float_mul_5"
+      type: "float_mul"
+      position:
+        x: 260
+        y: 390
+      properties:
+        b: 0.31746031746031744
+    -
+      id: "make_vector2_2"
+      type: "make_vector2"
+      position:
+        x: 520
+        y: 130
+      properties: {}
+    -
+      id: "uv_tile_1"
+      type: "uv_tile"
+      position:
+        x: 780
+        y: 260
+      properties:
+        tiles: "1,1"
+        offset: "0,0"
+    -
+      id: "procedural_radial_gradient_1"
+      type: "procedural_radial_gradient"
+      position:
+        x: 1040
+        y: 130
+      properties:
+        center: "0.5,0.5"
+        radius: 0.42
+    -
+      id: "float_mul_6"
+      type: "float_mul"
+      position:
+        x: 1300
+        y: 130
+      properties:
+        b: 3
+    -
+      id: "float_fraction_1"
+      type: "float_fraction"
+      position:
+        x: 1560
+        y: 130
+      properties: {}
+    -
+      id: "color_lerp_3"
+      type: "color_lerp"
+      position:
+        x: 1820
+        y: 0
+      properties:
+        a: "#3e3b42"
+        b: "#6f6b73"
+    -
+      id: "float_smoothstep_1"
+      type: "float_smoothstep"
+      position:
+        x: 1300
+        y: 260
+      properties:
+        edge0: 1.02
+        edge1: 0.96
+    -
+      id: "color_lerp_4"
+      type: "color_lerp"
+      position:
+        x: 2080
+        y: 0
+      properties:
+        a: "#4c4950"
+    -
+      id: "material_world_position_4"
+      type: "material_world_position"
+      position:
+        x: 0
+        y: 390
+      properties: {}
+    -
+      id: "float_mul_7"
+      type: "float_mul"
+      position:
+        x: 260
+        y: 520
+      properties:
+        b: 0.3846153846153846
+    -
+      id: "float_mul_8"
+      type: "float_mul"
+      position:
+        x: 260
+        y: 650
+      properties:
+        b: 0.3846153846153846
+    -
+      id: "make_vector2_3"
+      type: "make_vector2"
+      position:
+        x: 520
+        y: 260
+      properties: {}
+    -
+      id: "procedural_grid_2"
+      type: "procedural_grid"
+      position:
+        x: 780
+        y: 390
+      properties:
+        scale: 1
+        line_width: 0.3
+    -
+      id: "color_lerp_5"
+      type: "color_lerp"
+      position:
+        x: 1040
+        y: 260
+      properties:
+        a: "#3b4653"
+        b: "#6d6a66"
+    -
+      id: "float_smoothstep_2"
+      type: "float_smoothstep"
+      position:
+        x: 260
+        y: 780
+      properties:
+        edge0: 4.050000000000001
+        edge1: 4.25
+    -
+      id: "float_smoothstep_3"
+      type: "float_smoothstep"
+      position:
+        x: 260
+        y: 910
+      properties:
+        edge0: 7.3999999999999995
+        edge1: 7.2
+    -
+      id: "float_mul_9"
+      type: "float_mul"
+      position:
+        x: 520
+        y: 390
+      properties: {}
+    -
+      id: "color_lerp_6"
+      type: "color_lerp"
+      position:
+        x: 2340
+        y: 0
+      properties: {}
+    -
+      id: "float_smoothstep_4"
+      type: "float_smoothstep"
+      position:
+        x: 260
+        y: 1040
+      properties:
+        edge0: 2.9899999999999998
+        edge1: 3.11
+    -
+      id: "float_smoothstep_5"
+      type: "float_smoothstep"
+      position:
+        x: 260
+        y: 1170
+      properties:
+        edge0: 4.21
+        edge1: 4.090000000000001
+    -
+      id: "float_mul_10"
+      type: "float_mul"
+      position:
+        x: 520
+        y: 520
+      properties: {}
+    -
+      id: "color_lerp_7"
+      type: "color_lerp"
+      position:
+        x: 2600
+        y: 0
+      properties:
+        b: "#2e2c33"
+    -
+      id: "material_world_position_5"
+      type: "material_world_position"
+      position:
+        x: 0
+        y: 520
+      properties: {}
+    -
+      id: "float_mul_11"
+      type: "float_mul"
+      position:
+        x: 260
+        y: 1300
+      properties:
+        b: 0.7407407407407407
+    -
+      id: "float_mul_12"
+      type: "float_mul"
+      position:
+        x: 260
+        y: 1430
+      properties:
+        b: 1
+    -
+      id: "make_vector2_4"
+      type: "make_vector2"
+      position:
+        x: 520
+        y: 650
+      properties: {}
+    -
+      id: "procedural_grid_3"
+      type: "procedural_grid"
+      position:
+        x: 780
+        y: 520
+      properties:
+        scale: 1
+        line_width: 0.55
+    -
+      id: "float_smoothstep_6"
+      type: "float_smoothstep"
+      position:
+        x: 260
+        y: 1560
+      properties:
+        edge0: 3.21
+        edge1: 3.29
+    -
+      id: "float_smoothstep_7"
+      type: "float_smoothstep"
+      position:
+        x: 260
+        y: 1690
+      properties:
+        edge0: 4.04
+        edge1: 3.96
+    -
+      id: "float_mul_13"
+      type: "float_mul"
+      position:
+        x: 520
+        y: 780
+      properties: {}
+    -
+      id: "float_mul_14"
+      type: "float_mul"
+      position:
+        x: 1040
+        y: 390
+      properties: {}
+    -
+      id: "color_lerp_8"
+      type: "color_lerp"
+      position:
+        x: 2860
+        y: 0
+      properties:
+        b: "#eee2c4"
+    -
+      id: "float_smoothstep_8"
+      type: "float_smoothstep"
+      position:
+        x: 260
+        y: 1820
+      properties:
+        edge0: 2.45
+        edge1: 2.55
+    -
+      id: "float_smoothstep_9"
+      type: "float_smoothstep"
+      position:
+        x: 260
+        y: 1950
+      properties:
+        edge0: 3.0999999999999996
+        edge1: 3
+    -
+      id: "float_mul_15"
+      type: "float_mul"
+      position:
+        x: 520
+        y: 910
+      properties: {}
+    -
+      id: "color_lerp_9"
+      type: "color_lerp"
+      position:
+        x: 3120
+        y: 0
+      properties:
+        b: "#d49e2e"
+    -
+      id: "float_smoothstep_10"
+      type: "float_smoothstep"
+      position:
+        x: 260
+        y: 2080
+      properties:
+        edge0: -1.08
+        edge1: -0.92
+    -
+      id: "float_smoothstep_11"
+      type: "float_smoothstep"
+      position:
+        x: 260
+        y: 2210
+      properties:
+        edge0: 2.58
+        edge1: 2.42
+    -
+      id: "float_mul_16"
+      type: "float_mul"
+      position:
+        x: 520
+        y: 1040
+      properties: {}
+    -
+      id: "color_lerp_10"
+      type: "color_lerp"
+      position:
+        x: 3380
+        y: 0
+      properties: {}
+    -
+      id: "material_output_3d_1"
+      type: "material_output_3d"
+      position:
+        x: 3640
+        y: 0
+      properties:
+        gloss: 0.12
+  edges:
+    -
+      id: "material_world_position_2:x>float_mul_1:a"
+      from:
+        nodeId: "material_world_position_2"
+        pin: "x"
+      to:
+        nodeId: "float_mul_1"
+        pin: "a"
+    -
+      id: "material_world_position_2:y>float_mul_2:a"
+      from:
+        nodeId: "material_world_position_2"
+        pin: "y"
+      to:
+        nodeId: "float_mul_2"
+        pin: "a"
+    -
+      id: "float_mul_1:return>make_vector2_1:x"
+      from:
+        nodeId: "float_mul_1"
+        pin: "return"
+      to:
+        nodeId: "make_vector2_1"
+        pin: "x"
+    -
+      id: "float_mul_2:return>make_vector2_1:y"
+      from:
+        nodeId: "float_mul_2"
+        pin: "return"
+      to:
+        nodeId: "make_vector2_1"
+        pin: "y"
+    -
+      id: "make_vector2_1:return>procedural_grid_1:uv"
+      from:
+        nodeId: "make_vector2_1"
+        pin: "return"
+      to:
+        nodeId: "procedural_grid_1"
+        pin: "uv"
+    -
+      id: "make_vector2_1:return>procedural_noise_1:uv"
+      from:
+        nodeId: "make_vector2_1"
+        pin: "return"
+      to:
+        nodeId: "procedural_noise_1"
+        pin: "uv"
+    -
+      id: "procedural_noise_1:value>float_mul_3:a"
+      from:
+        nodeId: "procedural_noise_1"
+        pin: "value"
+      to:
+        nodeId: "float_mul_3"
+        pin: "a"
+    -
+      id: "float_mul_3:return>color_lerp_1:alpha"
+      from:
+        nodeId: "float_mul_3"
+        pin: "return"
+      to:
+        nodeId: "color_lerp_1"
+        pin: "alpha"
+    -
+      id: "color_lerp_1:return>color_lerp_2:a"
+      from:
+        nodeId: "color_lerp_1"
+        pin: "return"
+      to:
+        nodeId: "color_lerp_2"
+        pin: "a"
+    -
+      id: "procedural_grid_1:value>color_lerp_2:alpha"
+      from:
+        nodeId: "procedural_grid_1"
+        pin: "value"
+      to:
+        nodeId: "color_lerp_2"
+        pin: "alpha"
+    -
+      id: "material_world_position_3:x>float_mul_4:a"
+      from:
+        nodeId: "material_world_position_3"
+        pin: "x"
+      to:
+        nodeId: "float_mul_4"
+        pin: "a"
+    -
+      id: "material_world_position_3:y>float_mul_5:a"
+      from:
+        nodeId: "material_world_position_3"
+        pin: "y"
+      to:
+        nodeId: "float_mul_5"
+        pin: "a"
+    -
+      id: "float_mul_4:return>make_vector2_2:x"
+      from:
+        nodeId: "float_mul_4"
+        pin: "return"
+      to:
+        nodeId: "make_vector2_2"
+        pin: "x"
+    -
+      id: "float_mul_5:return>make_vector2_2:y"
+      from:
+        nodeId: "float_mul_5"
+        pin: "return"
+      to:
+        nodeId: "make_vector2_2"
+        pin: "y"
+    -
+      id: "make_vector2_2:return>uv_tile_1:uv"
+      from:
+        nodeId: "make_vector2_2"
+        pin: "return"
+      to:
+        nodeId: "uv_tile_1"
+        pin: "uv"
+    -
+      id: "uv_tile_1:value>procedural_radial_gradient_1:uv"
+      from:
+        nodeId: "uv_tile_1"
+        pin: "value"
+      to:
+        nodeId: "procedural_radial_gradient_1"
+        pin: "uv"
+    -
+      id: "procedural_radial_gradient_1:value>float_mul_6:a"
+      from:
+        nodeId: "procedural_radial_gradient_1"
+        pin: "value"
+      to:
+        nodeId: "float_mul_6"
+        pin: "a"
+    -
+      id: "float_mul_6:return>float_fraction_1:a"
+      from:
+        nodeId: "float_mul_6"
+        pin: "return"
+      to:
+        nodeId: "float_fraction_1"
+        pin: "a"
+    -
+      id: "float_fraction_1:return>color_lerp_3:alpha"
+      from:
+        nodeId: "float_fraction_1"
+        pin: "return"
+      to:
+        nodeId: "color_lerp_3"
+        pin: "alpha"
+    -
+      id: "procedural_radial_gradient_1:value>float_smoothstep_1:x"
+      from:
+        nodeId: "procedural_radial_gradient_1"
+        pin: "value"
+      to:
+        nodeId: "float_smoothstep_1"
+        pin: "x"
+    -
+      id: "color_lerp_3:return>color_lerp_4:b"
+      from:
+        nodeId: "color_lerp_3"
+        pin: "return"
+      to:
+        nodeId: "color_lerp_4"
+        pin: "b"
+    -
+      id: "float_smoothstep_1:return>color_lerp_4:alpha"
+      from:
+        nodeId: "float_smoothstep_1"
+        pin: "return"
+      to:
+        nodeId: "color_lerp_4"
+        pin: "alpha"
+    -
+      id: "material_world_position_4:x>float_mul_7:a"
+      from:
+        nodeId: "material_world_position_4"
+        pin: "x"
+      to:
+        nodeId: "float_mul_7"
+        pin: "a"
+    -
+      id: "material_world_position_4:y>float_mul_8:a"
+      from:
+        nodeId: "material_world_position_4"
+        pin: "y"
+      to:
+        nodeId: "float_mul_8"
+        pin: "a"
+    -
+      id: "float_mul_7:return>make_vector2_3:x"
+      from:
+        nodeId: "float_mul_7"
+        pin: "return"
+      to:
+        nodeId: "make_vector2_3"
+        pin: "x"
+    -
+      id: "float_mul_8:return>make_vector2_3:y"
+      from:
+        nodeId: "float_mul_8"
+        pin: "return"
+      to:
+        nodeId: "make_vector2_3"
+        pin: "y"
+    -
+      id: "make_vector2_3:return>procedural_grid_2:uv"
+      from:
+        nodeId: "make_vector2_3"
+        pin: "return"
+      to:
+        nodeId: "procedural_grid_2"
+        pin: "uv"
+    -
+      id: "procedural_grid_2:value>color_lerp_5:alpha"
+      from:
+        nodeId: "procedural_grid_2"
+        pin: "value"
+      to:
+        nodeId: "color_lerp_5"
+        pin: "alpha"
+    -
+      id: "material_world_position_1:y>float_smoothstep_2:x"
+      from:
+        nodeId: "material_world_position_1"
+        pin: "y"
+      to:
+        nodeId: "float_smoothstep_2"
+        pin: "x"
+    -
+      id: "material_world_position_1:y>float_smoothstep_3:x"
+      from:
+        nodeId: "material_world_position_1"
+        pin: "y"
+      to:
+        nodeId: "float_smoothstep_3"
+        pin: "x"
+    -
+      id: "float_smoothstep_2:return>float_mul_9:a"
+      from:
+        nodeId: "float_smoothstep_2"
+        pin: "return"
+      to:
+        nodeId: "float_mul_9"
+        pin: "a"
+    -
+      id: "float_smoothstep_3:return>float_mul_9:b"
+      from:
+        nodeId: "float_smoothstep_3"
+        pin: "return"
+      to:
+        nodeId: "float_mul_9"
+        pin: "b"
+    -
+      id: "color_lerp_2:return>color_lerp_6:a"
+      from:
+        nodeId: "color_lerp_2"
+        pin: "return"
+      to:
+        nodeId: "color_lerp_6"
+        pin: "a"
+    -
+      id: "color_lerp_4:return>color_lerp_6:b"
+      from:
+        nodeId: "color_lerp_4"
+        pin: "return"
+      to:
+        nodeId: "color_lerp_6"
+        pin: "b"
+    -
+      id: "float_mul_9:return>color_lerp_6:alpha"
+      from:
+        nodeId: "float_mul_9"
+        pin: "return"
+      to:
+        nodeId: "color_lerp_6"
+        pin: "alpha"
+    -
+      id: "material_world_position_1:y>float_smoothstep_4:x"
+      from:
+        nodeId: "material_world_position_1"
+        pin: "y"
+      to:
+        nodeId: "float_smoothstep_4"
+        pin: "x"
+    -
+      id: "material_world_position_1:y>float_smoothstep_5:x"
+      from:
+        nodeId: "material_world_position_1"
+        pin: "y"
+      to:
+        nodeId: "float_smoothstep_5"
+        pin: "x"
+    -
+      id: "float_smoothstep_4:return>float_mul_10:a"
+      from:
+        nodeId: "float_smoothstep_4"
+        pin: "return"
+      to:
+        nodeId: "float_mul_10"
+        pin: "a"
+    -
+      id: "float_smoothstep_5:return>float_mul_10:b"
+      from:
+        nodeId: "float_smoothstep_5"
+        pin: "return"
+      to:
+        nodeId: "float_mul_10"
+        pin: "b"
+    -
+      id: "color_lerp_6:return>color_lerp_7:a"
+      from:
+        nodeId: "color_lerp_6"
+        pin: "return"
+      to:
+        nodeId: "color_lerp_7"
+        pin: "a"
+    -
+      id: "float_mul_10:return>color_lerp_7:alpha"
+      from:
+        nodeId: "float_mul_10"
+        pin: "return"
+      to:
+        nodeId: "color_lerp_7"
+        pin: "alpha"
+    -
+      id: "material_world_position_5:x>float_mul_11:a"
+      from:
+        nodeId: "material_world_position_5"
+        pin: "x"
+      to:
+        nodeId: "float_mul_11"
+        pin: "a"
+    -
+      id: "material_world_position_5:y>float_mul_12:a"
+      from:
+        nodeId: "material_world_position_5"
+        pin: "y"
+      to:
+        nodeId: "float_mul_12"
+        pin: "a"
+    -
+      id: "float_mul_11:return>make_vector2_4:x"
+      from:
+        nodeId: "float_mul_11"
+        pin: "return"
+      to:
+        nodeId: "make_vector2_4"
+        pin: "x"
+    -
+      id: "float_mul_12:return>make_vector2_4:y"
+      from:
+        nodeId: "float_mul_12"
+        pin: "return"
+      to:
+        nodeId: "make_vector2_4"
+        pin: "y"
+    -
+      id: "make_vector2_4:return>procedural_grid_3:uv"
+      from:
+        nodeId: "make_vector2_4"
+        pin: "return"
+      to:
+        nodeId: "procedural_grid_3"
+        pin: "uv"
+    -
+      id: "material_world_position_1:y>float_smoothstep_6:x"
+      from:
+        nodeId: "material_world_position_1"
+        pin: "y"
+      to:
+        nodeId: "float_smoothstep_6"
+        pin: "x"
+    -
+      id: "material_world_position_1:y>float_smoothstep_7:x"
+      from:
+        nodeId: "material_world_position_1"
+        pin: "y"
+      to:
+        nodeId: "float_smoothstep_7"
+        pin: "x"
+    -
+      id: "float_smoothstep_6:return>float_mul_13:a"
+      from:
+        nodeId: "float_smoothstep_6"
+        pin: "return"
+      to:
+        nodeId: "float_mul_13"
+        pin: "a"
+    -
+      id: "float_smoothstep_7:return>float_mul_13:b"
+      from:
+        nodeId: "float_smoothstep_7"
+        pin: "return"
+      to:
+        nodeId: "float_mul_13"
+        pin: "b"
+    -
+      id: "float_mul_13:return>float_mul_14:a"
+      from:
+        nodeId: "float_mul_13"
+        pin: "return"
+      to:
+        nodeId: "float_mul_14"
+        pin: "a"
+    -
+      id: "procedural_grid_3:value>float_mul_14:b"
+      from:
+        nodeId: "procedural_grid_3"
+        pin: "value"
+      to:
+        nodeId: "float_mul_14"
+        pin: "b"
+    -
+      id: "color_lerp_7:return>color_lerp_8:a"
+      from:
+        nodeId: "color_lerp_7"
+        pin: "return"
+      to:
+        nodeId: "color_lerp_8"
+        pin: "a"
+    -
+      id: "float_mul_14:return>color_lerp_8:alpha"
+      from:
+        nodeId: "float_mul_14"
+        pin: "return"
+      to:
+        nodeId: "color_lerp_8"
+        pin: "alpha"
+    -
+      id: "material_world_position_1:y>float_smoothstep_8:x"
+      from:
+        nodeId: "material_world_position_1"
+        pin: "y"
+      to:
+        nodeId: "float_smoothstep_8"
+        pin: "x"
+    -
+      id: "material_world_position_1:y>float_smoothstep_9:x"
+      from:
+        nodeId: "material_world_position_1"
+        pin: "y"
+      to:
+        nodeId: "float_smoothstep_9"
+        pin: "x"
+    -
+      id: "float_smoothstep_8:return>float_mul_15:a"
+      from:
+        nodeId: "float_smoothstep_8"
+        pin: "return"
+      to:
+        nodeId: "float_mul_15"
+        pin: "a"
+    -
+      id: "float_smoothstep_9:return>float_mul_15:b"
+      from:
+        nodeId: "float_smoothstep_9"
+        pin: "return"
+      to:
+        nodeId: "float_mul_15"
+        pin: "b"
+    -
+      id: "color_lerp_8:return>color_lerp_9:a"
+      from:
+        nodeId: "color_lerp_8"
+        pin: "return"
+      to:
+        nodeId: "color_lerp_9"
+        pin: "a"
+    -
+      id: "float_mul_15:return>color_lerp_9:alpha"
+      from:
+        nodeId: "float_mul_15"
+        pin: "return"
+      to:
+        nodeId: "color_lerp_9"
+        pin: "alpha"
+    -
+      id: "material_world_position_1:y>float_smoothstep_10:x"
+      from:
+        nodeId: "material_world_position_1"
+        pin: "y"
+      to:
+        nodeId: "float_smoothstep_10"
+        pin: "x"
+    -
+      id: "material_world_position_1:y>float_smoothstep_11:x"
+      from:
+        nodeId: "material_world_position_1"
+        pin: "y"
+      to:
+        nodeId: "float_smoothstep_11"
+        pin: "x"
+    -
+      id: "float_smoothstep_10:return>float_mul_16:a"
+      from:
+        nodeId: "float_smoothstep_10"
+        pin: "return"
+      to:
+        nodeId: "float_mul_16"
+        pin: "a"
+    -
+      id: "float_smoothstep_11:return>float_mul_16:b"
+      from:
+        nodeId: "float_smoothstep_11"
+        pin: "return"
+      to:
+        nodeId: "float_mul_16"
+        pin: "b"
+    -
+      id: "color_lerp_9:return>color_lerp_10:a"
+      from:
+        nodeId: "color_lerp_9"
+        pin: "return"
+      to:
+        nodeId: "color_lerp_10"
+        pin: "a"
+    -
+      id: "color_lerp_5:return>color_lerp_10:b"
+      from:
+        nodeId: "color_lerp_5"
+        pin: "return"
+      to:
+        nodeId: "color_lerp_10"
+        pin: "b"
+    -
+      id: "float_mul_16:return>color_lerp_10:alpha"
+      from:
+        nodeId: "float_mul_16"
+        pin: "return"
+      to:
+        nodeId: "color_lerp_10"
+        pin: "alpha"
+    -
+      id: "color_lerp_10:return>material_output_3d_1:diffuse"
+      from:
+        nodeId: "color_lerp_10"
+        pin: "return"
+      to:
+        nodeId: "material_output_3d_1"
+        pin: "diffuse"
+defaults: {}
+purpose: "space-3d"

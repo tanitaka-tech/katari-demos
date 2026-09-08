@@ -1,0 +1,9 @@
+schema_version: 2
+kind: "material-dir"
+id: "materials-root"
+display_name: "Materials"
+memo: null
+pos: null
+children[2]{name,id,ref}:
+  "壁の粒.ktmat.toon","mat_wall","file"
+  "石畳の粒.ktmat.toon","mat_ground","file"

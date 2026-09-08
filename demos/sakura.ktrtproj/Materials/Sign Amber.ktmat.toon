@@ -1,0 +1,729 @@
+schema_version: 2
+kind: "material"
+id: "mat_sign_b"
+name: "Sign Amber"
+parent_material_id: null
+graph:
+  nodes:
+    -
+      id: "material_uv_1"
+      type: "material_uv"
+      position:
+        x: 0
+        y: 0
+      properties: {}
+    -
+      id: "uv_cell_1"
+      type: "uv_cell"
+      position:
+        x: 260
+        y: 0
+      properties:
+        tiles: "3,9"
+        offset: "0,0"
+    -
+      id: "uv_tile_1"
+      type: "uv_tile"
+      position:
+        x: 260
+        y: 130
+      properties:
+        tiles: "3,9"
+        offset: "0,0"
+    -
+      id: "cell_random_1"
+      type: "cell_random"
+      position:
+        x: 520
+        y: 0
+      properties:
+        seed: 42
+    -
+      id: "float_step_1"
+      type: "float_step"
+      position:
+        x: 780
+        y: 0
+      properties:
+        edge: 0.25
+    -
+      id: "float_mul_1"
+      type: "float_mul"
+      position:
+        x: 1040
+        y: 0
+      properties:
+        a: 0.075
+    -
+      id: "shape_line_1"
+      type: "shape_line"
+      position:
+        x: 1300
+        y: 0
+      properties:
+        a: "0.16,0.24"
+        b: "0.84,0.24"
+    -
+      id: "cell_random_2"
+      type: "cell_random"
+      position:
+        x: 520
+        y: 130
+      properties:
+        seed: 79
+    -
+      id: "float_step_2"
+      type: "float_step"
+      position:
+        x: 780
+        y: 130
+      properties:
+        edge: 0.45
+    -
+      id: "float_mul_2"
+      type: "float_mul"
+      position:
+        x: 1040
+        y: 130
+      properties:
+        a: 0.075
+    -
+      id: "shape_line_2"
+      type: "shape_line"
+      position:
+        x: 1300
+        y: 130
+      properties:
+        a: "0.22,0.5"
+        b: "0.78,0.5"
+    -
+      id: "cell_random_3"
+      type: "cell_random"
+      position:
+        x: 520
+        y: 260
+      properties:
+        seed: 116
+    -
+      id: "float_step_3"
+      type: "float_step"
+      position:
+        x: 780
+        y: 260
+      properties:
+        edge: 0.3
+    -
+      id: "float_mul_3"
+      type: "float_mul"
+      position:
+        x: 1040
+        y: 260
+      properties:
+        a: 0.075
+    -
+      id: "shape_line_3"
+      type: "shape_line"
+      position:
+        x: 1300
+        y: 260
+      properties:
+        a: "0.16,0.78"
+        b: "0.84,0.78"
+    -
+      id: "cell_random_4"
+      type: "cell_random"
+      position:
+        x: 520
+        y: 390
+      properties:
+        seed: 153
+    -
+      id: "float_step_4"
+      type: "float_step"
+      position:
+        x: 780
+        y: 390
+      properties:
+        edge: 0.35
+    -
+      id: "float_mul_4"
+      type: "float_mul"
+      position:
+        x: 1040
+        y: 390
+      properties:
+        a: 0.075
+    -
+      id: "shape_line_4"
+      type: "shape_line"
+      position:
+        x: 1300
+        y: 390
+      properties:
+        a: "0.5,0.12"
+        b: "0.5,0.9"
+    -
+      id: "cell_random_5"
+      type: "cell_random"
+      position:
+        x: 520
+        y: 520
+      properties:
+        seed: 190
+    -
+      id: "float_step_5"
+      type: "float_step"
+      position:
+        x: 780
+        y: 520
+      properties:
+        edge: 0.6
+    -
+      id: "float_mul_5"
+      type: "float_mul"
+      position:
+        x: 1040
+        y: 520
+      properties:
+        a: 0.075
+    -
+      id: "shape_line_5"
+      type: "shape_line"
+      position:
+        x: 1300
+        y: 520
+      properties:
+        a: "0.24,0.14"
+        b: "0.24,0.62"
+    -
+      id: "cell_random_6"
+      type: "cell_random"
+      position:
+        x: 520
+        y: 650
+      properties:
+        seed: 227
+    -
+      id: "float_step_6"
+      type: "float_step"
+      position:
+        x: 780
+        y: 650
+      properties:
+        edge: 0.6
+    -
+      id: "float_mul_6"
+      type: "float_mul"
+      position:
+        x: 1040
+        y: 650
+      properties:
+        a: 0.075
+    -
+      id: "shape_line_6"
+      type: "shape_line"
+      position:
+        x: 1300
+        y: 650
+      properties:
+        a: "0.76,0.14"
+        b: "0.76,0.62"
+    -
+      id: "sdf_union_1"
+      type: "sdf_union"
+      position:
+        x: 1560
+        y: 0
+      properties: {}
+    -
+      id: "sdf_union_2"
+      type: "sdf_union"
+      position:
+        x: 1820
+        y: 0
+      properties: {}
+    -
+      id: "sdf_union_3"
+      type: "sdf_union"
+      position:
+        x: 2080
+        y: 0
+      properties: {}
+    -
+      id: "sdf_union_4"
+      type: "sdf_union"
+      position:
+        x: 2340
+        y: 0
+      properties: {}
+    -
+      id: "sdf_union_5"
+      type: "sdf_union"
+      position:
+        x: 2600
+        y: 0
+      properties: {}
+    -
+      id: "sdf_fill_1"
+      type: "sdf_fill"
+      position:
+        x: 2860
+        y: 0
+      properties:
+        softness: 0.02
+    -
+      id: "shape_box_1"
+      type: "shape_box"
+      position:
+        x: 260
+        y: 260
+      properties:
+        center: "0.5,0.5"
+        size: "0.42,0.46"
+        corner: 0.04
+    -
+      id: "sdf_fill_2"
+      type: "sdf_fill"
+      position:
+        x: 520
+        y: 780
+      properties:
+        softness: 0.02
+    -
+      id: "color_lerp_1"
+      type: "color_lerp"
+      position:
+        x: 780
+        y: 780
+      properties:
+        a: "#2a231c"
+        b: "#e0a828"
+    -
+      id: "float_mul_7"
+      type: "float_mul"
+      position:
+        x: 3120
+        y: 0
+      properties:
+        b: 0.9
+    -
+      id: "color_lerp_2"
+      type: "color_lerp"
+      position:
+        x: 3380
+        y: 0
+      properties:
+        b: "#2a231c"
+    -
+      id: "material_output_3d_1"
+      type: "material_output_3d"
+      position:
+        x: 3640
+        y: 0
+      properties:
+        emissive: "#e0a828"
+        emissive_intensity: 0.12
+        gloss: 0.25
+  edges:
+    -
+      id: "material_uv_1:value>uv_cell_1:uv"
+      from:
+        nodeId: "material_uv_1"
+        pin: "value"
+      to:
+        nodeId: "uv_cell_1"
+        pin: "uv"
+    -
+      id: "material_uv_1:value>uv_tile_1:uv"
+      from:
+        nodeId: "material_uv_1"
+        pin: "value"
+      to:
+        nodeId: "uv_tile_1"
+        pin: "uv"
+    -
+      id: "uv_cell_1:value>cell_random_1:cell"
+      from:
+        nodeId: "uv_cell_1"
+        pin: "value"
+      to:
+        nodeId: "cell_random_1"
+        pin: "cell"
+    -
+      id: "cell_random_1:value>float_step_1:x"
+      from:
+        nodeId: "cell_random_1"
+        pin: "value"
+      to:
+        nodeId: "float_step_1"
+        pin: "x"
+    -
+      id: "float_step_1:return>float_mul_1:b"
+      from:
+        nodeId: "float_step_1"
+        pin: "return"
+      to:
+        nodeId: "float_mul_1"
+        pin: "b"
+    -
+      id: "uv_tile_1:value>shape_line_1:uv"
+      from:
+        nodeId: "uv_tile_1"
+        pin: "value"
+      to:
+        nodeId: "shape_line_1"
+        pin: "uv"
+    -
+      id: "float_mul_1:return>shape_line_1:width"
+      from:
+        nodeId: "float_mul_1"
+        pin: "return"
+      to:
+        nodeId: "shape_line_1"
+        pin: "width"
+    -
+      id: "uv_cell_1:value>cell_random_2:cell"
+      from:
+        nodeId: "uv_cell_1"
+        pin: "value"
+      to:
+        nodeId: "cell_random_2"
+        pin: "cell"
+    -
+      id: "cell_random_2:value>float_step_2:x"
+      from:
+        nodeId: "cell_random_2"
+        pin: "value"
+      to:
+        nodeId: "float_step_2"
+        pin: "x"
+    -
+      id: "float_step_2:return>float_mul_2:b"
+      from:
+        nodeId: "float_step_2"
+        pin: "return"
+      to:
+        nodeId: "float_mul_2"
+        pin: "b"
+    -
+      id: "uv_tile_1:value>shape_line_2:uv"
+      from:
+        nodeId: "uv_tile_1"
+        pin: "value"
+      to:
+        nodeId: "shape_line_2"
+        pin: "uv"
+    -
+      id: "float_mul_2:return>shape_line_2:width"
+      from:
+        nodeId: "float_mul_2"
+        pin: "return"
+      to:
+        nodeId: "shape_line_2"
+        pin: "width"
+    -
+      id: "uv_cell_1:value>cell_random_3:cell"
+      from:
+        nodeId: "uv_cell_1"
+        pin: "value"
+      to:
+        nodeId: "cell_random_3"
+        pin: "cell"
+    -
+      id: "cell_random_3:value>float_step_3:x"
+      from:
+        nodeId: "cell_random_3"
+        pin: "value"
+      to:
+        nodeId: "float_step_3"
+        pin: "x"
+    -
+      id: "float_step_3:return>float_mul_3:b"
+      from:
+        nodeId: "float_step_3"
+        pin: "return"
+      to:
+        nodeId: "float_mul_3"
+        pin: "b"
+    -
+      id: "uv_tile_1:value>shape_line_3:uv"
+      from:
+        nodeId: "uv_tile_1"
+        pin: "value"
+      to:
+        nodeId: "shape_line_3"
+        pin: "uv"
+    -
+      id: "float_mul_3:return>shape_line_3:width"
+      from:
+        nodeId: "float_mul_3"
+        pin: "return"
+      to:
+        nodeId: "shape_line_3"
+        pin: "width"
+    -
+      id: "uv_cell_1:value>cell_random_4:cell"
+      from:
+        nodeId: "uv_cell_1"
+        pin: "value"
+      to:
+        nodeId: "cell_random_4"
+        pin: "cell"
+    -
+      id: "cell_random_4:value>float_step_4:x"
+      from:
+        nodeId: "cell_random_4"
+        pin: "value"
+      to:
+        nodeId: "float_step_4"
+        pin: "x"
+    -
+      id: "float_step_4:return>float_mul_4:b"
+      from:
+        nodeId: "float_step_4"
+        pin: "return"
+      to:
+        nodeId: "float_mul_4"
+        pin: "b"
+    -
+      id: "uv_tile_1:value>shape_line_4:uv"
+      from:
+        nodeId: "uv_tile_1"
+        pin: "value"
+      to:
+        nodeId: "shape_line_4"
+        pin: "uv"
+    -
+      id: "float_mul_4:return>shape_line_4:width"
+      from:
+        nodeId: "float_mul_4"
+        pin: "return"
+      to:
+        nodeId: "shape_line_4"
+        pin: "width"
+    -
+      id: "uv_cell_1:value>cell_random_5:cell"
+      from:
+        nodeId: "uv_cell_1"
+        pin: "value"
+      to:
+        nodeId: "cell_random_5"
+        pin: "cell"
+    -
+      id: "cell_random_5:value>float_step_5:x"
+      from:
+        nodeId: "cell_random_5"
+        pin: "value"
+      to:
+        nodeId: "float_step_5"
+        pin: "x"
+    -
+      id: "float_step_5:return>float_mul_5:b"
+      from:
+        nodeId: "float_step_5"
+        pin: "return"
+      to:
+        nodeId: "float_mul_5"
+        pin: "b"
+    -
+      id: "uv_tile_1:value>shape_line_5:uv"
+      from:
+        nodeId: "uv_tile_1"
+        pin: "value"
+      to:
+        nodeId: "shape_line_5"
+        pin: "uv"
+    -
+      id: "float_mul_5:return>shape_line_5:width"
+      from:
+        nodeId: "float_mul_5"
+        pin: "return"
+      to:
+        nodeId: "shape_line_5"
+        pin: "width"
+    -
+      id: "uv_cell_1:value>cell_random_6:cell"
+      from:
+        nodeId: "uv_cell_1"
+        pin: "value"
+      to:
+        nodeId: "cell_random_6"
+        pin: "cell"
+    -
+      id: "cell_random_6:value>float_step_6:x"
+      from:
+        nodeId: "cell_random_6"
+        pin: "value"
+      to:
+        nodeId: "float_step_6"
+        pin: "x"
+    -
+      id: "float_step_6:return>float_mul_6:b"
+      from:
+        nodeId: "float_step_6"
+        pin: "return"
+      to:
+        nodeId: "float_mul_6"
+        pin: "b"
+    -
+      id: "uv_tile_1:value>shape_line_6:uv"
+      from:
+        nodeId: "uv_tile_1"
+        pin: "value"
+      to:
+        nodeId: "shape_line_6"
+        pin: "uv"
+    -
+      id: "float_mul_6:return>shape_line_6:width"
+      from:
+        nodeId: "float_mul_6"
+        pin: "return"
+      to:
+        nodeId: "shape_line_6"
+        pin: "width"
+    -
+      id: "shape_line_1:value>sdf_union_1:a"
+      from:
+        nodeId: "shape_line_1"
+        pin: "value"
+      to:
+        nodeId: "sdf_union_1"
+        pin: "a"
+    -
+      id: "shape_line_2:value>sdf_union_1:b"
+      from:
+        nodeId: "shape_line_2"
+        pin: "value"
+      to:
+        nodeId: "sdf_union_1"
+        pin: "b"
+    -
+      id: "sdf_union_1:return>sdf_union_2:a"
+      from:
+        nodeId: "sdf_union_1"
+        pin: "return"
+      to:
+        nodeId: "sdf_union_2"
+        pin: "a"
+    -
+      id: "shape_line_3:value>sdf_union_2:b"
+      from:
+        nodeId: "shape_line_3"
+        pin: "value"
+      to:
+        nodeId: "sdf_union_2"
+        pin: "b"
+    -
+      id: "sdf_union_2:return>sdf_union_3:a"
+      from:
+        nodeId: "sdf_union_2"
+        pin: "return"
+      to:
+        nodeId: "sdf_union_3"
+        pin: "a"
+    -
+      id: "shape_line_4:value>sdf_union_3:b"
+      from:
+        nodeId: "shape_line_4"
+        pin: "value"
+      to:
+        nodeId: "sdf_union_3"
+        pin: "b"
+    -
+      id: "sdf_union_3:return>sdf_union_4:a"
+      from:
+        nodeId: "sdf_union_3"
+        pin: "return"
+      to:
+        nodeId: "sdf_union_4"
+        pin: "a"
+    -
+      id: "shape_line_5:value>sdf_union_4:b"
+      from:
+        nodeId: "shape_line_5"
+        pin: "value"
+      to:
+        nodeId: "sdf_union_4"
+        pin: "b"
+    -
+      id: "sdf_union_4:return>sdf_union_5:a"
+      from:
+        nodeId: "sdf_union_4"
+        pin: "return"
+      to:
+        nodeId: "sdf_union_5"
+        pin: "a"
+    -
+      id: "shape_line_6:value>sdf_union_5:b"
+      from:
+        nodeId: "shape_line_6"
+        pin: "value"
+      to:
+        nodeId: "sdf_union_5"
+        pin: "b"
+    -
+      id: "sdf_union_5:return>sdf_fill_1:d"
+      from:
+        nodeId: "sdf_union_5"
+        pin: "return"
+      to:
+        nodeId: "sdf_fill_1"
+        pin: "d"
+    -
+      id: "material_uv_1:value>shape_box_1:uv"
+      from:
+        nodeId: "material_uv_1"
+        pin: "value"
+      to:
+        nodeId: "shape_box_1"
+        pin: "uv"
+    -
+      id: "shape_box_1:value>sdf_fill_2:d"
+      from:
+        nodeId: "shape_box_1"
+        pin: "value"
+      to:
+        nodeId: "sdf_fill_2"
+        pin: "d"
+    -
+      id: "sdf_fill_2:return>color_lerp_1:alpha"
+      from:
+        nodeId: "sdf_fill_2"
+        pin: "return"
+      to:
+        nodeId: "color_lerp_1"
+        pin: "alpha"
+    -
+      id: "sdf_fill_1:return>float_mul_7:a"
+      from:
+        nodeId: "sdf_fill_1"
+        pin: "return"
+      to:
+        nodeId: "float_mul_7"
+        pin: "a"
+    -
+      id: "color_lerp_1:return>color_lerp_2:a"
+      from:
+        nodeId: "color_lerp_1"
+        pin: "return"
+      to:
+        nodeId: "color_lerp_2"
+        pin: "a"
+    -
+      id: "float_mul_7:return>color_lerp_2:alpha"
+      from:
+        nodeId: "float_mul_7"
+        pin: "return"
+      to:
+        nodeId: "color_lerp_2"
+        pin: "alpha"
+    -
+      id: "color_lerp_2:return>material_output_3d_1:diffuse"
+      from:
+        nodeId: "color_lerp_2"
+        pin: "return"
+      to:
+        nodeId: "material_output_3d_1"
+        pin: "diffuse"
+defaults: {}
+purpose: "space-3d"

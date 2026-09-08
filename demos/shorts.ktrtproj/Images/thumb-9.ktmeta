@@ -1,0 +1,10 @@
+schema_version: 2
+kind: "asset"
+id: "ast_1k6tolz"
+display_name: "thumb-9"
+asset_type: "image"
+category: "image"
+source: "embedded"
+external_path: null
+original_filename: "thumb-9.png"
+stored_filename: "thumb-9.png"

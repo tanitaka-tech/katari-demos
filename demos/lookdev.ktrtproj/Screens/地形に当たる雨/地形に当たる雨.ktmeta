@@ -1,0 +1,10 @@
+schema_version: 2
+kind: "space"
+id: "lookdev_splash"
+display_name: "地形に当たる雨"
+parent_screen_id: null
+memo: "▶ で雨が降る。坂・段・球・屋根それぞれの面で消えて飛沫が上がる。**屋根の真下が乾いている**のが、当たり判定が実際に効いていることの証拠。"
+pos:
+  x: 40
+  y: 580
+favorite: false

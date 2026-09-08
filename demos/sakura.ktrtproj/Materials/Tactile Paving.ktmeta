@@ -1,0 +1,8 @@
+schema_version: 2
+kind: "material"
+id: "mat_tactile"
+display_name: "Tactile Paving"
+parent_material_id: null
+memo: null
+pos: null
+favorite: false

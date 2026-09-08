@@ -1,0 +1,10 @@
+schema_version: 2
+kind: "asset"
+id: "ast_18n49t2"
+display_name: "thumb-6"
+asset_type: "image"
+category: "image"
+source: "embedded"
+external_path: null
+original_filename: "thumb-6.png"
+stored_filename: "thumb-6.png"

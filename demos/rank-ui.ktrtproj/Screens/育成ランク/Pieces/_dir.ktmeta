@@ -1,0 +1,11 @@
+schema_version: 2
+kind: "piece-dir"
+id: "screen_rank_ui_main-pieces"
+display_name: "Pieces"
+memo: null
+pos: null
+children:
+  -
+    name: "形 40x25.ktpiece.toon"
+    id: "pc_gg11"
+    ref: "file"

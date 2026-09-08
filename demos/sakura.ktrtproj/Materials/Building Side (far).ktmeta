@@ -1,0 +1,8 @@
+schema_version: 2
+kind: "material"
+id: "mat_fac_side_far"
+display_name: "Building Side (far)"
+parent_material_id: null
+memo: null
+pos: null
+favorite: false

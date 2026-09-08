@@ -1,0 +1,8 @@
+schema_version: 2
+kind: "material"
+id: "mat_fac_gray_b"
+display_name: "Warm Facade B"
+parent_material_id: null
+memo: null
+pos: null
+favorite: false

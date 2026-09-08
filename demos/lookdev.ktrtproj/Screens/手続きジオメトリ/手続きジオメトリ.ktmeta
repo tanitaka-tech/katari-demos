@@ -1,0 +1,10 @@
+schema_version: 2
+kind: "space"
+id: "lookdev_procedural"
+display_name: "手続きジオメトリ"
+parent_screen_id: null
+memo: "▶ で回転台が回る。段数 / 草の密度 / 道幅 / 留め具の間隔 …… を変えると形がその場で組み直る。奥は波打つパネル、手前は降り積もる粒。"
+pos:
+  x: 40
+  y: 220
+favorite: false

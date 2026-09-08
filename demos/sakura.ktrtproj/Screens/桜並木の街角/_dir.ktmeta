@@ -1,0 +1,13 @@
+schema_version: 2
+kind: "screen-dir"
+id: "sakura_street"
+display_name: "桜並木の街角"
+memo: "参照写真 1 枚の構図を 3D で組み直した街角。素材は 1 つも持たず、空も地面も桜も人物も手続きマテリアルとプリミティブだけで作っている。カメラは参照の消失点と人物の頭頂から逆算した固定値（Camera を選ぶと数値が見える）。"
+pos:
+  x: 40
+  y: 40
+children:
+  -
+    name: "桜並木の街角.screen"
+    id: "sakura_street"
+    ref: "file"

@@ -1,0 +1,11 @@
+schema_version: 2
+kind: "screen-dir"
+id: "screens-root"
+display_name: "Screens"
+memo: null
+pos: null
+children:
+  -
+    name: "ショップ"
+    id: "screen_shop_ui_main"
+    ref: "dir"

@@ -1,0 +1,10 @@
+schema_version: 2
+kind: "screen"
+id: "screen_dating_stage"
+display_name: "学園生活"
+parent_screen_id: null
+memo: "週ごとにコマンドを選び、週を進めると条件に合うイベントの脚本が始まる。脚本で動いた好感度は画面へ戻る。"
+pos:
+  x: 40
+  y: 40
+favorite: false

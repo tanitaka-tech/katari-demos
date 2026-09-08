@@ -1,0 +1,187 @@
+schema_version: 2
+kind: "material"
+id: "mat_cloud"
+name: "Cumulus"
+parent_material_id: null
+graph:
+  nodes:
+    -
+      id: "material_uv_1"
+      type: "material_uv"
+      position:
+        x: 0
+        y: 0
+      properties: {}
+    -
+      id: "procedural_noise_1"
+      type: "procedural_noise"
+      position:
+        x: 260
+        y: 0
+      properties:
+        scale: 3.4
+        seed: 21
+        octaves: 5
+    -
+      id: "procedural_radial_gradient_1"
+      type: "procedural_radial_gradient"
+      position:
+        x: 260
+        y: 130
+      properties:
+        center: "0.5,0.5"
+        radius: 0.52
+    -
+      id: "float_smoothstep_1"
+      type: "float_smoothstep"
+      position:
+        x: 520
+        y: 0
+      properties:
+        edge0: 1
+        edge1: 0.25
+    -
+      id: "float_mul_1"
+      type: "float_mul"
+      position:
+        x: 780
+        y: 0
+      properties: {}
+    -
+      id: "float_smoothstep_2"
+      type: "float_smoothstep"
+      position:
+        x: 1040
+        y: 0
+      properties:
+        edge0: 0.3
+        edge1: 0.66
+    -
+      id: "break_vector2_1"
+      type: "break_vector2"
+      position:
+        x: 260
+        y: 260
+      properties: {}
+    -
+      id: "float_smoothstep_3"
+      type: "float_smoothstep"
+      position:
+        x: 520
+        y: 130
+      properties:
+        edge0: 0.2
+        edge1: 0.75
+    -
+      id: "color_lerp_1"
+      type: "color_lerp"
+      position:
+        x: 780
+        y: 130
+      properties:
+        a: "#a8c3dd"
+        b: "#fbfdff"
+    -
+      id: "material_output_3d_1"
+      type: "material_output_3d"
+      position:
+        x: 1300
+        y: 0
+      properties:
+        diffuse: "#000000"
+        emissive_intensity: 1
+        blend_mode: "normal"
+        depth_write: false
+        two_sided: true
+        gloss: 0
+  edges:
+    -
+      id: "material_uv_1:value>procedural_noise_1:uv"
+      from:
+        nodeId: "material_uv_1"
+        pin: "value"
+      to:
+        nodeId: "procedural_noise_1"
+        pin: "uv"
+    -
+      id: "material_uv_1:value>procedural_radial_gradient_1:uv"
+      from:
+        nodeId: "material_uv_1"
+        pin: "value"
+      to:
+        nodeId: "procedural_radial_gradient_1"
+        pin: "uv"
+    -
+      id: "procedural_radial_gradient_1:value>float_smoothstep_1:x"
+      from:
+        nodeId: "procedural_radial_gradient_1"
+        pin: "value"
+      to:
+        nodeId: "float_smoothstep_1"
+        pin: "x"
+    -
+      id: "procedural_noise_1:value>float_mul_1:a"
+      from:
+        nodeId: "procedural_noise_1"
+        pin: "value"
+      to:
+        nodeId: "float_mul_1"
+        pin: "a"
+    -
+      id: "float_smoothstep_1:return>float_mul_1:b"
+      from:
+        nodeId: "float_smoothstep_1"
+        pin: "return"
+      to:
+        nodeId: "float_mul_1"
+        pin: "b"
+    -
+      id: "float_mul_1:return>float_smoothstep_2:x"
+      from:
+        nodeId: "float_mul_1"
+        pin: "return"
+      to:
+        nodeId: "float_smoothstep_2"
+        pin: "x"
+    -
+      id: "material_uv_1:value>break_vector2_1:v"
+      from:
+        nodeId: "material_uv_1"
+        pin: "value"
+      to:
+        nodeId: "break_vector2_1"
+        pin: "v"
+    -
+      id: "break_vector2_1:y>float_smoothstep_3:x"
+      from:
+        nodeId: "break_vector2_1"
+        pin: "y"
+      to:
+        nodeId: "float_smoothstep_3"
+        pin: "x"
+    -
+      id: "float_smoothstep_3:return>color_lerp_1:alpha"
+      from:
+        nodeId: "float_smoothstep_3"
+        pin: "return"
+      to:
+        nodeId: "color_lerp_1"
+        pin: "alpha"
+    -
+      id: "color_lerp_1:return>material_output_3d_1:emissive"
+      from:
+        nodeId: "color_lerp_1"
+        pin: "return"
+      to:
+        nodeId: "material_output_3d_1"
+        pin: "emissive"
+    -
+      id: "float_smoothstep_2:return>material_output_3d_1:opacity"
+      from:
+        nodeId: "float_smoothstep_2"
+        pin: "return"
+      to:
+        nodeId: "material_output_3d_1"
+        pin: "opacity"
+defaults: {}
+purpose: "space-3d"

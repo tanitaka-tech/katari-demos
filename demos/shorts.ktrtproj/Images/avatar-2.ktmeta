@@ -1,0 +1,10 @@
+schema_version: 2
+kind: "asset"
+id: "ast_q7stxj"
+display_name: "avatar-2"
+asset_type: "image"
+category: "image"
+source: "embedded"
+external_path: null
+original_filename: "avatar-2.png"
+stored_filename: "avatar-2.png"

@@ -1,0 +1,12 @@
+schema_version: 2
+kind: "asset-dir"
+id: "films-root"
+display_name: "Films"
+memo: null
+pos: null
+children[5]{name,id,ref}:
+  "clip-1.ktmeta","ast_12l5wt0","file"
+  "clip-2.ktmeta","ast_1lrh6kh","file"
+  "clip-3.ktmeta","ast_1i42zne","file"
+  "clip-4.ktmeta","ast_1igukvz","file"
+  "clip-5.ktmeta","ast_qku3pk","file"

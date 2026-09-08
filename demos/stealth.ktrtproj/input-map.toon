@@ -1,0 +1,55 @@
+schemaVersion: 1
+actionMaps:
+  -
+    id: "map_gameplay"
+    name: "Gameplay"
+    actions:
+      -
+        id: "act_move"
+        name: "Move"
+        actionType: "value"
+        controlType: "vector2"
+        interactions: []
+        processors:
+          -
+            type: "stickDeadzone"
+            min: 0.125
+            max: 0.925
+        bindings:
+          -
+            kind: "composite"
+            id: "bnd_move_wasd"
+            composite: "2DVector"
+            parts[4]{name,path}:
+              "up","<Keyboard>/w"
+              "down","<Keyboard>/s"
+              "left","<Keyboard>/a"
+              "right","<Keyboard>/d"
+            interactions: []
+            processors: []
+          -
+            kind: "simple"
+            id: "bnd_move_stick"
+            path: "<Gamepad>/leftStick"
+            interactions: []
+            processors: []
+      -
+        id: "act_sneak"
+        name: "Sneak"
+        actionType: "value"
+        controlType: "button"
+        interactions: []
+        processors: []
+        bindings:
+          -
+            kind: "simple"
+            id: "bnd_sneak_space"
+            path: "<Keyboard>/space"
+            interactions: []
+            processors: []
+          -
+            kind: "simple"
+            id: "bnd_sneak_pad"
+            path: "<Gamepad>/buttonEast"
+            interactions: []
+            processors: []

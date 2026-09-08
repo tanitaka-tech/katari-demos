@@ -1,0 +1,432 @@
+schema_version: 2
+kind: "material"
+id: "mat_fac_mascot"
+name: "Mascot Mural"
+parent_material_id: null
+graph:
+  nodes:
+    -
+      id: "material_uv_1"
+      type: "material_uv"
+      position:
+        x: 0
+        y: 0
+      properties: {}
+    -
+      id: "uv_tile_1"
+      type: "uv_tile"
+      position:
+        x: 260
+        y: 0
+      properties:
+        tiles: "14,11"
+        offset: "0,0"
+    -
+      id: "procedural_grid_1"
+      type: "procedural_grid"
+      position:
+        x: 520
+        y: 0
+      properties:
+        scale: 1
+        line_width: 0.08
+    -
+      id: "color_lerp_1"
+      type: "color_lerp"
+      position:
+        x: 780
+        y: 0
+      properties:
+        a: "#8e6a58"
+        b: "#c49a7e"
+    -
+      id: "shape_box_1"
+      type: "shape_box"
+      position:
+        x: 260
+        y: 130
+      properties:
+        center: "0.5,0.72"
+        size: "0.42,0.09"
+        corner: 0.02
+    -
+      id: "sdf_fill_1"
+      type: "sdf_fill"
+      position:
+        x: 520
+        y: 130
+      properties:
+        softness: 0.006
+    -
+      id: "procedural_radial_gradient_1"
+      type: "procedural_radial_gradient"
+      position:
+        x: 260
+        y: 260
+      properties:
+        center: "0.5,0.5"
+        radius: 0.085
+    -
+      id: "float_smoothstep_1"
+      type: "float_smoothstep"
+      position:
+        x: 520
+        y: 260
+      properties:
+        edge0: 1.02
+        edge1: 0.94
+    -
+      id: "shape_box_2"
+      type: "shape_box"
+      position:
+        x: 260
+        y: 390
+      properties:
+        center: "0.5,0.567"
+        size: "0.094,0.03"
+        corner: 0.025
+    -
+      id: "sdf_fill_2"
+      type: "sdf_fill"
+      position:
+        x: 520
+        y: 390
+      properties:
+        softness: 0.006
+    -
+      id: "procedural_radial_gradient_2"
+      type: "procedural_radial_gradient"
+      position:
+        x: 260
+        y: 520
+      properties:
+        center: "0.474,0.513"
+        radius: 0.015
+    -
+      id: "procedural_radial_gradient_3"
+      type: "procedural_radial_gradient"
+      position:
+        x: 260
+        y: 650
+      properties:
+        center: "0.526,0.513"
+        radius: 0.015
+    -
+      id: "float_smoothstep_2"
+      type: "float_smoothstep"
+      position:
+        x: 520
+        y: 520
+      properties:
+        edge0: 1.02
+        edge1: 0.9
+    -
+      id: "float_smoothstep_3"
+      type: "float_smoothstep"
+      position:
+        x: 520
+        y: 650
+      properties:
+        edge0: 1.02
+        edge1: 0.9
+    -
+      id: "float_max_1"
+      type: "float_max"
+      position:
+        x: 780
+        y: 130
+      properties: {}
+    -
+      id: "shape_box_3"
+      type: "shape_box"
+      position:
+        x: 260
+        y: 780
+      properties:
+        center: "0.5,0.472"
+        size: "0.038,0.013"
+        corner: 0.012
+    -
+      id: "sdf_fill_3"
+      type: "sdf_fill"
+      position:
+        x: 520
+        y: 780
+      properties:
+        softness: 0.006
+    -
+      id: "color_lerp_2"
+      type: "color_lerp"
+      position:
+        x: 1040
+        y: 0
+      properties:
+        b: "#c8332c"
+    -
+      id: "color_lerp_3"
+      type: "color_lerp"
+      position:
+        x: 1300
+        y: 0
+      properties:
+        b: "#f6f2ec"
+    -
+      id: "color_lerp_4"
+      type: "color_lerp"
+      position:
+        x: 1560
+        y: 0
+      properties:
+        b: "#c4282e"
+    -
+      id: "color_lerp_5"
+      type: "color_lerp"
+      position:
+        x: 1820
+        y: 0
+      properties:
+        b: "#1e1c22"
+    -
+      id: "color_lerp_6"
+      type: "color_lerp"
+      position:
+        x: 2080
+        y: 0
+      properties:
+        b: "#b02830"
+    -
+      id: "material_output_3d_1"
+      type: "material_output_3d"
+      position:
+        x: 2340
+        y: 0
+      properties:
+        gloss: 0.35
+        metalness: 0.1
+  edges:
+    -
+      id: "material_uv_1:value>uv_tile_1:uv"
+      from:
+        nodeId: "material_uv_1"
+        pin: "value"
+      to:
+        nodeId: "uv_tile_1"
+        pin: "uv"
+    -
+      id: "uv_tile_1:value>procedural_grid_1:uv"
+      from:
+        nodeId: "uv_tile_1"
+        pin: "value"
+      to:
+        nodeId: "procedural_grid_1"
+        pin: "uv"
+    -
+      id: "procedural_grid_1:value>color_lerp_1:alpha"
+      from:
+        nodeId: "procedural_grid_1"
+        pin: "value"
+      to:
+        nodeId: "color_lerp_1"
+        pin: "alpha"
+    -
+      id: "material_uv_1:value>shape_box_1:uv"
+      from:
+        nodeId: "material_uv_1"
+        pin: "value"
+      to:
+        nodeId: "shape_box_1"
+        pin: "uv"
+    -
+      id: "shape_box_1:value>sdf_fill_1:d"
+      from:
+        nodeId: "shape_box_1"
+        pin: "value"
+      to:
+        nodeId: "sdf_fill_1"
+        pin: "d"
+    -
+      id: "material_uv_1:value>procedural_radial_gradient_1:uv"
+      from:
+        nodeId: "material_uv_1"
+        pin: "value"
+      to:
+        nodeId: "procedural_radial_gradient_1"
+        pin: "uv"
+    -
+      id: "procedural_radial_gradient_1:value>float_smoothstep_1:x"
+      from:
+        nodeId: "procedural_radial_gradient_1"
+        pin: "value"
+      to:
+        nodeId: "float_smoothstep_1"
+        pin: "x"
+    -
+      id: "material_uv_1:value>shape_box_2:uv"
+      from:
+        nodeId: "material_uv_1"
+        pin: "value"
+      to:
+        nodeId: "shape_box_2"
+        pin: "uv"
+    -
+      id: "shape_box_2:value>sdf_fill_2:d"
+      from:
+        nodeId: "shape_box_2"
+        pin: "value"
+      to:
+        nodeId: "sdf_fill_2"
+        pin: "d"
+    -
+      id: "material_uv_1:value>procedural_radial_gradient_2:uv"
+      from:
+        nodeId: "material_uv_1"
+        pin: "value"
+      to:
+        nodeId: "procedural_radial_gradient_2"
+        pin: "uv"
+    -
+      id: "material_uv_1:value>procedural_radial_gradient_3:uv"
+      from:
+        nodeId: "material_uv_1"
+        pin: "value"
+      to:
+        nodeId: "procedural_radial_gradient_3"
+        pin: "uv"
+    -
+      id: "procedural_radial_gradient_2:value>float_smoothstep_2:x"
+      from:
+        nodeId: "procedural_radial_gradient_2"
+        pin: "value"
+      to:
+        nodeId: "float_smoothstep_2"
+        pin: "x"
+    -
+      id: "procedural_radial_gradient_3:value>float_smoothstep_3:x"
+      from:
+        nodeId: "procedural_radial_gradient_3"
+        pin: "value"
+      to:
+        nodeId: "float_smoothstep_3"
+        pin: "x"
+    -
+      id: "float_smoothstep_2:return>float_max_1:a"
+      from:
+        nodeId: "float_smoothstep_2"
+        pin: "return"
+      to:
+        nodeId: "float_max_1"
+        pin: "a"
+    -
+      id: "float_smoothstep_3:return>float_max_1:b"
+      from:
+        nodeId: "float_smoothstep_3"
+        pin: "return"
+      to:
+        nodeId: "float_max_1"
+        pin: "b"
+    -
+      id: "material_uv_1:value>shape_box_3:uv"
+      from:
+        nodeId: "material_uv_1"
+        pin: "value"
+      to:
+        nodeId: "shape_box_3"
+        pin: "uv"
+    -
+      id: "shape_box_3:value>sdf_fill_3:d"
+      from:
+        nodeId: "shape_box_3"
+        pin: "value"
+      to:
+        nodeId: "sdf_fill_3"
+        pin: "d"
+    -
+      id: "color_lerp_1:return>color_lerp_2:a"
+      from:
+        nodeId: "color_lerp_1"
+        pin: "return"
+      to:
+        nodeId: "color_lerp_2"
+        pin: "a"
+    -
+      id: "sdf_fill_1:return>color_lerp_2:alpha"
+      from:
+        nodeId: "sdf_fill_1"
+        pin: "return"
+      to:
+        nodeId: "color_lerp_2"
+        pin: "alpha"
+    -
+      id: "color_lerp_2:return>color_lerp_3:a"
+      from:
+        nodeId: "color_lerp_2"
+        pin: "return"
+      to:
+        nodeId: "color_lerp_3"
+        pin: "a"
+    -
+      id: "float_smoothstep_1:return>color_lerp_3:alpha"
+      from:
+        nodeId: "float_smoothstep_1"
+        pin: "return"
+      to:
+        nodeId: "color_lerp_3"
+        pin: "alpha"
+    -
+      id: "color_lerp_3:return>color_lerp_4:a"
+      from:
+        nodeId: "color_lerp_3"
+        pin: "return"
+      to:
+        nodeId: "color_lerp_4"
+        pin: "a"
+    -
+      id: "sdf_fill_2:return>color_lerp_4:alpha"
+      from:
+        nodeId: "sdf_fill_2"
+        pin: "return"
+      to:
+        nodeId: "color_lerp_4"
+        pin: "alpha"
+    -
+      id: "color_lerp_4:return>color_lerp_5:a"
+      from:
+        nodeId: "color_lerp_4"
+        pin: "return"
+      to:
+        nodeId: "color_lerp_5"
+        pin: "a"
+    -
+      id: "float_max_1:return>color_lerp_5:alpha"
+      from:
+        nodeId: "float_max_1"
+        pin: "return"
+      to:
+        nodeId: "color_lerp_5"
+        pin: "alpha"
+    -
+      id: "color_lerp_5:return>color_lerp_6:a"
+      from:
+        nodeId: "color_lerp_5"
+        pin: "return"
+      to:
+        nodeId: "color_lerp_6"
+        pin: "a"
+    -
+      id: "sdf_fill_3:return>color_lerp_6:alpha"
+      from:
+        nodeId: "sdf_fill_3"
+        pin: "return"
+      to:
+        nodeId: "color_lerp_6"
+        pin: "alpha"
+    -
+      id: "color_lerp_6:return>material_output_3d_1:diffuse"
+      from:
+        nodeId: "color_lerp_6"
+        pin: "return"
+      to:
+        nodeId: "material_output_3d_1"
+        pin: "diffuse"
+defaults: {}
+purpose: "space-3d"

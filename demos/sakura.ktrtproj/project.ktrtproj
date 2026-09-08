@@ -1,0 +1,4 @@
+schema_version: 1
+name: "桜並木の街角 デモ"
+data:
+  format: "split"

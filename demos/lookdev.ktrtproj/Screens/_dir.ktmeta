@@ -4,8 +4,8 @@ id: "screens-root"
 display_name: "Screens"
 memo: null
 pos: null
-children:
-  -
-    name: "ルックデブ"
-    id: "lookdev_stage"
-    ref: "dir"
+children[4]{name,id,ref}:
+  "ルックデブ","lookdev_stage","dir"
+  "手続きジオメトリ","lookdev_procedural","dir"
+  "雨と飛沫","lookdev_rain","dir"
+  "地形に当たる雨","lookdev_splash","dir"

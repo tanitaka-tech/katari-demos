@@ -1,0 +1,13 @@
+schema_version: 2
+kind: "screen-dir"
+id: "screen_rank_ui_main"
+display_name: "育成ランク"
+memo: "参照 1 枚から起こした 4 本目。結果を祝う画面（徽章とゲージ）。"
+pos:
+  x: 40
+  y: 40
+children:
+  -
+    name: "育成ランク.screen"
+    id: "screen_rank_ui_main"
+    ref: "file"

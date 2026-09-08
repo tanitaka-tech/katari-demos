@@ -1,0 +1,13 @@
+schema_version: 2
+kind: "scene-dir"
+id: "scenes-root"
+display_name: "Scenes"
+memo: null
+pos: null
+children[6]{name,id,ref}:
+  "プロローグ.ktrt","scn_dating_1j9zmln","file"
+  "廊下.ktrt","scn_dating_gjup","file"
+  "デート.ktrt","scn_dating_7dsur","file"
+  "すれ違い.ktrt","scn_dating_6bbtia","file"
+  "告白.ktrt","scn_dating_ezjn","file"
+  "学期の終わり.ktrt","scn_dating_1g6ubfs","file"

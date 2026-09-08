@@ -1,0 +1,127 @@
+branding:
+  companyName: ""
+  productName: ""
+  bundleIdentifier: ""
+  version: "1.0.0"
+appearance:
+  macosIconPath: ""
+  windowsIconPath: ""
+  splashImagePath: ""
+  splashBackground: "#000000"
+  appAppearance: "auto"
+  colorPalette[29]{id,name,color}:
+    "sky_top","sky_top","#d8e6f7"
+    "sky_mid","sky_mid","#e7e6f0"
+    "sky_low","sky_low","#f2eaf2"
+    "petal_pale","petal_pale","#fbeaf8"
+    "petal_light","petal_light","#f6dcf3"
+    "petal_mid","petal_mid","#eec4ea"
+    "petal_deep","petal_deep","#d79ad2"
+    "petal_shade","petal_shade","#b98bc0"
+    "branch","branch","#9a8894"
+    "ground_far","ground_far","#b6b5ba"
+    "ground_near","ground_near","#b8b6b4"
+    "wall","wall","#f0e6d6"
+    "wall_dim","wall_dim","#e3d8c8"
+    "roof","roof","#9cc0da"
+    "window","window","#cbdfee"
+    "hair","hair","#f2879f"
+    "hair_dark","hair_dark","#dc6c8c"
+    "ear","ear","#c9294b"
+    "skin","skin","#fdeade"
+    "skin_shade","skin_shade","#f3d4c8"
+    "uniform","uniform","#f6efe3"
+    "plum","plum","#4a2a5e"
+    "wine","wine","#7d2b3c"
+    "skirt","skirt","#6b2439"
+    "skirt_light","skirt_light","#8d4459"
+    "gold","gold","#dfa73c"
+    "ui_pink","ui_pink","#f483b0"
+    "ui_pink_head","ui_pink_head","#fccae3"
+    "ui_clinic","ui_clinic","#7150a0"
+  numberPalette: []
+  fontPalette:
+    -
+      id: "ui"
+      name: "UI（丸ゴシック）"
+      source:
+        kind: "os"
+        family: "Hiragino Maru Gothic ProN, Yu Gothic UI, Meiryo, M PLUS Rounded 1c, sans-serif"
+    -
+      id: "number"
+      name: "数字"
+      source:
+        kind: "os"
+        family: "Hiragino Maru Gothic ProN, Yu Gothic UI, Meiryo, M PLUS Rounded 1c, sans-serif"
+  gradientPresets: []
+  filterPresets: []
+look:
+  postEffects: []
+player:
+  width: 648
+  height: 1152
+  fullscreen: false
+  autoAdvance: false
+  autoAdvanceMs: 60
+  skipUnreadText: false
+  fps: 60
+  particleQuality: 1
+  pixelSnap: false
+  tickMode: "fixed"
+  tickHz: 60
+  gpu: "webgl2"
+platform:
+  permissions:
+    networkAccess: false
+    fileSystemAccess: false
+    microphoneAccess: false
+  macos:
+    hardenedRuntime: true
+    enableMetal: true
+  windows:
+    enableHighDpi: true
+    requestAdmin: false
+scripting:
+  backend: "default"
+  apiCompatibility: "v1"
+  managedStripping: "none"
+  strictDialogueLint: true
+editor:
+  maxOverflowX: 1024
+  maxOverflowY: 1024
+audio:
+  buses: []
+assets:
+  image_optimize:
+    enabled: false
+    max_dimension: 2048
+    format: "auto"
+    quality: 82
+    reduce_colors: false
+  video_sidecar: false
+  external_assets: false
+  bundle_unreferenced: false
+  dynamic_refs: []
+  smart_folders: []
+  packs: []
+save:
+  groups: []
+localization:
+  sourceLocale: "ja"
+  locales: []
+  tables: []
+  assetVariants: {}
+storePage:
+  platforms: []
+initialScreen: "screen_uma_ui_main"
+startScene: ""
+dialogueScreen: "screen_dialogue"
+plugins: {}
+vcs:
+  lore:
+    serverUrl: "lore://127.0.0.1:41337"
+    autoStartLocalServer: true
+network:
+  allow: []
+extensions: {}
+vaults: []

@@ -1,0 +1,8 @@
+schema_version: 2
+kind: "material"
+id: "mat_wall"
+display_name: "壁の粒"
+parent_material_id: null
+memo: null
+pos: null
+favorite: false

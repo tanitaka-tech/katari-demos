@@ -1,0 +1,1744 @@
+screen_component:
+  screen_space: true
+  resolution_width: 1280
+  resolution_height: 720
+  ref_resolution_width: 1280
+  ref_resolution_height: 720
+  scale_mode: "blend"
+  scale_blend: 0.5
+  priority: 0
+objects:
+  - id: "backdrop"
+    name: "backdrop"
+    type: "rectangle"
+    x: 0
+    y: 0
+    origin_x: 0
+    origin_y: 0
+    width: 1280
+    height: 720
+    fill: "#07070b"
+  - id: "hint"
+    name: "hint"
+    type: "text"
+    x: 20
+    y: 48
+    origin_x: 0
+    origin_y: 0
+    width: 400
+    height: 29
+    text: "指で上下に払うと 1 本ずつ送れる"
+    font_size: 18
+    color: "#8a8aa0"
+  - id: "hint2"
+    name: "hint2"
+    type: "text"
+    x: 20
+    y: 92
+    origin_x: 0
+    origin_y: 0
+    width: 400
+    height: 24
+    text: "速く払えば少しの動きでも次へ\nゆっくりなら元の位置へ戻る"
+    font_size: 15
+    color: "#6b6b82"
+  - id: "hint3"
+    name: "hint3"
+    type: "text"
+    x: 20
+    y: 148
+    origin_x: 0
+    origin_y: 0
+    width: 400
+    height: 24
+    text: "いいね / コメント / プロフも触れる"
+    font_size: 15
+    color: "#6b6b82"
+  - id: "feed"
+    name: "フィード"
+    type: "frame"
+    x: 437
+    y: 0
+    origin_x: 0
+    origin_y: 0
+    width: 406
+    height: 720
+    fill: "#000000"
+    scroll:
+      axis: "vertical"
+      snap:
+        index_variable: "page"
+      end_variable: "more"
+    children:
+      - id: "post0"
+        name: "投稿 1"
+        type: "frame"
+        x: 0
+        y: 0
+        origin_x: 0
+        origin_y: 0
+        width: 406
+        height: 720
+        fill: "#00000000"
+        children:
+          - id: "p0_bg"
+            name: "p0_bg"
+            type: "rectangle"
+            x: 0
+            y: 0
+            origin_x: 0
+            origin_y: 0
+            width: 406
+            height: 720
+            fill: "#1b1033"
+          - id: "p0_video"
+            name: "p0_video"
+            type: "video"
+            video: "Films/clip-1.mp4"
+            playing: "$play0"
+            loop: true
+            muted: true
+            fit: "cover"
+            x: 0
+            y: 0
+            origin_x: 0
+            origin_y: 0
+            width: 406
+            height: 720
+            position_variable: "vpos"
+            duration_variable: "vdur"
+          - id: "p0_ball"
+            name: "p0_ball"
+            type: "rectangle"
+            x: 203
+            y: "$bounce"
+            origin_x: 0.5
+            origin_y: 0.5
+            width: 56
+            height: 56
+            fill: "#c9b8ff"
+            corner_radius: 28
+          - id: "p0_no"
+            name: "p0_no"
+            type: "text"
+            x: 310
+            y: 26
+            origin_x: 0
+            origin_y: 0
+            width: 80
+            height: 29
+            text: "1 / 5"
+            font_size: 18
+            color: "#ffffff99"
+      - id: "post1"
+        name: "投稿 2"
+        type: "frame"
+        x: 0
+        y: 720
+        origin_x: 0
+        origin_y: 0
+        width: 406
+        height: 720
+        fill: "#00000000"
+        children:
+          - id: "p1_bg"
+            name: "p1_bg"
+            type: "rectangle"
+            x: 0
+            y: 0
+            origin_x: 0
+            origin_y: 0
+            width: 406
+            height: 720
+            fill: "#0f2436"
+          - id: "p1_video"
+            name: "p1_video"
+            type: "video"
+            video: "Films/clip-2.mp4"
+            playing: "$play1"
+            loop: true
+            muted: true
+            fit: "cover"
+            x: 0
+            y: 0
+            origin_x: 0
+            origin_y: 0
+            width: 406
+            height: 720
+          - id: "p1_ball"
+            name: "p1_ball"
+            type: "rectangle"
+            x: 203
+            y: "$bounce"
+            origin_x: 0.5
+            origin_y: 0.5
+            width: 56
+            height: 56
+            fill: "#a8e0f5"
+            corner_radius: 28
+          - id: "p1_no"
+            name: "p1_no"
+            type: "text"
+            x: 310
+            y: 26
+            origin_x: 0
+            origin_y: 0
+            width: 80
+            height: 29
+            text: "2 / 5"
+            font_size: 18
+            color: "#ffffff99"
+      - id: "post2"
+        name: "投稿 3"
+        type: "frame"
+        x: 0
+        y: 1440
+        origin_x: 0
+        origin_y: 0
+        width: 406
+        height: 720
+        fill: "#00000000"
+        children:
+          - id: "p2_bg"
+            name: "p2_bg"
+            type: "rectangle"
+            x: 0
+            y: 0
+            origin_x: 0
+            origin_y: 0
+            width: 406
+            height: 720
+            fill: "#331521"
+          - id: "p2_video"
+            name: "p2_video"
+            type: "video"
+            video: "Films/clip-3.mp4"
+            playing: "$play2"
+            loop: true
+            muted: true
+            fit: "cover"
+            x: 0
+            y: 0
+            origin_x: 0
+            origin_y: 0
+            width: 406
+            height: 720
+          - id: "p2_ball"
+            name: "p2_ball"
+            type: "rectangle"
+            x: 203
+            y: "$bounce"
+            origin_x: 0.5
+            origin_y: 0.5
+            width: 56
+            height: 56
+            fill: "#ffc0d0"
+            corner_radius: 28
+          - id: "p2_no"
+            name: "p2_no"
+            type: "text"
+            x: 310
+            y: 26
+            origin_x: 0
+            origin_y: 0
+            width: 80
+            height: 29
+            text: "3 / 5"
+            font_size: 18
+            color: "#ffffff99"
+      - id: "post3"
+        name: "投稿 4"
+        type: "frame"
+        x: 0
+        y: 2160
+        origin_x: 0
+        origin_y: 0
+        width: 406
+        height: 720
+        fill: "#00000000"
+        children:
+          - id: "p3_bg"
+            name: "p3_bg"
+            type: "rectangle"
+            x: 0
+            y: 0
+            origin_x: 0
+            origin_y: 0
+            width: 406
+            height: 720
+            fill: "#122b1e"
+          - id: "p3_video"
+            name: "p3_video"
+            type: "video"
+            video: "Films/clip-4.mp4"
+            playing: "$play3"
+            loop: true
+            muted: true
+            fit: "cover"
+            x: 0
+            y: 0
+            origin_x: 0
+            origin_y: 0
+            width: 406
+            height: 720
+          - id: "p3_ball"
+            name: "p3_ball"
+            type: "rectangle"
+            x: 203
+            y: "$bounce"
+            origin_x: 0.5
+            origin_y: 0.5
+            width: 56
+            height: 56
+            fill: "#b6f0d2"
+            corner_radius: 28
+          - id: "p3_no"
+            name: "p3_no"
+            type: "text"
+            x: 310
+            y: 26
+            origin_x: 0
+            origin_y: 0
+            width: 80
+            height: 29
+            text: "4 / 5"
+            font_size: 18
+            color: "#ffffff99"
+      - id: "post4"
+        name: "投稿 5"
+        type: "frame"
+        x: 0
+        y: 2880
+        origin_x: 0
+        origin_y: 0
+        width: 406
+        height: 720
+        fill: "#00000000"
+        children:
+          - id: "p4_bg"
+            name: "p4_bg"
+            type: "rectangle"
+            x: 0
+            y: 0
+            origin_x: 0
+            origin_y: 0
+            width: 406
+            height: 720
+            fill: "#2c2410"
+          - id: "p4_video"
+            name: "p4_video"
+            type: "video"
+            video: "Films/clip-5.mp4"
+            playing: "$play4"
+            loop: true
+            muted: true
+            fit: "cover"
+            x: 0
+            y: 0
+            origin_x: 0
+            origin_y: 0
+            width: 406
+            height: 720
+          - id: "p4_ball"
+            name: "p4_ball"
+            type: "rectangle"
+            x: 203
+            y: "$bounce"
+            origin_x: 0.5
+            origin_y: 0.5
+            width: 56
+            height: 56
+            fill: "#ffe6a8"
+            corner_radius: 28
+          - id: "p4_no"
+            name: "p4_no"
+            type: "text"
+            x: 310
+            y: 26
+            origin_x: 0
+            origin_y: 0
+            width: 80
+            height: 29
+            text: "5 / 5"
+            font_size: 18
+            color: "#ffffff99"
+    clip_content: true
+  - id: "overlay"
+    name: "overlay"
+    type: "frame"
+    x: 437
+    y: 0
+    origin_x: 0
+    origin_y: 0
+    width: 406
+    height: 720
+    fill: "#00000000"
+    children:
+      - id: "ov_tabs"
+        name: "ov_tabs"
+        type: "text"
+        x: 90
+        y: 28
+        origin_x: 0
+        origin_y: 0
+        width: 260
+        height: 27
+        text: "おすすめ　|　フォロー中"
+        font_size: 17
+        color: "#ffffffcc"
+      - id: "ov_avatar"
+        name: "ov_avatar"
+        type: "image"
+        texture: "$avatar"
+        x: 20
+        y: 486
+        origin_x: 0
+        origin_y: 0
+        width: 56
+        height: 56
+      - id: "ov_user"
+        name: "ov_user"
+        type: "text"
+        x: 20
+        y: 560
+        origin_x: 0
+        origin_y: 0
+        width: 280
+        height: 35
+        text: "{$user}"
+        font_size: 22
+        color: "#ffffff"
+      - id: "ov_caption"
+        name: "ov_caption"
+        type: "text"
+        x: 20
+        y: 596
+        origin_x: 0
+        origin_y: 0
+        width: 290
+        height: 26
+        text: "{$caption}"
+        font_size: 16
+        color: "#ffffffdd"
+      - id: "ov_music"
+        name: "ov_music"
+        type: "text"
+        x: 20
+        y: 640
+        origin_x: 0
+        origin_y: 0
+        width: 290
+        height: 24
+        text: "♪ {$music}"
+        font_size: 15
+        color: "#ffffffaa"
+      - id: "btn_like"
+        name: "btn_like"
+        type: "button"
+        x: 322
+        y: 300
+        origin_x: 0
+        origin_y: 0
+        width: 72
+        height: 64
+        text: "♥\n{$like_count}"
+        font_size: 15
+        fill: "#00000066"
+        color: "#ffffff"
+        corner_radius: 16
+        events:
+          - id: "btn_like_ev"
+            trigger: "click"
+            action:
+              kind: "set_variable"
+              variable_id: "command"
+              value: "like"
+      - id: "btn_comment"
+        name: "btn_comment"
+        type: "button"
+        x: 322
+        y: 376
+        origin_x: 0
+        origin_y: 0
+        width: 72
+        height: 64
+        text: "コメント\n{$comment_count}"
+        font_size: 15
+        fill: "#00000066"
+        color: "#ffffff"
+        corner_radius: 16
+        events:
+          - id: "btn_comment_ev"
+            trigger: "click"
+            action:
+              kind: "set_variable"
+              variable_id: "command"
+              value: "comments"
+      - id: "btn_profile"
+        name: "btn_profile"
+        type: "button"
+        x: 322
+        y: 452
+        origin_x: 0
+        origin_y: 0
+        width: 72
+        height: 64
+        text: "プロフ"
+        font_size: 15
+        fill: "#00000066"
+        color: "#ffffff"
+        corner_radius: 16
+        events:
+          - id: "btn_profile_ev"
+            trigger: "click"
+            action:
+              kind: "set_variable"
+              variable_id: "command"
+              value: "profile"
+      - id: "ov_progress_bg"
+        name: "ov_progress_bg"
+        type: "rectangle"
+        x: 20
+        y: 700
+        origin_x: 0
+        origin_y: 0
+        width: 366
+        height: 4
+        fill: "#ffffff33"
+        corner_radius: 2
+      - id: "ov_progress"
+        name: "ov_progress"
+        type: "rectangle"
+        x: 20
+        y: 700
+        origin_x: 0
+        origin_y: 0
+        width: "$prog_w"
+        height: 4
+        fill: "#ffffffcc"
+        corner_radius: 2
+      - id: "ov_end"
+        name: "ov_end"
+        type: "text"
+        x: 20
+        y: 508
+        origin_x: 0
+        origin_y: 0
+        width: 260
+        height: 24
+        text: "これ以上ありません"
+        font_size: 15
+        color: "#ffffff99"
+        visible: "$more"
+  - id: "comments"
+    name: "コメント欄"
+    type: "frame"
+    x: 437
+    y: 320
+    origin_x: 0
+    origin_y: 0
+    width: 406
+    height: 400
+    fill: "#12121a"
+    corner_radius: 20
+    visible: "$comments_open"
+    children:
+      - id: "cm_title"
+        name: "cm_title"
+        type: "text"
+        x: 20
+        y: 20
+        origin_x: 0
+        origin_y: 0
+        width: 240
+        height: 29
+        text: "コメント {$comment_count} 件"
+        font_size: 18
+        color: "#ffffff"
+      - id: "btn_comments_close"
+        name: "閉じる"
+        type: "button"
+        x: 318
+        y: 16
+        origin_x: 0
+        origin_y: 0
+        width: 68
+        height: 32
+        text: "閉じる"
+        font_size: 14
+        fill: "#2a2a38"
+        color: "#ffffff"
+        corner_radius: 16
+        events:
+          - id: "btn_comments_close_ev"
+            trigger: "click"
+            action:
+              kind: "set_variable"
+              variable_id: "command"
+              value: "close"
+      - id: "comment_list"
+        name: "コメント一覧"
+        type: "frame"
+        x: 20
+        y: 64
+        origin_x: 0
+        origin_y: 0
+        width: 366
+        height: 300
+        fill: "#00000000"
+        scroll:
+          axis: "vertical"
+        children:
+          - id: "cm0_dot"
+            name: "cm0_dot"
+            type: "rectangle"
+            x: 0
+            y: 6
+            origin_x: 0
+            origin_y: 0
+            width: 32
+            height: 32
+            fill: "#ffffff22"
+            corner_radius: 16
+          - id: "cm0"
+            name: "cm0"
+            type: "text"
+            x: 44
+            y: 12
+            origin_x: 0
+            origin_y: 0
+            width: 300
+            height: 24
+            text: "これ全部矩形なの…？"
+            font_size: 15
+            color: "#ffffffdd"
+          - id: "cm1_dot"
+            name: "cm1_dot"
+            type: "rectangle"
+            x: 0
+            y: 62
+            origin_x: 0
+            origin_y: 0
+            width: 32
+            height: 32
+            fill: "#ffffff22"
+            corner_radius: 16
+          - id: "cm1"
+            name: "cm1"
+            type: "text"
+            x: 44
+            y: 68
+            origin_x: 0
+            origin_y: 0
+            width: 300
+            height: 24
+            text: "スワイプの止まり方が気持ちいい"
+            font_size: 15
+            color: "#ffffffdd"
+          - id: "cm2_dot"
+            name: "cm2_dot"
+            type: "rectangle"
+            x: 0
+            y: 118
+            origin_x: 0
+            origin_y: 0
+            width: 32
+            height: 32
+            fill: "#ffffff22"
+            corner_radius: 16
+          - id: "cm2"
+            name: "cm2"
+            type: "text"
+            x: 44
+            y: 124
+            origin_x: 0
+            origin_y: 0
+            width: 300
+            height: 24
+            text: "1 本ずつぴたっと止まるの好き"
+            font_size: 15
+            color: "#ffffffdd"
+          - id: "cm3_dot"
+            name: "cm3_dot"
+            type: "rectangle"
+            x: 0
+            y: 174
+            origin_x: 0
+            origin_y: 0
+            width: 32
+            height: 32
+            fill: "#ffffff22"
+            corner_radius: 16
+          - id: "cm3"
+            name: "cm3"
+            type: "text"
+            x: 44
+            y: 180
+            origin_x: 0
+            origin_y: 0
+            width: 300
+            height: 24
+            text: "曲名どこ？"
+            font_size: 15
+            color: "#ffffffdd"
+          - id: "cm4_dot"
+            name: "cm4_dot"
+            type: "rectangle"
+            x: 0
+            y: 230
+            origin_x: 0
+            origin_y: 0
+            width: 32
+            height: 32
+            fill: "#ffffff22"
+            corner_radius: 16
+          - id: "cm4"
+            name: "cm4"
+            type: "text"
+            x: 44
+            y: 236
+            origin_x: 0
+            origin_y: 0
+            width: 300
+            height: 24
+            text: "↑ 左下に出てるよ"
+            font_size: 15
+            color: "#ffffffdd"
+          - id: "cm5_dot"
+            name: "cm5_dot"
+            type: "rectangle"
+            x: 0
+            y: 286
+            origin_x: 0
+            origin_y: 0
+            width: 32
+            height: 32
+            fill: "#ffffff22"
+            corner_radius: 16
+          - id: "cm5"
+            name: "cm5"
+            type: "text"
+            x: 44
+            y: 292
+            origin_x: 0
+            origin_y: 0
+            width: 300
+            height: 24
+            text: "いいね押したら増えた"
+            font_size: 15
+            color: "#ffffffdd"
+          - id: "cm6_dot"
+            name: "cm6_dot"
+            type: "rectangle"
+            x: 0
+            y: 342
+            origin_x: 0
+            origin_y: 0
+            width: 32
+            height: 32
+            fill: "#ffffff22"
+            corner_radius: 16
+          - id: "cm6"
+            name: "cm6"
+            type: "text"
+            x: 44
+            y: 348
+            origin_x: 0
+            origin_y: 0
+            width: 300
+            height: 24
+            text: "next のページも見て"
+            font_size: 15
+            color: "#ffffffdd"
+          - id: "cm7_dot"
+            name: "cm7_dot"
+            type: "rectangle"
+            x: 0
+            y: 398
+            origin_x: 0
+            origin_y: 0
+            width: 32
+            height: 32
+            fill: "#ffffff22"
+            corner_radius: 16
+          - id: "cm7"
+            name: "cm7"
+            type: "text"
+            x: 44
+            y: 404
+            origin_x: 0
+            origin_y: 0
+            width: 300
+            height: 24
+            text: "スクロールの慣性が効いてる"
+            font_size: 15
+            color: "#ffffffdd"
+          - id: "cm8_dot"
+            name: "cm8_dot"
+            type: "rectangle"
+            x: 0
+            y: 454
+            origin_x: 0
+            origin_y: 0
+            width: 32
+            height: 32
+            fill: "#ffffff22"
+            corner_radius: 16
+          - id: "cm8"
+            name: "cm8"
+            type: "text"
+            x: 44
+            y: 460
+            origin_x: 0
+            origin_y: 0
+            width: 300
+            height: 24
+            text: "作り方が知りたい"
+            font_size: 15
+            color: "#ffffffdd"
+          - id: "cm9_dot"
+            name: "cm9_dot"
+            type: "rectangle"
+            x: 0
+            y: 510
+            origin_x: 0
+            origin_y: 0
+            width: 32
+            height: 32
+            fill: "#ffffff22"
+            corner_radius: 16
+          - id: "cm9"
+            name: "cm9"
+            type: "text"
+            x: 44
+            y: 516
+            origin_x: 0
+            origin_y: 0
+            width: 300
+            height: 24
+            text: "デモから開けるらしい"
+            font_size: 15
+            color: "#ffffffdd"
+          - id: "cm10_dot"
+            name: "cm10_dot"
+            type: "rectangle"
+            x: 0
+            y: 566
+            origin_x: 0
+            origin_y: 0
+            width: 32
+            height: 32
+            fill: "#ffffff22"
+            corner_radius: 16
+          - id: "cm10"
+            name: "cm10"
+            type: "text"
+            x: 44
+            y: 572
+            origin_x: 0
+            origin_y: 0
+            width: 300
+            height: 24
+            text: "最後まで行くと札が出る"
+            font_size: 15
+            color: "#ffffffdd"
+          - id: "cm11_dot"
+            name: "cm11_dot"
+            type: "rectangle"
+            x: 0
+            y: 622
+            origin_x: 0
+            origin_y: 0
+            width: 32
+            height: 32
+            fill: "#ffffff22"
+            corner_radius: 16
+          - id: "cm11"
+            name: "cm11"
+            type: "text"
+            x: 44
+            y: 628
+            origin_x: 0
+            origin_y: 0
+            width: 300
+            height: 24
+            text: "コメント欄もスクロールする"
+            font_size: 15
+            color: "#ffffffdd"
+        clip_content: true
+  - id: "profile"
+    name: "プロフィール"
+    type: "frame"
+    x: 437
+    y: 0
+    origin_x: 0
+    origin_y: 0
+    width: 406
+    height: 720
+    fill: "#0d0d14"
+    visible: "$profile_open"
+    children:
+      - id: "pf_avatar"
+        name: "pf_avatar"
+        type: "image"
+        texture: "$avatar"
+        x: 163
+        y: 40
+        origin_x: 0
+        origin_y: 0
+        width: 80
+        height: 80
+      - id: "pf_name"
+        name: "pf_name"
+        type: "text"
+        x: 20
+        y: 132
+        origin_x: 0
+        origin_y: 0
+        width: 366
+        height: 35
+        text: "{$user}"
+        font_size: 22
+        color: "#ffffff"
+      - id: "btn_profile_close"
+        name: "戻る"
+        type: "button"
+        x: 318
+        y: 24
+        origin_x: 0
+        origin_y: 0
+        width: 68
+        height: 32
+        text: "戻る"
+        font_size: 14
+        fill: "#2a2a38"
+        color: "#ffffff"
+        corner_radius: 16
+        events:
+          - id: "btn_profile_close_ev"
+            trigger: "click"
+            action:
+              kind: "set_variable"
+              variable_id: "command"
+              value: "close"
+      - id: "pf0"
+        name: "pf0"
+        type: "image"
+        texture: "Images/thumb-1.png"
+        x: 20
+        y: 190
+        origin_x: 0
+        origin_y: 0
+        width: 114
+        height: 154
+      - id: "pf1"
+        name: "pf1"
+        type: "image"
+        texture: "Images/thumb-2.png"
+        x: 144
+        y: 190
+        origin_x: 0
+        origin_y: 0
+        width: 114
+        height: 154
+      - id: "pf2"
+        name: "pf2"
+        type: "image"
+        texture: "Images/thumb-3.png"
+        x: 268
+        y: 190
+        origin_x: 0
+        origin_y: 0
+        width: 114
+        height: 154
+      - id: "pf3"
+        name: "pf3"
+        type: "image"
+        texture: "Images/thumb-4.png"
+        x: 20
+        y: 354
+        origin_x: 0
+        origin_y: 0
+        width: 114
+        height: 154
+      - id: "pf4"
+        name: "pf4"
+        type: "image"
+        texture: "Images/thumb-5.png"
+        x: 144
+        y: 354
+        origin_x: 0
+        origin_y: 0
+        width: 114
+        height: 154
+      - id: "pf5"
+        name: "pf5"
+        type: "image"
+        texture: "Images/thumb-6.png"
+        x: 268
+        y: 354
+        origin_x: 0
+        origin_y: 0
+        width: 114
+        height: 154
+      - id: "pf6"
+        name: "pf6"
+        type: "image"
+        texture: "Images/thumb-7.png"
+        x: 20
+        y: 518
+        origin_x: 0
+        origin_y: 0
+        width: 114
+        height: 154
+      - id: "pf7"
+        name: "pf7"
+        type: "image"
+        texture: "Images/thumb-8.png"
+        x: 144
+        y: 518
+        origin_x: 0
+        origin_y: 0
+        width: 114
+        height: 154
+      - id: "pf8"
+        name: "pf8"
+        type: "image"
+        texture: "Images/thumb-9.png"
+        x: 268
+        y: 518
+        origin_x: 0
+        origin_y: 0
+        width: 114
+        height: 154
+variables:
+  - kind: "normal"
+    id: "page"
+    name: "$page"
+    value_type: "Int"
+    initial_value: "0"
+  - kind: "normal"
+    id: "more"
+    name: "$more"
+    value_type: "Bool"
+    initial_value: "false"
+  - kind: "normal"
+    id: "user"
+    name: "$user"
+    value_type: "String"
+    initial_value: "@aoi_dev"
+  - kind: "normal"
+    id: "caption"
+    name: "$caption"
+    value_type: "String"
+    initial_value: "はじめての縦フィード。指で払って次へ"
+  - kind: "normal"
+    id: "music"
+    name: "$music"
+    value_type: "String"
+    initial_value: "Neon Drift"
+  - kind: "normal"
+    id: "like_count"
+    name: "$like_count"
+    value_type: "Int"
+    initial_value: "0"
+  - kind: "normal"
+    id: "comment_count"
+    name: "$comment_count"
+    value_type: "Int"
+    initial_value: "12"
+  - kind: "normal"
+    id: "avatar"
+    name: "$avatar"
+    value_type: "String"
+    initial_value: "Images/avatar-1.png"
+  - kind: "normal"
+    id: "users"
+    name: "$users"
+    value_type: "Array"
+    initial_value: "[\"@aoi_dev\",\"@katari_lab\",\"@mochi3d\",\"@night_run\",\"@pixel_kit\"]"
+    element_type: "String"
+  - kind: "normal"
+    id: "captions"
+    name: "$captions"
+    value_type: "Array"
+    initial_value: "[\"はじめての縦フィード。指で払って次へ\",\"図形だけで作った“映像”。素材は 0 枚\",\"いいねは投稿ごとに別で数える\",\"コメント欄は下から出るスクロール面\",\"ここが最後。末尾に来ると下に札が出る\"]"
+    element_type: "String"
+  - kind: "normal"
+    id: "musics"
+    name: "$musics"
+    value_type: "Array"
+    initial_value: "[\"Neon Drift\",\"Blue Hour\",\"Sugar Static\",\"Night Run\",\"Pixel Dawn\"]"
+    element_type: "String"
+  - kind: "normal"
+    id: "comment_counts"
+    name: "$comment_counts"
+    value_type: "Array"
+    initial_value: "[12,34,5,87,21]"
+    element_type: "Int"
+  - kind: "normal"
+    id: "avatars"
+    name: "$avatars"
+    value_type: "Array"
+    initial_value: "[\"Images/avatar-1.png\",\"Images/avatar-2.png\",\"Images/avatar-3.png\",\"Images/avatar-4.png\",\"Images/avatar-5.png\"]"
+    element_type: "String"
+  - kind: "normal"
+    id: "likes"
+    name: "$likes"
+    value_type: "Array"
+    initial_value: "[0,0,0,0,0]"
+    element_type: "Int"
+  - kind: "normal"
+    id: "command"
+    name: "$command"
+    value_type: "String"
+    initial_value: ""
+  - kind: "normal"
+    id: "comments_open"
+    name: "$comments_open"
+    value_type: "Bool"
+    initial_value: "false"
+  - kind: "normal"
+    id: "profile_open"
+    name: "$profile_open"
+    value_type: "Bool"
+    initial_value: "false"
+  - kind: "normal"
+    id: "spin"
+    name: "$spin"
+    value_type: "Float"
+    initial_value: "0"
+  - kind: "normal"
+    id: "bounce"
+    name: "$bounce"
+    value_type: "Float"
+    initial_value: "0"
+  - kind: "normal"
+    id: "play0"
+    name: "$play0"
+    value_type: "Bool"
+    initial_value: "true"
+  - kind: "normal"
+    id: "play1"
+    name: "$play1"
+    value_type: "Bool"
+    initial_value: "false"
+  - kind: "normal"
+    id: "play2"
+    name: "$play2"
+    value_type: "Bool"
+    initial_value: "false"
+  - kind: "normal"
+    id: "play3"
+    name: "$play3"
+    value_type: "Bool"
+    initial_value: "false"
+  - kind: "normal"
+    id: "play4"
+    name: "$play4"
+    value_type: "Bool"
+    initial_value: "false"
+  - kind: "normal"
+    id: "vpos"
+    name: "$vpos"
+    value_type: "Float"
+    initial_value: "0"
+  - kind: "normal"
+    id: "vdur"
+    name: "$vdur"
+    value_type: "Float"
+    initial_value: "0"
+  - kind: "normal"
+    id: "prog_w"
+    name: "$prog_w"
+    value_type: "Float"
+    initial_value: "0"
+  - kind: "normal"
+    id: "bounce_t"
+    name: "$bounce_t"
+    value_type: "Float"
+    initial_value: "0"
+requests: []
+script_graph:
+  nodes:
+    - id: "lambda_1"
+      type: "lambda"
+      properties:
+        arg_count: 1
+        arg_types: "[\"Float\"]"
+      next: "set_variable_1"
+    - id: "on_tick_1"
+      type: "on_tick"
+    - id: "subscribe_1"
+      type: "subscribe"
+    - id: "event_begin_play_1"
+      type: "event_begin_play"
+      next: "subscribe_1"
+    - id: "float_mul_1"
+      type: "float_mul"
+      properties:
+        b: 90
+    - id: "float_add_1"
+      type: "float_add"
+      properties:
+        a: "$spin"
+    - id: "set_variable_1"
+      type: "set_variable"
+      properties:
+        variable: "spin"
+      next: "set_variable_2"
+    - id: "float_add_2"
+      type: "float_add"
+      properties:
+        a: "$bounce_t"
+    - id: "float_mod_1"
+      type: "float_mod"
+      properties:
+        b: 2
+    - id: "set_variable_2"
+      type: "set_variable"
+      properties:
+        variable: "bounce_t"
+      next: "set_variable_3"
+    - id: "float_sub_1"
+      type: "float_sub"
+      properties:
+        a: "$bounce_t"
+        b: 1
+    - id: "float_abs_1"
+      type: "float_abs"
+    - id: "float_mul_2"
+      type: "float_mul"
+      properties:
+        a: 60
+    - id: "float_add_3"
+      type: "float_add"
+      properties:
+        a: 430
+    - id: "set_variable_3"
+      type: "set_variable"
+      properties:
+        variable: "bounce"
+      next: "set_variable_4"
+    - id: "array_get_1"
+      type: "array_get"
+      properties:
+        array: "$users"
+        index: "$page"
+    - id: "set_variable_4"
+      type: "set_variable"
+      properties:
+        variable: "user"
+      next: "set_variable_5"
+    - id: "array_get_2"
+      type: "array_get"
+      properties:
+        array: "$captions"
+        index: "$page"
+    - id: "set_variable_5"
+      type: "set_variable"
+      properties:
+        variable: "caption"
+      next: "set_variable_6"
+    - id: "array_get_3"
+      type: "array_get"
+      properties:
+        array: "$musics"
+        index: "$page"
+    - id: "set_variable_6"
+      type: "set_variable"
+      properties:
+        variable: "music"
+      next: "set_variable_7"
+    - id: "array_get_4"
+      type: "array_get"
+      properties:
+        array: "$likes"
+        index: "$page"
+    - id: "set_variable_7"
+      type: "set_variable"
+      properties:
+        variable: "like_count"
+      next: "set_variable_8"
+    - id: "array_get_5"
+      type: "array_get"
+      properties:
+        array: "$comment_counts"
+        index: "$page"
+    - id: "set_variable_8"
+      type: "set_variable"
+      properties:
+        variable: "comment_count"
+      next: "set_variable_9"
+    - id: "array_get_6"
+      type: "array_get"
+      properties:
+        array: "$avatars"
+        index: "$page"
+    - id: "set_variable_9"
+      type: "set_variable"
+      properties:
+        variable: "avatar"
+      next: "set_variable_10"
+    - id: "int_eq_1"
+      type: "int_eq"
+      properties:
+        a: "$page"
+        b: 0
+    - id: "set_variable_10"
+      type: "set_variable"
+      properties:
+        variable: "play0"
+      next: "set_variable_11"
+    - id: "int_eq_2"
+      type: "int_eq"
+      properties:
+        a: "$page"
+        b: 1
+    - id: "set_variable_11"
+      type: "set_variable"
+      properties:
+        variable: "play1"
+      next: "set_variable_12"
+    - id: "int_eq_3"
+      type: "int_eq"
+      properties:
+        a: "$page"
+        b: 2
+    - id: "set_variable_12"
+      type: "set_variable"
+      properties:
+        variable: "play2"
+      next: "set_variable_13"
+    - id: "int_eq_4"
+      type: "int_eq"
+      properties:
+        a: "$page"
+        b: 3
+    - id: "set_variable_13"
+      type: "set_variable"
+      properties:
+        variable: "play3"
+      next: "set_variable_14"
+    - id: "int_eq_5"
+      type: "int_eq"
+      properties:
+        a: "$page"
+        b: 4
+    - id: "set_variable_14"
+      type: "set_variable"
+      properties:
+        variable: "play4"
+      next: "set_variable_15"
+    - id: "float_max_1"
+      type: "float_max"
+      properties:
+        a: "$vdur"
+        b: 0.001
+    - id: "float_div_1"
+      type: "float_div"
+      properties:
+        a: "$vpos"
+    - id: "float_mul_3"
+      type: "float_mul"
+      properties:
+        a: 366
+    - id: "set_variable_15"
+      type: "set_variable"
+      properties:
+        variable: "prog_w"
+      next: "switch_on_string_1"
+    - id: "switch_on_string_1"
+      type: "switch_on_string"
+      properties:
+        selection: "$command"
+        case_count: 4
+        case_0_value: "like"
+        case_1_value: "comments"
+        case_2_value: "profile"
+        case_3_value: "close"
+      next:
+        case_0: "float_increment_1"
+        case_1: "set_variable_18"
+        case_2: "set_variable_20"
+        case_3: "set_variable_22"
+    - id: "float_increment_1"
+      type: "float_increment"
+      properties:
+        variable: "like_count"
+      next: "set_variable_16"
+    - id: "array_set_1"
+      type: "array_set"
+      properties:
+        array: "$likes"
+        index: "$page"
+        value: "$like_count"
+    - id: "set_variable_16"
+      type: "set_variable"
+      properties:
+        variable: "likes"
+      next: "set_variable_17"
+    - id: "set_variable_17"
+      type: "set_variable"
+      properties:
+        variable: "command"
+        value: ""
+    - id: "set_variable_18"
+      type: "set_variable"
+      properties:
+        variable: "comments_open"
+        value: true
+      next: "set_variable_19"
+    - id: "set_variable_19"
+      type: "set_variable"
+      properties:
+        variable: "command"
+        value: ""
+    - id: "set_variable_20"
+      type: "set_variable"
+      properties:
+        variable: "profile_open"
+        value: true
+      next: "set_variable_21"
+    - id: "set_variable_21"
+      type: "set_variable"
+      properties:
+        variable: "command"
+        value: ""
+    - id: "set_variable_22"
+      type: "set_variable"
+      properties:
+        variable: "comments_open"
+        value: false
+      next: "set_variable_23"
+    - id: "set_variable_23"
+      type: "set_variable"
+      properties:
+        variable: "profile_open"
+        value: false
+      next: "set_variable_24"
+    - id: "set_variable_24"
+      type: "set_variable"
+      properties:
+        variable: "command"
+        value: ""
+  layout:
+    - id: "on_tick_1"
+      x: 0
+      y: 130
+    - id: "subscribe_1"
+      x: 260
+      y: 0
+    - id: "event_begin_play_1"
+      x: 0
+      y: 260
+    - id: "float_mul_1"
+      x: 260
+      y: 130
+    - id: "float_add_1"
+      x: 520
+      y: 0
+    - id: "set_variable_1"
+      x: 780
+      y: 0
+    - id: "float_add_2"
+      x: 260
+      y: 260
+    - id: "float_mod_1"
+      x: 520
+      y: 130
+    - id: "set_variable_2"
+      x: 1040
+      y: 0
+    - id: "float_sub_1"
+      x: 0
+      y: 390
+    - id: "float_abs_1"
+      x: 260
+      y: 390
+    - id: "float_mul_2"
+      x: 520
+      y: 260
+    - id: "float_add_3"
+      x: 780
+      y: 130
+    - id: "set_variable_3"
+      x: 1300
+      y: 0
+    - id: "array_get_1"
+      x: 0
+      y: 520
+    - id: "set_variable_4"
+      x: 1560
+      y: 0
+    - id: "array_get_2"
+      x: 0
+      y: 650
+    - id: "set_variable_5"
+      x: 1820
+      y: 0
+    - id: "array_get_3"
+      x: 0
+      y: 780
+    - id: "set_variable_6"
+      x: 2080
+      y: 0
+    - id: "array_get_4"
+      x: 0
+      y: 910
+    - id: "set_variable_7"
+      x: 2340
+      y: 0
+    - id: "array_get_5"
+      x: 0
+      y: 1040
+    - id: "set_variable_8"
+      x: 2600
+      y: 0
+    - id: "array_get_6"
+      x: 0
+      y: 1170
+    - id: "set_variable_9"
+      x: 2860
+      y: 0
+    - id: "int_eq_1"
+      x: 0
+      y: 1300
+    - id: "set_variable_10"
+      x: 3120
+      y: 0
+    - id: "int_eq_2"
+      x: 0
+      y: 1430
+    - id: "set_variable_11"
+      x: 3380
+      y: 0
+    - id: "int_eq_3"
+      x: 0
+      y: 1560
+    - id: "set_variable_12"
+      x: 3640
+      y: 0
+    - id: "int_eq_4"
+      x: 0
+      y: 1690
+    - id: "set_variable_13"
+      x: 3900
+      y: 0
+    - id: "int_eq_5"
+      x: 0
+      y: 1820
+    - id: "set_variable_14"
+      x: 4160
+      y: 0
+    - id: "float_max_1"
+      x: 0
+      y: 1950
+    - id: "float_div_1"
+      x: 260
+      y: 520
+    - id: "float_mul_3"
+      x: 520
+      y: 390
+    - id: "set_variable_15"
+      x: 4420
+      y: 0
+    - id: "switch_on_string_1"
+      x: 4680
+      y: 0
+    - id: "float_increment_1"
+      x: 4940
+      y: 0
+    - id: "array_set_1"
+      x: 0
+      y: 2080
+    - id: "set_variable_16"
+      x: 5200
+      y: 0
+    - id: "set_variable_17"
+      x: 5460
+      y: 0
+    - id: "set_variable_18"
+      x: 4940
+      y: 130
+    - id: "set_variable_19"
+      x: 5200
+      y: 130
+    - id: "set_variable_20"
+      x: 4940
+      y: 260
+    - id: "set_variable_21"
+      x: 5200
+      y: 260
+    - id: "set_variable_22"
+      x: 4940
+      y: 390
+    - id: "set_variable_23"
+      x: 5200
+      y: 390
+    - id: "set_variable_24"
+      x: 5460
+      y: 130
+  edges:
+    - from:
+        nodeId: "on_tick_1"
+        pin: "value"
+      to:
+        nodeId: "subscribe_1"
+        pin: "source"
+    - from:
+        nodeId: "lambda_1"
+        pin: "function"
+      to:
+        nodeId: "subscribe_1"
+        pin: "on_next"
+    - from:
+        nodeId: "lambda_1"
+        pin: "value_0"
+      to:
+        nodeId: "float_mul_1"
+        pin: "a"
+    - from:
+        nodeId: "float_mul_1"
+        pin: "return"
+      to:
+        nodeId: "float_add_1"
+        pin: "b"
+    - from:
+        nodeId: "float_add_1"
+        pin: "return"
+      to:
+        nodeId: "set_variable_1"
+        pin: "value"
+    - from:
+        nodeId: "lambda_1"
+        pin: "value_0"
+      to:
+        nodeId: "float_add_2"
+        pin: "b"
+    - from:
+        nodeId: "float_add_2"
+        pin: "return"
+      to:
+        nodeId: "float_mod_1"
+        pin: "a"
+    - from:
+        nodeId: "float_mod_1"
+        pin: "return"
+      to:
+        nodeId: "set_variable_2"
+        pin: "value"
+    - from:
+        nodeId: "float_sub_1"
+        pin: "return"
+      to:
+        nodeId: "float_abs_1"
+        pin: "a"
+    - from:
+        nodeId: "float_abs_1"
+        pin: "return"
+      to:
+        nodeId: "float_mul_2"
+        pin: "b"
+    - from:
+        nodeId: "float_mul_2"
+        pin: "return"
+      to:
+        nodeId: "float_add_3"
+        pin: "b"
+    - from:
+        nodeId: "float_add_3"
+        pin: "return"
+      to:
+        nodeId: "set_variable_3"
+        pin: "value"
+    - from:
+        nodeId: "array_get_1"
+        pin: "return"
+      to:
+        nodeId: "set_variable_4"
+        pin: "value"
+    - from:
+        nodeId: "array_get_2"
+        pin: "return"
+      to:
+        nodeId: "set_variable_5"
+        pin: "value"
+    - from:
+        nodeId: "array_get_3"
+        pin: "return"
+      to:
+        nodeId: "set_variable_6"
+        pin: "value"
+    - from:
+        nodeId: "array_get_4"
+        pin: "return"
+      to:
+        nodeId: "set_variable_7"
+        pin: "value"
+    - from:
+        nodeId: "array_get_5"
+        pin: "return"
+      to:
+        nodeId: "set_variable_8"
+        pin: "value"
+    - from:
+        nodeId: "array_get_6"
+        pin: "return"
+      to:
+        nodeId: "set_variable_9"
+        pin: "value"
+    - from:
+        nodeId: "int_eq_1"
+        pin: "return"
+      to:
+        nodeId: "set_variable_10"
+        pin: "value"
+    - from:
+        nodeId: "int_eq_2"
+        pin: "return"
+      to:
+        nodeId: "set_variable_11"
+        pin: "value"
+    - from:
+        nodeId: "int_eq_3"
+        pin: "return"
+      to:
+        nodeId: "set_variable_12"
+        pin: "value"
+    - from:
+        nodeId: "int_eq_4"
+        pin: "return"
+      to:
+        nodeId: "set_variable_13"
+        pin: "value"
+    - from:
+        nodeId: "int_eq_5"
+        pin: "return"
+      to:
+        nodeId: "set_variable_14"
+        pin: "value"
+    - from:
+        nodeId: "float_max_1"
+        pin: "return"
+      to:
+        nodeId: "float_div_1"
+        pin: "b"
+    - from:
+        nodeId: "float_div_1"
+        pin: "return"
+      to:
+        nodeId: "float_mul_3"
+        pin: "b"
+    - from:
+        nodeId: "float_mul_3"
+        pin: "return"
+      to:
+        nodeId: "set_variable_15"
+        pin: "value"
+    - from:
+        nodeId: "array_set_1"
+        pin: "return"
+      to:
+        nodeId: "set_variable_16"
+        pin: "value"

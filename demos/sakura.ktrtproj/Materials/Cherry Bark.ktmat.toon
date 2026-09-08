@@ -1,0 +1,159 @@
+schema_version: 2
+kind: "material"
+id: "mat_bark"
+name: "Cherry Bark"
+parent_material_id: null
+graph:
+  nodes:
+    -
+      id: "material_uv_1"
+      type: "material_uv"
+      position:
+        x: 0
+        y: 0
+      properties: {}
+    -
+      id: "uv_transform_1"
+      type: "uv_transform"
+      position:
+        x: 260
+        y: 0
+      properties:
+        scale: "3,1"
+        translate: "0,0"
+        rotate: 0
+        pivot: "0.5,0.5"
+    -
+      id: "procedural_noise_1"
+      type: "procedural_noise"
+      position:
+        x: 520
+        y: 0
+      properties:
+        scale: 14
+        seed: 5
+        octaves: 5
+    -
+      id: "procedural_noise_2"
+      type: "procedural_noise"
+      position:
+        x: 520
+        y: 130
+      properties:
+        scale: 3
+        seed: 9
+        octaves: 4
+    -
+      id: "float_mul_1"
+      type: "float_mul"
+      position:
+        x: 780
+        y: 0
+      properties:
+        b: 0.65
+    -
+      id: "float_mul_2"
+      type: "float_mul"
+      position:
+        x: 780
+        y: 130
+      properties:
+        b: 0.35
+    -
+      id: "float_add_1"
+      type: "float_add"
+      position:
+        x: 1040
+        y: 0
+      properties: {}
+    -
+      id: "gradient_ramp_1"
+      type: "gradient_ramp"
+      position:
+        x: 1300
+        y: 0
+      properties:
+        stops: "0:#3a2c26,0.55:#5a4740,1:#8a7266"
+    -
+      id: "material_output_3d_1"
+      type: "material_output_3d"
+      position:
+        x: 1560
+        y: 0
+      properties:
+        gloss: 0.08
+  edges:
+    -
+      id: "material_uv_1:value>uv_transform_1:uv"
+      from:
+        nodeId: "material_uv_1"
+        pin: "value"
+      to:
+        nodeId: "uv_transform_1"
+        pin: "uv"
+    -
+      id: "uv_transform_1:value>procedural_noise_1:uv"
+      from:
+        nodeId: "uv_transform_1"
+        pin: "value"
+      to:
+        nodeId: "procedural_noise_1"
+        pin: "uv"
+    -
+      id: "uv_transform_1:value>procedural_noise_2:uv"
+      from:
+        nodeId: "uv_transform_1"
+        pin: "value"
+      to:
+        nodeId: "procedural_noise_2"
+        pin: "uv"
+    -
+      id: "procedural_noise_1:value>float_mul_1:a"
+      from:
+        nodeId: "procedural_noise_1"
+        pin: "value"
+      to:
+        nodeId: "float_mul_1"
+        pin: "a"
+    -
+      id: "procedural_noise_2:value>float_mul_2:a"
+      from:
+        nodeId: "procedural_noise_2"
+        pin: "value"
+      to:
+        nodeId: "float_mul_2"
+        pin: "a"
+    -
+      id: "float_mul_1:return>float_add_1:a"
+      from:
+        nodeId: "float_mul_1"
+        pin: "return"
+      to:
+        nodeId: "float_add_1"
+        pin: "a"
+    -
+      id: "float_mul_2:return>float_add_1:b"
+      from:
+        nodeId: "float_mul_2"
+        pin: "return"
+      to:
+        nodeId: "float_add_1"
+        pin: "b"
+    -
+      id: "float_add_1:return>gradient_ramp_1:t"
+      from:
+        nodeId: "float_add_1"
+        pin: "return"
+      to:
+        nodeId: "gradient_ramp_1"
+        pin: "t"
+    -
+      id: "gradient_ramp_1:value>material_output_3d_1:diffuse"
+      from:
+        nodeId: "gradient_ramp_1"
+        pin: "value"
+      to:
+        nodeId: "material_output_3d_1"
+        pin: "diffuse"
+defaults: {}
+purpose: "space-3d"

@@ -1,0 +1,8 @@
+schema_version: 2
+kind: "material"
+id: "mat_sign_a"
+display_name: "Sign Red"
+parent_material_id: null
+memo: null
+pos: null
+favorite: false

@@ -1,0 +1,123 @@
+schema_version: 2
+kind: "material"
+id: "mat_concrete"
+name: "Concrete"
+parent_material_id: null
+graph:
+  nodes:
+    -
+      id: "material_world_position_1"
+      type: "material_world_position"
+      position:
+        x: 0
+        y: 0
+      properties: {}
+    -
+      id: "float_mul_1"
+      type: "float_mul"
+      position:
+        x: 260
+        y: 0
+      properties:
+        b: 0.8333333333333334
+    -
+      id: "float_mul_2"
+      type: "float_mul"
+      position:
+        x: 260
+        y: 130
+      properties:
+        b: 0.8333333333333334
+    -
+      id: "make_vector2_1"
+      type: "make_vector2"
+      position:
+        x: 520
+        y: 0
+      properties: {}
+    -
+      id: "procedural_noise_1"
+      type: "procedural_noise"
+      position:
+        x: 780
+        y: 0
+      properties:
+        scale: 5
+        seed: 71
+        octaves: 5
+    -
+      id: "color_lerp_1"
+      type: "color_lerp"
+      position:
+        x: 1040
+        y: 0
+      properties:
+        a: "#83807c"
+        b: "#9a9691"
+    -
+      id: "material_output_3d_1"
+      type: "material_output_3d"
+      position:
+        x: 1300
+        y: 0
+      properties:
+        gloss: 0.08
+  edges:
+    -
+      id: "material_world_position_1:x>float_mul_1:a"
+      from:
+        nodeId: "material_world_position_1"
+        pin: "x"
+      to:
+        nodeId: "float_mul_1"
+        pin: "a"
+    -
+      id: "material_world_position_1:z>float_mul_2:a"
+      from:
+        nodeId: "material_world_position_1"
+        pin: "z"
+      to:
+        nodeId: "float_mul_2"
+        pin: "a"
+    -
+      id: "float_mul_1:return>make_vector2_1:x"
+      from:
+        nodeId: "float_mul_1"
+        pin: "return"
+      to:
+        nodeId: "make_vector2_1"
+        pin: "x"
+    -
+      id: "float_mul_2:return>make_vector2_1:y"
+      from:
+        nodeId: "float_mul_2"
+        pin: "return"
+      to:
+        nodeId: "make_vector2_1"
+        pin: "y"
+    -
+      id: "make_vector2_1:return>procedural_noise_1:uv"
+      from:
+        nodeId: "make_vector2_1"
+        pin: "return"
+      to:
+        nodeId: "procedural_noise_1"
+        pin: "uv"
+    -
+      id: "procedural_noise_1:value>color_lerp_1:alpha"
+      from:
+        nodeId: "procedural_noise_1"
+        pin: "value"
+      to:
+        nodeId: "color_lerp_1"
+        pin: "alpha"
+    -
+      id: "color_lerp_1:return>material_output_3d_1:diffuse"
+      from:
+        nodeId: "color_lerp_1"
+        pin: "return"
+      to:
+        nodeId: "material_output_3d_1"
+        pin: "diffuse"
+defaults: {}
+purpose: "space-3d"

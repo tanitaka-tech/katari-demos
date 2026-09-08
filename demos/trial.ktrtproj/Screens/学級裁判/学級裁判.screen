@@ -152,7 +152,7 @@ script_graph:
   nodes:
     - id: "event_begin_play_1"
       type: "event_begin_play"
-      next: "subscribe_vector2_1"
+      next: "subscribe_1"
     - id: "get_input_action_vector2_1"
       type: "get_input_action_vector2"
       properties:
@@ -168,9 +168,9 @@ script_graph:
       type: "set_variable"
       properties:
         variable: "move"
-    - id: "subscribe_vector2_1"
-      type: "subscribe_vector2"
-      next: "subscribe_bool_1"
+    - id: "subscribe_1"
+      type: "subscribe"
+      next: "subscribe_2"
     - id: "get_input_action_bool_1"
       type: "get_input_action_bool"
       properties:
@@ -186,9 +186,9 @@ script_graph:
       type: "set_variable"
       properties:
         variable: "fire"
-    - id: "subscribe_bool_1"
-      type: "subscribe_bool"
-      next: "subscribe_float_1"
+    - id: "subscribe_2"
+      type: "subscribe"
+      next: "subscribe_3"
     - id: "lambda_3"
       type: "lambda"
       properties:
@@ -197,8 +197,8 @@ script_graph:
       next: "set_variable_3"
     - id: "on_tick_1"
       type: "on_tick"
-    - id: "subscribe_float_1"
-      type: "subscribe_float"
+    - id: "subscribe_3"
+      type: "subscribe"
     - id: "get_variable_float_1"
       type: "get_variable_float"
       properties:
@@ -426,7 +426,7 @@ script_graph:
     - id: "set_variable_1"
       x: 260
       y: 0
-    - id: "subscribe_vector2_1"
+    - id: "subscribe_1"
       x: 260
       y: 130
     - id: "get_input_action_bool_1"
@@ -438,7 +438,7 @@ script_graph:
     - id: "set_variable_2"
       x: 260
       y: 260
-    - id: "subscribe_bool_1"
+    - id: "subscribe_2"
       x: 520
       y: 0
     - id: "lambda_3"
@@ -447,7 +447,7 @@ script_graph:
     - id: "on_tick_1"
       x: 0
       y: 780
-    - id: "subscribe_float_1"
+    - id: "subscribe_3"
       x: 780
       y: 0
     - id: "get_variable_float_1"
@@ -629,13 +629,13 @@ script_graph:
         nodeId: "get_input_action_vector2_1"
         pin: "value"
       to:
-        nodeId: "subscribe_vector2_1"
+        nodeId: "subscribe_1"
         pin: "source"
     - from:
         nodeId: "lambda_1"
         pin: "function"
       to:
-        nodeId: "subscribe_vector2_1"
+        nodeId: "subscribe_1"
         pin: "on_next"
     - from:
         nodeId: "lambda_2"
@@ -647,25 +647,25 @@ script_graph:
         nodeId: "get_input_action_bool_1"
         pin: "value"
       to:
-        nodeId: "subscribe_bool_1"
+        nodeId: "subscribe_2"
         pin: "source"
     - from:
         nodeId: "lambda_2"
         pin: "function"
       to:
-        nodeId: "subscribe_bool_1"
+        nodeId: "subscribe_2"
         pin: "on_next"
     - from:
         nodeId: "on_tick_1"
         pin: "value"
       to:
-        nodeId: "subscribe_float_1"
+        nodeId: "subscribe_3"
         pin: "source"
     - from:
         nodeId: "lambda_3"
         pin: "function"
       to:
-        nodeId: "subscribe_float_1"
+        nodeId: "subscribe_3"
         pin: "on_next"
     - from:
         nodeId: "get_variable_float_1"

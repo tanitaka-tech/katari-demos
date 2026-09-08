@@ -1,0 +1,8 @@
+schema_version: 2
+kind: "scene"
+id: "scn_dating_ezjn"
+display_name: "告白"
+memo: ""
+pos:
+  x: 300
+  y: 220

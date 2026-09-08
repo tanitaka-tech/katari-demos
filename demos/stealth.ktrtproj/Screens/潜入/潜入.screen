@@ -305,9 +305,9 @@ script_graph:
       type: "set_variable"
       properties:
         variable: "move"
-    - id: "subscribe_vector2_1"
-      type: "subscribe_vector2"
-      next: "subscribe_bool_1"
+    - id: "subscribe_1"
+      type: "subscribe"
+      next: "subscribe_2"
     - id: "get_input_action_bool_1"
       type: "get_input_action_bool"
       properties:
@@ -323,8 +323,8 @@ script_graph:
       type: "set_variable"
       properties:
         variable: "sneak"
-    - id: "subscribe_bool_1"
-      type: "subscribe_bool"
+    - id: "subscribe_2"
+      type: "subscribe"
     - id: "set_variable_3"
       type: "set_variable"
       properties:
@@ -350,32 +350,17 @@ script_graph:
         variable: "moving"
         value: "=$mx * $mx + $mz * $mz > 0.01"
       next: "set_variable_7"
-    - id: "ternary_1"
-      type: "ternary"
-      properties:
-        index: "$sneak"
-        true: 1.9
-        false: 4.6
     - id: "set_variable_7"
       type: "set_variable"
       properties:
         variable: "spd"
+        value: "=$sneak ? 1.9 : 4.6"
       next: "set_variable_8"
-    - id: "ternary_2"
-      type: "ternary"
-      properties:
-        index: "$sneak"
-        true: 2.5
-        false: 12
-    - id: "ternary_3"
-      type: "ternary"
-      properties:
-        index: "$moving"
-        false: 0
     - id: "set_variable_8"
       type: "set_variable"
       properties:
         variable: "noise"
+        value: "=$moving ? ($sneak ? 2.5 : 12) : 0"
       next: "set_variable_9"
     - id: "set_variable_9"
       type: "set_variable"
@@ -428,7 +413,7 @@ script_graph:
       properties:
         variable: "pz"
       next: "set_variable_13"
-    - id: "ternary_4"
+    - id: "ternary_1"
       type: "ternary"
       properties:
         true: 0
@@ -454,7 +439,7 @@ script_graph:
       type: "float_mul"
       properties:
         b: 57.29577951308232
-    - id: "ternary_5"
+    - id: "ternary_2"
       type: "ternary"
       properties:
         index: "$moving"
@@ -501,7 +486,7 @@ script_graph:
         ignore_ids: "[\"player\"]"
     - id: "or_op_1"
       type: "or_op"
-    - id: "ternary_6"
+    - id: "ternary_3"
       type: "ternary"
       properties:
         true: 1
@@ -511,7 +496,7 @@ script_graph:
       properties:
         variable: "see1"
       next: "set_variable_16"
-    - id: "ternary_7"
+    - id: "ternary_4"
       type: "ternary"
       properties:
         true: 1
@@ -521,7 +506,7 @@ script_graph:
       properties:
         variable: "hear1"
       next: "set_variable_17"
-    - id: "ternary_8"
+    - id: "ternary_5"
       type: "ternary"
       properties:
         true: 4
@@ -531,7 +516,7 @@ script_graph:
       properties:
         variable: "g1hunt"
       next: "set_variable_18"
-    - id: "ternary_9"
+    - id: "ternary_6"
       type: "ternary"
       properties:
         true: "$px"
@@ -541,7 +526,7 @@ script_graph:
       properties:
         variable: "g1sx"
       next: "set_variable_19"
-    - id: "ternary_10"
+    - id: "ternary_7"
       type: "ternary"
       properties:
         true: "$pz"
@@ -556,7 +541,7 @@ script_graph:
       properties:
         a: "$g1hunt"
         b: 0
-    - id: "ternary_11"
+    - id: "ternary_8"
       type: "ternary"
       properties:
         true: "$g1sx"
@@ -566,7 +551,7 @@ script_graph:
       properties:
         variable: "g1tx"
       next: "set_variable_21"
-    - id: "ternary_12"
+    - id: "ternary_9"
       type: "ternary"
       properties:
         true: "$g1sz"
@@ -606,7 +591,7 @@ script_graph:
       type: "vector3_normalize"
     - id: "break_vector3_3"
       type: "break_vector3"
-    - id: "ternary_13"
+    - id: "ternary_10"
       type: "ternary"
       properties:
         true: 3.6
@@ -674,11 +659,11 @@ script_graph:
       type: "float_mul"
       properties:
         b: 57.29577951308232
-    - id: "ternary_14"
+    - id: "ternary_11"
       type: "ternary"
       properties:
         false: "$g1ry"
-    - id: "ternary_15"
+    - id: "ternary_12"
       type: "ternary"
     - id: "set_variable_24"
       type: "set_variable"
@@ -689,7 +674,7 @@ script_graph:
       type: "not_op"
     - id: "and_op_1"
       type: "and_op"
-    - id: "ternary_16"
+    - id: "ternary_13"
       type: "ternary"
       properties:
         true: "=1 - $g1wp"
@@ -736,7 +721,7 @@ script_graph:
         ignore_ids: "[\"player\"]"
     - id: "or_op_2"
       type: "or_op"
-    - id: "ternary_17"
+    - id: "ternary_14"
       type: "ternary"
       properties:
         true: 1
@@ -746,7 +731,7 @@ script_graph:
       properties:
         variable: "see2"
       next: "set_variable_27"
-    - id: "ternary_18"
+    - id: "ternary_15"
       type: "ternary"
       properties:
         true: 1
@@ -756,7 +741,7 @@ script_graph:
       properties:
         variable: "hear2"
       next: "set_variable_28"
-    - id: "ternary_19"
+    - id: "ternary_16"
       type: "ternary"
       properties:
         true: 4
@@ -766,7 +751,7 @@ script_graph:
       properties:
         variable: "g2hunt"
       next: "set_variable_29"
-    - id: "ternary_20"
+    - id: "ternary_17"
       type: "ternary"
       properties:
         true: "$px"
@@ -776,7 +761,7 @@ script_graph:
       properties:
         variable: "g2sx"
       next: "set_variable_30"
-    - id: "ternary_21"
+    - id: "ternary_18"
       type: "ternary"
       properties:
         true: "$pz"
@@ -791,7 +776,7 @@ script_graph:
       properties:
         a: "$g2hunt"
         b: 0
-    - id: "ternary_22"
+    - id: "ternary_19"
       type: "ternary"
       properties:
         true: "$g2sx"
@@ -801,7 +786,7 @@ script_graph:
       properties:
         variable: "g2tx"
       next: "set_variable_32"
-    - id: "ternary_23"
+    - id: "ternary_20"
       type: "ternary"
       properties:
         true: "$g2sz"
@@ -841,7 +826,7 @@ script_graph:
       type: "vector3_normalize"
     - id: "break_vector3_6"
       type: "break_vector3"
-    - id: "ternary_24"
+    - id: "ternary_21"
       type: "ternary"
       properties:
         true: 3.6
@@ -909,11 +894,11 @@ script_graph:
       type: "float_mul"
       properties:
         b: 57.29577951308232
-    - id: "ternary_25"
+    - id: "ternary_22"
       type: "ternary"
       properties:
         false: "$g2ry"
-    - id: "ternary_26"
+    - id: "ternary_23"
       type: "ternary"
     - id: "set_variable_35"
       type: "set_variable"
@@ -924,7 +909,7 @@ script_graph:
       type: "not_op"
     - id: "and_op_2"
       type: "and_op"
-    - id: "ternary_27"
+    - id: "ternary_24"
       type: "ternary"
       properties:
         true: "=1 - $g2wp"
@@ -968,7 +953,7 @@ script_graph:
       properties:
         variable: "busted"
       next: "set_variable_42"
-    - id: "ternary_28"
+    - id: "ternary_25"
       type: "ternary"
       properties:
         true: 2
@@ -978,7 +963,7 @@ script_graph:
       properties:
         variable: "caught"
       next: "set_variable_43"
-    - id: "ternary_29"
+    - id: "ternary_26"
       type: "ternary"
       properties:
         true: 0
@@ -988,7 +973,7 @@ script_graph:
       properties:
         variable: "px"
       next: "set_variable_44"
-    - id: "ternary_30"
+    - id: "ternary_27"
       type: "ternary"
       properties:
         true: -12
@@ -998,7 +983,7 @@ script_graph:
       properties:
         variable: "pz"
       next: "set_variable_45"
-    - id: "ternary_31"
+    - id: "ternary_28"
       type: "ternary"
       properties:
         true: 0
@@ -1035,18 +1020,18 @@ script_graph:
       properties:
         variable: "cleared"
       next: "set_variable_47"
-    - id: "ternary_32"
+    - id: "ternary_29"
       type: "ternary"
       properties:
         index: "$seen"
         true: "見られている！"
         false: "出口をめざせ"
-    - id: "ternary_33"
+    - id: "ternary_30"
       type: "ternary"
       properties:
         index: "=$caught > 0"
         true: "見つかった！ 入口からやり直し"
-    - id: "ternary_34"
+    - id: "ternary_31"
       type: "ternary"
       properties:
         index: "$cleared"
@@ -1064,8 +1049,8 @@ script_graph:
         arg_types: "[\"Float\"]"
       next: "set_variable_3"
     - id: "subscribe_tick"
-      type: "subscribe_float"
-      next: "subscribe_vector2_1"
+      type: "subscribe"
+      next: "subscribe_1"
   layout:
     - id: "get_input_action_vector2_1"
       x: 0
@@ -1076,7 +1061,7 @@ script_graph:
     - id: "set_variable_1"
       x: 260
       y: 0
-    - id: "subscribe_vector2_1"
+    - id: "subscribe_1"
       x: 260
       y: 130
     - id: "get_input_action_bool_1"
@@ -1088,7 +1073,7 @@ script_graph:
     - id: "set_variable_2"
       x: 260
       y: 260
-    - id: "subscribe_bool_1"
+    - id: "subscribe_2"
       x: 520
       y: 0
     - id: "set_variable_3"
@@ -1106,18 +1091,9 @@ script_graph:
     - id: "set_variable_6"
       x: 1040
       y: 0
-    - id: "ternary_1"
-      x: 0
-      y: 910
     - id: "set_variable_7"
       x: 1300
       y: 0
-    - id: "ternary_2"
-      x: 0
-      y: 1040
-    - id: "ternary_3"
-      x: 260
-      y: 520
     - id: "set_variable_8"
       x: 1560
       y: 0
@@ -1126,19 +1102,19 @@ script_graph:
       y: 0
     - id: "get_space_colliders_1"
       x: 0
-      y: 1170
+      y: 910
     - id: "get_space_colliders_2"
       x: 0
-      y: 1300
+      y: 1040
     - id: "array_concat_1"
       x: 260
-      y: 650
+      y: 520
     - id: "make_vector3_1"
       x: 0
-      y: 1430
+      y: 1170
     - id: "make_vector3_2"
       x: 0
-      y: 1560
+      y: 1300
     - id: "move_and_slide_3d_1"
       x: 520
       y: 260
@@ -1154,7 +1130,7 @@ script_graph:
     - id: "set_variable_12"
       x: 2600
       y: 0
-    - id: "ternary_4"
+    - id: "ternary_1"
       x: 780
       y: 260
     - id: "set_variable_13"
@@ -1162,17 +1138,17 @@ script_graph:
       y: 0
     - id: "float_mul_1"
       x: 0
-      y: 1690
+      y: 1430
     - id: "float_mul_2"
       x: 0
-      y: 1820
+      y: 1560
     - id: "float_atan2_1"
       x: 260
-      y: 780
+      y: 650
     - id: "float_mul_3"
       x: 520
       y: 390
-    - id: "ternary_5"
+    - id: "ternary_2"
       x: 780
       y: 390
     - id: "set_variable_14"
@@ -1180,53 +1156,53 @@ script_graph:
       y: 0
     - id: "get_space_sensors_1"
       x: 0
-      y: 1950
+      y: 1690
     - id: "get_space_colliders_3"
       x: 0
-      y: 2080
+      y: 1820
     - id: "make_vector3_3"
       x: 0
-      y: 2210
+      y: 1950
     - id: "make_vector3_4"
       x: 0
-      y: 2340
+      y: 2080
     - id: "sensor_sees_3d_1"
       x: 260
-      y: 910
+      y: 780
     - id: "make_vector3_5"
       x: 0
-      y: 2470
+      y: 2210
     - id: "sensor_hears_3d_1"
       x: 260
-      y: 1040
+      y: 910
     - id: "or_op_1"
       x: 520
       y: 520
-    - id: "ternary_6"
+    - id: "ternary_3"
       x: 520
       y: 650
     - id: "set_variable_15"
       x: 3380
       y: 0
-    - id: "ternary_7"
+    - id: "ternary_4"
       x: 520
       y: 780
     - id: "set_variable_16"
       x: 3640
       y: 0
-    - id: "ternary_8"
+    - id: "ternary_5"
       x: 780
       y: 520
     - id: "set_variable_17"
       x: 3900
       y: 0
-    - id: "ternary_9"
+    - id: "ternary_6"
       x: 780
       y: 650
     - id: "set_variable_18"
       x: 4160
       y: 0
-    - id: "ternary_10"
+    - id: "ternary_7"
       x: 780
       y: 780
     - id: "set_variable_19"
@@ -1234,25 +1210,25 @@ script_graph:
       y: 0
     - id: "float_gt_1"
       x: 0
-      y: 2600
-    - id: "ternary_11"
+      y: 2340
+    - id: "ternary_8"
       x: 260
-      y: 1170
+      y: 1040
     - id: "set_variable_20"
       x: 4680
       y: 0
-    - id: "ternary_12"
+    - id: "ternary_9"
       x: 260
-      y: 1300
+      y: 1170
     - id: "set_variable_21"
       x: 4940
       y: 0
     - id: "make_vector3_6"
       x: 0
-      y: 2730
+      y: 2470
     - id: "nav_next_step_3d_1"
       x: 260
-      y: 1430
+      y: 1300
     - id: "break_vector3_2"
       x: 520
       y: 910
@@ -1271,15 +1247,15 @@ script_graph:
     - id: "break_vector3_3"
       x: 1560
       y: 130
-    - id: "ternary_13"
+    - id: "ternary_10"
       x: 260
-      y: 1560
+      y: 1430
     - id: "get_space_colliders_4"
       x: 0
-      y: 2860
+      y: 2600
     - id: "array_concat_2"
       x: 260
-      y: 1690
+      y: 1560
     - id: "float_mul_4"
       x: 520
       y: 1040
@@ -1309,10 +1285,10 @@ script_graph:
       y: 0
     - id: "float_atan2_2"
       x: 0
-      y: 2990
+      y: 2730
     - id: "float_mul_8"
       x: 260
-      y: 1820
+      y: 1690
     - id: "float_mul_9"
       x: 1820
       y: 390
@@ -1325,10 +1301,10 @@ script_graph:
     - id: "float_mul_11"
       x: 2340
       y: 260
-    - id: "ternary_14"
+    - id: "ternary_11"
       x: 2600
       y: 260
-    - id: "ternary_15"
+    - id: "ternary_12"
       x: 2860
       y: 130
     - id: "set_variable_24"
@@ -1336,11 +1312,11 @@ script_graph:
       y: 0
     - id: "not_op_1"
       x: 260
-      y: 1950
+      y: 1820
     - id: "and_op_1"
       x: 520
       y: 1300
-    - id: "ternary_16"
+    - id: "ternary_13"
       x: 780
       y: 1170
     - id: "set_variable_25"
@@ -1348,53 +1324,53 @@ script_graph:
       y: 0
     - id: "get_space_sensors_2"
       x: 0
-      y: 3120
+      y: 2860
     - id: "get_space_colliders_5"
       x: 0
-      y: 3250
+      y: 2990
     - id: "make_vector3_9"
       x: 0
-      y: 3380
+      y: 3120
     - id: "make_vector3_10"
       x: 0
-      y: 3510
+      y: 3250
     - id: "sensor_sees_3d_2"
       x: 260
-      y: 2080
+      y: 1950
     - id: "make_vector3_11"
       x: 0
-      y: 3640
+      y: 3380
     - id: "sensor_hears_3d_2"
       x: 260
-      y: 2210
+      y: 2080
     - id: "or_op_2"
       x: 520
       y: 1430
-    - id: "ternary_17"
+    - id: "ternary_14"
       x: 520
       y: 1560
     - id: "set_variable_26"
       x: 6240
       y: 0
-    - id: "ternary_18"
+    - id: "ternary_15"
       x: 520
       y: 1690
     - id: "set_variable_27"
       x: 6500
       y: 0
-    - id: "ternary_19"
+    - id: "ternary_16"
       x: 780
       y: 1300
     - id: "set_variable_28"
       x: 6760
       y: 0
-    - id: "ternary_20"
+    - id: "ternary_17"
       x: 780
       y: 1430
     - id: "set_variable_29"
       x: 7020
       y: 0
-    - id: "ternary_21"
+    - id: "ternary_18"
       x: 780
       y: 1560
     - id: "set_variable_30"
@@ -1402,25 +1378,25 @@ script_graph:
       y: 0
     - id: "float_gt_2"
       x: 0
-      y: 3770
-    - id: "ternary_22"
+      y: 3510
+    - id: "ternary_19"
       x: 260
-      y: 2340
+      y: 2210
     - id: "set_variable_31"
       x: 7540
       y: 0
-    - id: "ternary_23"
+    - id: "ternary_20"
       x: 260
-      y: 2470
+      y: 2340
     - id: "set_variable_32"
       x: 7800
       y: 0
     - id: "make_vector3_12"
       x: 0
-      y: 3900
+      y: 3640
     - id: "nav_next_step_3d_2"
       x: 260
-      y: 2600
+      y: 2470
     - id: "break_vector3_5"
       x: 520
       y: 1820
@@ -1439,15 +1415,15 @@ script_graph:
     - id: "break_vector3_6"
       x: 1560
       y: 260
-    - id: "ternary_24"
+    - id: "ternary_21"
       x: 260
-      y: 2730
+      y: 2600
     - id: "get_space_colliders_6"
       x: 0
-      y: 4030
+      y: 3770
     - id: "array_concat_3"
       x: 260
-      y: 2860
+      y: 2730
     - id: "float_mul_12"
       x: 520
       y: 1950
@@ -1477,10 +1453,10 @@ script_graph:
       y: 0
     - id: "float_atan2_4"
       x: 0
-      y: 4160
+      y: 3900
     - id: "float_mul_16"
       x: 260
-      y: 2990
+      y: 2860
     - id: "float_mul_17"
       x: 1820
       y: 910
@@ -1493,10 +1469,10 @@ script_graph:
     - id: "float_mul_19"
       x: 2340
       y: 520
-    - id: "ternary_25"
+    - id: "ternary_22"
       x: 2600
       y: 520
-    - id: "ternary_26"
+    - id: "ternary_23"
       x: 2860
       y: 260
     - id: "set_variable_35"
@@ -1504,11 +1480,11 @@ script_graph:
       y: 0
     - id: "not_op_2"
       x: 260
-      y: 3120
+      y: 2990
     - id: "and_op_2"
       x: 520
       y: 2210
-    - id: "ternary_27"
+    - id: "ternary_24"
       x: 780
       y: 1950
     - id: "set_variable_36"
@@ -1528,43 +1504,43 @@ script_graph:
       y: 0
     - id: "float_ge_1"
       x: 0
-      y: 4290
+      y: 4030
     - id: "set_variable_41"
       x: 10140
       y: 0
-    - id: "ternary_28"
+    - id: "ternary_25"
       x: 260
-      y: 3250
+      y: 3120
     - id: "set_variable_42"
       x: 10400
       y: 0
-    - id: "ternary_29"
+    - id: "ternary_26"
       x: 260
-      y: 3380
+      y: 3250
     - id: "set_variable_43"
       x: 10660
       y: 0
-    - id: "ternary_30"
+    - id: "ternary_27"
       x: 260
-      y: 3510
+      y: 3380
     - id: "set_variable_44"
       x: 10920
       y: 0
-    - id: "ternary_31"
+    - id: "ternary_28"
       x: 260
-      y: 3640
+      y: 3510
     - id: "set_variable_45"
       x: 11180
       y: 0
     - id: "get_space_colliders_7"
       x: 0
-      y: 4420
+      y: 4160
     - id: "make_vector3_15"
       x: 0
-      y: 4550
+      y: 4290
     - id: "overlap_sphere_3d_1"
       x: 260
-      y: 3770
+      y: 3640
     - id: "array_is_empty_1"
       x: 520
       y: 2340
@@ -1577,13 +1553,13 @@ script_graph:
     - id: "set_variable_46"
       x: 11440
       y: 0
-    - id: "ternary_32"
+    - id: "ternary_29"
       x: 0
-      y: 4680
-    - id: "ternary_33"
+      y: 4420
+    - id: "ternary_30"
       x: 260
-      y: 3900
-    - id: "ternary_34"
+      y: 3770
+    - id: "ternary_31"
       x: 520
       y: 2470
     - id: "set_variable_47"
@@ -1609,13 +1585,13 @@ script_graph:
         nodeId: "get_input_action_vector2_1"
         pin: "value"
       to:
-        nodeId: "subscribe_vector2_1"
+        nodeId: "subscribe_1"
         pin: "source"
     - from:
         nodeId: "lambda_1"
         pin: "function"
       to:
-        nodeId: "subscribe_vector2_1"
+        nodeId: "subscribe_1"
         pin: "on_next"
     - from:
         nodeId: "lambda_2"
@@ -1627,13 +1603,13 @@ script_graph:
         nodeId: "get_input_action_bool_1"
         pin: "value"
       to:
-        nodeId: "subscribe_bool_1"
+        nodeId: "subscribe_2"
         pin: "source"
     - from:
         nodeId: "lambda_2"
         pin: "function"
       to:
-        nodeId: "subscribe_bool_1"
+        nodeId: "subscribe_2"
         pin: "on_next"
     - from:
         nodeId: "tick_body"
@@ -1652,24 +1628,6 @@ script_graph:
         pin: "y"
       to:
         nodeId: "set_variable_5"
-        pin: "value"
-    - from:
-        nodeId: "ternary_1"
-        pin: "return"
-      to:
-        nodeId: "set_variable_7"
-        pin: "value"
-    - from:
-        nodeId: "ternary_2"
-        pin: "return"
-      to:
-        nodeId: "ternary_3"
-        pin: "true"
-    - from:
-        nodeId: "ternary_3"
-        pin: "return"
-      to:
-        nodeId: "set_variable_8"
         pin: "value"
     - from:
         nodeId: "get_space_colliders_1"
@@ -1729,10 +1687,10 @@ script_graph:
         nodeId: "move_and_slide_3d_1"
         pin: "on_ground"
       to:
-        nodeId: "ternary_4"
+        nodeId: "ternary_1"
         pin: "index"
     - from:
-        nodeId: "ternary_4"
+        nodeId: "ternary_1"
         pin: "return"
       to:
         nodeId: "set_variable_13"
@@ -1759,10 +1717,10 @@ script_graph:
         nodeId: "float_mul_3"
         pin: "return"
       to:
-        nodeId: "ternary_5"
+        nodeId: "ternary_2"
         pin: "true"
     - from:
-        nodeId: "ternary_5"
+        nodeId: "ternary_2"
         pin: "return"
       to:
         nodeId: "set_variable_14"
@@ -1819,10 +1777,10 @@ script_graph:
         nodeId: "sensor_sees_3d_1"
         pin: "visible"
       to:
-        nodeId: "ternary_6"
+        nodeId: "ternary_3"
         pin: "index"
     - from:
-        nodeId: "ternary_6"
+        nodeId: "ternary_3"
         pin: "return"
       to:
         nodeId: "set_variable_15"
@@ -1831,10 +1789,10 @@ script_graph:
         nodeId: "sensor_hears_3d_1"
         pin: "audible"
       to:
-        nodeId: "ternary_7"
+        nodeId: "ternary_4"
         pin: "index"
     - from:
-        nodeId: "ternary_7"
+        nodeId: "ternary_4"
         pin: "return"
       to:
         nodeId: "set_variable_16"
@@ -1843,10 +1801,10 @@ script_graph:
         nodeId: "or_op_1"
         pin: "return"
       to:
-        nodeId: "ternary_8"
+        nodeId: "ternary_5"
         pin: "index"
     - from:
-        nodeId: "ternary_8"
+        nodeId: "ternary_5"
         pin: "return"
       to:
         nodeId: "set_variable_17"
@@ -1855,10 +1813,10 @@ script_graph:
         nodeId: "or_op_1"
         pin: "return"
       to:
-        nodeId: "ternary_9"
+        nodeId: "ternary_6"
         pin: "index"
     - from:
-        nodeId: "ternary_9"
+        nodeId: "ternary_6"
         pin: "return"
       to:
         nodeId: "set_variable_18"
@@ -1867,10 +1825,10 @@ script_graph:
         nodeId: "or_op_1"
         pin: "return"
       to:
-        nodeId: "ternary_10"
+        nodeId: "ternary_7"
         pin: "index"
     - from:
-        nodeId: "ternary_10"
+        nodeId: "ternary_7"
         pin: "return"
       to:
         nodeId: "set_variable_19"
@@ -1879,10 +1837,10 @@ script_graph:
         nodeId: "float_gt_1"
         pin: "return"
       to:
-        nodeId: "ternary_11"
+        nodeId: "ternary_8"
         pin: "index"
     - from:
-        nodeId: "ternary_11"
+        nodeId: "ternary_8"
         pin: "return"
       to:
         nodeId: "set_variable_20"
@@ -1891,10 +1849,10 @@ script_graph:
         nodeId: "float_gt_1"
         pin: "return"
       to:
-        nodeId: "ternary_12"
+        nodeId: "ternary_9"
         pin: "index"
     - from:
-        nodeId: "ternary_12"
+        nodeId: "ternary_9"
         pin: "return"
       to:
         nodeId: "set_variable_21"
@@ -1963,7 +1921,7 @@ script_graph:
         nodeId: "float_gt_1"
         pin: "return"
       to:
-        nodeId: "ternary_13"
+        nodeId: "ternary_10"
         pin: "index"
     - from:
         nodeId: "get_space_colliders_3"
@@ -1978,7 +1936,7 @@ script_graph:
         nodeId: "array_concat_2"
         pin: "b"
     - from:
-        nodeId: "ternary_13"
+        nodeId: "ternary_10"
         pin: "return"
       to:
         nodeId: "float_mul_4"
@@ -1996,7 +1954,7 @@ script_graph:
         nodeId: "float_mul_5"
         pin: "b"
     - from:
-        nodeId: "ternary_13"
+        nodeId: "ternary_10"
         pin: "return"
       to:
         nodeId: "float_mul_6"
@@ -2101,34 +2059,34 @@ script_graph:
         nodeId: "nav_next_step_3d_1"
         pin: "found"
       to:
-        nodeId: "ternary_14"
+        nodeId: "ternary_11"
         pin: "index"
     - from:
         nodeId: "float_mul_11"
         pin: "return"
       to:
-        nodeId: "ternary_14"
+        nodeId: "ternary_11"
         pin: "true"
     - from:
         nodeId: "float_gt_1"
         pin: "return"
       to:
-        nodeId: "ternary_15"
+        nodeId: "ternary_12"
         pin: "index"
     - from:
         nodeId: "float_mul_8"
         pin: "return"
       to:
-        nodeId: "ternary_15"
+        nodeId: "ternary_12"
         pin: "true"
     - from:
-        nodeId: "ternary_14"
+        nodeId: "ternary_11"
         pin: "return"
       to:
-        nodeId: "ternary_15"
+        nodeId: "ternary_12"
         pin: "false"
     - from:
-        nodeId: "ternary_15"
+        nodeId: "ternary_12"
         pin: "return"
       to:
         nodeId: "set_variable_24"
@@ -2155,10 +2113,10 @@ script_graph:
         nodeId: "and_op_1"
         pin: "return"
       to:
-        nodeId: "ternary_16"
+        nodeId: "ternary_13"
         pin: "index"
     - from:
-        nodeId: "ternary_16"
+        nodeId: "ternary_13"
         pin: "return"
       to:
         nodeId: "set_variable_25"
@@ -2215,10 +2173,10 @@ script_graph:
         nodeId: "sensor_sees_3d_2"
         pin: "visible"
       to:
-        nodeId: "ternary_17"
+        nodeId: "ternary_14"
         pin: "index"
     - from:
-        nodeId: "ternary_17"
+        nodeId: "ternary_14"
         pin: "return"
       to:
         nodeId: "set_variable_26"
@@ -2227,10 +2185,10 @@ script_graph:
         nodeId: "sensor_hears_3d_2"
         pin: "audible"
       to:
-        nodeId: "ternary_18"
+        nodeId: "ternary_15"
         pin: "index"
     - from:
-        nodeId: "ternary_18"
+        nodeId: "ternary_15"
         pin: "return"
       to:
         nodeId: "set_variable_27"
@@ -2239,10 +2197,10 @@ script_graph:
         nodeId: "or_op_2"
         pin: "return"
       to:
-        nodeId: "ternary_19"
+        nodeId: "ternary_16"
         pin: "index"
     - from:
-        nodeId: "ternary_19"
+        nodeId: "ternary_16"
         pin: "return"
       to:
         nodeId: "set_variable_28"
@@ -2251,10 +2209,10 @@ script_graph:
         nodeId: "or_op_2"
         pin: "return"
       to:
-        nodeId: "ternary_20"
+        nodeId: "ternary_17"
         pin: "index"
     - from:
-        nodeId: "ternary_20"
+        nodeId: "ternary_17"
         pin: "return"
       to:
         nodeId: "set_variable_29"
@@ -2263,10 +2221,10 @@ script_graph:
         nodeId: "or_op_2"
         pin: "return"
       to:
-        nodeId: "ternary_21"
+        nodeId: "ternary_18"
         pin: "index"
     - from:
-        nodeId: "ternary_21"
+        nodeId: "ternary_18"
         pin: "return"
       to:
         nodeId: "set_variable_30"
@@ -2275,10 +2233,10 @@ script_graph:
         nodeId: "float_gt_2"
         pin: "return"
       to:
-        nodeId: "ternary_22"
+        nodeId: "ternary_19"
         pin: "index"
     - from:
-        nodeId: "ternary_22"
+        nodeId: "ternary_19"
         pin: "return"
       to:
         nodeId: "set_variable_31"
@@ -2287,10 +2245,10 @@ script_graph:
         nodeId: "float_gt_2"
         pin: "return"
       to:
-        nodeId: "ternary_23"
+        nodeId: "ternary_20"
         pin: "index"
     - from:
-        nodeId: "ternary_23"
+        nodeId: "ternary_20"
         pin: "return"
       to:
         nodeId: "set_variable_32"
@@ -2359,7 +2317,7 @@ script_graph:
         nodeId: "float_gt_2"
         pin: "return"
       to:
-        nodeId: "ternary_24"
+        nodeId: "ternary_21"
         pin: "index"
     - from:
         nodeId: "get_space_colliders_5"
@@ -2374,7 +2332,7 @@ script_graph:
         nodeId: "array_concat_3"
         pin: "b"
     - from:
-        nodeId: "ternary_24"
+        nodeId: "ternary_21"
         pin: "return"
       to:
         nodeId: "float_mul_12"
@@ -2392,7 +2350,7 @@ script_graph:
         nodeId: "float_mul_13"
         pin: "b"
     - from:
-        nodeId: "ternary_24"
+        nodeId: "ternary_21"
         pin: "return"
       to:
         nodeId: "float_mul_14"
@@ -2497,34 +2455,34 @@ script_graph:
         nodeId: "nav_next_step_3d_2"
         pin: "found"
       to:
-        nodeId: "ternary_25"
+        nodeId: "ternary_22"
         pin: "index"
     - from:
         nodeId: "float_mul_19"
         pin: "return"
       to:
-        nodeId: "ternary_25"
+        nodeId: "ternary_22"
         pin: "true"
     - from:
         nodeId: "float_gt_2"
         pin: "return"
       to:
-        nodeId: "ternary_26"
+        nodeId: "ternary_23"
         pin: "index"
     - from:
         nodeId: "float_mul_16"
         pin: "return"
       to:
-        nodeId: "ternary_26"
+        nodeId: "ternary_23"
         pin: "true"
     - from:
-        nodeId: "ternary_25"
+        nodeId: "ternary_22"
         pin: "return"
       to:
-        nodeId: "ternary_26"
+        nodeId: "ternary_23"
         pin: "false"
     - from:
-        nodeId: "ternary_26"
+        nodeId: "ternary_23"
         pin: "return"
       to:
         nodeId: "set_variable_35"
@@ -2551,10 +2509,10 @@ script_graph:
         nodeId: "and_op_2"
         pin: "return"
       to:
-        nodeId: "ternary_27"
+        nodeId: "ternary_24"
         pin: "index"
     - from:
-        nodeId: "ternary_27"
+        nodeId: "ternary_24"
         pin: "return"
       to:
         nodeId: "set_variable_36"
@@ -2569,10 +2527,10 @@ script_graph:
         nodeId: "float_ge_1"
         pin: "return"
       to:
-        nodeId: "ternary_28"
+        nodeId: "ternary_25"
         pin: "index"
     - from:
-        nodeId: "ternary_28"
+        nodeId: "ternary_25"
         pin: "return"
       to:
         nodeId: "set_variable_42"
@@ -2581,10 +2539,10 @@ script_graph:
         nodeId: "float_ge_1"
         pin: "return"
       to:
-        nodeId: "ternary_29"
+        nodeId: "ternary_26"
         pin: "index"
     - from:
-        nodeId: "ternary_29"
+        nodeId: "ternary_26"
         pin: "return"
       to:
         nodeId: "set_variable_43"
@@ -2593,10 +2551,10 @@ script_graph:
         nodeId: "float_ge_1"
         pin: "return"
       to:
-        nodeId: "ternary_30"
+        nodeId: "ternary_27"
         pin: "index"
     - from:
-        nodeId: "ternary_30"
+        nodeId: "ternary_27"
         pin: "return"
       to:
         nodeId: "set_variable_44"
@@ -2605,10 +2563,10 @@ script_graph:
         nodeId: "float_ge_1"
         pin: "return"
       to:
-        nodeId: "ternary_31"
+        nodeId: "ternary_28"
         pin: "index"
     - from:
-        nodeId: "ternary_31"
+        nodeId: "ternary_28"
         pin: "return"
       to:
         nodeId: "set_variable_45"
@@ -2650,19 +2608,19 @@ script_graph:
         nodeId: "set_variable_46"
         pin: "value"
     - from:
-        nodeId: "ternary_32"
+        nodeId: "ternary_29"
         pin: "return"
       to:
-        nodeId: "ternary_33"
+        nodeId: "ternary_30"
         pin: "false"
     - from:
-        nodeId: "ternary_33"
+        nodeId: "ternary_30"
         pin: "return"
       to:
-        nodeId: "ternary_34"
+        nodeId: "ternary_31"
         pin: "false"
     - from:
-        nodeId: "ternary_34"
+        nodeId: "ternary_31"
         pin: "return"
       to:
         nodeId: "set_variable_47"

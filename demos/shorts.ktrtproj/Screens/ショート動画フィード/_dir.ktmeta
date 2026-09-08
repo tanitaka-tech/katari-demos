@@ -1,0 +1,13 @@
+schema_version: 2
+kind: "screen-dir"
+id: "screen_shorts_feed"
+display_name: "ショート動画フィード"
+memo: "スマホの画面を指で上下に払うと 1 本ずつ送れる（ページ送り）。いいねは投稿ごとに別で数え、コメント欄とプロフィールは Frame の出し分け。"
+pos:
+  x: 40
+  y: 40
+children:
+  -
+    name: "ショート動画フィード.screen"
+    id: "screen_shorts_feed"
+    ref: "file"

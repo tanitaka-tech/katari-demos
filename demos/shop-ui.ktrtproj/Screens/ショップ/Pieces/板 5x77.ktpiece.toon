@@ -1,0 +1,28 @@
+id: "pc_st93"
+name: "板 5x77"
+piece_type: "object"
+width: 5
+height: 77
+variables: []
+root:
+  id: "pc_st93_root"
+  name: "板 5x77"
+  type: "frame"
+  x: 0
+  y: 0
+  origin_x: 0
+  origin_y: 0
+  width: 5
+  height: 77
+  children:
+    -
+      id: "st93_shape"
+      name: "st93_shape"
+      type: "rectangle"
+      x: 0
+      y: 0
+      width: 5
+      height: 77
+      origin_x: 0
+      origin_y: 0
+      fill: "#887f6d"

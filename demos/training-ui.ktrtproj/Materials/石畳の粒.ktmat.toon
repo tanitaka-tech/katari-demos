@@ -1,0 +1,84 @@
+schema_version: 2
+kind: "material"
+id: "mat_ground"
+name: "石畳の粒"
+parent_material_id: null
+graph:
+  nodes:
+    -
+      id: "material_uv_1"
+      type: "material_uv"
+      position:
+        x: 0
+        y: 0
+      properties: {}
+    -
+      id: "procedural_noise_1"
+      type: "procedural_noise"
+      position:
+        x: 260
+        y: 0
+      properties:
+        scale: 30
+        seed: 11
+        octaves: 3
+    -
+      id: "color_lerp_1"
+      type: "color_lerp"
+      position:
+        x: 520
+        y: 0
+      properties:
+        a: "#a9a7ae"
+        b: "#e2dfdc"
+    -
+      id: "blend_mode_literal_1"
+      type: "blend_mode_literal"
+      position:
+        x: 0
+        y: 130
+      properties:
+        value: "normal"
+    -
+      id: "material_output_1"
+      type: "material_output"
+      position:
+        x: 780
+        y: 0
+      properties:
+        alpha: 1
+  edges:
+    -
+      id: "material_uv_1:value>procedural_noise_1:uv"
+      from:
+        nodeId: "material_uv_1"
+        pin: "value"
+      to:
+        nodeId: "procedural_noise_1"
+        pin: "uv"
+    -
+      id: "procedural_noise_1:value>color_lerp_1:alpha"
+      from:
+        nodeId: "procedural_noise_1"
+        pin: "value"
+      to:
+        nodeId: "color_lerp_1"
+        pin: "alpha"
+    -
+      id: "color_lerp_1:return>material_output_1:base_color"
+      from:
+        nodeId: "color_lerp_1"
+        pin: "return"
+      to:
+        nodeId: "material_output_1"
+        pin: "base_color"
+    -
+      id: "blend_mode_literal_1:value>material_output_1:blend_mode"
+      from:
+        nodeId: "blend_mode_literal_1"
+        pin: "value"
+      to:
+        nodeId: "material_output_1"
+        pin: "blend_mode"
+defaults: {}
+purpose: "screen-2d"

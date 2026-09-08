@@ -1,0 +1,8 @@
+schema_version: 2
+kind: "scene"
+id: "scn_dating_gjup"
+display_name: "廊下"
+memo: ""
+pos:
+  x: 300
+  y: 40

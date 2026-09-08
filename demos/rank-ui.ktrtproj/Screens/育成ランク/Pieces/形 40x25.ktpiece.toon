@@ -1,0 +1,85 @@
+id: "pc_gg11"
+name: "形 40x25"
+piece_type: "object"
+width: 40
+height: 25
+variables: []
+root:
+  id: "pc_gg11_root"
+  name: "形 40x25"
+  type: "frame"
+  x: 0
+  y: 0
+  origin_x: 0
+  origin_y: 0
+  width: 40
+  height: 25
+  children:
+    -
+      id: "gg11_shape"
+      name: "gg11_shape"
+      type: "path"
+      x: 0
+      y: 0
+      width: 40
+      height: 25
+      origin_x: 0
+      origin_y: 0
+      points:
+        -
+          x: 1
+          y: 0
+          hi:
+            dx: 0
+            dy: 3.5
+        -
+          x: 35
+          y: 0
+          ho:
+            dx: 2.6
+            dy: 0.3
+        -
+          x: 38
+          y: 7.3
+          ho:
+            dx: 2
+            dy: 3.8
+          hi:
+            dx: -1.2
+            dy: -2.4
+        -
+          x: 36.8
+          y: 18
+          ho:
+            dx: -1.8
+            dy: 1.6
+          hi:
+            dx: 3.4
+            dy: -3
+        -
+          x: 35
+          y: 25
+          hi:
+            dx: 2.4
+            dy: -0.3
+        -
+          x: 0
+          y: 25
+        -
+          x: 0
+          y: 21.2
+          ho:
+            dx: 1
+            dy: -2.3
+        -
+          x: 6
+          y: 13.3
+          ho:
+            dx: 0.9
+            dy: -1.9
+          hi:
+            dx: -1.3
+            dy: 2.8
+      closed: true
+      fill: "#ebeaef"
+      fill_rule: "nonzero"

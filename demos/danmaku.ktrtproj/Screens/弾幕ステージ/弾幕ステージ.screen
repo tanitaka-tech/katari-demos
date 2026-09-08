@@ -27,7 +27,7 @@ objects:
     y: 0
     width: 1280
     height: 720
-    source: "$shots"
+    source: "table:bullets"
     grain: "circle"
     grain_size: 10
     color: "#ff5ea8"
@@ -80,11 +80,6 @@ variables:
     kind: "normal"
     value_type: "Vector2"
     initial_value: "0,0"
-  - id: "shots"
-    name: "$shots"
-    kind: "normal"
-    value_type: "String"
-    initial_value: "[]"
   - id: "hits"
     name: "$hits"
     kind: "normal"
@@ -117,7 +112,7 @@ script_graph:
         actionMap: "map_gameplay"
         action: "act_move"
     - id: "mv_sub"
-      type: "subscribe_vector2"
+      type: "subscribe"
       next: "start"
     - id: "mv_lam"
       type: "lambda"
@@ -133,7 +128,8 @@ script_graph:
       type: "routine_entry"
       properties:
         routine: "pattern"
-      next: "pt_while"
+      next:
+        exec_out: "pt_while"
     - id: "pt_true"
       type: "bool_literal"
       properties:
@@ -222,7 +218,7 @@ script_graph:
         arg_types: "[\"Float\"]"
       next: "px_set"
     - id: "tick_sub"
-      type: "subscribe_float"
+      type: "subscribe"
     - id: "mv_var"
       type: "get_variable_vector2"
       properties:
@@ -342,20 +338,11 @@ script_graph:
       type: "table_remove_where"
       properties:
         table: "bullets"
-      next: "rows_set"
-    - id: "rows"
-      type: "table_rows"
-      properties:
-        table: "bullets"
-    - id: "rows_set"
-      type: "set_variable"
-      properties:
-        variable: "shots"
       next: "hit_br"
-    - id: "shots_var"
-      type: "get_variable_string"
+    - id: "shots_ref"
+      type: "string_literal"
       properties:
-        variable: "shots"
+        value: "table:bullets"
     - id: "px_get2"
       type: "get_variable_float"
       properties:
@@ -768,13 +755,7 @@ script_graph:
         nodeId: "cull_y_hi"
         pin: "value"
     - from:
-        nodeId: "rows"
-        pin: "return"
-      to:
-        nodeId: "rows_set"
-        pin: "value"
-    - from:
-        nodeId: "shots_var"
+        nodeId: "shots_ref"
         pin: "value"
       to:
         nodeId: "hit_q"

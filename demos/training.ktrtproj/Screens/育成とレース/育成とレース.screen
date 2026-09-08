@@ -375,7 +375,7 @@ script_graph:
       type: "set_random_seed"
       properties:
         seed: "uma-demo-2026"
-      next: "subscribe_float_1"
+      next: "subscribe_1"
     - id: "event_begin_play_1"
       type: "event_begin_play"
       next: "set_random_seed_1"
@@ -387,9 +387,9 @@ script_graph:
       next: "switch_on_string_1"
     - id: "on_tick_1"
       type: "on_tick"
-    - id: "subscribe_float_1"
-      type: "subscribe_float"
-      next: "subscribe_string_1"
+    - id: "subscribe_1"
+      type: "subscribe"
+      next: "subscribe_2"
     - id: "lambda_2"
       type: "lambda"
       properties:
@@ -400,9 +400,9 @@ script_graph:
       type: "on_event"
       properties:
         event_name: "after_turn"
-    - id: "subscribe_string_1"
-      type: "subscribe_string"
-      next: "subscribe_string_2"
+    - id: "subscribe_2"
+      type: "subscribe"
+      next: "subscribe_3"
     - id: "lambda_3"
       type: "lambda"
       properties:
@@ -413,9 +413,9 @@ script_graph:
       type: "on_event"
       properties:
         event_name: "start_race"
-    - id: "subscribe_string_2"
-      type: "subscribe_string"
-      next: "subscribe_string_3"
+    - id: "subscribe_3"
+      type: "subscribe"
+      next: "subscribe_4"
     - id: "lambda_4"
       type: "lambda"
       properties:
@@ -426,8 +426,8 @@ script_graph:
       type: "on_event"
       properties:
         event_name: "finish_race"
-    - id: "subscribe_string_3"
-      type: "subscribe_string"
+    - id: "subscribe_4"
+      type: "subscribe"
     - id: "switch_on_string_1"
       type: "switch_on_string"
       properties:
@@ -875,7 +875,7 @@ script_graph:
     - id: "on_tick_1"
       x: 0
       y: 260
-    - id: "subscribe_float_1"
+    - id: "subscribe_1"
       x: 520
       y: 0
     - id: "lambda_2"
@@ -884,7 +884,7 @@ script_graph:
     - id: "on_event_1"
       x: 0
       y: 520
-    - id: "subscribe_string_1"
+    - id: "subscribe_2"
       x: 780
       y: 0
     - id: "lambda_3"
@@ -893,7 +893,7 @@ script_graph:
     - id: "on_event_2"
       x: 0
       y: 780
-    - id: "subscribe_string_2"
+    - id: "subscribe_3"
       x: 1040
       y: 0
     - id: "lambda_4"
@@ -902,7 +902,7 @@ script_graph:
     - id: "on_event_3"
       x: 0
       y: 1040
-    - id: "subscribe_string_3"
+    - id: "subscribe_4"
       x: 1300
       y: 0
     - id: "switch_on_string_1"
@@ -1186,49 +1186,49 @@ script_graph:
         nodeId: "on_tick_1"
         pin: "value"
       to:
-        nodeId: "subscribe_float_1"
+        nodeId: "subscribe_1"
         pin: "source"
     - from:
         nodeId: "lambda_1"
         pin: "function"
       to:
-        nodeId: "subscribe_float_1"
+        nodeId: "subscribe_1"
         pin: "on_next"
     - from:
         nodeId: "on_event_1"
         pin: "value"
       to:
-        nodeId: "subscribe_string_1"
+        nodeId: "subscribe_2"
         pin: "source"
     - from:
         nodeId: "lambda_2"
         pin: "function"
       to:
-        nodeId: "subscribe_string_1"
+        nodeId: "subscribe_2"
         pin: "on_next"
     - from:
         nodeId: "on_event_2"
         pin: "value"
       to:
-        nodeId: "subscribe_string_2"
+        nodeId: "subscribe_3"
         pin: "source"
     - from:
         nodeId: "lambda_3"
         pin: "function"
       to:
-        nodeId: "subscribe_string_2"
+        nodeId: "subscribe_3"
         pin: "on_next"
     - from:
         nodeId: "on_event_3"
         pin: "value"
       to:
-        nodeId: "subscribe_string_3"
+        nodeId: "subscribe_4"
         pin: "source"
     - from:
         nodeId: "lambda_4"
         pin: "function"
       to:
-        nodeId: "subscribe_string_3"
+        nodeId: "subscribe_4"
         pin: "on_next"
     - from:
         nodeId: "float_ge_1"

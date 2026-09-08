@@ -1,0 +1,10 @@
+schema_version: 2
+kind: "asset"
+id: "ast_1t6ofno"
+display_name: "thumb-8"
+asset_type: "image"
+category: "image"
+source: "embedded"
+external_path: null
+original_filename: "thumb-8.png"
+stored_filename: "thumb-8.png"

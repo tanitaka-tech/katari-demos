@@ -516,10 +516,10 @@ space:
       type: "camera"
       position:
         x: 0
-        y: 40
-        z: 0
+        y: 22
+        z: 1.7471257420052044
       rotation:
-        x: -90
+        x: -58
         y: 0
         z: 0
       scale:
@@ -530,6 +530,21 @@ space:
       fov: 45
       clear_color: "#141a24"
       output: "buffer"
+      camera_work:
+        follow:
+          target_id: "player"
+          offset:
+            x: 0
+            y: 22
+            z: 13.747125742005204
+          damping: 0.2
+        look_at:
+          target_id: "player"
+          offset:
+            x: 0
+            y: 1
+            z: 0
+          damping: 0.15
     - id: "sun"
       name: "太陽"
       type: "light"

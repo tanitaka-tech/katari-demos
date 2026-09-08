@@ -1,0 +1,119 @@
+branding:
+  companyName: ""
+  productName: ""
+  bundleIdentifier: ""
+  version: "1.0.0"
+appearance:
+  macosIconPath: ""
+  windowsIconPath: ""
+  splashImagePath: ""
+  splashBackground: "#000000"
+  appAppearance: "auto"
+  colorPalette[27]{id,name,color}:
+    "ceiling","ceiling","#7a6c60"
+    "wall","wall","#a0937d"
+    "shelf","shelf","#8d7358"
+    "shelf_lit","shelf_lit","#c4b49b"
+    "floor","floor","#90855f"
+    "counter","counter","#a5866f"
+    "goods_a","goods_a","#5fa7c8"
+    "goods_b","goods_b","#d98f6a"
+    "goods_c","goods_c","#8fbb63"
+    "header","header","#645e82"
+    "header_lit","header_lit","#8b86a6"
+    "card","card","#f5f2ef"
+    "white","white","#fbf9f6"
+    "line","line","#e4e1ec"
+    "ink","ink","#4a4356"
+    "bubble","bubble","#f6f1ec"
+    "sale_a","sale_a","#c79a4a"
+    "sale_b","sale_b","#9a7130"
+    "badge","badge","#ff4c81"
+    "nav","nav","#e2dbd8"
+    "nav_line","nav_line","#dfdce3"
+    "uniform","uniform","#538e3b"
+    "uniform_dark","uniform_dark","#1f6b2a"
+    "cap","cap","#2f8f3a"
+    "skin","skin","#a58878"
+    "hair","hair","#4b332a"
+    "tie","tie","#e8a33c"
+  numberPalette: []
+  fontPalette:
+    -
+      id: "ui"
+      name: "UI（丸ゴシック）"
+      source:
+        kind: "os"
+        family: "Hiragino Maru Gothic ProN, Yu Gothic UI, Meiryo, M PLUS Rounded 1c, sans-serif"
+  gradientPresets: []
+  filterPresets: []
+look:
+  postEffects: []
+player:
+  width: 648
+  height: 1152
+  fullscreen: false
+  autoAdvance: false
+  autoAdvanceMs: 60
+  skipUnreadText: false
+  fps: 60
+  particleQuality: 1
+  pixelSnap: false
+  tickMode: "fixed"
+  tickHz: 60
+  gpu: "webgl2"
+platform:
+  permissions:
+    networkAccess: false
+    fileSystemAccess: false
+    microphoneAccess: false
+  macos:
+    hardenedRuntime: true
+    enableMetal: true
+  windows:
+    enableHighDpi: true
+    requestAdmin: false
+scripting:
+  backend: "default"
+  apiCompatibility: "v1"
+  managedStripping: "none"
+  strictDialogueLint: true
+editor:
+  maxOverflowX: 1024
+  maxOverflowY: 1024
+audio:
+  buses: []
+assets:
+  image_optimize:
+    enabled: false
+    max_dimension: 2048
+    format: "auto"
+    quality: 82
+    reduce_colors: false
+  video_sidecar: false
+  external_assets: false
+  bundle_unreferenced: false
+  dynamic_refs: []
+  smart_folders: []
+  packs: []
+save:
+  groups: []
+localization:
+  sourceLocale: "ja"
+  locales: []
+  tables: []
+  assetVariants: {}
+storePage:
+  platforms: []
+initialScreen: "screen_shop_ui_main"
+startScene: ""
+dialogueScreen: "screen_dialogue"
+plugins: {}
+vcs:
+  lore:
+    serverUrl: "lore://127.0.0.1:41337"
+    autoStartLocalServer: true
+network:
+  allow: []
+extensions: {}
+vaults: []

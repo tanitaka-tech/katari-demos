@@ -1,0 +1,94 @@
+branding:
+  companyName: ""
+  productName: ""
+  bundleIdentifier: ""
+  version: "1.0.0"
+appearance:
+  macosIconPath: ""
+  windowsIconPath: ""
+  splashImagePath: ""
+  splashBackground: "#000000"
+  appAppearance: "auto"
+  colorPalette[8]{id,name,color}:
+    "white","white","#ffffff"
+    "black","black","#000000"
+    "primary","primary","#3b82f6"
+    "success","success","#10b981"
+    "warning","warning","#f59e0b"
+    "danger","danger","#ef4444"
+    "accent","accent","#8b5cf6"
+    "surface","surface","#1f2937"
+  numberPalette: []
+  fontPalette: []
+  gradientPresets: []
+  filterPresets: []
+look:
+  postEffects: []
+player:
+  width: 1280
+  height: 720
+  fullscreen: false
+  autoAdvance: false
+  autoAdvanceMs: 60
+  skipUnreadText: false
+  fps: 60
+  particleQuality: 1
+  pixelSnap: false
+  tickMode: "fixed"
+  tickHz: 60
+  gpu: "webgl2"
+platform:
+  permissions:
+    networkAccess: false
+    fileSystemAccess: false
+    microphoneAccess: false
+  macos:
+    hardenedRuntime: true
+    enableMetal: true
+  windows:
+    enableHighDpi: true
+    requestAdmin: false
+scripting:
+  backend: "default"
+  apiCompatibility: "v1"
+  managedStripping: "none"
+  strictDialogueLint: true
+editor:
+  maxOverflowX: 1024
+  maxOverflowY: 1024
+audio:
+  buses: []
+assets:
+  image_optimize:
+    enabled: false
+    max_dimension: 2048
+    format: "auto"
+    quality: 82
+    reduce_colors: false
+  video_sidecar: false
+  external_assets: false
+  bundle_unreferenced: false
+  dynamic_refs: []
+  smart_folders: []
+  packs: []
+save:
+  groups: []
+localization:
+  sourceLocale: "ja"
+  locales: []
+  tables: []
+  assetVariants: {}
+storePage:
+  platforms: []
+initialScreen: "scr_mansion_hall"
+startScene: ""
+dialogueScreen: "screen_dialogue"
+plugins: {}
+vcs:
+  lore:
+    serverUrl: "lore://127.0.0.1:41337"
+    autoStartLocalServer: true
+network:
+  allow: []
+extensions: {}
+vaults: []

@@ -1,0 +1,10 @@
+schema_version: 2
+kind: "asset"
+id: "ast_kdon6a"
+display_name: "thumb-2"
+asset_type: "image"
+category: "image"
+source: "embedded"
+external_path: null
+original_filename: "thumb-2.png"
+stored_filename: "thumb-2.png"

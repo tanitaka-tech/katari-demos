@@ -1,0 +1,21 @@
+schema_version: 2
+kind: "asset-dir"
+id: "images-root"
+display_name: "Images"
+memo: null
+pos: null
+children[14]{name,id,ref}:
+  "avatar-1.ktmeta","ast_1lmuyze","file"
+  "avatar-2.ktmeta","ast_q7stxj","file"
+  "avatar-3.ktmeta","ast_14nvt6c","file"
+  "avatar-4.ktmeta","ast_1gr2g81","file"
+  "avatar-5.ktmeta","ast_1aikqni","file"
+  "thumb-1.ktmeta","ast_12pb39b","file"
+  "thumb-2.ktmeta","ast_kdon6a","file"
+  "thumb-3.ktmeta","ast_jipbb9","file"
+  "thumb-4.ktmeta","ast_lc6nb4","file"
+  "thumb-5.ktmeta","ast_reggvn","file"
+  "thumb-6.ktmeta","ast_18n49t2","file"
+  "thumb-7.ktmeta","ast_17v8vy1","file"
+  "thumb-8.ktmeta","ast_1t6ofno","file"
+  "thumb-9.ktmeta","ast_1k6tolz","file"

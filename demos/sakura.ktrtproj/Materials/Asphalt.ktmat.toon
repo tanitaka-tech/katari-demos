@@ -1,0 +1,196 @@
+schema_version: 2
+kind: "material"
+id: "mat_asphalt"
+name: "Asphalt"
+parent_material_id: null
+graph:
+  nodes:
+    -
+      id: "material_world_position_1"
+      type: "material_world_position"
+      position:
+        x: 0
+        y: 0
+      properties: {}
+    -
+      id: "float_mul_1"
+      type: "float_mul"
+      position:
+        x: 260
+        y: 0
+      properties:
+        b: 0.7142857142857143
+    -
+      id: "float_mul_2"
+      type: "float_mul"
+      position:
+        x: 260
+        y: 130
+      properties:
+        b: 0.7142857142857143
+    -
+      id: "make_vector2_1"
+      type: "make_vector2"
+      position:
+        x: 520
+        y: 0
+      properties: {}
+    -
+      id: "procedural_noise_1"
+      type: "procedural_noise"
+      position:
+        x: 780
+        y: 0
+      properties:
+        scale: 9
+        seed: 31
+        octaves: 4
+    -
+      id: "procedural_noise_2"
+      type: "procedural_noise"
+      position:
+        x: 780
+        y: 130
+      properties:
+        scale: 34
+        seed: 47
+        octaves: 3
+    -
+      id: "float_mul_3"
+      type: "float_mul"
+      position:
+        x: 1040
+        y: 0
+      properties:
+        b: 0.6
+    -
+      id: "float_mul_4"
+      type: "float_mul"
+      position:
+        x: 1040
+        y: 130
+      properties:
+        b: 0.4
+    -
+      id: "float_add_1"
+      type: "float_add"
+      position:
+        x: 1300
+        y: 0
+      properties: {}
+    -
+      id: "color_lerp_1"
+      type: "color_lerp"
+      position:
+        x: 1560
+        y: 0
+      properties:
+        a: "#7e8087"
+        b: "#94969d"
+    -
+      id: "material_output_3d_1"
+      type: "material_output_3d"
+      position:
+        x: 1820
+        y: 0
+      properties:
+        gloss: 0.08
+  edges:
+    -
+      id: "material_world_position_1:x>float_mul_1:a"
+      from:
+        nodeId: "material_world_position_1"
+        pin: "x"
+      to:
+        nodeId: "float_mul_1"
+        pin: "a"
+    -
+      id: "material_world_position_1:z>float_mul_2:a"
+      from:
+        nodeId: "material_world_position_1"
+        pin: "z"
+      to:
+        nodeId: "float_mul_2"
+        pin: "a"
+    -
+      id: "float_mul_1:return>make_vector2_1:x"
+      from:
+        nodeId: "float_mul_1"
+        pin: "return"
+      to:
+        nodeId: "make_vector2_1"
+        pin: "x"
+    -
+      id: "float_mul_2:return>make_vector2_1:y"
+      from:
+        nodeId: "float_mul_2"
+        pin: "return"
+      to:
+        nodeId: "make_vector2_1"
+        pin: "y"
+    -
+      id: "make_vector2_1:return>procedural_noise_1:uv"
+      from:
+        nodeId: "make_vector2_1"
+        pin: "return"
+      to:
+        nodeId: "procedural_noise_1"
+        pin: "uv"
+    -
+      id: "make_vector2_1:return>procedural_noise_2:uv"
+      from:
+        nodeId: "make_vector2_1"
+        pin: "return"
+      to:
+        nodeId: "procedural_noise_2"
+        pin: "uv"
+    -
+      id: "procedural_noise_1:value>float_mul_3:a"
+      from:
+        nodeId: "procedural_noise_1"
+        pin: "value"
+      to:
+        nodeId: "float_mul_3"
+        pin: "a"
+    -
+      id: "procedural_noise_2:value>float_mul_4:a"
+      from:
+        nodeId: "procedural_noise_2"
+        pin: "value"
+      to:
+        nodeId: "float_mul_4"
+        pin: "a"
+    -
+      id: "float_mul_3:return>float_add_1:a"
+      from:
+        nodeId: "float_mul_3"
+        pin: "return"
+      to:
+        nodeId: "float_add_1"
+        pin: "a"
+    -
+      id: "float_mul_4:return>float_add_1:b"
+      from:
+        nodeId: "float_mul_4"
+        pin: "return"
+      to:
+        nodeId: "float_add_1"
+        pin: "b"
+    -
+      id: "float_add_1:return>color_lerp_1:alpha"
+      from:
+        nodeId: "float_add_1"
+        pin: "return"
+      to:
+        nodeId: "color_lerp_1"
+        pin: "alpha"
+    -
+      id: "color_lerp_1:return>material_output_3d_1:diffuse"
+      from:
+        nodeId: "color_lerp_1"
+        pin: "return"
+      to:
+        nodeId: "material_output_3d_1"
+        pin: "diffuse"
+defaults: {}
+purpose: "space-3d"

@@ -1,0 +1,8 @@
+schema_version: 2
+kind: "material"
+id: "mat_brick"
+display_name: "Plaza Brick"
+parent_material_id: null
+memo: null
+pos: null
+favorite: false

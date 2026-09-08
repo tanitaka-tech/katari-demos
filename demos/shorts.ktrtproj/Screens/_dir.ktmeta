@@ -1,0 +1,11 @@
+schema_version: 2
+kind: "screen-dir"
+id: "screens-root"
+display_name: "Screens"
+memo: null
+pos: null
+children:
+  -
+    name: "ショート動画フィード"
+    id: "screen_shorts_feed"
+    ref: "dir"

@@ -1,0 +1,211 @@
+schema_version: 2
+kind: "material"
+id: "mat_train"
+name: "Train Side"
+parent_material_id: null
+graph:
+  nodes:
+    -
+      id: "material_world_position_1"
+      type: "material_world_position"
+      position:
+        x: 0
+        y: 0
+      properties: {}
+    -
+      id: "float_smoothstep_1"
+      type: "float_smoothstep"
+      position:
+        x: 260
+        y: 0
+      properties:
+        edge0: 6.52
+        edge1: 6.68
+    -
+      id: "float_smoothstep_2"
+      type: "float_smoothstep"
+      position:
+        x: 260
+        y: 130
+      properties:
+        edge0: 7.08
+        edge1: 6.92
+    -
+      id: "float_mul_1"
+      type: "float_mul"
+      position:
+        x: 520
+        y: 0
+      properties: {}
+    -
+      id: "material_world_position_2"
+      type: "material_world_position"
+      position:
+        x: 0
+        y: 130
+      properties: {}
+    -
+      id: "float_mul_2"
+      type: "float_mul"
+      position:
+        x: 260
+        y: 260
+      properties:
+        b: 0.625
+    -
+      id: "float_mul_3"
+      type: "float_mul"
+      position:
+        x: 260
+        y: 390
+      properties:
+        b: 0.9090909090909091
+    -
+      id: "make_vector2_1"
+      type: "make_vector2"
+      position:
+        x: 520
+        y: 130
+      properties: {}
+    -
+      id: "procedural_grid_1"
+      type: "procedural_grid"
+      position:
+        x: 780
+        y: 0
+      properties:
+        scale: 1
+        line_width: 0.36
+    -
+      id: "color_lerp_1"
+      type: "color_lerp"
+      position:
+        x: 1040
+        y: 0
+      properties:
+        a: "#3a4250"
+        b: "#e6e6ea"
+    -
+      id: "color_lerp_2"
+      type: "color_lerp"
+      position:
+        x: 1300
+        y: 0
+      properties:
+        b: "#2660a8"
+    -
+      id: "material_output_3d_1"
+      type: "material_output_3d"
+      position:
+        x: 1560
+        y: 0
+      properties:
+        gloss: 0.4
+        metalness: 0.15
+  edges:
+    -
+      id: "material_world_position_1:y>float_smoothstep_1:x"
+      from:
+        nodeId: "material_world_position_1"
+        pin: "y"
+      to:
+        nodeId: "float_smoothstep_1"
+        pin: "x"
+    -
+      id: "material_world_position_1:y>float_smoothstep_2:x"
+      from:
+        nodeId: "material_world_position_1"
+        pin: "y"
+      to:
+        nodeId: "float_smoothstep_2"
+        pin: "x"
+    -
+      id: "float_smoothstep_1:return>float_mul_1:a"
+      from:
+        nodeId: "float_smoothstep_1"
+        pin: "return"
+      to:
+        nodeId: "float_mul_1"
+        pin: "a"
+    -
+      id: "float_smoothstep_2:return>float_mul_1:b"
+      from:
+        nodeId: "float_smoothstep_2"
+        pin: "return"
+      to:
+        nodeId: "float_mul_1"
+        pin: "b"
+    -
+      id: "material_world_position_2:z>float_mul_2:a"
+      from:
+        nodeId: "material_world_position_2"
+        pin: "z"
+      to:
+        nodeId: "float_mul_2"
+        pin: "a"
+    -
+      id: "material_world_position_2:y>float_mul_3:a"
+      from:
+        nodeId: "material_world_position_2"
+        pin: "y"
+      to:
+        nodeId: "float_mul_3"
+        pin: "a"
+    -
+      id: "float_mul_2:return>make_vector2_1:x"
+      from:
+        nodeId: "float_mul_2"
+        pin: "return"
+      to:
+        nodeId: "make_vector2_1"
+        pin: "x"
+    -
+      id: "float_mul_3:return>make_vector2_1:y"
+      from:
+        nodeId: "float_mul_3"
+        pin: "return"
+      to:
+        nodeId: "make_vector2_1"
+        pin: "y"
+    -
+      id: "make_vector2_1:return>procedural_grid_1:uv"
+      from:
+        nodeId: "make_vector2_1"
+        pin: "return"
+      to:
+        nodeId: "procedural_grid_1"
+        pin: "uv"
+    -
+      id: "procedural_grid_1:value>color_lerp_1:alpha"
+      from:
+        nodeId: "procedural_grid_1"
+        pin: "value"
+      to:
+        nodeId: "color_lerp_1"
+        pin: "alpha"
+    -
+      id: "color_lerp_1:return>color_lerp_2:a"
+      from:
+        nodeId: "color_lerp_1"
+        pin: "return"
+      to:
+        nodeId: "color_lerp_2"
+        pin: "a"
+    -
+      id: "float_mul_1:return>color_lerp_2:alpha"
+      from:
+        nodeId: "float_mul_1"
+        pin: "return"
+      to:
+        nodeId: "color_lerp_2"
+        pin: "alpha"
+    -
+      id: "color_lerp_2:return>material_output_3d_1:diffuse"
+      from:
+        nodeId: "color_lerp_2"
+        pin: "return"
+      to:
+        nodeId: "material_output_3d_1"
+        pin: "diffuse"
+defaults: {}
+purpose: "space-3d"

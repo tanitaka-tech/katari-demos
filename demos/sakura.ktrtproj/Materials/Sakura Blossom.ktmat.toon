@@ -1,0 +1,325 @@
+schema_version: 2
+kind: "material"
+id: "mat_blossom"
+name: "Sakura Blossom"
+parent_material_id: null
+graph:
+  nodes:
+    -
+      id: "material_uv_1"
+      type: "material_uv"
+      position:
+        x: 0
+        y: 0
+      properties: {}
+    -
+      id: "uv_tile_1"
+      type: "uv_tile"
+      position:
+        x: 260
+        y: 0
+      properties:
+        tiles: "4,4"
+        offset: "0,0"
+    -
+      id: "shape_star_1"
+      type: "shape_star"
+      position:
+        x: 520
+        y: 0
+      properties:
+        center: "0.26,0.3"
+        radius: 0.2
+        points: 5
+        inner: 0.56
+        angle: 12
+    -
+      id: "sdf_round_1"
+      type: "sdf_round"
+      position:
+        x: 780
+        y: 0
+      properties:
+        radius: 0.1
+    -
+      id: "shape_star_2"
+      type: "shape_star"
+      position:
+        x: 520
+        y: 130
+      properties:
+        center: "0.68,0.26"
+        radius: 0.17
+        points: 5
+        inner: 0.56
+        angle: 47
+    -
+      id: "sdf_round_2"
+      type: "sdf_round"
+      position:
+        x: 780
+        y: 130
+      properties:
+        radius: 0.085
+    -
+      id: "sdf_union_1"
+      type: "sdf_union"
+      position:
+        x: 1040
+        y: 0
+      properties: {}
+    -
+      id: "shape_star_3"
+      type: "shape_star"
+      position:
+        x: 520
+        y: 260
+      properties:
+        center: "0.44,0.62"
+        radius: 0.19
+        points: 5
+        inner: 0.56
+        angle: 70
+    -
+      id: "sdf_round_3"
+      type: "sdf_round"
+      position:
+        x: 780
+        y: 260
+      properties:
+        radius: 0.095
+    -
+      id: "sdf_union_2"
+      type: "sdf_union"
+      position:
+        x: 1300
+        y: 0
+      properties: {}
+    -
+      id: "shape_star_4"
+      type: "shape_star"
+      position:
+        x: 520
+        y: 390
+      properties:
+        center: "0.8,0.76"
+        radius: 0.15
+        points: 5
+        inner: 0.56
+        angle: 25
+    -
+      id: "sdf_round_4"
+      type: "sdf_round"
+      position:
+        x: 780
+        y: 390
+      properties:
+        radius: 0.075
+    -
+      id: "sdf_union_3"
+      type: "sdf_union"
+      position:
+        x: 1560
+        y: 0
+      properties: {}
+    -
+      id: "float_smoothstep_1"
+      type: "float_smoothstep"
+      position:
+        x: 1820
+        y: 0
+      properties:
+        edge0: -0.13
+        edge1: 0.006
+    -
+      id: "color_lerp_1"
+      type: "color_lerp"
+      position:
+        x: 2080
+        y: 0
+      properties:
+        a: "#dc8f95"
+        b: "#f7dcd8"
+    -
+      id: "sdf_fill_1"
+      type: "sdf_fill"
+      position:
+        x: 1820
+        y: 130
+      properties:
+        softness: 0.02
+    -
+      id: "material_output_3d_1"
+      type: "material_output_3d"
+      position:
+        x: 2340
+        y: 0
+      properties:
+        emissive: "#ffcbc4"
+        emissive_intensity: 0.16
+        gloss: 0.1
+        alpha_test: 0.45
+        two_sided: true
+  edges:
+    -
+      id: "material_uv_1:value>uv_tile_1:uv"
+      from:
+        nodeId: "material_uv_1"
+        pin: "value"
+      to:
+        nodeId: "uv_tile_1"
+        pin: "uv"
+    -
+      id: "uv_tile_1:value>shape_star_1:uv"
+      from:
+        nodeId: "uv_tile_1"
+        pin: "value"
+      to:
+        nodeId: "shape_star_1"
+        pin: "uv"
+    -
+      id: "shape_star_1:value>sdf_round_1:d"
+      from:
+        nodeId: "shape_star_1"
+        pin: "value"
+      to:
+        nodeId: "sdf_round_1"
+        pin: "d"
+    -
+      id: "uv_tile_1:value>shape_star_2:uv"
+      from:
+        nodeId: "uv_tile_1"
+        pin: "value"
+      to:
+        nodeId: "shape_star_2"
+        pin: "uv"
+    -
+      id: "shape_star_2:value>sdf_round_2:d"
+      from:
+        nodeId: "shape_star_2"
+        pin: "value"
+      to:
+        nodeId: "sdf_round_2"
+        pin: "d"
+    -
+      id: "sdf_round_1:return>sdf_union_1:a"
+      from:
+        nodeId: "sdf_round_1"
+        pin: "return"
+      to:
+        nodeId: "sdf_union_1"
+        pin: "a"
+    -
+      id: "sdf_round_2:return>sdf_union_1:b"
+      from:
+        nodeId: "sdf_round_2"
+        pin: "return"
+      to:
+        nodeId: "sdf_union_1"
+        pin: "b"
+    -
+      id: "uv_tile_1:value>shape_star_3:uv"
+      from:
+        nodeId: "uv_tile_1"
+        pin: "value"
+      to:
+        nodeId: "shape_star_3"
+        pin: "uv"
+    -
+      id: "shape_star_3:value>sdf_round_3:d"
+      from:
+        nodeId: "shape_star_3"
+        pin: "value"
+      to:
+        nodeId: "sdf_round_3"
+        pin: "d"
+    -
+      id: "sdf_union_1:return>sdf_union_2:a"
+      from:
+        nodeId: "sdf_union_1"
+        pin: "return"
+      to:
+        nodeId: "sdf_union_2"
+        pin: "a"
+    -
+      id: "sdf_round_3:return>sdf_union_2:b"
+      from:
+        nodeId: "sdf_round_3"
+        pin: "return"
+      to:
+        nodeId: "sdf_union_2"
+        pin: "b"
+    -
+      id: "uv_tile_1:value>shape_star_4:uv"
+      from:
+        nodeId: "uv_tile_1"
+        pin: "value"
+      to:
+        nodeId: "shape_star_4"
+        pin: "uv"
+    -
+      id: "shape_star_4:value>sdf_round_4:d"
+      from:
+        nodeId: "shape_star_4"
+        pin: "value"
+      to:
+        nodeId: "sdf_round_4"
+        pin: "d"
+    -
+      id: "sdf_union_2:return>sdf_union_3:a"
+      from:
+        nodeId: "sdf_union_2"
+        pin: "return"
+      to:
+        nodeId: "sdf_union_3"
+        pin: "a"
+    -
+      id: "sdf_round_4:return>sdf_union_3:b"
+      from:
+        nodeId: "sdf_round_4"
+        pin: "return"
+      to:
+        nodeId: "sdf_union_3"
+        pin: "b"
+    -
+      id: "sdf_union_3:return>float_smoothstep_1:x"
+      from:
+        nodeId: "sdf_union_3"
+        pin: "return"
+      to:
+        nodeId: "float_smoothstep_1"
+        pin: "x"
+    -
+      id: "float_smoothstep_1:return>color_lerp_1:alpha"
+      from:
+        nodeId: "float_smoothstep_1"
+        pin: "return"
+      to:
+        nodeId: "color_lerp_1"
+        pin: "alpha"
+    -
+      id: "sdf_union_3:return>sdf_fill_1:d"
+      from:
+        nodeId: "sdf_union_3"
+        pin: "return"
+      to:
+        nodeId: "sdf_fill_1"
+        pin: "d"
+    -
+      id: "color_lerp_1:return>material_output_3d_1:diffuse"
+      from:
+        nodeId: "color_lerp_1"
+        pin: "return"
+      to:
+        nodeId: "material_output_3d_1"
+        pin: "diffuse"
+    -
+      id: "sdf_fill_1:return>material_output_3d_1:opacity"
+      from:
+        nodeId: "sdf_fill_1"
+        pin: "return"
+      to:
+        nodeId: "material_output_3d_1"
+        pin: "opacity"
+defaults: {}
+purpose: "space-3d"

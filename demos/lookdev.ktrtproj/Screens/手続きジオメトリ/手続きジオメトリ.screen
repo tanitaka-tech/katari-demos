@@ -1,0 +1,708 @@
+screen_component:
+  screen_space: true
+  resolution_width: 1280
+  resolution_height: 720
+  ref_resolution_width: 1280
+  ref_resolution_height: 720
+  scale_mode: "blend"
+  scale_blend: 0.5
+  priority: 0
+objects: []
+variables:
+  - id: "turn"
+    kind: "normal"
+    name: "$turn"
+    value_type: "Float"
+    initial_value: "0"
+  - id: "terrain_height"
+    name: "terrain_height"
+    kind: "normal"
+    value_type: "Float"
+    initial_value: "1.6"
+  - id: "grass_density"
+    name: "grass_density"
+    kind: "normal"
+    value_type: "Float"
+    initial_value: "1"
+  - id: "rock_density"
+    name: "rock_density"
+    kind: "normal"
+    value_type: "Float"
+    initial_value: "1"
+  - id: "road_width"
+    name: "road_width"
+    kind: "normal"
+    value_type: "Float"
+    initial_value: "2"
+  - id: "max_slope"
+    name: "max_slope"
+    kind: "normal"
+    value_type: "Float"
+    initial_value: "28"
+  - id: "seed"
+    name: "seed"
+    kind: "normal"
+    value_type: "Int"
+    initial_value: "1"
+  - id: "step_count"
+    name: "step_count"
+    kind: "normal"
+    value_type: "Int"
+    initial_value: "32"
+  - id: "step_height"
+    name: "step_height"
+    kind: "normal"
+    value_type: "Float"
+    initial_value: "0.18"
+  - id: "step_angle"
+    name: "step_angle"
+    kind: "normal"
+    value_type: "Float"
+    initial_value: "15"
+  - id: "stair_radius"
+    name: "stair_radius"
+    kind: "normal"
+    value_type: "Float"
+    initial_value: "1.4"
+  - id: "tread_width"
+    name: "tread_width"
+    kind: "normal"
+    value_type: "Float"
+    initial_value: "0.9"
+  - id: "tread_thickness"
+    name: "tread_thickness"
+    kind: "normal"
+    value_type: "Float"
+    initial_value: "0.08"
+  - id: "clockwise"
+    name: "clockwise"
+    kind: "normal"
+    value_type: "Bool"
+    initial_value: "true"
+  - id: "rail_visible"
+    name: "rail_visible"
+    kind: "normal"
+    value_type: "Bool"
+    initial_value: "true"
+  - id: "rail_height"
+    name: "rail_height"
+    kind: "normal"
+    value_type: "Float"
+    initial_value: "0.9"
+  - id: "rail_thickness"
+    name: "rail_thickness"
+    kind: "normal"
+    value_type: "Float"
+    initial_value: "0.04"
+  - id: "cable_radius"
+    name: "cable_radius"
+    kind: "normal"
+    value_type: "Float"
+    initial_value: "0.12"
+  - id: "clamp_spacing"
+    name: "clamp_spacing"
+    kind: "normal"
+    value_type: "Float"
+    initial_value: "0.8"
+  - id: "clamp_thickness"
+    name: "clamp_thickness"
+    kind: "normal"
+    value_type: "Float"
+    initial_value: "0.05"
+  - id: "section_resolution"
+    name: "section_resolution"
+    kind: "normal"
+    value_type: "Int"
+    initial_value: "12"
+requests: []
+space:
+  entities:
+    - id: "camera"
+      name: "Camera"
+      type: "camera"
+      position:
+        x: 0
+        y: 7
+        z: 16
+      rotation:
+        x: -14
+        y: 0
+        z: 0
+      scale:
+        x: 1
+        y: 1
+        z: 1
+      projection: "perspective"
+      fov: 52
+      clear_color: "#1c2028"
+      output: "buffer"
+      camera_work:
+        look_at:
+          target_id: "staircase"
+          offset:
+            x: 0
+            y: 2.4
+            z: 0
+        dolly:
+          points:
+            - x: 0
+              y: 7
+              z: 16
+            - x: 4.141104721640332
+              y: 7
+              z: 15.454813220625093
+            - x: 7.999999999999999
+              y: 7
+              z: 13.85640646055102
+            - x: 11.31370849898476
+              y: 7
+              z: 11.313708498984761
+            - x: 13.856406460551018
+              y: 7
+              z: 8.000000000000002
+            - x: 15.454813220625093
+              y: 7
+              z: 4.141104721640332
+            - x: 16
+              y: 7
+              z: 9.797174393178826e-16
+            - x: 15.454813220625093
+              y: 7
+              z: -4.141104721640334
+            - x: 13.85640646055102
+              y: 7
+              z: -7.9999999999999964
+            - x: 11.313708498984761
+              y: 7
+              z: -11.31370849898476
+            - x: 7.999999999999999
+              y: 7
+              z: -13.85640646055102
+            - x: 4.141104721640336
+              y: 7
+              z: -15.454813220625091
+            - x: 1.959434878635765e-15
+              y: 7
+              z: -16
+            - x: -4.141104721640326
+              y: 7
+              z: -15.454813220625095
+            - x: -8.000000000000002
+              y: 7
+              z: -13.856406460551018
+            - x: -11.31370849898476
+              y: 7
+              z: -11.313708498984763
+            - x: -13.856406460551016
+              y: 7
+              z: -8.000000000000007
+            - x: -15.454813220625093
+              y: 7
+              z: -4.14110472164033
+            - x: -16
+              y: 7
+              z: -2.9391523179536475e-15
+            - x: -15.454813220625095
+              y: 7
+              z: 4.141104721640325
+            - x: -13.856406460551018
+              y: 7
+              z: 8.000000000000002
+            - x: -11.313708498984763
+              y: 7
+              z: 11.313708498984758
+            - x: -8.000000000000007
+              y: 7
+              z: 13.856406460551014
+            - x: -4.141104721640331
+              y: 7
+              z: 15.454813220625093
+          position: "$turn"
+          closed: true
+    - id: "key"
+      name: "Key Light"
+      type: "light"
+      position:
+        x: 0
+        y: 6
+        z: 0
+      rotation:
+        x: 50
+        y: -35
+        z: 0
+      scale:
+        x: 1
+        y: 1
+        z: 1
+      light_type: "directional"
+      color: "#fff2e0"
+      intensity: 1.5
+      cast_shadows: true
+      shadow_resolution: 2048
+      shadow_type: "pcf3"
+      shadow_distance: 60
+    - id: "fill"
+      name: "Fill Light"
+      type: "light"
+      position:
+        x: 0
+        y: 6
+        z: 0
+      rotation:
+        x: 20
+        y: 60
+        z: 0
+      scale:
+        x: 1
+        y: 1
+        z: 1
+      light_type: "directional"
+      color: "#dce6ff"
+      intensity: 0.5
+      cast_shadows: false
+    - id: "rim"
+      name: "Rim Light"
+      type: "light"
+      position:
+        x: 0
+        y: 6
+        z: 0
+      rotation:
+        x: 30
+        y: 160
+        z: 0
+      scale:
+        x: 1
+        y: 1
+        z: 1
+      light_type: "directional"
+      color: "#ffffff"
+      intensity: 0.8
+      cast_shadows: false
+    - id: "meadow"
+      name: "岩のある草原"
+      type: "group"
+      position:
+        x: -11
+        y: 0
+        z: 0
+      rotation:
+        x: 0
+        y: 0
+        z: 0
+      scale:
+        x: 0.45
+        y: 0.45
+        z: 0.45
+    - id: "terrain"
+      name: "地形"
+      type: "render"
+      position:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        x: 0
+        y: 0
+        z: 0
+      scale:
+        x: 1
+        y: 1
+        z: 1
+      parent_id: "meadow"
+      shape: "plane"
+      cast_shadows: true
+      receive_shadows: true
+      params:
+        kind: "plane"
+        width: 20
+        height: 20
+        segments_w: 64
+        segments_h: 64
+      modifiers:
+        - kind: "displace"
+          direction: "y"
+          amount:
+            kind: "compose"
+            op: "mul"
+            terms:
+              - kind: "noise"
+                amplitude: 1
+                frequency: 0.12
+              - kind: "expr"
+                source: "abs(x) < road_width / 2 ? 0 : terrain_height"
+    - id: "grass"
+      name: "草"
+      type: "render"
+      position:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        x: 0
+        y: 0
+        z: 0
+      scale:
+        x: 1
+        y: 1
+        z: 1
+      parent_id: "meadow"
+      shape: "cone"
+      cast_shadows: true
+      receive_shadows: true
+      params:
+        kind: "cone"
+        radius: 0.06
+        height: 0.5
+        segments: 4
+      modifiers:
+        - kind: "transform"
+          translate:
+            y: 0.25
+        - kind: "scatter"
+          surface: "terrain"
+          count: 1200
+          density:
+            kind: "expr"
+            source: "abs(x) < road_width / 2 ? 0 : grass_density"
+          max_slope: "$max_slope"
+          scale:
+            kind: "random"
+            min: 0.7
+            max: 1.4
+          rotation:
+            kind: "random"
+            min: 0
+            max: 360
+          seed: "$seed"
+          align_normal: true
+    - id: "rocks"
+      name: "岩"
+      type: "render"
+      position:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        x: 0
+        y: 0
+        z: 0
+      scale:
+        x: 1
+        y: 1
+        z: 1
+      parent_id: "meadow"
+      shape: "sphere"
+      cast_shadows: true
+      receive_shadows: true
+      params:
+        kind: "sphere"
+        radius: 0.35
+        segments_w: 6
+        segments_h: 4
+      modifiers:
+        - kind: "scatter"
+          surface: "terrain"
+          count: 90
+          density:
+            kind: "expr"
+            source: "abs(x) < road_width / 2 ? 0 : rock_density"
+          scale:
+            kind: "random"
+            min: 0.5
+            max: 1.6
+          rotation:
+            kind: "random"
+            min: 0
+            max: 360
+          seed: "$seed"
+    - id: "staircase"
+      name: "らせん階段"
+      type: "group"
+      position:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        x: 0
+        y: 0
+        z: 0
+      scale:
+        x: 1
+        y: 1
+        z: 1
+    - id: "treads"
+      name: "踏み板"
+      type: "render"
+      position:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        x: 0
+        y: 0
+        z: 0
+      scale:
+        x: 1
+        y: 1
+        z: 1
+      parent_id: "staircase"
+      shape: "box"
+      cast_shadows: true
+      receive_shadows: true
+      modifiers:
+        - kind: "transform"
+          translate:
+            x: "=$stair_radius / 2"
+          scale:
+            x: "$stair_radius"
+            y: "$tread_thickness"
+            z: "$tread_width"
+        - kind: "array"
+          mode: "spiral"
+          count: "$step_count"
+          angle: "=$clockwise ? $step_angle : -$step_angle"
+          radius: 0
+          rise: "$step_height"
+          face_center: true
+    - id: "pillar"
+      name: "支柱"
+      type: "render"
+      position:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        x: 0
+        y: 0
+        z: 0
+      scale:
+        x: 1
+        y: 1
+        z: 1
+      parent_id: "staircase"
+      shape: "cylinder"
+      cast_shadows: true
+      receive_shadows: true
+      params:
+        kind: "cylinder"
+        top_radius: 0.16
+        bottom_radius: 0.16
+        height: 1
+        segments: 24
+    - id: "handrail"
+      name: "手すり"
+      type: "render"
+      position:
+        x: 0
+        y: "$rail_height"
+        z: 0
+      rotation:
+        x: 0
+        y: 0
+        z: 0
+      scale:
+        x: 1
+        y: 1
+        z: 1
+      parent_id: "staircase"
+      visible: "$rail_visible"
+      shape: "path"
+      cast_shadows: true
+      receive_shadows: true
+      path3d_params:
+        points: []
+        source: "helix"
+        generator:
+          radius: "=$stair_radius * 0.94"
+          angle_total: "=($clockwise ? $step_angle : -$step_angle) * ($step_count - 1)"
+          height: "=$step_height * ($step_count - 1)"
+          segments: "=$step_count * 4"
+        radius: 0.04
+        radial_segments: 8
+        tubular_segments: 96
+        cap_ends: true
+    - id: "cable_rig"
+      name: "ケーブル"
+      type: "group"
+      position:
+        x: 11
+        y: 2.4
+        z: 0
+      rotation:
+        x: 0
+        y: 0
+        z: 0
+      scale:
+        x: 1
+        y: 1
+        z: 1
+    - id: "cable"
+      name: "ケーブル"
+      type: "render"
+      position:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        x: 0
+        y: 0
+        z: 0
+      scale:
+        x: 1
+        y: 1
+        z: 1
+      parent_id: "cable_rig"
+      shape: "path"
+      cast_shadows: true
+      receive_shadows: true
+      path3d_params:
+        points:
+          - x: -4
+            y: 0
+            z: -2
+          - x: -1.5
+            y: 0.8
+            z: 1.5
+          - x: 1.5
+            y: -0.6
+            z: -1.5
+          - x: 4
+            y: 0.4
+            z: 2
+        mode: "tube"
+        radius: 0.12
+        radial_segments: 12
+        tubular_segments: 96
+        cap_ends: true
+    - id: "clamps"
+      name: "留め具"
+      type: "render"
+      position:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        x: 0
+        y: 0
+        z: 0
+      scale:
+        x: 1
+        y: 1
+        z: 1
+      parent_id: "cable_rig"
+      shape: "torus"
+      cast_shadows: true
+      receive_shadows: true
+      params:
+        kind: "torus"
+        ring_radius: 0.2
+        tube_radius: 0.05
+        segments_ring: 16
+        segments_tube: 8
+      modifiers:
+        - kind: "along_curve"
+          curve: "cable"
+          spacing: "$clamp_spacing"
+          align: true
+    - id: "wave"
+      name: "波打つパネル"
+      type: "particles"
+      position:
+        x: 0
+        y: 9
+        z: -9
+      rotation:
+        x: 0
+        y: 0
+        z: 0
+      scale:
+        x: 1
+        y: 1
+        z: 1
+      effect_id: "builtin:3d-wave-panels"
+      seed: 1
+      time_scale: 1
+      area:
+        x: 8
+        y: 1
+        z: 8
+      loop: true
+    - id: "snowfall"
+      name: "降り積もる粒"
+      type: "particles"
+      position:
+        x: -6
+        y: 3
+        z: 9
+      rotation:
+        x: 0
+        y: 0
+        z: 0
+      scale:
+        x: 1
+        y: 1
+        z: 1
+      effect_id: "builtin:3d-settling"
+      seed: 1
+      time_scale: 1
+      area:
+        x: 5
+        y: 6
+        z: 5
+      loop: true
+    - id: "piling"
+      name: "積もる粒"
+      type: "particles"
+      position:
+        x: 6
+        y: 3
+        z: 9
+      rotation:
+        x: 0
+        y: 0
+        z: 0
+      scale:
+        x: 1
+        y: 1
+        z: 1
+      effect_id: "builtin:3d-piling"
+      seed: 1
+      time_scale: 1
+      area:
+        x: 5
+        y: 6
+        z: 5
+      loop: true
+  environment:
+    ambient:
+      source: "skybox"
+      intensity: 1
+    skybox:
+      source: "gradient"
+      sky_color: "#4a78b8"
+      horizon_color: "#dfe6ee"
+      ground_color: "#3a3632"
+      intensity: 1
+      show_background: true
+    tone:
+      tonemapping: "neutral"
+      exposure: 1
+      gamma: "srgb"
+  sequences:
+    - id: "turntable"
+      name: "Turntable"
+      kind: "state_loop"
+      duration: 24
+      tracks:
+        - id: "turn-track"
+          kind: "variable"
+          variable_id: "turn"
+          time_offset: 0
+          keyframes:
+            - time: 0
+              value: "0"
+              easing: "linear"
+            - time: 24
+              value: "1"
+              easing: "linear"

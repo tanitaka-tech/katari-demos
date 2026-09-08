@@ -1,0 +1,11 @@
+schema_version: 2
+kind: "piece-dir"
+id: "screen_shop_ui_main-pieces"
+display_name: "Pieces"
+memo: null
+pos: null
+children:
+  -
+    name: "板 5x77.ktpiece.toon"
+    id: "pc_st93"
+    ref: "file"
