@@ -1,0 +1,13 @@
+schema_version: 2
+kind: "screen-dir"
+id: "screen_rank_ui_main"
+display_name: "育成ランク"
+memo: "結果発表。ゲージが時間で伸びる。「次へ」で育成メインへ。"
+pos:
+  x: 2200
+  y: 40
+children:
+  -
+    name: "育成ランク.screen"
+    id: "screen_rank_ui_main"
+    ref: "file"

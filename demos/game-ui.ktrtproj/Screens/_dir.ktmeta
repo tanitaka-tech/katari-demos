@@ -1,0 +1,11 @@
+schema_version: 2
+kind: "screen-dir"
+id: "screens-root"
+display_name: "Screens"
+memo: null
+pos: null
+children[4]{name,id,ref}:
+  "トレーナー登録","screen_form_ui_main","dir"
+  "育成メイン","screen_uma_ui_main","dir"
+  "ショップ","screen_shop_ui_main","dir"
+  "育成ランク","screen_rank_ui_main","dir"

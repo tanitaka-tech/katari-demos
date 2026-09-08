@@ -1,7 +1,0 @@
-schema_version: 2
-kind: "particle-effect-dir"
-id: "particle-effects-root"
-display_name: "ParticleEffects"
-memo: null
-pos: null
-children: []

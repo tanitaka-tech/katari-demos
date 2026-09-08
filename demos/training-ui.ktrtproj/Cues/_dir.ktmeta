@@ -1,7 +1,0 @@
-schema_version: 2
-kind: "cue-dir"
-id: "cues-root"
-display_name: "Cues"
-memo: null
-pos: null
-children: []

@@ -1,7 +1,0 @@
-schema_version: 2
-kind: "material-dir"
-id: "materials-root"
-display_name: "Materials"
-memo: null
-pos: null
-children: []

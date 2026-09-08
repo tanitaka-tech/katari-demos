@@ -1,7 +1,0 @@
-schema_version: 2
-kind: "asset-dir"
-id: "models-root"
-display_name: "Models"
-memo: null
-pos: null
-children: []

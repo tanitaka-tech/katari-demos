@@ -1,7 +1,0 @@
-schema_version: 2
-kind: "asset-dir"
-id: "environment-root"
-display_name: "Environment"
-memo: null
-pos: null
-children: []

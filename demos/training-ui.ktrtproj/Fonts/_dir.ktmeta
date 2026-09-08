@@ -1,7 +1,0 @@
-schema_version: 2
-kind: "asset-dir"
-id: "fonts-root"
-display_name: "Fonts"
-memo: null
-pos: null
-children: []

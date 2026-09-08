@@ -1,0 +1,10 @@
+schema_version: 2
+kind: "screen"
+id: "screen_uma_ui_main"
+display_name: "育成メイン"
+parent_screen_id: null
+memo: "育成のハブ。「お出かけ」でショップ、「レース」で結果発表、「≡」で登録へ。"
+pos:
+  x: 760
+  y: 40
+favorite: false

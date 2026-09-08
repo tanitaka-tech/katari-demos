@@ -1,0 +1,10 @@
+schema_version: 2
+kind: "screen"
+id: "screen_shop_ui_main"
+display_name: "ショップ"
+parent_screen_id: null
+memo: "交換所。カード状の UI が主役。「戻る」で育成メインへ。"
+pos:
+  x: 1480
+  y: 40
+favorite: false

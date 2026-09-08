@@ -5,8 +5,8 @@ name:
   ja: "Katari デモ集"
   en: "Katari demos"
 description:
-  ja: "ホーム画面に並ぶデモ 16 本。触って動かして確かめるためのもの"
-  en: "The 16 demos on the home screen. Made to be opened and played"
+  ja: "ホーム画面に並ぶデモ 13 本。触って動かして確かめるためのもの"
+  en: "The 13 demos on the home screen. Made to be opened and played"
 contributes:
   sample_projects:
     - id: "platformer"
@@ -111,74 +111,23 @@ contributes:
         cover: "media/dating/hero.jpg"
         screenshots: ["media/dating/shot-1.jpg", "media/dating/shot-2.jpg"]
         trailer: "media/dating/play.mp4"
-    - id: "training-ui"
+    - id: "game-ui"
       name:
-        ja: "育成ゲームの画面 UI"
-        en: "Trainer game UI"
+        ja: "スマホゲームの UI 一式"
+        en: "Mobile game UI set"
       description:
-        ja: "縦持ちスマホの育成画面を、素材なしで矩形と文字だけで組んだもの"
-        en: "A portrait phone game screen built from rectangles and text only — no assets"
+        ja: "縦持ちの 4 画面（育成 / ショップ / 登録 / 結果発表）を行き来する。参照画像 1 枚ずつから機械で測って組んだもので、素材は 1 枚も使っていない"
+        en: "Four portrait screens (training, shop, sign-up, results) you can move between. Each was rebuilt by measuring one reference image, with no assets at all"
       body:
-        ja: "縦持ち（648x1152）の 1 画面。背景の桜も校舎も、立っているキャラクターも、画像を 1 枚も使わずに矩形・楕円・多角形・文字だけで描いてあります。角丸・グラデーション・多重縁取りの文字を組み合わせると、スマホゲームの UI がそのまま出せることを見せるためのものです。ボタンは押すと動きます（トレーニングでステータスが伸び、体力とターンが減る）。"
-        en: "One portrait screen (648x1152). The blossoms, the school building and the character are all drawn from rectangles, ellipses, polygons and text — not a single image. It shows that rounded corners, gradients and multi-outlined text are enough to build a phone-game UI. The buttons work: training raises a stat and spends stamina and a turn."
-      path: "demos/training-ui.ktrtproj"
-      home: true
-      accent: "#f483b0"
-      media:
-        cover: "media/training-ui/hero.jpg"
-        screenshots: ["media/training-ui/shot-1.jpg", "media/training-ui/shot-2.jpg"]
-        trailer: "media/training-ui/play.mp4"
-    - id: "shop-ui"
-      name:
-        ja: "ショップ画面（参照 1 枚から）"
-        en: "Shop screen (from one reference)"
-      description:
-        ja: "参照画像 1 枚を測って組み直した交換所。カードの並びとアイコン、店内の背景まで素材なし"
-        en: "An exchange counter rebuilt by measuring one reference image — cards, icons and the shop interior, with no assets"
-      body:
-        ja: "縦持ち（648x1152）の 1 画面。**参照の写真を機械で測って**組んであります —— 交換ボタン 6 枚の大きさ（287x112）と並び（2 列 3 行、間隔 303x130）、吹き出しや戻るボタンの枠は、目分量ではなく画素から拾った値です。店内の棚と店員は、色ごとに塊へ割って輪郭をなぞった面の集まり（画像は 1 枚も使っていません）。アイコンは 24x24 の SVG から取り込んであるので、拡大しても崩れません。ボタンは押すと反応します。"
-        en: "One portrait screen (648x1152), rebuilt by **measuring the reference by machine**: the six exchange buttons' size (287x112) and layout (2 columns x 3 rows, pitch 303x130), and the frames of the speech bubble and back button all come from pixels, not from eyeballing. The shelves and shopkeeper are regions traced by colour and outline — no images at all. The icons are imported from 24x24 SVGs so they stay crisp when scaled. The buttons respond."
-      path: "demos/shop-ui.ktrtproj"
+        ja: "縦持ち（648x1152）の画面が 4 枚あり、**押すと画面が変わります** —— 育成メインの「お出かけ」でショップ、「レース」で結果発表、「≡」でトレーナー登録へ。戻り道も繋いであるので一周できます（画面遷移は Object のイベント `navigate_screen` 1 行で、グラフを 1 本も足していません）。\n\n絵は**参照の写真を機械で測って**組んであります。交換ボタン 6 枚の大きさ（287x112）と並び（2 列 3 行、間隔 303x130）、桜や店内や徽章の面は、色ごとに塊へ割って輪郭をなぞったもの。画像は 1 枚も使っておらず、アイコンだけ 24x24 の SVG から取り込んであるので拡大しても崩れません。\n\n動くところも入っています。トレーニングを押すとステータスが伸びて体力ゲージが縮み、結果発表のゲージは `on_tick` の秒を足して伸び、伸びきったところで止まります（端末の速さに依りません）。登録フォームの名前欄は OS の IME で打てる本物の入力で、性別のラジオは選んだほうにだけ玉が出ます。"
+        en: "Four portrait screens (648x1152) that **navigate to each other**: from the training hub, \"go out\" opens the shop, \"race\" opens the results, and the hamburger opens sign-up — with the way back wired too, so you can go around. Navigation is one object event (`navigate_screen`); no graph nodes were added.\n\nThe art was rebuilt by **measuring the references by machine**: the six exchange buttons' size (287x112) and layout (2 columns x 3 rows, pitch 303x130), and the blossoms, shop interior and badge are regions traced by colour and outline. Not one image is used; only the icons come from 24x24 SVGs, so they stay crisp when scaled.\n\nThings move, too. Training raises a stat and drains stamina; the results gauge adds up the per-frame seconds from `on_tick` and stops when full (so it fills at the same rate on any device). The name field is a real input (OS IME works) and only the selected gender radio shows its dot."
+      path: "demos/game-ui.ktrtproj"
       home: true
       accent: "#67bc01"
       media:
-        cover: "media/shop-ui/hero.jpg"
-        screenshots: ["media/shop-ui/shot-1.jpg", "media/shop-ui/shot-2.jpg"]
-        trailer: "media/shop-ui/play.mp4"
-    - id: "form-ui"
-      name:
-        ja: "登録フォーム"
-        en: "Registration form"
-      description:
-        ja: "入力欄とラジオボタンのあるモーダル。押すと選択が入れ替わり、値が変数へ届く"
-        en: "A modal with a text field and radio buttons — tapping swaps the selection and writes to a variable"
-      body:
-        ja: "ぼけた背景の上に載るモーダルのフォームです。名前の入力欄は OS の IME で打てる本物の入力（`input`）で、性別のラジオは押すと変数が変わり、**選ばれているほうにだけ緑の玉が出ます**（`visible` に式を繋いであります）。参照の写真から箱と文字の大きさを測って組んであり、背景のぼけは色ごとに割った面の集まりです。フォームの部品をどう配線するかを、そのまま読める形で入れてあります。"
-        en: "A modal form over a blurred background. The name field is a real input (OS IME works), and the gender radios write a variable when tapped — **only the selected one shows its green dot** (an expression drives `visible`). Boxes and text sizes were measured from the reference photo, and the blurred background is a set of colour regions. It shows how form parts are wired, readably."
-      path: "demos/form-ui.ktrtproj"
-      home: true
-      accent: "#7ecb0c"
-      media:
-        cover: "media/form-ui/hero.jpg"
-        screenshots: ["media/form-ui/shot-1.jpg", "media/form-ui/shot-2.jpg"]
-        trailer: "media/form-ui/play.mp4"
-    - id: "rank-ui"
-      name:
-        ja: "結果発表の画面"
-        en: "Result screen"
-      description:
-        ja: "丸い徽章とリボン、時間で伸びるゲージ。祝う画面の作り方"
-        en: "A round badge, a ribbon and a gauge that fills over time — how a celebration screen is built"
-      body:
-        ja: "育成の結果を出す 1 画面。放射状の背景・丸い徽章・リボンは、参照から色ごとに割って輪郭をなぞった面でできています（画像は 1 枚も使っていません）。▶ を押すとゲージが**時間で伸びて、伸びきったところで止まります** —— 毎フレームの秒を `on_tick` から取って足しているので、端末の速さが変わっても同じ速さで伸びます。同じ形が繰り返すところは金型（Piece）1 枚にまとめてあり、1 枚直せば全部変わります。"
-        en: "A single result screen. The radiating background, round badge and ribbon are regions traced from the reference by colour — not a single image. Press play and the gauge **fills over time and stops when full**: the per-frame seconds come from `on_tick`, so it fills at the same rate on any device. Repeated shapes are collapsed into one Piece, so editing it changes them all."
-      path: "demos/rank-ui.ktrtproj"
-      home: true
-      accent: "#b44fc0"
-      media:
-        cover: "media/rank-ui/hero.jpg"
-        screenshots: ["media/rank-ui/shot-1.jpg", "media/rank-ui/shot-2.jpg"]
-        trailer: "media/rank-ui/play.mp4"
+        cover: "media/game-ui/hero.jpg"
+        screenshots: ["media/game-ui/shot-1.jpg", "media/game-ui/shot-2.jpg"]
+        trailer: "media/game-ui/play.mp4"
     - id: "danmaku"
       name:
         ja: "弾幕シューティング"

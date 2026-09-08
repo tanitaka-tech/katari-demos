@@ -1,0 +1,173 @@
+branding:
+  companyName: ""
+  productName: ""
+  bundleIdentifier: ""
+  version: "1.0.0"
+appearance:
+  macosIconPath: ""
+  windowsIconPath: ""
+  splashImagePath: ""
+  splashBackground: "#000000"
+  appAppearance: "auto"
+  colorPalette[75]{id,name,color}:
+    "sky_top","sky_top","#d8e6f7"
+    "sky_mid","sky_mid","#e7e6f0"
+    "sky_low","sky_low","#f2eaf2"
+    "petal_pale","petal_pale","#fbeaf8"
+    "petal_light","petal_light","#f6dcf3"
+    "petal_mid","petal_mid","#eec4ea"
+    "petal_deep","petal_deep","#d79ad2"
+    "petal_shade","petal_shade","#b98bc0"
+    "branch","branch","#9a8894"
+    "ground_far","ground_far","#b6b5ba"
+    "ground_near","ground_near","#b8b6b4"
+    "wall","wall","#f0e6d6"
+    "wall_dim","wall_dim","#e3d8c8"
+    "roof","roof","#9cc0da"
+    "window","window","#cbdfee"
+    "hair","hair","#f2879f"
+    "hair_dark","hair_dark","#dc6c8c"
+    "ear","ear","#c9294b"
+    "skin","skin","#fdeade"
+    "skin_shade","skin_shade","#f3d4c8"
+    "uniform","uniform","#f6efe3"
+    "plum","plum","#4a2a5e"
+    "wine","wine","#7d2b3c"
+    "skirt","skirt","#6b2439"
+    "skirt_light","skirt_light","#8d4459"
+    "gold","gold","#dfa73c"
+    "ui_pink","ui_pink","#f483b0"
+    "ui_pink_head","ui_pink_head","#fccae3"
+    "ui_clinic","ui_clinic","#7150a0"
+    "shop_ceiling","ショップ / ceiling","#7a6c60"
+    "shop_wall","ショップ / wall","#a0937d"
+    "shop_shelf","ショップ / shelf","#8d7358"
+    "shop_shelf_lit","ショップ / shelf_lit","#c4b49b"
+    "shop_floor","ショップ / floor","#90855f"
+    "shop_counter","ショップ / counter","#a5866f"
+    "shop_goods_a","ショップ / goods_a","#5fa7c8"
+    "shop_goods_b","ショップ / goods_b","#d98f6a"
+    "shop_goods_c","ショップ / goods_c","#8fbb63"
+    "shop_header","ショップ / header","#645e82"
+    "shop_header_lit","ショップ / header_lit","#8b86a6"
+    "shop_card","ショップ / card","#f5f2ef"
+    "shop_white","ショップ / white","#fbf9f6"
+    "shop_line","ショップ / line","#e4e1ec"
+    "shop_ink","ショップ / ink","#4a4356"
+    "shop_bubble","ショップ / bubble","#f6f1ec"
+    "shop_sale_a","ショップ / sale_a","#c79a4a"
+    "shop_sale_b","ショップ / sale_b","#9a7130"
+    "shop_badge","ショップ / badge","#ff4c81"
+    "shop_nav","ショップ / nav","#e2dbd8"
+    "shop_nav_line","ショップ / nav_line","#dfdce3"
+    "shop_uniform","ショップ / uniform","#538e3b"
+    "shop_uniform_dark","ショップ / uniform_dark","#1f6b2a"
+    "shop_cap","ショップ / cap","#2f8f3a"
+    "shop_skin","ショップ / skin","#a58878"
+    "shop_hair","ショップ / hair","#4b332a"
+    "shop_tie","ショップ / tie","#e8a33c"
+    "form_head","登録 / head","#67bc01"
+    "form_head_dark","登録 / head_dark","#4f9a00"
+    "form_body","登録 / body","#f9f9f9"
+    "form_pill","登録 / pill","#eee7e5"
+    "form_ink","登録 / ink","#81532c"
+    "form_hint","登録 / hint","#aba094"
+    "form_warn","登録 / warn","#fb9e12"
+    "form_input","登録 / input","#ffffff"
+    "form_input_line","登録 / input_line","#d8d2cc"
+    "form_on","登録 / on","#86ce23"
+    "form_off","登録 / off","#dadadf"
+    "form_btn","登録 / btn","#548307"
+    "rank_ink","ランク / ink","#7e481c"
+    "rank_num","ランク / num","#8a4a12"
+    "rank_gauge_bg","ランク / gauge_bg","#ecebf0"
+    "rank_gauge_on","ランク / gauge_on","#8ed320"
+    "rank_btn","ランク / btn","#7fcc0a"
+    "rank_title","ランク / title","#a9e02a"
+    "rank_title_edge","ランク / title_edge","#3f7a00"
+  numberPalette: []
+  fontPalette:
+    -
+      id: "ui"
+      name: "UI（丸ゴシック）"
+      source:
+        kind: "os"
+        family: "Hiragino Maru Gothic ProN, Yu Gothic UI, Meiryo, M PLUS Rounded 1c, sans-serif"
+    -
+      id: "number"
+      name: "数字"
+      source:
+        kind: "os"
+        family: "Hiragino Maru Gothic ProN, Yu Gothic UI, Meiryo, M PLUS Rounded 1c, sans-serif"
+  gradientPresets: []
+  filterPresets: []
+look:
+  postEffects: []
+player:
+  width: 648
+  height: 1152
+  fullscreen: false
+  autoAdvance: false
+  autoAdvanceMs: 60
+  skipUnreadText: false
+  fps: 60
+  particleQuality: 1
+  pixelSnap: false
+  tickMode: "fixed"
+  tickHz: 60
+  gpu: "webgl2"
+platform:
+  permissions:
+    networkAccess: false
+    fileSystemAccess: false
+    microphoneAccess: false
+  macos:
+    hardenedRuntime: true
+    enableMetal: true
+  windows:
+    enableHighDpi: true
+    requestAdmin: false
+scripting:
+  backend: "default"
+  apiCompatibility: "v1"
+  managedStripping: "none"
+  strictDialogueLint: true
+editor:
+  maxOverflowX: 1024
+  maxOverflowY: 1024
+audio:
+  buses: []
+assets:
+  image_optimize:
+    enabled: false
+    max_dimension: 2048
+    format: "auto"
+    quality: 82
+    reduce_colors: false
+  video_sidecar: false
+  external_assets: false
+  bundle_unreferenced: false
+  dynamic_refs: []
+  smart_folders: []
+  packs: []
+save:
+  groups: []
+localization:
+  sourceLocale: "ja"
+  locales: []
+  tables: []
+  assetVariants: {}
+storePage:
+  platforms: []
+initialScreen: "screen_uma_ui_main"
+startScene: ""
+dialogueScreen: "screen_dialogue"
+plugins: {}
+vcs:
+  lore:
+    serverUrl: "lore://127.0.0.1:41337"
+    autoStartLocalServer: true
+network:
+  allow: []
+extensions: {}
+vaults: []
