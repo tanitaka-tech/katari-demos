@@ -140,11 +140,3 @@ variables:
     value_type: "Bool"
     initial_value: "false"
 requests: []
-script_graph:
-  nodes:
-    - id: "begin_play"
-      type: "event_begin_play"
-  layout:
-    - id: "begin_play"
-      x: 80
-      y: 80

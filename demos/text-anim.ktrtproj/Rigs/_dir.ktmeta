@@ -1,0 +1,7 @@
+schema_version: 2
+kind: "asset-dir"
+id: "rigs-root"
+display_name: "Rigs"
+memo: null
+pos: null
+children: []

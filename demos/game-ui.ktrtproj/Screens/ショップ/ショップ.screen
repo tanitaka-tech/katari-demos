@@ -24037,17 +24037,4 @@ variables:
     value_type: "Int"
     initial_value: "0"
 requests: []
-script_graph:
-  nodes:
-    - id: "set_variable_1"
-      type: "set_variable"
-      properties:
-        variable: "opened"
-        value: 1
-    - id: "event_begin_play_1"
-      type: "event_begin_play"
-      next: "set_variable_1"
-  layout:
-    - id: "set_variable_1"
-      x: 260
-      y: 0
+script: "opened = 1\n"

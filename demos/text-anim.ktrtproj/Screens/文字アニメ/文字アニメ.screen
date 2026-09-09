@@ -1,0 +1,36 @@
+screen_component:
+  screen_space: true
+  resolution_width: 1280
+  resolution_height: 720
+  ref_resolution_width: 1280
+  ref_resolution_height: 720
+  scale_mode: "blend"
+  scale_blend: 0.5
+  priority: 0
+objects:
+  - id: "stage"
+    name: "stage"
+    type: "frame"
+    x: 0
+    y: 0
+    width: 1280
+    height: 720
+    origin_x: 0
+    origin_y: 0
+    anchor_min_x: 0
+    anchor_min_y: 0
+    anchor_max_x: 1
+    anchor_max_y: 1
+    children:
+      - id: "bg"
+        name: "bg"
+        type: "rectangle"
+        x: 0
+        y: 0
+        width: 1280
+        height: 720
+        origin_x: 0
+        origin_y: 0
+        fill: "#0b0b0e"
+variables: []
+requests: []

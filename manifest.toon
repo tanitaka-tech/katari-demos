@@ -5,8 +5,8 @@ name:
   ja: "Katari デモ集"
   en: "Katari demos"
 description:
-  ja: "ホーム画面に並ぶデモ 13 本。触って動かして確かめるためのもの"
-  en: "The 13 demos on the home screen. Made to be opened and played"
+  ja: "ホーム画面に並ぶデモ 14 本。触って動かして確かめるためのもの"
+  en: "The 14 demos on the home screen. Made to be opened and played"
 contributes:
   sample_projects:
     - id: "platformer"
@@ -230,3 +230,20 @@ contributes:
         cover: "media/sakura/hero.jpg"
         screenshots: ["media/sakura/shot-1.jpg", "media/sakura/shot-2.jpg"]
         trailer: "media/sakura/play.mp4"
+    - id: "text-anim"
+      name:
+        ja: "文字アニメ（金型で使い回す）"
+        en: "Text animation (reusable as a Piece)"
+      description:
+        ja: "字ごとに動く出方 / 消え方を、文字列を引数に取る金型 1 枚へ畳んだ例。Sequencer のクリップで何回でも出せる"
+        en: "Per-character enter / exit motion folded into one Piece that takes the string as a parameter, replayed from Sequencer clips"
+      body:
+        ja: "字が 1 つずつ遅れて出て、1 つずつ膨らみながら消えていきます。動かしているのは**文字単位 Modifier**（1 字だけを選ぶ域を 7 本）で、その値を**金型（Piece）が持つ Appear / Disappear の Sequencer** が動かします。金型は文字列を引数（`input` 変数）で受け取るので、**中身は 1 枚だけ**。画面の Sequencer に piece クリップを並べ、クリップごとに違う文字列を渡して 4 回出しています。参照の映像から測って分かった決まりごとが 3 つ入っています —— 濃さは 0 か 1 だけ（半透明は使わない。消えるのは 1 コマ単位の点滅）、出る / 消える瞬間の 1 コマは塗りが抜けて輪郭だけ、そして 1 字ずつ遅れる。書体は同梱のサブセット（SIL OFL 1.1）です。"
+        en: "Characters arrive one at a time and leave one at a time, swelling as they go. The motion is **per-character Text Modifiers** (seven ranges, each selecting a single glyph), driven by **Appear / Disappear sequences that live inside a Piece**. The Piece takes the string as a parameter, so there is only one copy of the artwork: the screen's Sequencer lays out piece clips and hands each one a different string. Three rules measured from a reference film are baked in - opacity is only ever 0 or 1 (no translucency; leaving is a one-frame blink), the first and last frame of each character is outline-only, and each character is offset in time. The bundled font is a subset shipped under SIL OFL 1.1."
+      path: "demos/text-anim.ktrtproj"
+      home: true
+      accent: "#5b7cfa"
+      media:
+        cover: "media/text-anim/hero.jpg"
+        screenshots: ["media/text-anim/shot-1.jpg", "media/text-anim/shot-2.jpg"]
+        trailer: "media/text-anim/play.mp4"

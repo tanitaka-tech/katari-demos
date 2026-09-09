@@ -1,0 +1,723 @@
+id: "text-anim-piece"
+name: "テキスト演出"
+piece_type: "object"
+width: 620
+height: 120
+variables:
+  -
+    id: "label"
+    kind: "input"
+    name: "label"
+    value_type: "String"
+    required: false
+    initial_value: "テキストを入力"
+root:
+  id: "text-anim-piece-root"
+  name: "root"
+  type: "frame"
+  x: 0
+  y: 0
+  width: 620
+  height: 120
+  origin_x: 0
+  origin_y: 0
+  children:
+    -
+      id: "text-anim-body"
+      name: "本文"
+      type: "text"
+      x: 310
+      y: 60
+      origin_x: 0.5
+      origin_y: 0.5
+      width: 620
+      height: 120
+      text: "$label"
+      font_family: "@text-anim-font"
+      font_size: 44
+      letter_spacing: 20
+      color: "#ffffff"
+      strokes:
+        -
+          id: "ink"
+          color: "#ffffff"
+          width: 0.5
+      text_align: "center"
+      text_v_align: "middle"
+      text_modifiers:
+        -
+          id: "g0"
+          name: "字1"
+          ranges:
+            -
+              id: "r0"
+              name: "字1"
+              unit: "grapheme"
+              basis: "index"
+              start: 0
+              end: 1
+              offset: 0
+              feather_in: 0
+              feather_out: 0
+              strength: 1
+          strength: 1
+          opacity: 1
+          position:
+            x: 0
+            y: 0
+          scale:
+            x: 1
+            y: 1
+          origin:
+            x: 0.5
+            y: 0.5
+        -
+          id: "g1"
+          name: "字2"
+          ranges:
+            -
+              id: "r1"
+              name: "字2"
+              unit: "grapheme"
+              basis: "index"
+              start: 1
+              end: 2
+              offset: 0
+              feather_in: 0
+              feather_out: 0
+              strength: 1
+          strength: 1
+          opacity: 1
+          position:
+            x: 0
+            y: 0
+          scale:
+            x: 1
+            y: 1
+          origin:
+            x: 0.5
+            y: 0.5
+        -
+          id: "g2"
+          name: "字3"
+          ranges:
+            -
+              id: "r2"
+              name: "字3"
+              unit: "grapheme"
+              basis: "index"
+              start: 2
+              end: 3
+              offset: 0
+              feather_in: 0
+              feather_out: 0
+              strength: 1
+          strength: 1
+          opacity: 1
+          position:
+            x: 0
+            y: 0
+          scale:
+            x: 1
+            y: 1
+          origin:
+            x: 0.5
+            y: 0.5
+        -
+          id: "g3"
+          name: "字4"
+          ranges:
+            -
+              id: "r3"
+              name: "字4"
+              unit: "grapheme"
+              basis: "index"
+              start: 3
+              end: 4
+              offset: 0
+              feather_in: 0
+              feather_out: 0
+              strength: 1
+          strength: 1
+          opacity: 1
+          position:
+            x: 0
+            y: 0
+          scale:
+            x: 1
+            y: 1
+          origin:
+            x: 0.5
+            y: 0.5
+        -
+          id: "g4"
+          name: "字5"
+          ranges:
+            -
+              id: "r4"
+              name: "字5"
+              unit: "grapheme"
+              basis: "index"
+              start: 4
+              end: 5
+              offset: 0
+              feather_in: 0
+              feather_out: 0
+              strength: 1
+          strength: 1
+          opacity: 1
+          position:
+            x: 0
+            y: 0
+          scale:
+            x: 1
+            y: 1
+          origin:
+            x: 0.5
+            y: 0.5
+        -
+          id: "g5"
+          name: "字6"
+          ranges:
+            -
+              id: "r5"
+              name: "字6"
+              unit: "grapheme"
+              basis: "index"
+              start: 5
+              end: 6
+              offset: 0
+              feather_in: 0
+              feather_out: 0
+              strength: 1
+          strength: 1
+          opacity: 1
+          position:
+            x: 0
+            y: 0
+          scale:
+            x: 1
+            y: 1
+          origin:
+            x: 0.5
+            y: 0.5
+        -
+          id: "g6"
+          name: "字7"
+          ranges:
+            -
+              id: "r6"
+              name: "字7"
+              unit: "grapheme"
+              basis: "index"
+              start: 6
+              end: 7
+              offset: 0
+              feather_in: 0
+              feather_out: 0
+              strength: 1
+          strength: 1
+          opacity: 1
+          position:
+            x: 0
+            y: 0
+          scale:
+            x: 1
+            y: 1
+          origin:
+            x: 0.5
+            y: 0.5
+sequences:
+  -
+    id: "appear"
+    name: "Appear"
+    kind: "appear"
+    duration: 0.7
+    tracks:
+      -
+        id: "body"
+        kind: "object"
+        object_id: "text-anim-body"
+        time_offset: 0
+        property_tracks:
+          -
+            id: "pt-0-opacity"
+            property: "text_modifiers.g0.opacity"
+            keyframes[2]{time,value,easing}:
+              0,"0","step"
+              0,"1","step"
+          -
+            id: "pt-0-fill"
+            property: "text_modifiers.g0.fill"
+            keyframes[2]{time,value,easing}:
+              0,"#ffffff00","step"
+              0.033,"#ffffff","step"
+          -
+            id: "pt-0-strokewidth"
+            property: "text_modifiers.g0.stroke.width"
+            keyframes[2]{time,value,easing}:
+              0,"1.6","step"
+              0.033,"0.5","step"
+          -
+            id: "pt-0-scalex"
+            property: "text_modifiers.g0.scale.x"
+            keyframes[2]{time,value,easing}:
+              0,"1.6","step"
+              0.033,"1","step"
+          -
+            id: "pt-0-scaley"
+            property: "text_modifiers.g0.scale.y"
+            keyframes[2]{time,value,easing}:
+              0,"1.6","step"
+              0.033,"1","step"
+          -
+            id: "pt-1-opacity"
+            property: "text_modifiers.g1.opacity"
+            keyframes[2]{time,value,easing}:
+              0,"0","step"
+              0.05,"1","step"
+          -
+            id: "pt-1-fill"
+            property: "text_modifiers.g1.fill"
+            keyframes[2]{time,value,easing}:
+              0,"#ffffff00","step"
+              0.083,"#ffffff","step"
+          -
+            id: "pt-1-strokewidth"
+            property: "text_modifiers.g1.stroke.width"
+            keyframes[2]{time,value,easing}:
+              0,"1.6","step"
+              0.083,"0.5","step"
+          -
+            id: "pt-1-scalex"
+            property: "text_modifiers.g1.scale.x"
+            keyframes[2]{time,value,easing}:
+              0,"1.6","step"
+              0.083,"1","step"
+          -
+            id: "pt-1-scaley"
+            property: "text_modifiers.g1.scale.y"
+            keyframes[2]{time,value,easing}:
+              0,"1.6","step"
+              0.083,"1","step"
+          -
+            id: "pt-2-opacity"
+            property: "text_modifiers.g2.opacity"
+            keyframes[2]{time,value,easing}:
+              0,"0","step"
+              0.1,"1","step"
+          -
+            id: "pt-2-fill"
+            property: "text_modifiers.g2.fill"
+            keyframes[2]{time,value,easing}:
+              0,"#ffffff00","step"
+              0.133,"#ffffff","step"
+          -
+            id: "pt-2-strokewidth"
+            property: "text_modifiers.g2.stroke.width"
+            keyframes[2]{time,value,easing}:
+              0,"1.6","step"
+              0.133,"0.5","step"
+          -
+            id: "pt-2-scalex"
+            property: "text_modifiers.g2.scale.x"
+            keyframes[2]{time,value,easing}:
+              0,"1.6","step"
+              0.133,"1","step"
+          -
+            id: "pt-2-scaley"
+            property: "text_modifiers.g2.scale.y"
+            keyframes[2]{time,value,easing}:
+              0,"1.6","step"
+              0.133,"1","step"
+          -
+            id: "pt-3-opacity"
+            property: "text_modifiers.g3.opacity"
+            keyframes[2]{time,value,easing}:
+              0,"0","step"
+              0.15,"1","step"
+          -
+            id: "pt-3-fill"
+            property: "text_modifiers.g3.fill"
+            keyframes[2]{time,value,easing}:
+              0,"#ffffff00","step"
+              0.183,"#ffffff","step"
+          -
+            id: "pt-3-strokewidth"
+            property: "text_modifiers.g3.stroke.width"
+            keyframes[2]{time,value,easing}:
+              0,"1.6","step"
+              0.183,"0.5","step"
+          -
+            id: "pt-3-scalex"
+            property: "text_modifiers.g3.scale.x"
+            keyframes[2]{time,value,easing}:
+              0,"1.6","step"
+              0.183,"1","step"
+          -
+            id: "pt-3-scaley"
+            property: "text_modifiers.g3.scale.y"
+            keyframes[2]{time,value,easing}:
+              0,"1.6","step"
+              0.183,"1","step"
+          -
+            id: "pt-4-opacity"
+            property: "text_modifiers.g4.opacity"
+            keyframes[2]{time,value,easing}:
+              0,"0","step"
+              0.2,"1","step"
+          -
+            id: "pt-4-fill"
+            property: "text_modifiers.g4.fill"
+            keyframes[2]{time,value,easing}:
+              0,"#ffffff00","step"
+              0.233,"#ffffff","step"
+          -
+            id: "pt-4-strokewidth"
+            property: "text_modifiers.g4.stroke.width"
+            keyframes[2]{time,value,easing}:
+              0,"1.6","step"
+              0.233,"0.5","step"
+          -
+            id: "pt-4-scalex"
+            property: "text_modifiers.g4.scale.x"
+            keyframes[2]{time,value,easing}:
+              0,"1.6","step"
+              0.233,"1","step"
+          -
+            id: "pt-4-scaley"
+            property: "text_modifiers.g4.scale.y"
+            keyframes[2]{time,value,easing}:
+              0,"1.6","step"
+              0.233,"1","step"
+          -
+            id: "pt-5-opacity"
+            property: "text_modifiers.g5.opacity"
+            keyframes[2]{time,value,easing}:
+              0,"0","step"
+              0.25,"1","step"
+          -
+            id: "pt-5-fill"
+            property: "text_modifiers.g5.fill"
+            keyframes[2]{time,value,easing}:
+              0,"#ffffff00","step"
+              0.283,"#ffffff","step"
+          -
+            id: "pt-5-strokewidth"
+            property: "text_modifiers.g5.stroke.width"
+            keyframes[2]{time,value,easing}:
+              0,"1.6","step"
+              0.283,"0.5","step"
+          -
+            id: "pt-5-scalex"
+            property: "text_modifiers.g5.scale.x"
+            keyframes[2]{time,value,easing}:
+              0,"1.6","step"
+              0.283,"1","step"
+          -
+            id: "pt-5-scaley"
+            property: "text_modifiers.g5.scale.y"
+            keyframes[2]{time,value,easing}:
+              0,"1.6","step"
+              0.283,"1","step"
+          -
+            id: "pt-6-opacity"
+            property: "text_modifiers.g6.opacity"
+            keyframes[2]{time,value,easing}:
+              0,"0","step"
+              0.3,"1","step"
+          -
+            id: "pt-6-fill"
+            property: "text_modifiers.g6.fill"
+            keyframes[2]{time,value,easing}:
+              0,"#ffffff00","step"
+              0.333,"#ffffff","step"
+          -
+            id: "pt-6-strokewidth"
+            property: "text_modifiers.g6.stroke.width"
+            keyframes[2]{time,value,easing}:
+              0,"1.6","step"
+              0.333,"0.5","step"
+          -
+            id: "pt-6-scalex"
+            property: "text_modifiers.g6.scale.x"
+            keyframes[2]{time,value,easing}:
+              0,"1.6","step"
+              0.333,"1","step"
+          -
+            id: "pt-6-scaley"
+            property: "text_modifiers.g6.scale.y"
+            keyframes[2]{time,value,easing}:
+              0,"1.6","step"
+              0.333,"1","step"
+  -
+    id: "disappear"
+    name: "Disappear"
+    kind: "disappear"
+    duration: 0.8
+    tracks:
+      -
+        id: "body"
+        kind: "object"
+        object_id: "text-anim-body"
+        time_offset: 0
+        property_tracks:
+          -
+            id: "pt-0-opacity"
+            property: "text_modifiers.g0.opacity"
+            keyframes[5]{time,value,easing}:
+              0.2,"0","step"
+              0.233,"1","step"
+              0.3,"0","step"
+              0.333,"1","step"
+              0.4,"0","step"
+          -
+            id: "pt-0-scalex"
+            property: "text_modifiers.g0.scale.x"
+            keyframes[3]{time,value,easing}:
+              0,"1","step"
+              0.2,"1.6","step"
+              0.4,"2.2","step"
+          -
+            id: "pt-0-scaley"
+            property: "text_modifiers.g0.scale.y"
+            keyframes[3]{time,value,easing}:
+              0,"1","step"
+              0.2,"1.6","step"
+              0.4,"2.2","step"
+          -
+            id: "pt-0-fill"
+            property: "text_modifiers.g0.fill"
+            keyframes[3]{time,value,easing}:
+              0,"#ffffff","step"
+              0.2,"#ffffff00","step"
+              0.233,"#ffffff","step"
+          -
+            id: "pt-0-strokewidth"
+            property: "text_modifiers.g0.stroke.width"
+            keyframes[3]{time,value,easing}:
+              0,"0.5","step"
+              0.2,"1.6","step"
+              0.233,"0.5","step"
+          -
+            id: "pt-1-opacity"
+            property: "text_modifiers.g1.opacity"
+            keyframes[5]{time,value,easing}:
+              0.25,"0","step"
+              0.283,"1","step"
+              0.35,"0","step"
+              0.383,"1","step"
+              0.45,"0","step"
+          -
+            id: "pt-1-scalex"
+            property: "text_modifiers.g1.scale.x"
+            keyframes[3]{time,value,easing}:
+              0,"1","step"
+              0.25,"1.6","step"
+              0.45,"2.2","step"
+          -
+            id: "pt-1-scaley"
+            property: "text_modifiers.g1.scale.y"
+            keyframes[3]{time,value,easing}:
+              0,"1","step"
+              0.25,"1.6","step"
+              0.45,"2.2","step"
+          -
+            id: "pt-1-fill"
+            property: "text_modifiers.g1.fill"
+            keyframes[3]{time,value,easing}:
+              0,"#ffffff","step"
+              0.25,"#ffffff00","step"
+              0.283,"#ffffff","step"
+          -
+            id: "pt-1-strokewidth"
+            property: "text_modifiers.g1.stroke.width"
+            keyframes[3]{time,value,easing}:
+              0,"0.5","step"
+              0.25,"1.6","step"
+              0.283,"0.5","step"
+          -
+            id: "pt-2-opacity"
+            property: "text_modifiers.g2.opacity"
+            keyframes[5]{time,value,easing}:
+              0.3,"0","step"
+              0.333,"1","step"
+              0.4,"0","step"
+              0.433,"1","step"
+              0.5,"0","step"
+          -
+            id: "pt-2-scalex"
+            property: "text_modifiers.g2.scale.x"
+            keyframes[3]{time,value,easing}:
+              0,"1","step"
+              0.3,"1.6","step"
+              0.5,"2.2","step"
+          -
+            id: "pt-2-scaley"
+            property: "text_modifiers.g2.scale.y"
+            keyframes[3]{time,value,easing}:
+              0,"1","step"
+              0.3,"1.6","step"
+              0.5,"2.2","step"
+          -
+            id: "pt-2-fill"
+            property: "text_modifiers.g2.fill"
+            keyframes[3]{time,value,easing}:
+              0,"#ffffff","step"
+              0.3,"#ffffff00","step"
+              0.333,"#ffffff","step"
+          -
+            id: "pt-2-strokewidth"
+            property: "text_modifiers.g2.stroke.width"
+            keyframes[3]{time,value,easing}:
+              0,"0.5","step"
+              0.3,"1.6","step"
+              0.333,"0.5","step"
+          -
+            id: "pt-3-opacity"
+            property: "text_modifiers.g3.opacity"
+            keyframes[5]{time,value,easing}:
+              0.35,"0","step"
+              0.383,"1","step"
+              0.45,"0","step"
+              0.483,"1","step"
+              0.55,"0","step"
+          -
+            id: "pt-3-scalex"
+            property: "text_modifiers.g3.scale.x"
+            keyframes[3]{time,value,easing}:
+              0,"1","step"
+              0.35,"1.6","step"
+              0.55,"2.2","step"
+          -
+            id: "pt-3-scaley"
+            property: "text_modifiers.g3.scale.y"
+            keyframes[3]{time,value,easing}:
+              0,"1","step"
+              0.35,"1.6","step"
+              0.55,"2.2","step"
+          -
+            id: "pt-3-fill"
+            property: "text_modifiers.g3.fill"
+            keyframes[3]{time,value,easing}:
+              0,"#ffffff","step"
+              0.35,"#ffffff00","step"
+              0.383,"#ffffff","step"
+          -
+            id: "pt-3-strokewidth"
+            property: "text_modifiers.g3.stroke.width"
+            keyframes[3]{time,value,easing}:
+              0,"0.5","step"
+              0.35,"1.6","step"
+              0.383,"0.5","step"
+          -
+            id: "pt-4-opacity"
+            property: "text_modifiers.g4.opacity"
+            keyframes[5]{time,value,easing}:
+              0.4,"0","step"
+              0.433,"1","step"
+              0.5,"0","step"
+              0.533,"1","step"
+              0.6,"0","step"
+          -
+            id: "pt-4-scalex"
+            property: "text_modifiers.g4.scale.x"
+            keyframes[3]{time,value,easing}:
+              0,"1","step"
+              0.4,"1.6","step"
+              0.6,"2.2","step"
+          -
+            id: "pt-4-scaley"
+            property: "text_modifiers.g4.scale.y"
+            keyframes[3]{time,value,easing}:
+              0,"1","step"
+              0.4,"1.6","step"
+              0.6,"2.2","step"
+          -
+            id: "pt-4-fill"
+            property: "text_modifiers.g4.fill"
+            keyframes[3]{time,value,easing}:
+              0,"#ffffff","step"
+              0.4,"#ffffff00","step"
+              0.433,"#ffffff","step"
+          -
+            id: "pt-4-strokewidth"
+            property: "text_modifiers.g4.stroke.width"
+            keyframes[3]{time,value,easing}:
+              0,"0.5","step"
+              0.4,"1.6","step"
+              0.433,"0.5","step"
+          -
+            id: "pt-5-opacity"
+            property: "text_modifiers.g5.opacity"
+            keyframes[5]{time,value,easing}:
+              0.45,"0","step"
+              0.483,"1","step"
+              0.55,"0","step"
+              0.583,"1","step"
+              0.65,"0","step"
+          -
+            id: "pt-5-scalex"
+            property: "text_modifiers.g5.scale.x"
+            keyframes[3]{time,value,easing}:
+              0,"1","step"
+              0.45,"1.6","step"
+              0.65,"2.2","step"
+          -
+            id: "pt-5-scaley"
+            property: "text_modifiers.g5.scale.y"
+            keyframes[3]{time,value,easing}:
+              0,"1","step"
+              0.45,"1.6","step"
+              0.65,"2.2","step"
+          -
+            id: "pt-5-fill"
+            property: "text_modifiers.g5.fill"
+            keyframes[3]{time,value,easing}:
+              0,"#ffffff","step"
+              0.45,"#ffffff00","step"
+              0.483,"#ffffff","step"
+          -
+            id: "pt-5-strokewidth"
+            property: "text_modifiers.g5.stroke.width"
+            keyframes[3]{time,value,easing}:
+              0,"0.5","step"
+              0.45,"1.6","step"
+              0.483,"0.5","step"
+          -
+            id: "pt-6-opacity"
+            property: "text_modifiers.g6.opacity"
+            keyframes[5]{time,value,easing}:
+              0.5,"0","step"
+              0.533,"1","step"
+              0.6,"0","step"
+              0.633,"1","step"
+              0.7,"0","step"
+          -
+            id: "pt-6-scalex"
+            property: "text_modifiers.g6.scale.x"
+            keyframes[3]{time,value,easing}:
+              0,"1","step"
+              0.5,"1.6","step"
+              0.7,"2.2","step"
+          -
+            id: "pt-6-scaley"
+            property: "text_modifiers.g6.scale.y"
+            keyframes[3]{time,value,easing}:
+              0,"1","step"
+              0.5,"1.6","step"
+              0.7,"2.2","step"
+          -
+            id: "pt-6-fill"
+            property: "text_modifiers.g6.fill"
+            keyframes[3]{time,value,easing}:
+              0,"#ffffff","step"
+              0.5,"#ffffff00","step"
+              0.533,"#ffffff","step"
+          -
+            id: "pt-6-strokewidth"
+            property: "text_modifiers.g6.stroke.width"
+            keyframes[3]{time,value,easing}:
+              0,"0.5","step"
+              0.5,"1.6","step"
+              0.533,"0.5","step"

@@ -1,0 +1,10 @@
+schema_version: 2
+kind: "asset"
+id: "ast_1suabd4"
+display_name: "NotoSansJP-Black-subset"
+asset_type: "font"
+category: "font"
+source: "embedded"
+external_path: null
+original_filename: "NotoSansJP-Black-subset.ttf"
+stored_filename: "NotoSansJP-Black-subset.ttf"
