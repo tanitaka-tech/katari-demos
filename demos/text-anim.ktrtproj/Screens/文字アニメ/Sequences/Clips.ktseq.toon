@@ -1,0 +1,47 @@
+id: "clips"
+name: "Clips"
+kind: "state_loop"
+duration: 7.4
+tracks:
+  -
+    id: "piece_track"
+    kind: "piece"
+    piece_id: "text-anim-piece"
+    time_offset: 0
+    clips:
+      -
+        id: "clip0"
+        start: 0.3
+        duration: 3
+        position:
+          x: 640
+          y: 170
+        inputs:
+          label: "テキストを入力"
+      -
+        id: "clip1"
+        start: 1.5
+        duration: 3
+        position:
+          x: 640
+          y: 310
+        inputs:
+          label: "登場アニメ"
+      -
+        id: "clip2"
+        start: 2.7
+        duration: 3
+        position:
+          x: 640
+          y: 450
+        inputs:
+          label: "退場アニメ"
+      -
+        id: "clip3"
+        start: 3.9
+        duration: 3
+        position:
+          x: 640
+          y: 590
+        inputs:
+          label: "プリセット"

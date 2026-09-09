@@ -1,0 +1,11 @@
+schema_version: 2
+kind: "sequence-dir"
+id: "text-anim-stage-sequences"
+display_name: "Sequences"
+memo: null
+pos: null
+children:
+  -
+    name: "Clips.ktseq.toon"
+    id: "clips"
+    ref: "file"

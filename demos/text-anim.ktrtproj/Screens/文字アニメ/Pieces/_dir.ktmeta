@@ -1,0 +1,11 @@
+schema_version: 2
+kind: "piece-dir"
+id: "text-anim-stage-pieces"
+display_name: "Pieces"
+memo: null
+pos: null
+children:
+  -
+    name: "テキスト演出.ktpiece.toon"
+    id: "text-anim-piece"
+    ref: "file"

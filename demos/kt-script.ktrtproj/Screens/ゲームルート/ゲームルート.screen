@@ -35,31 +35,4 @@ variables:
     value_type: "Screen"
     initial_value: "screen_save_load"
 requests: []
-script_graph:
-  nodes:
-    - id: "begin_play"
-      type: "event_begin_play"
-      next: "open_title_screen"
-    - id: "get_title_screen"
-      type: "get_variable_screen"
-      properties:
-        variable: "screen_title"
-    - id: "open_title_screen"
-      type: "open_screen_call"
-  layout:
-    - id: "begin_play"
-      x: 80
-      y: 80
-    - id: "get_title_screen"
-      x: 360
-      y: 160
-    - id: "open_title_screen"
-      x: 360
-      y: 80
-  edges:
-    - from:
-        nodeId: "get_title_screen"
-        pin: "value"
-      to:
-        nodeId: "open_title_screen"
-        pin: "screen"
+script: ".screens.title_screen.open().await()\n"
